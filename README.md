@@ -136,7 +136,6 @@ Add the following to /etc/apache2/apache2.conf
 	ProxyPassReverseCookieDomain localhost manuscripta.se
 	ProxyPassReverseCookiePath / /exist
 	RewriteEngine       on
-#	RewriteRule	    ^/(uub.*)$    /view.html?uri=$1.xml
 	RewriteRule         ^\/?(.*)$     /$1   [PT]
 </VirtualHost>
 ```
