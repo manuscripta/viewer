@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="page-header">Manuscripts</h3>
+            <div class="input-group-btn pull-left">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sort <span class="caret"/>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="?sort=date">Date</a>
+                    </li>
+                    <li>
+                        <a href="?sort=shelfmark">Shelfmark</a>
+                    </li>
+                    <li>
+                        <a href="?sort=summary">Summary</a>
+                    </li>
+                    <li>
+                        <a href="?sort=support">Support</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Shelfmark</th>
+                            <th>Date</th>
+                            <th>Support</th>
+                            <th>Summary</th>
+                        </tr>
+                        <tr data-template="browse:list-manuscripts"/>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

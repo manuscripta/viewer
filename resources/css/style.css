@@ -1,0 +1,177 @@
+body{
+    font-size:1.6em;
+}
+/*h1{
+    font-size:1.8em;
+    font-variant:small-caps;
+    font-weight:bold;
+}
+h2{
+    /\*font-size:1.6em;
+    font-variant:small-caps;*\/
+    font-weight:bold;
+}
+h3{
+    font-size:1.4em;
+    font-weight:bold;
+}
+h4{
+    font-size:1em;
+    display:inline;
+    font-weight:bold;
+}
+.summary{
+    font-size:1.4em;
+    font-variant:small-caps;
+    font-weight:bold;
+    margin-top:20px;
+}*/
+/*.short_description{
+    margin-top:20px;
+}*/
+
+.italic{
+    font-style:italic;
+}
+.spacing{
+    letter-spacing:0.1em;
+}
+.small-caps{
+    font-variant:small-caps;
+}
+.summary p{
+    display:inline;
+    padding-right:30px;
+}
+.msContents,
+.physDesc,
+.history,
+.additional,
+.lastRevision{
+    display:block;
+    /*margin-right:50px;*/
+    margin-top:20px;
+}
+.biblItem{
+    display:inline;    
+}
+.bibl_author{
+    display:inline;
+}
+.bibl_book_title{
+    display:inline;
+    font-style:italic;
+}
+.bibl_journal_title{
+    display:inline;
+    font-style:italic;
+}
+.bibliography .biblItem{
+    text-align:left;
+    display:list-item;
+    margin-left:30pt;
+}
+.msItem{
+    display:block;
+    margin-bottom:20px;
+}
+.sub_msItem{
+    display:block;
+    margin-left:30px;
+}
+.msItem_nr,
+.sub_msItem_nr{
+    font-weight:bold;
+}
+.author{
+    display:inline;
+}
+.bibl_book_title{
+    display:inline;
+    font-style:italic
+}
+.incipit,
+.explicit,
+.rubric,
+.final-rubric,
+.colophon,
+.note,
+.editions{
+    display:block;
+    text-indent:1em;
+}
+/*.incipit_head,
+.explicit_head,
+.msItem_rubric_head,
+.msItem_finalRubric_head,
+.colophon_head,
+.note_head{
+    display:inline;
+    font-weight:bold;
+}*/
+.ms-item-bibl{
+    display:block;
+    text-indent:1em;
+}
+.msItem_listBibl,
+.listBibl{
+    display:block;
+    text-indent:1em;
+}
+.objectDesc,
+.supportDesc,
+.watermarks,
+.watermark,
+.extent,
+.foliation,
+.collation,
+.condition,
+.layoutDesc,
+.handDesc,
+.additions,
+.bindingDesc,
+.decoDesc,
+.origin,
+.provenance,
+.acquisition{
+    display:block;
+    margin-top:10px;
+}
+sub,
+sup{
+    font-size:75%;
+    line-height:0;
+    position:relative;
+    vertical-align:baseline;
+}
+sup{
+    top:-0.5em;
+}
+sub{
+    bottom:-0.25em;
+}
+.unit_nr{
+    display:inline;
+    font-weight:bold;
+}
+a{
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:underline;
+}
+a.shortTitle{
+    text-decoration:none;
+    border-bottom:1px dotted #777;
+}
+a.shortTitle:hover{
+    text-decoration:none;
+}
+p:first-of-type{
+    display:inline;
+}
+p{
+    margin-top:0em;
+    margin-bottom:0em;
+    text-indent:1em;
+}

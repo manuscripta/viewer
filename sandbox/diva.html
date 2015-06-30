@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" href="diva.js/css/diva.min.css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"/>
+        <style type="text/css">
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  margin:0;
+  padding:0;
+  border:0;
+}
+    </style>
+        <script src="diva.js/js/diva.min.js" type="text/javascript"/>
+        <script>
+    $(document).ready(function() {
+        $('#diva-wrapper').diva({
+            iipServerURL: "http://probok.alvin-portal.org/cgi-bin/iipsrv.fcgi",
+            objectData: "ut.json",
+            imageDir: "/home/alvin/conv-service/outputImages/jp2/ca/Original",
+            enableGridControls: "slider",
+            enableZoomControls: "slider",
+            minZoomLevel: 1,
+            zoomLevel: 1,
+            pagesPerRow: 4,
+            verticallyOriented: true,
+            inFullscreen: true,
+            inGrid: true,
+            enableAutoTitle: false,
+            enableDownloadpdf: true,
+            enableDownload: false,
+            toolbarParentSelector: "#tool"
+            // Other options can be set here as well
+        });
+    });
+    </script>
+    </head>
+    <body>
+        <div id="tool"/>
+        <div id="diva-wrapper"/>
+    </body>
+</html>
