@@ -1,2 +1,2 @@
-# manuscripta-eXist-app
-eXist code for manuscripta.se
+# Manuscripta webapp
+eXist-db webapp for manuscripta.se
