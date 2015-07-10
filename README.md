@@ -126,7 +126,7 @@ Add the following to /etc/apache2/apache2.conf
 <VirtualHost *:80>
 	ProxyRequests       off
 	ServerName      www.manuscripta.se
-	ServerAlias     *.manuscripta.se
+	ServerAlias     manuscripta.se
 	<Proxy>
 	   Order deny,allow
 	   Allow from all
@@ -136,6 +136,8 @@ Add the following to /etc/apache2/apache2.conf
 	ProxyPassReverseCookieDomain localhost manuscripta.se
 	ProxyPassReverseCookiePath / /exist
 	RewriteEngine       on
+	RewriteRule ^(.*)$ http://www.manuscripta.se/$1 [R=301,L]
+        RewriteRule   ^\/?(.*)$     /$1   [PT]
 	RewriteRule         ^\/?(.*)$     /$1   [PT]
 </VirtualHost>
 ```
