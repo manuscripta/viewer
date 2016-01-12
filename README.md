@@ -136,8 +136,8 @@ Add the following to /etc/apache2/apache2.conf
 	ProxyPassReverseCookieDomain localhost manuscripta.se
 	ProxyPassReverseCookiePath / /exist
 	RewriteEngine       on
-	RewriteRule ^(.*)$ http://www.manuscripta.se/$1 [R=301,L]
-        RewriteRule   ^\/?(.*)$     /$1   [PT]
+	RewriteRule   ^(.*)$ http://www.manuscripta.se/$1 [R=301,L]
+	RewriteRule   ^\/?(.*)$     /$1   [PT]
 </VirtualHost>
 ```
 
