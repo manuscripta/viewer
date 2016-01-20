@@ -71,10 +71,9 @@ AddHandler fastcgi-script fcg fcgi fpl
 FastCgiServer //var/www/html/fcgi-bin/iipsrv.fcgi \
 -initial-env LOGFILE=/tmp/iipsrv.log \
 -initial-env VERBOSITY=2 \
--initial-env MAX_IMAGE_CACHE_SIZE=10 \
--initial-env FILENAME_PATTERN=_pyr_ \
--initial-env JPEG_QUALITY=50 \
--initial-env MAX_CVT=3000
+-initial-env MAX_IMAGE_CACHE_SIZE=20 \
+-initial-env JPEG_QUALITY=90 \
+-initial-env MAX_CVT=5000
 ```
 
 Restart Apache
