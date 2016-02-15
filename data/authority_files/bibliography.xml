@@ -60,6 +60,55 @@
                <pubPlace>Berlin</pubPlace>
                <date when="1981"/>
             </bibl>
+            <bibl xml:id="Alvin1885">
+               <author role="critEd">
+                    <persName>
+                        <forename>Anders</forename>
+                        <forename>Reinhold</forename>
+                        <surname>Alvin</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/285626260</idno>
+                    <!-- Alvin, Anders Reinhold f. 1847 d. 1928. Kontraktsprost och kyrkoherde i Hägerstads pastorat, Linköpings stift (uppg. hämtad från Riksarkivet) -->
+                </author>
+               <author role="origAuth">
+                    <persName>
+                        <forename>Johannes</forename>
+                        <addName>Chrysostomus</addName>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/216421863</idno>
+                </author>
+               <title level="m">Chrysostomi Homilia öfver I Kor. 8: efter en grekisk handskrift (diss.)</title>
+               <pubPlace>Linköping</pubPlace>
+               <date when="1885"/>
+            </bibl>
+            <bibl xml:id="Andres1965">
+               <author>
+                    <persName>
+                        <forename>Gregorio</forename>
+                        <nameLink>de</nameLink>
+                        <surname>Andrés</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/22167868</idno>
+                </author>
+               <title level="a">Historia del texto griego escurialense (<foreign xml:lang="grc">Θ</foreign>.IV.30) de la vida de S. Sinclética y sus traducciones latinas</title>
+               <title level="j">La Ciudad de Dios</title>
+               <date when="1965"/>
+               <biblScope from="178" to="178" unit="volume"/>
+               <biblScope from="491" to="511" unit="page"/>
+            </bibl>
+            <bibl xml:id="Andres1968">
+               <author>
+                    <persName>
+                        <forename>Gregorio</forename>
+                        <nameLink>de</nameLink>
+                        <surname>Andrés</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/22167868</idno>
+                </author>
+               <title level="m">Catálogo de los códices griegos desaparecidos de la Real biblioteca de El Escorial</title>
+               <pubPlace>El Escorial</pubPlace>
+               <date when="1968"/>
+            </bibl>
             <bibl xml:id="Asulanus1524">
                <author role="origAuth">
                     <persName>
@@ -158,6 +207,19 @@
                <date when="1965"/>
                <biblScope from="1" to="4" unit="volume"/>
             </bibl>
+            <bibl xml:id="Bellermann1841">
+               <author role="critEd">
+                    <persName>
+                        <forename>Friedrich</forename>
+                        <surname>Bellermann</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/34546618</idno>
+                </author>
+               <title level="m">Anonymi scriptio de musica. Bacchii senioris introductio artis musicae</title>
+               <pubPlace>Berlin</pubPlace>
+               <date when="1841"/>
+               <idno type="URI">https://archive.org/details/anonymiscritiod00bellgoog</idno>
+            </bibl>
             <bibl xml:id="Benediktsson1938">
                <author>
                     <persName>
@@ -178,8 +240,10 @@
                     <persName>
                         <forename>Erik</forename>
                         <surname>Benzelius</surname>
+                        <genName>the Younger</genName>
                     </persName>
                     <idno type="URI">http://viaf.org/viaf/9857012</idno>
+                    <idno type="URI">https://en.wikipedia.org/wiki/Erik_Benzelius_the_younger</idno>
                 </author>
                <title level="m">Catalogus centuriae librorum rarissimorum manuscript. et partim impressorum, arabicorum, persicorum, turcicorum, græcorum, latinorum, etc.</title>
                <pubPlace>Uppsala</pubPlace>
@@ -307,6 +371,39 @@
                <pubPlace>Paris</pubPlace>
                <date when="1958"/>
             </bibl>
+            <bibl xml:id="Carter1970">
+               <author>
+                    <persName>
+                        <forename>Robert</forename>
+                        <forename>E.</forename>
+                        <surname>Carter</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/36928555</idno>
+                </author>
+               <title level="m">Codices Chrysostomici graeci. 3: Codices Americae et Europae occidentalis</title>
+               <pubPlace>Paris</pubPlace>
+               <date when="1970"/>
+            </bibl>
+            <bibl xml:id="CCAG1898">
+               <title type="main" level="m">Catalogus codicum astrologorum Graecorum</title>
+               <title type="short" level="m">CCAG</title>
+               <pubPlace>Brussels</pubPlace>
+               <date from="1898" to="1936"/>
+               <biblScope from="1" to="12" unit="volume"/>
+            </bibl>
+            <bibl xml:id="Celsius1745">
+               <author>
+                    <persName>
+                        <forename>Olof</forename>
+                        <surname>Celsius</surname>
+                        <genName>the Younger</genName>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/56655527</idno>
+                </author>
+               <title level="m">Bibliothecæ Upsaliensis historia, auctore Olavo O. Celsio</title>
+               <date when="1745"/>
+               <idno type="URI">https://archive.org/details/bibliothecaeupsa00upps</idno>
+            </bibl>
             <bibl xml:id="Ciccolella1989">
                <author role="origAuth">
                     <persName>
@@ -375,6 +472,13 @@
                <title level="m">Appendix Vergiliana</title>
                <pubPlace>Oxford</pubPlace>
                <date when="1966"/>
+            </bibl>
+            <bibl xml:id="Clavis1974">
+               <title type="main" level="m">Corpus Christianorum. Clavis patrum Graecorum: qua optimae quaeque scriptorum patrum Graecorum recensiones a primaevis saeculis usque ad octavum commode recluduntur</title>
+               <title type="short" level="m">CPG</title>
+               <pubPlace>Turnhout</pubPlace>
+               <date from="1974" to="1987"/>
+               <biblScope from="1" to="5" unit="volume"/>
             </bibl>
             <bibl xml:id="Courtonne1957">
                <author role="origAuth">
@@ -466,6 +570,21 @@
                <title level="m">Notitiae episcopatuum ecclesiae Constantinopolitanae</title>
                <pubPlace>Paris</pubPlace>
                <date when="1981"/>
+            </bibl>
+            <bibl xml:id="Decorps2001">
+               <author>
+                    <persName>
+                        <forename>Micheline</forename>
+                        <surname>Decorps-Foulquier</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/13535921</idno>
+                </author>
+               <title level="a">La tradition manuscrite du texte grec des <q>Coniques</q> d’Apollonios de Pergé (livres I-IV)</title>
+               <title level="j">Revue d’histoire des textes</title>
+               <date when="2001"/>
+               <biblScope from="31" to="31" unit="volume"/>
+               <biblScope from="61" to="116" unit="page"/>
+               <idno type="URL">http://www.persee.fr/doc/rht_0373-6075_2003_num_31_2001_1506</idno>
             </bibl>
             <bibl xml:id="DeStefani1902">
                <author>
@@ -694,6 +813,45 @@
                <title level="m">Minne öfver Jacob Jonas Björnståhl</title>
                <pubPlace>Stockholm</pubPlace>
                <date when="1785"/>
+            </bibl>
+            <bibl xml:id="Evieux1997">
+               <author role="critEd">
+                    <persName>
+                        <forename>Pierre</forename>
+                        <surname>Évieux</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/93684326</idno>
+                </author>
+               <author role="origAuth">
+                    <persName>
+                        <forename>Isidorus</forename>
+                        <addName>Pelusiota</addName>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/63872189</idno>
+                </author>
+               <title level="m">Isidore de Péluse. Lettres</title>
+               <pubPlace>Paris</pubPlace>
+               <date from="1997" to="2000"/>
+               <biblScope from="1" to="2" unit="volume"/>
+            </bibl>
+            <bibl xml:id="Field1847">
+               <author role="origAuth">
+                    <persName>
+                        <forename>Johannes</forename>
+                        <addName>Chrysostomus</addName>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/216421863</idno>
+                </author>
+               <author role="critEd">
+                    <persName>
+                        <forename>Frederick</forename>
+                        <surname>Field</surname>
+                    </persName>
+                    <idno type="URL">http://viaf.org/viaf/69075131</idno>
+                </author>
+               <title level="m">Joannis Chrysostomi Interpretatio omnium epistolarum Paulinarum per homilias facta</title>
+               <date when="1847"/>
+               <biblScope from="2" to="2" unit="volume"/>
             </bibl>
             <bibl xml:id="Fabricius1790">
                <author>
@@ -999,6 +1157,7 @@
                <title level="m">Notices sommaires des manuscrits grecs de Suède</title>
                <pubPlace>Paris</pubPlace>
                <date when="1889"/>
+               <idno type="URI">https://archive.org/details/noticessommaires00grauuoft</idno>
             </bibl>
             <bibl xml:id="Gregory1909">
                <author>
@@ -1046,6 +1205,26 @@
                <title level="m">Catalogue des manuscrits hagiographiques de la Bibliothèque nationale d’Athènes</title>
                <pubPlace>Brussels</pubPlace>
                <date when="1983"/>
+            </bibl>
+            <bibl xml:id="Hansen1972">
+               <author role="critEd"/>
+               <author role="critEd">
+                    <persName>
+                        <forename>Erich</forename>
+                        <surname>Klostermann</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/4945995</idno>
+                </author>
+               <author role="origAuth">
+                    <persName>
+                        <forename>Eusebius</forename>
+                        <addName>Caesariensis</addName>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/4929593</idno>
+                </author>
+               <title level="m">Eusebius Werke. Bd 4, Gegen Marcell. Über die kirchliche Theologie. Die Fragmente Marcells</title>
+               <pubPlace>Berlin</pubPlace>
+               <date when="1972"/>
             </bibl>
             <bibl xml:id="Harlfinger1971">
                <author>
@@ -1129,7 +1308,7 @@
                         <forename>Werner</forename>
                         <surname>Seibt</surname>
                     </persName>
-                    <idno type="URI"> http://viaf.org/viaf/44305385</idno>
+                    <idno type="URI">http://viaf.org/viaf/44305385</idno>
                 </editor>
                <title level="m">Geschichte und Kultur der Palaiologenzeit: Referate des Internationalen Symposions zu Ehren von Herbert Hunger (Wien, 30. November bis 3. Dezember 1994)</title>
                <pubPlace>Vienna</pubPlace>
@@ -1206,6 +1385,33 @@
                <date from="1949" to="1960"/>
                <biblScope from="1" to="2" unit="volume"/>
             </bibl>
+            <bibl xml:id="Heiberg1916">
+               <author role="origAuth">
+                    <persName>
+                        <forename>Euclides</forename>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/176184097</idno>
+                </author>
+               <author role="critEd">
+                    <persName>
+                        <forename>Heinrich</forename>
+                        <surname>Menge</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/45979128</idno>
+                </author>
+               <author role="critEd">
+                    <persName>
+                        <forename>Johan</forename>
+                        <forename>Ludvig</forename>
+                        <surname>Heiberg</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/76356362</idno>
+                </author>
+               <title level="m">Euclidis opera omnia. Vol. VIII. Euclidis phaenomena et scripta musica</title>
+               <pubPlace>Leipzig</pubPlace>
+               <date when="1916"/>
+               <idno type="URI">https://archive.org/details/euclidisoperaomn08eucluoft</idno>
+            </bibl>
             <bibl xml:id="Heiberg1921">
                <author role="origAuth">
                     <persName>
@@ -1226,6 +1432,33 @@
                <pubPlace>Leipzig</pubPlace>
                <date from="1921" to="1924"/>
                <biblScope from="1" to="2" unit="volume"/>
+            </bibl>
+            <bibl xml:id="Heiberg1929">
+               <author role="critEd">
+                    <persName>
+                        <forename>Johan</forename>
+                        <forename>Ludvig</forename>
+                        <surname>Heiberg</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/76356362</idno>
+                </author>
+               <title level="m">Anonymi logica et quadrivium, cum scholiis antiquis</title>
+               <pubPlace>København</pubPlace>
+               <date when="1929"/>
+            </bibl>
+            <bibl xml:id="Heitsch1963">
+               <author role="critEd">
+                    <persName>
+                        <forename>Ernst</forename>
+                        <surname>Heitsch</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/120153155</idno>
+                </author>
+               <title level="m">Die griechischen Dichterfragmente der römischen Kaiserzeit</title>
+               <pubPlace>Göttingen</pubPlace>
+               <date when="1963"/>
+               <edition n="2"/>
+               <biblScope from="1" to="1" unit="volume"/>
             </bibl>
             <bibl xml:id="Heijbroek1994">
                <author>
@@ -1307,6 +1540,112 @@
 
                <pubPlace>Jena</pubPlace>
                <date when="1832"/>
+            </bibl>
+            <bibl xml:id="Jaeger1954">
+               <author>
+                    <persName>
+                        <forename>Werner</forename>
+                        <surname>Jaeger</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/46762703</idno>
+                </author>
+               <title level="m">Two Rediscovered Works of Ancient Christian Literature: Gregory of Nyssa and Macarius</title>
+               <pubPlace>Leiden</pubPlace>
+               <date when="1954"/>
+            </bibl>
+            <bibl xml:id="Jan1890a">
+               <author role="origAuth">
+                    <persName>
+                        <forename>Bacchius</forename>
+                        <addName>Senex</addName>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/173310432</idno>
+                </author>
+               <author role="critEd">
+                    <persName>
+                        <forename>Carl</forename>
+                        <nameLink>von</nameLink>
+                        <surname>Jan</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/2626257</idno>
+                </author>
+               <title level="a">Die Eisagoge des Bacchius. 1. Text, kritischer Apparat und deutsche Uebersetzung</title>
+               <title level="j">Lyceum zu Strassburg im Elsass. Beilage zum Programm für das Schuljahr 1890/90</title>
+               <pubPlace>Strassburg</pubPlace>
+               <date when="1890"/>
+               <idno type="URI">urn:nbn:de:bvb:12-bsb10930889-3</idno>
+            </bibl>
+            <bibl xml:id="Jan1890b">
+               <author>
+                    <persName>
+                        <forename>Carl</forename>
+                        <nameLink>von</nameLink>
+                        <surname>Jan</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/2626257</idno>
+                </author>
+               <title level="a">Die Handschriften der Hymnen des Mesomedes</title>
+               <title level="j">Jahrbücher für classische Philologie</title>
+               <date when="1890"/>
+               <biblScope from="36" to="36" unit="volume"/>
+               <biblScope from="679" to="688" unit="page"/>
+               <idno type="URI">https://archive.org/details/bub_gb_MzQZuvLXkjIC</idno>
+            </bibl>
+            <bibl xml:id="Jan1891">
+               <author role="origAuth">
+                    <persName>
+                        <forename>Bacchius</forename>
+                        <addName>Senex</addName>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/173310432</idno>
+                </author>
+               <author role="critEd">
+                    <persName>
+                        <forename>Carl</forename>
+                        <nameLink>von</nameLink>
+                        <surname>Jan</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/2626257</idno>
+                </author>
+               <title level="a">Die Eisagoge des Bacchius. 2. Erklärung</title>
+               <title level="j">Lyceum zu Strassburg im Elsass. Beilage zum Programm für das Schuljahr 1890/90</title>
+               <pubPlace>Strassburg</pubPlace>
+               <date when="1891"/>
+               <idno type="URI">urn:nbn:de:bvb:12-bsb10930890-0</idno>
+            </bibl>
+            <bibl xml:id="Jan1895">
+               <author role="critEd">
+                    <persName>
+                        <forename>Carl</forename>
+                        <nameLink>von</nameLink>
+                        <surname>Jan</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/2626257</idno>
+                </author>
+               <title level="m">Musici scriptores Graeci</title>
+               <pubPlace>Leipzig</pubPlace>
+               <date when="1895"/>
+               <idno type="URI">https://archive.org/details/musiciscriptoresjank</idno>
+            </bibl>
+            <bibl xml:id="Jonker1970">
+               <author role="origAuth">
+                    <persName>
+                        <forename>Manuel</forename>
+                        <surname>Bryennius</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/7524861/</idno>
+                </author>
+               <author role="critEd">
+                    <persName>
+                        <forename>Goverdus</forename>
+                        <forename>Henricus</forename>
+                        <surname>Jonker</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/18824061</idno>
+                </author>
+               <title level="m">The Harmonics of Manuel Bryennius</title>
+               <pubPlace>Groningen</pubPlace>
+               <date when="1970"/>
             </bibl>
             <bibl xml:id="Karlsson1981">
                <editor>
@@ -1528,7 +1867,7 @@
                <title level="m">Hesychii Alexandrini lexicon</title>
                <date from="1963" to="1966"/>
             </bibl>
-            <bibl xml:id="Lenz1959">               
+            <bibl xml:id="Lenz1959">
                <author role="origAuth">
                     <persName>
                         <forename>Aelius</forename>
@@ -1887,6 +2226,20 @@
                <pubPlace>Naples</pubPlace>
                <date when="1963"/>
             </bibl>
+            <bibl xml:id="Mathiesen1988">
+               <author>
+                    <persName>
+                        <forename>Thomas</forename>
+                        <forename>J.</forename>
+                        <surname>Mathiesen</surname>
+                    </persName>
+                    <idno type="URL">http://viaf.org/viaf/44430696</idno>
+                </author>
+               <title level="m">Ancient Greek Music Theory. A Catalogue Raisonné of Manuscripts</title>
+               <title level="s">Répertoire international des sources musicales. B 11</title>
+               <pubPlace>München</pubPlace>
+               <date when="1988"/>
+            </bibl>
             <bibl xml:id="Matranga1850">
                <author role="critEd">
                     <persName>
@@ -2168,6 +2521,34 @@
                <pubPlace>Uppsala</pubPlace>
                <date when="2009"/>
             </bibl>
+            <bibl xml:id="Paulson1889">
+               <author>
+                    <persName>
+                        <forename>Johannes</forename>
+                        <surname>Paulson</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/89017807</idno>
+                </author>
+               <title level="m">Symbolae ad Chrysostomum patrem. I. De codice Lincopensi. Accedit tabula palaeographica</title>
+               <pubPlace>Lund</pubPlace>
+               <date when="1889"/>
+               <idno type="URI">urn:nbn:de:bvb:12-bsb00074686-4</idno>
+               <!-- Särtryck av: "Symbolae ad Chrysostomum patrem. I. De codice Lincopensi homiliarum Chrysostomi in epist. ad Cor. I habitarum", Lunds universitets årsskrift vol. 25 (1888-89) -->
+            </bibl>
+            <bibl xml:id="Paulson1890">
+               <author>
+                    <persName>
+                        <forename>Johannes</forename>
+                        <surname>Paulson</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/89017807</idno>
+                </author>
+               <title level="m">Symbolae ad Chrysostomum patrem. II. De codice Holmensi</title>
+               <pubPlace>Lund</pubPlace>
+               <date when="1890"/>
+               <idno type="URI">urn:nbn:de:bvb:12-bsb00074687-9</idno>
+               <!-- Särtryck av: "Symbolae ad Chrysostomum patrem. II. De codice Holmensi homiliarum Chrysostomi", Lunds universitets årsskrift, vol. 26 (1889-90) -->
+            </bibl>
             <bibl xml:id="Pelletier1975">
                <author role="origAuth">
                     <persName>
@@ -2274,6 +2655,28 @@
                <biblScope from="7" to="7" unit="volume"/>
                <biblScope from="109" to="222" unit="page"/>
             </bibl>
+            <bibl xml:id="Pohlmann1973">
+               <author>
+                    <persName>
+                        <forename>Egert</forename>
+                        <surname>Pöhlmann</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/5394810</idno>
+                </author>
+               <editor>
+                    <persName>
+                        <forename>Friedrich</forename>
+                        <surname>Blume</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/73949822</idno>
+                </editor>
+               <title level="a">Bakcheios</title>
+               <title level="m">Die Musik in Geschichte und Gegenwart</title>
+               <pubPlace>Kassel</pubPlace>
+               <date when="1973"/>
+               <biblScope from="15" to="15" unit="volume"/>
+               <biblScope from="422" to="424" unit="column"/>
+            </bibl>
             <bibl xml:id="Prete1978">
                <author role="origAuth">
                     <persName>
@@ -2341,8 +2744,23 @@
                     <idno type="URI">http://viaf.org/viaf/44690899</idno>
                 </author>
                <title level="m">Scholia in Lucianum</title>
-               <pubPlace>Leipzig</pubPlace>               
+               <pubPlace>Leipzig</pubPlace>
                <date when="1906"/>
+            </bibl>
+            <bibl xml:id="Rathgeber1888">
+               <author>
+                    <persName>
+                        <forename>Julius</forename>
+                        <surname>Rathgeber</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/15517903</idno>
+                </author>
+               <title level="a">Die Schicksale einer Strassburger Bibliothek. Anhang. Stammbaum der Familie Müg von Boofzheim und Mieg von Mülhausen im Ober-Elsass</title>
+               <title level="j">Jahrbuch für Geschichte Elsaß-Lothringens</title>
+               <date when="1888"/>
+               <biblScope from="4" to="4" unit="volume"/>
+               <biblScope from="63" to="71" unit="page"/>
+               <idno type="URI">https://archive.org/details/bub_gb_i9I9AQAAMAAJ</idno>
             </bibl>
             <bibl xml:id="Rehm1929">
                <author role="origAuth">
@@ -2391,6 +2809,39 @@
                <pubPlace>Bonn</pubPlace>
                <date when="1957"/>
             </bibl>
+            <bibl xml:id="Revilla1936">
+               <author>
+                    <persName>
+                        <forename>Alejo</forename>
+                        <surname>Revilla</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/52056541</idno>
+                </author>
+               <title level="m">Catálogo de los códices griegos de la Biblioteca de el Escorial</title>
+               <pubPlace>Madrid</pubPlace>
+               <date when="1936"/>
+               <biblScope from="1" to="1" unit="volume"/>
+            </bibl>
+            <bibl xml:id="Rios1954">
+               <author role="origAuth">
+                    <persName>
+                        <forename>Aristoxenus</forename>
+                        <addName>Tarentinus</addName>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/89598429</idno>
+                </author>
+               <author role="critEd">
+                    <persName>
+                        <forename>Rosetta</forename>
+                        <nameLink>da</nameLink>
+                        <surname>Rios</surname>
+                    </persName>
+                    <idno type="URI"/>
+                </author>
+               <title level="m">Aristoxeni Elementa harmonica</title>
+               <pubPlace>Rome</pubPlace>
+               <date when="1954"/>
+            </bibl>
             <bibl xml:id="Roscher1913">
                <author role="origAuth">
                     <persName>
@@ -2409,6 +2860,41 @@
                <title level="m">Die hippokratische Schrift von der Siebenzahl</title>
                <pubPlace>Paderborn</pubPlace>
                <date when="1913"/>
+            </bibl>
+            <bibl xml:id="Rosengren1888">
+               <author>
+                    <persName>
+                        <forename>Erik</forename>
+                        <surname>Rosengren</surname>
+                    </persName>
+                    <idno type="URI">https://sv.wikipedia.org/wiki/Erik_Rosengren</idno>
+                </author>
+               <title level="m">De origine Aristoxeni Elementorum harmonicorum codicis Upsaliensis disputatio</title>
+               <pubPlace>Hernösand</pubPlace>
+               <date when="1888"/>
+            </bibl>
+            <bibl xml:id="Rudberg1959">
+               <author role="critEd">
+                    <persName>
+                        <forename>Stig</forename>
+                        <forename>Yngve</forename>
+                        <surname>Rudberg</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/119180713</idno>
+                </author>
+               <author role="origAuth">
+                    <persName>
+                        <forename>Proclus</forename>
+                        <roleName>Archbishop of Constantinople</roleName>
+                    </persName>
+                    <idno type="URI">http://en.wikipedia.org/wiki/Proclus_of_Constantinople</idno>
+                </author>
+               <title level="a">L’homélie pseudo-Basilienne <q>Consolatoria ad aegrotum</q>
+                    </title>
+               <title level="j">Muséon</title>
+               <date when="1959"/>
+               <biblScope from="72" to="72" unit="volume"/>
+               <biblScope from="301" to="322" unit="page"/>
             </bibl>
             <bibl xml:id="Rudberg1960">
                <author>
@@ -2549,9 +3035,9 @@
                     <idno type="URI">http://viaf.org/viaf/4932629</idno>
                 </author>
                <title level="m" type="main">Répertoire de réglures dans les manuscrits grecs sur parchemin: base de données</title>
-               <title level="m" type="short">Sautel</title>               
+               <title level="m" type="short">Sautel</title>
                <pubPlace>Turnhout</pubPlace>
-               <date when="1995"/>               
+               <date when="1995"/>
             </bibl>
             <bibl xml:id="Schneider1908">
                <author role="origAuth">
@@ -2626,6 +3112,28 @@
                <pubPlace>Bonn</pubPlace>
                <date from="1829" to="1855"/>
                <biblScope from="1" to="3" unit="volume"/>
+            </bibl>
+            <bibl xml:id="Schuck1915">
+               <author role="origAuth">
+                    <persName>
+                        <forename>Johannes</forename>
+                        <surname>Schefferus</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/12390834</idno>
+                </author>
+               <author role="critEd">
+                    <persName>
+                        <forename>Henrik</forename>
+                        <surname>Schück</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/61559922</idno>
+                </author>
+               <title level="a">Ioannis Schefferi Argentoratensis vita</title>
+               <title level="s">Äldre svenska biografier 1–2</title>
+               <title level="s">Uppsala universitets årsskrift</title>
+               <pubPlace>Uppsala</pubPlace>
+               <date when="1915"/>
+               <biblScope from="7" to="36" unit="page"/>
             </bibl>
             <bibl xml:id="Searby2003a">
                <author>
@@ -2742,6 +3250,24 @@
                <pubPlace>Oxford</pubPlace>
                <date when="1990"/>
             </bibl>
+            <bibl xml:id="Solomon1980">
+               <author role="origAuth">
+                    <persName>
+                        <forename>Cleonides</forename>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/34362168</idno>
+                </author>
+               <author role="critEd">
+                    <persName>
+                        <forename>Jon</forename>
+                        <surname>Solomon</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/113595283</idno>
+                </author>
+               <title level="m">Cleonides, <foreign xml:lang="grc">ΕΙΣΑΓΩΓΗ ΑΡΜΟΝΙΚΗ</foreign>. Critical Edition, Translation and Commentary </title>
+               <pubPlace>Chapel Hill</pubPlace>
+               <date when="1980"/>
+            </bibl>
             <bibl xml:id="Sommerbrodt1884">
                <author>
                     <persName>
@@ -2849,6 +3375,25 @@
                <date from="1944" to="1949"/>
                <biblScope from="1" to="2" unit="volume"/>
             </bibl>
+            <bibl xml:id="Terzes2010">
+               <author role="origAuth">
+                    <persName>
+                        <forename>Dionysius</forename>
+                        <addName>Musicus</addName>
+                    </persName>
+                </author>
+               <author role="critEd">
+                    <persName>
+                        <forename>Chrēstos</forename>
+                        <surname>Terzēs</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/197700971</idno>
+                </author>
+               <title level="m" xml:lang="el">Διονυσίου &lt;Τέχνη μουσική&gt;. Εισαγωγή-κείμενο-μετάφραση-σχόλια. Κριτική έκδοση</title>
+               <pubPlace>Athens</pubPlace>
+               <date when="2010"/>
+               <idno type="URI">http://www.moisasociety.org/de-musicis/dionysiou-techn-mousik-introduction-text-translation-commentary-critical-edition</idno>
+            </bibl>
             <bibl xml:id="Thevenot1693">
                <author role="critEd">
                     <persName>
@@ -2879,7 +3424,8 @@
             <bibl xml:id="Thiel1959">
                <author role="origAuth">
                     <persName>
-                        <forename>Pseudo-Callisthenes</forename>
+                        <forename>Callisthenes</forename>
+                        <addName>Pseudo-</addName>
                     </persName>
                     <idno type="URI">http://viaf.org/viaf/88969189</idno>
                 </author>
@@ -3019,6 +3565,18 @@
                <pubPlace>Stuttgart</pubPlace>
                <date when="1994"/>
             </bibl>
+            <bibl xml:id="Vassis2005">
+               <author>
+                    <persName>
+                        <forename>Ioannis</forename>
+                        <surname>Vassis</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/106921477</idno>
+                </author>
+               <title level="m">Initia carminum Byzantinorum</title>
+               <pubPlace>Berlin</pubPlace>
+               <date when="2005"/>
+            </bibl>
             <bibl xml:id="Vieillefond1970">
                <author>
                     <persName>
@@ -3056,13 +3614,36 @@
                <biblScope from="75" to="75" unit="volume"/>
                <biblScope from="77" to="107" unit="page"/>
             </bibl>
+            <bibl xml:id="Winnington1963">
+               <author role="origAuth">
+                    <persName>
+                        <forename>Aristides</forename>
+                        <addName>Quintilianus</addName>
+                    </persName>
+                    <idno type="URI">http://catalog.perseus.org/cite-collections/authors/urn:cite:perseus:author.191</idno>
+                    <idno type="URI">http://pinakes.irht.cnrs.fr/notices/auteur/id/353</idno>
+                    <idno type="URI">http://viaf.org/viaf/59438804</idno>
+                </author>
+               <author role="critEd">
+                    <persName>
+                        <forename>Reginald</forename>
+                        <forename>Pepys</forename>
+                        <surname>Winnington-Ingram</surname>
+                    </persName>
+                    <idno type="URI">http://viaf.org/viaf/108123619</idno>
+                </author>
+               <title level="m">Aristidis Quintiliani De musica libri tres</title>
+               <pubPlace>Leipzig</pubPlace>
+               <date when="1963"/>
+               <idno type="URI">http://catalog.perseus.org/catalog/urn:cts:greekLit:tlg2054.tlg001.opp-grc2</idno>
+            </bibl>
             <bibl xml:id="Wittek1952">
                <author>
                     <persName>
                         <forename>Martin</forename>
                         <surname>Wittek</surname>
                     </persName>
-                    <idno>http://viaf.org/viaf/268703313</idno>
+                    <idno type="URI">http://viaf.org/viaf/268703313</idno>
                 </author>
                <title level="a">Bibliographie. Liste des manuscrits de Lucien</title>
                <title level="j">Scriptorium</title>

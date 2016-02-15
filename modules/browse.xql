@@ -139,7 +139,7 @@ function browse:list-manuscripts($node as node(), $model as map(*)){
         else $mss//tei:TEI/@xml:id
     return 
         browse:display-manuscripts($title,$uri,$date,$support,$summary)
-}; 
+};
 
 declare function browse:display-manuscripts($title as xs:string?, $uri as xs:anyURI?, $date as xs:string?, $support as xs:string*, $summary as xs:string*) as node()*{
                 <tr>

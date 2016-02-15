@@ -40,7 +40,7 @@ else if (contains($exist:path, "resources/")) then
             </forward>
         </dispatch>
 
-else if (starts-with($exist:path, "/uub")) then
+else if (starts-with($exist:path, "/uub") or starts-with($exist:path, "/lub") or starts-with($exist:path, "/lsb") or starts-with($exist:path, "/kb")) then
     let $id := $exist:resource
     return
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
@@ -143,7 +143,7 @@ else if ($exist:path eq "/browse/scribes") then
             <forward url="{$exist:controller}/modules/view.xql"/>
         </view>
     </dispatch>
-
+    
 else if (ends-with($exist:resource, ".html")) then
     (: the html page is run through view.xql to expand templates :)
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">

@@ -44,6 +44,12 @@
         <xsl:apply-templates/>
     </xsl:template>
 
+    <xsl:template match="addName">
+        <span class="name">
+            <xsl:value-of select="normalize-space(.)"/>
+        </span>
+    </xsl:template>
+
     <xsl:template match="altIdentifier">
         <xsl:apply-templates/>
     </xsl:template>
@@ -110,21 +116,21 @@
 
     <!-- availability -->
 
-    <xsl:template match="msItem/bibl">
-        <div class="editions">
-            <span class="head">Edition: </span>
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-
-    <xsl:template match="msItem/listBibl">
-        <div class="editions">
-            <span class="head">Editions: </span>
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-
     <xsl:template match="bibl">
+        <xsl:choose>
+            <xsl:when test="parent::msItem">
+                <div class="editions">
+                    <span class="head">Edition: </span>
+                    <xsl:call-template name="bibl"/>
+                </div>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:call-template name="bibl"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
+    <xsl:template name="bibl">
         <div class="biblItem">
             <xsl:choose>
                 <xsl:when test="exists(title[@level='a']) and exists(title[@level='m'])">
@@ -537,18 +543,29 @@
 
     <!--  Country  -->
 
-    <xsl:template match="date">
-        <xsl:if test="@from">
-            <xsl:value-of select="@from"/>
-            <xsl:text>–</xsl:text>
-            <xsl:value-of select="@to"/>
-        </xsl:if>
-        <xsl:if test="@when">
-            <xsl:value-of select="@when"/>
-        </xsl:if>
-        <xsl:if test="text()">
-            <xsl:apply-templates/>
-        </xsl:if>
+    <xsl:template match="date|origDate">
+        <span class="date">
+            <xsl:choose>
+                <xsl:when test="exists(text())">
+                    <xsl:value-of select="."/>
+                </xsl:when>
+            <xsl:otherwise>
+                    <xsl:if test="@from">
+                        <xsl:value-of select="@from"/>
+                        <xsl:text>–</xsl:text>
+                        <xsl:value-of select="@to"/>
+                    </xsl:if>
+                    <xsl:if test="@notBefore">
+                        <xsl:value-of select="@notBefore"/>
+                        <xsl:text>–</xsl:text>
+                        <xsl:value-of select="@notAfter"/>
+                    </xsl:if>
+                    <xsl:if test="@when">
+                        <xsl:value-of select="@when"/>
+                    </xsl:if>
+                </xsl:otherwise>
+            </xsl:choose>
+            </span>       
     </xsl:template>
 
     <xsl:template match="decoDesc">
@@ -665,16 +682,14 @@
     </xsl:template>
 
     <xsl:template match="forename">
-        <span class="forename">
+        <span class="name">
             <xsl:value-of select="normalize-space(.)"/>
         </span>
     </xsl:template>
 
     <xsl:template match="forename" mode="abbreviated-name">
-        <span class="forename">
-            <xsl:value-of select="substring(., 1, 1)"/>
-            <xsl:text>.</xsl:text>
-        </span>
+        <xsl:value-of select="substring(., 1, 1)"/>
+    <xsl:text>.</xsl:text>
     </xsl:template>
 
     <xsl:template match="formula">
@@ -684,6 +699,12 @@
     <xsl:template match="gap">
         <!--FIX-->
         <xsl:apply-templates/>
+    </xsl:template>
+
+    <xsl:template match="genName">
+        <span class="name">
+            <xsl:value-of select="normalize-space(.)"/>
+        </span>
     </xsl:template>
 
     <!--  graphic  -->
@@ -765,6 +786,11 @@
             <xsl:when test="@type='ms_ref'">
                 <xsl:apply-templates/>
             </xsl:when>
+            <xsl:when test="@type = 'URI'">
+                <a href="{.}">
+                    <xsl:apply-templates/>
+                </a>
+            </xsl:when>
             <!--<xsl:otherwise>
                 <xsl:apply-templates />
             </xsl:otherwise>-->
@@ -841,7 +867,17 @@
     </xsl:template>
 
     <xsl:template match="listBibl">
-        <xsl:apply-templates/>
+        <xsl:choose>
+            <xsl:when test="parent::msItem">
+                <div class="editions">
+                    <span class="head">Editions: </span>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
     <!--<xsl:template match="listBibl">
@@ -1558,6 +1594,13 @@
         <xsl:apply-templates/>
     </xsl:template>
 
+    <xsl:template match="nameLink">
+        <span class="name">
+            <xsl:value-of select="normalize-space(.)"/>
+        </span>
+    </xsl:template>
+
+
     <xsl:template match="note">
         <!--<xsl:choose>
             <xsl:when test="parent::msItem[@class='endleaf'] or parent::layout">
@@ -1599,27 +1642,12 @@
         <xsl:apply-templates/>
     </xsl:template>
 
-    <xsl:template match="origDate">
-        <xsl:if test="@from and not(text())">
-            <xsl:value-of select="@from"/>
-            <xsl:text>–</xsl:text>
-            <xsl:value-of select="@to"/>
-        </xsl:if>
-        <xsl:if test="@notBefore and not(text())">
-            <xsl:value-of select="@notBefore"/>
-            <xsl:text>–</xsl:text>
-            <xsl:value-of select="@notAfter"/>
-        </xsl:if>
-        <xsl:if test="@when and not(text())">
-            <xsl:value-of select="@when"/>
-        </xsl:if>
-        <xsl:if test="text()">
-            <xsl:apply-templates/>
-        </xsl:if>
-    </xsl:template>
+    <!--origDate, see date-->
 
     <xsl:template match="origPlace">
-        <xsl:apply-templates/>
+        <span class="placeName">
+            <xsl:value-of select="normalize-space(.)"/>
+        </span>
     </xsl:template>
 
     <xsl:template match="origin">
@@ -1641,33 +1669,34 @@
         </xsl:choose>
     </xsl:template>
 
-    <xsl:template match="persName">
-        <!--<xsl:choose>
-            <xsl:when test="@evidence='external' or @evidence='conjecture'">
-                <xsl:text>⟨</xsl:text>
-                <!-\- Mathematical left angle bracket U+27E8 -\->
-                <xsl:apply-templates />
-                <!-\-<xsl:value-of select="normalize-space(.)"/>-\->
-                <!-\- Removes whitespace before and after -\->
-                <xsl:text>⟩</xsl:text>
-                <!-\- Mathematical right angle bracket U+27E9 -\->
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates />
-                <!-\-<xsl:value-of select="normalize-space(.)" />-\->
-            </xsl:otherwise>
-        </xsl:choose>-->
-        <xsl:choose>
-            <xsl:when test="parent::author/parent::msItem">
-                <span class="small-caps">
-                    <xsl:apply-templates/>
-                </span>
+    <xsl:template match="persName">        
+        <span class="persName">
+            <xsl:choose>
+                <xsl:when test="parent::author/parent::msItem">
+                    <span class="small-caps">
+                        <xsl:choose>
+                            <xsl:when test="@evidence='external' or @evidence='conjecture'">
+                                <xsl:text>⟨</xsl:text>
+                                <!-- Mathematical left angle bracket U+27E8 -->
+                                <!--<xsl:apply-templates />-->
+                                <xsl:value-of select="normalize-space(.)"/>
+                                <!-- Removes whitespace before and after -->
+                                <xsl:text>⟩</xsl:text>
+                                <!-- Mathematical right angle bracket U+27E9 -->
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <!--<xsl:apply-templates />-->
+                                <xsl:value-of select="normalize-space(.)"/>
+                            </xsl:otherwise>
+                            </xsl:choose>
+                        </span>
                 <xsl:text>, </xsl:text>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="normalize-space(.)"/>
+                </xsl:otherwise>
+            </xsl:choose>
+            </span>
     </xsl:template>
 
     <xsl:template match="persName" mode="abbreviated-name">
@@ -1746,6 +1775,12 @@
                 <p>This description is a preliminary draft and is subject to change without notice</p>
             </div>
         </xsl:if>
+    </xsl:template>
+
+    <xsl:template match="roleName">
+        <span class="name">
+            <xsl:value-of select="normalize-space(.)"/>
+        </span>
     </xsl:template>
 
     <xsl:template match="rubric">
@@ -1869,7 +1904,7 @@
     <!-- surface -->
 
     <xsl:template match="surname">
-        <span class="surname">
+        <span class="name">
             <xsl:value-of select="normalize-space(.)"/>
         </span>
     </xsl:template>

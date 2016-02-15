@@ -51,6 +51,13 @@
                 <xsl:apply-templates select="//biblScope"/>
             </div>
         </xsl:if>
+        <xsl:if test="exists(//idno[@type='URI'][starts-with(.,'https://archive.org')])">
+            <div>
+                <span class="head">Digitization: </span>
+                <xsl:apply-templates select="//idno[@type='URI'][starts-with(.,'https://archive.org')]"/>
+            </div>
+        </xsl:if>
+        
         
 
     </xsl:template>

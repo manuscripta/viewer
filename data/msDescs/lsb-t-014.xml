@@ -1,0 +1,2109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" version="5.0" xml:id="lsb-t-014">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>Linköping Diocesan Library, T 14</title>
+                <respStmt xml:id="BC">
+                    <persName>
+                        <forename>Barbara</forename>
+                        <surname>Crostini Lappin</surname>
+                    </persName>
+                    <resp key="cataloguer"/>
+                </respStmt>
+                <respStmt xml:id="PG">
+                    <persName>
+                        <forename>Patrik</forename>
+                        <surname>Granholm</surname>
+                    </persName>
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Uppsala University Library</authority>
+                <pubPlace>Uppsala</pubPlace>
+                <date when="2015"/>
+                <availability status="free">
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Sweden</country>
+                        <settlement>Linköping</settlement>
+                        <institution>Linköping Diocesan Library</institution>
+                        <repository>Linköping Diocesan Library</repository>
+                        <idno type="shelfmark">T 14</idno>
+                    </msIdentifier>
+                    <head/>
+                    <msContents>
+                        <msItem class="left_endleaf">
+                            <locus from="ar" to="XVv" scheme="folios"/>
+                            <note/>
+                        </msItem>
+                        <msItem class="right_endleaf">
+                            <locus from="cr" to="dv" scheme="folios"/>
+                            <note/>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <extent>
+                                    <measure type="left_flyleaves" quantity="17"/>
+                                    <measure type="right_flyleaves" quantity="2"/>
+                                </extent>
+                                <foliation/>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                    <history>
+                        <origin/>
+                        <provenance/>
+                        <acquisition/>
+                    </history>
+                    <additional>
+                        <listBibl> </listBibl>
+                    </additional>
+                    <msPart>
+                        <msIdentifier>
+                            <idno type="codicological_unit">1</idno>
+                        </msIdentifier>
+                        <msContents>
+                            
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc material="parchment">
+                                    <support>
+                                        <p/>
+                                    </support>
+                                    <extent>
+                                        <measure type="textblock_leaves" quantity="229"/>
+                                    </extent>
+                                    <foliation/>
+                                </supportDesc>
+                            </objectDesc>
+                        </physDesc>
+                        <history>
+                            <origin/>
+                            <provenance/>
+                            <acquisition/>
+                        </history>
+                    </msPart>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc status="draft">
+            <change status="draft" when="2016-01-19" who="#PG">First draft</change>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface xml:id="lsb-t-014-QP-card">
+            <desc>QP card</desc>
+            <graphic url="lsb-t-014-0000-QP-card.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-LCO">
+            <desc>Left cover, outside</desc>
+            <graphic url="lsb-t-014-0001-LCO.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-LCI">
+            <desc>Left cover, inside</desc>
+            <graphic url="lsb-t-014-0002-LCI.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-ar">
+            <desc>Folio ar</desc>
+            <graphic url="lsb-t-014-0003-ar.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-av">
+            <desc>Folio av</desc>
+            <graphic url="lsb-t-014-0004-av.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-br">
+            <desc>Folio br</desc>
+            <graphic url="lsb-t-014-0005-br.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-bv">
+            <desc>Folio bv</desc>
+            <graphic url="lsb-t-014-0006-bv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-Ir">
+            <desc>Folio Ir</desc>
+            <graphic url="lsb-t-014-0007-Ir.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-Iv">
+            <desc>Folio Iv</desc>
+            <graphic url="lsb-t-014-0008-Iv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-IIr">
+            <desc>Folio IIr</desc>
+            <graphic url="lsb-t-014-0009-IIr.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-IIv">
+            <desc>Folio IIv</desc>
+            <graphic url="lsb-t-014-0010-IIv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-IIIr">
+            <desc>Folio IIIr</desc>
+            <graphic url="lsb-t-014-0011-IIIr.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-IIIv">
+            <desc>Folio IIIv</desc>
+            <graphic url="lsb-t-014-0012-IIIv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-IVr">
+            <desc>Folio IVr</desc>
+            <graphic url="lsb-t-014-0013-IVr.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-IVv">
+            <desc>Folio IVv</desc>
+            <graphic url="lsb-t-014-0014-IVv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-Vr">
+            <desc>Folio Vr</desc>
+            <graphic url="lsb-t-014-0015-Vr.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-Vv">
+            <desc>Folio Vv</desc>
+            <graphic url="lsb-t-014-0016-Vv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-VIr">
+            <desc>Folio VIr</desc>
+            <graphic url="lsb-t-014-0017-VIr.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-VIv">
+            <desc>Folio VIv</desc>
+            <graphic url="lsb-t-014-0018-VIv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-VIIr">
+            <desc>Folio VIIr</desc>
+            <graphic url="lsb-t-014-0019-VIIr.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-VIIv">
+            <desc>Folio VIIv</desc>
+            <graphic url="lsb-t-014-0020-VIIv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-VIIIr">
+            <desc>Folio VIIIr</desc>
+            <graphic url="lsb-t-014-0021-VIIIr.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-VIIIv">
+            <desc>Folio VIIIv</desc>
+            <graphic url="lsb-t-014-0022-VIIIv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-IXr">
+            <desc>Folio IXr</desc>
+            <graphic url="lsb-t-014-0023-IXr.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-IXv">
+            <desc>Folio IXv</desc>
+            <graphic url="lsb-t-014-0024-IXv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-Xr">
+            <desc>Folio Xr</desc>
+            <graphic url="lsb-t-014-0025-Xr.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-Xv">
+            <desc>Folio Xv</desc>
+            <graphic url="lsb-t-014-0026-Xv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-XIr">
+            <desc>Folio XIr</desc>
+            <graphic url="lsb-t-014-0027-XIr.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-XIv">
+            <desc>Folio XIv</desc>
+            <graphic url="lsb-t-014-0028-XIv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-XIIr">
+            <desc>Folio XIIr</desc>
+            <graphic url="lsb-t-014-0029-XIIr.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-XIIv">
+            <desc>Folio XIIv</desc>
+            <graphic url="lsb-t-014-0030-XIIv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-XIIIr">
+            <desc>Folio XIIIr</desc>
+            <graphic url="lsb-t-014-0031-XIIIr.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-XIIIv">
+            <desc>Folio XIIIv</desc>
+            <graphic url="lsb-t-014-0032-XIIIv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-XIVr">
+            <desc>Folio XIVr</desc>
+            <graphic url="lsb-t-014-0033-XIVr.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-XIVv">
+            <desc>Folio XIVv</desc>
+            <graphic url="lsb-t-014-0034-XIVv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-XVr">
+            <desc>Folio XVr</desc>
+            <graphic url="lsb-t-014-0035-XVr.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-XVv">
+            <desc>Folio XVv</desc>
+            <graphic url="lsb-t-014-0036-XVv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-1r">
+            <desc>Folio 1r</desc>
+            <graphic url="lsb-t-014-0037-001r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-1v">
+            <desc>Folio 1v</desc>
+            <graphic url="lsb-t-014-0038-001v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-2r">
+            <desc>Folio 2r</desc>
+            <graphic url="lsb-t-014-0039-002r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-2v">
+            <desc>Folio 2v</desc>
+            <graphic url="lsb-t-014-0040-002v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-3r">
+            <desc>Folio 3r</desc>
+            <graphic url="lsb-t-014-0041-003r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-3v">
+            <desc>Folio 3v</desc>
+            <graphic url="lsb-t-014-0042-003v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-4r">
+            <desc>Folio 4r</desc>
+            <graphic url="lsb-t-014-0043-004r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-4v">
+            <desc>Folio 4v</desc>
+            <graphic url="lsb-t-014-0044-004v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-5r">
+            <desc>Folio 5r</desc>
+            <graphic url="lsb-t-014-0045-005r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-5v">
+            <desc>Folio 5v</desc>
+            <graphic url="lsb-t-014-0046-005v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-6r">
+            <desc>Folio 6r</desc>
+            <graphic url="lsb-t-014-0047-006r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-6v">
+            <desc>Folio 6v</desc>
+            <graphic url="lsb-t-014-0048-006v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-7r">
+            <desc>Folio 7r</desc>
+            <graphic url="lsb-t-014-0049-007r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-7v">
+            <desc>Folio 7v</desc>
+            <graphic url="lsb-t-014-0050-007v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-8r">
+            <desc>Folio 8r</desc>
+            <graphic url="lsb-t-014-0051-008r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-8v">
+            <desc>Folio 8v</desc>
+            <graphic url="lsb-t-014-0052-008v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-9r">
+            <desc>Folio 9r</desc>
+            <graphic url="lsb-t-014-0053-009r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-9v">
+            <desc>Folio 9v</desc>
+            <graphic url="lsb-t-014-0054-009v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-10r">
+            <desc>Folio 10r</desc>
+            <graphic url="lsb-t-014-0055-010r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-10v">
+            <desc>Folio 10v</desc>
+            <graphic url="lsb-t-014-0056-010v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-11r">
+            <desc>Folio 11r</desc>
+            <graphic url="lsb-t-014-0057-011r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-11v">
+            <desc>Folio 11v</desc>
+            <graphic url="lsb-t-014-0058-011v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-12r">
+            <desc>Folio 12r</desc>
+            <graphic url="lsb-t-014-0059-012r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-12v">
+            <desc>Folio 12v</desc>
+            <graphic url="lsb-t-014-0060-012v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-13r">
+            <desc>Folio 13r</desc>
+            <graphic url="lsb-t-014-0061-013r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-13v">
+            <desc>Folio 13v</desc>
+            <graphic url="lsb-t-014-0062-013v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-14r">
+            <desc>Folio 14r</desc>
+            <graphic url="lsb-t-014-0063-014r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-14v">
+            <desc>Folio 14v</desc>
+            <graphic url="lsb-t-014-0064-014v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-15r">
+            <desc>Folio 15r</desc>
+            <graphic url="lsb-t-014-0065-015r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-15v">
+            <desc>Folio 15v</desc>
+            <graphic url="lsb-t-014-0066-015v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-16r">
+            <desc>Folio 16r</desc>
+            <graphic url="lsb-t-014-0067-016r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-16v">
+            <desc>Folio 16v</desc>
+            <graphic url="lsb-t-014-0068-016v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-17r">
+            <desc>Folio 17r</desc>
+            <graphic url="lsb-t-014-0069-017r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-17v">
+            <desc>Folio 17v</desc>
+            <graphic url="lsb-t-014-0070-017v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-18r">
+            <desc>Folio 18r</desc>
+            <graphic url="lsb-t-014-0071-018r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-18v">
+            <desc>Folio 18v</desc>
+            <graphic url="lsb-t-014-0072-018v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-19r">
+            <desc>Folio 19r</desc>
+            <graphic url="lsb-t-014-0073-019r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-19v">
+            <desc>Folio 19v</desc>
+            <graphic url="lsb-t-014-0074-019v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-20r">
+            <desc>Folio 20r</desc>
+            <graphic url="lsb-t-014-0075-020r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-20v">
+            <desc>Folio 20v</desc>
+            <graphic url="lsb-t-014-0076-020v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-21r">
+            <desc>Folio 21r</desc>
+            <graphic url="lsb-t-014-0077-021r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-21v">
+            <desc>Folio 21v</desc>
+            <graphic url="lsb-t-014-0078-021v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-22r">
+            <desc>Folio 22r</desc>
+            <graphic url="lsb-t-014-0079-022r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-22v">
+            <desc>Folio 22v</desc>
+            <graphic url="lsb-t-014-0080-022v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-23r">
+            <desc>Folio 23r</desc>
+            <graphic url="lsb-t-014-0081-023r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-23v">
+            <desc>Folio 23v</desc>
+            <graphic url="lsb-t-014-0082-023v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-24r">
+            <desc>Folio 24r</desc>
+            <graphic url="lsb-t-014-0083-024r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-24v">
+            <desc>Folio 24v</desc>
+            <graphic url="lsb-t-014-0084-024v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-25r">
+            <desc>Folio 25r</desc>
+            <graphic url="lsb-t-014-0085-025r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-25v">
+            <desc>Folio 25v</desc>
+            <graphic url="lsb-t-014-0086-025v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-26r">
+            <desc>Folio 26r</desc>
+            <graphic url="lsb-t-014-0087-026r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-26v">
+            <desc>Folio 26v</desc>
+            <graphic url="lsb-t-014-0088-026v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-27r">
+            <desc>Folio 27r</desc>
+            <graphic url="lsb-t-014-0089-027r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-27v">
+            <desc>Folio 27v</desc>
+            <graphic url="lsb-t-014-0090-027v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-28r">
+            <desc>Folio 28r</desc>
+            <graphic url="lsb-t-014-0091-028r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-28v">
+            <desc>Folio 28v</desc>
+            <graphic url="lsb-t-014-0092-028v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-29r">
+            <desc>Folio 29r</desc>
+            <graphic url="lsb-t-014-0093-029r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-29v">
+            <desc>Folio 29v</desc>
+            <graphic url="lsb-t-014-0094-029v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-30r">
+            <desc>Folio 30r</desc>
+            <graphic url="lsb-t-014-0095-030r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-30v">
+            <desc>Folio 30v</desc>
+            <graphic url="lsb-t-014-0096-030v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-31r">
+            <desc>Folio 31r</desc>
+            <graphic url="lsb-t-014-0097-031r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-31v">
+            <desc>Folio 31v</desc>
+            <graphic url="lsb-t-014-0098-031v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-32r">
+            <desc>Folio 32r</desc>
+            <graphic url="lsb-t-014-0099-032r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-32v">
+            <desc>Folio 32v</desc>
+            <graphic url="lsb-t-014-0100-032v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-33r">
+            <desc>Folio 33r</desc>
+            <graphic url="lsb-t-014-0101-033r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-33v">
+            <desc>Folio 33v</desc>
+            <graphic url="lsb-t-014-0102-033v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-34r">
+            <desc>Folio 34r</desc>
+            <graphic url="lsb-t-014-0103-034r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-34v">
+            <desc>Folio 34v</desc>
+            <graphic url="lsb-t-014-0104-034v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-35r">
+            <desc>Folio 35r</desc>
+            <graphic url="lsb-t-014-0105-035r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-35v">
+            <desc>Folio 35v</desc>
+            <graphic url="lsb-t-014-0106-035v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-36r">
+            <desc>Folio 36r</desc>
+            <graphic url="lsb-t-014-0107-036r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-36v">
+            <desc>Folio 36v</desc>
+            <graphic url="lsb-t-014-0108-036v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-37r">
+            <desc>Folio 37r</desc>
+            <graphic url="lsb-t-014-0109-037r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-37v">
+            <desc>Folio 37v</desc>
+            <graphic url="lsb-t-014-0110-037v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-38r">
+            <desc>Folio 38r</desc>
+            <graphic url="lsb-t-014-0111-038r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-38v">
+            <desc>Folio 38v</desc>
+            <graphic url="lsb-t-014-0112-038v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-39r">
+            <desc>Folio 39r</desc>
+            <graphic url="lsb-t-014-0113-039r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-39v">
+            <desc>Folio 39v</desc>
+            <graphic url="lsb-t-014-0114-039v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-40r">
+            <desc>Folio 40r</desc>
+            <graphic url="lsb-t-014-0115-040r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-40v">
+            <desc>Folio 40v</desc>
+            <graphic url="lsb-t-014-0116-040v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-41r">
+            <desc>Folio 41r</desc>
+            <graphic url="lsb-t-014-0117-041r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-41v">
+            <desc>Folio 41v</desc>
+            <graphic url="lsb-t-014-0118-041v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-42r">
+            <desc>Folio 42r</desc>
+            <graphic url="lsb-t-014-0119-042r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-42v">
+            <desc>Folio 42v</desc>
+            <graphic url="lsb-t-014-0120-042v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-43r">
+            <desc>Folio 43r</desc>
+            <graphic url="lsb-t-014-0121-043r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-43v">
+            <desc>Folio 43v</desc>
+            <graphic url="lsb-t-014-0122-043v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-44r">
+            <desc>Folio 44r</desc>
+            <graphic url="lsb-t-014-0123-044r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-44v">
+            <desc>Folio 44v</desc>
+            <graphic url="lsb-t-014-0124-044v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-45r">
+            <desc>Folio 45r</desc>
+            <graphic url="lsb-t-014-0125-045r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-45v">
+            <desc>Folio 45v</desc>
+            <graphic url="lsb-t-014-0126-045v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-46r">
+            <desc>Folio 46r</desc>
+            <graphic url="lsb-t-014-0127-046r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-46v">
+            <desc>Folio 46v</desc>
+            <graphic url="lsb-t-014-0128-046v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-47r">
+            <desc>Folio 47r</desc>
+            <graphic url="lsb-t-014-0129-047r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-47v">
+            <desc>Folio 47v</desc>
+            <graphic url="lsb-t-014-0130-047v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-48r">
+            <desc>Folio 48r</desc>
+            <graphic url="lsb-t-014-0131-048r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-48v">
+            <desc>Folio 48v</desc>
+            <graphic url="lsb-t-014-0132-048v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-49r">
+            <desc>Folio 49r</desc>
+            <graphic url="lsb-t-014-0133-049r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-49v">
+            <desc>Folio 49v</desc>
+            <graphic url="lsb-t-014-0134-049v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-50r">
+            <desc>Folio 50r</desc>
+            <graphic url="lsb-t-014-0135-050r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-50v">
+            <desc>Folio 50v</desc>
+            <graphic url="lsb-t-014-0136-050v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-51r">
+            <desc>Folio 51r</desc>
+            <graphic url="lsb-t-014-0137-051r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-51v">
+            <desc>Folio 51v</desc>
+            <graphic url="lsb-t-014-0138-051v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-52r">
+            <desc>Folio 52r</desc>
+            <graphic url="lsb-t-014-0139-052r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-52v">
+            <desc>Folio 52v</desc>
+            <graphic url="lsb-t-014-0140-052v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-53r">
+            <desc>Folio 53r</desc>
+            <graphic url="lsb-t-014-0141-053r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-53v">
+            <desc>Folio 53v</desc>
+            <graphic url="lsb-t-014-0142-053v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-54r">
+            <desc>Folio 54r</desc>
+            <graphic url="lsb-t-014-0143-054r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-54v">
+            <desc>Folio 54v</desc>
+            <graphic url="lsb-t-014-0144-054v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-55r">
+            <desc>Folio 55r</desc>
+            <graphic url="lsb-t-014-0145-055r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-55v">
+            <desc>Folio 55v</desc>
+            <graphic url="lsb-t-014-0146-055v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-56r">
+            <desc>Folio 56r</desc>
+            <graphic url="lsb-t-014-0147-056r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-56v">
+            <desc>Folio 56v</desc>
+            <graphic url="lsb-t-014-0148-056v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-57r">
+            <desc>Folio 57r</desc>
+            <graphic url="lsb-t-014-0149-057r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-57v">
+            <desc>Folio 57v</desc>
+            <graphic url="lsb-t-014-0150-057v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-58r">
+            <desc>Folio 58r</desc>
+            <graphic url="lsb-t-014-0151-058r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-58v">
+            <desc>Folio 58v</desc>
+            <graphic url="lsb-t-014-0152-058v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-59r">
+            <desc>Folio 59r</desc>
+            <graphic url="lsb-t-014-0153-059r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-59v">
+            <desc>Folio 59v</desc>
+            <graphic url="lsb-t-014-0154-059v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-60r">
+            <desc>Folio 60r</desc>
+            <graphic url="lsb-t-014-0155-060r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-60v">
+            <desc>Folio 60v</desc>
+            <graphic url="lsb-t-014-0156-060v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-61r">
+            <desc>Folio 61r</desc>
+            <graphic url="lsb-t-014-0157-061r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-61v">
+            <desc>Folio 61v</desc>
+            <graphic url="lsb-t-014-0158-061v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-62r">
+            <desc>Folio 62r</desc>
+            <graphic url="lsb-t-014-0159-062r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-62v">
+            <desc>Folio 62v</desc>
+            <graphic url="lsb-t-014-0160-062v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-63r">
+            <desc>Folio 63r</desc>
+            <graphic url="lsb-t-014-0161-063r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-63v">
+            <desc>Folio 63v</desc>
+            <graphic url="lsb-t-014-0162-063v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-64r">
+            <desc>Folio 64r</desc>
+            <graphic url="lsb-t-014-0163-064r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-64v">
+            <desc>Folio 64v</desc>
+            <graphic url="lsb-t-014-0164-064v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-65r">
+            <desc>Folio 65r</desc>
+            <graphic url="lsb-t-014-0165-065r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-65v">
+            <desc>Folio 65v</desc>
+            <graphic url="lsb-t-014-0166-065v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-66r">
+            <desc>Folio 66r</desc>
+            <graphic url="lsb-t-014-0167-066r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-66v">
+            <desc>Folio 66v</desc>
+            <graphic url="lsb-t-014-0168-066v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-67r">
+            <desc>Folio 67r</desc>
+            <graphic url="lsb-t-014-0169-067r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-67v">
+            <desc>Folio 67v</desc>
+            <graphic url="lsb-t-014-0170-067v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-68r">
+            <desc>Folio 68r</desc>
+            <graphic url="lsb-t-014-0171-068r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-68v">
+            <desc>Folio 68v</desc>
+            <graphic url="lsb-t-014-0172-068v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-69r">
+            <desc>Folio 69r</desc>
+            <graphic url="lsb-t-014-0173-069r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-69v">
+            <desc>Folio 69v</desc>
+            <graphic url="lsb-t-014-0174-069v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-70r">
+            <desc>Folio 70r</desc>
+            <graphic url="lsb-t-014-0175-070r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-70v">
+            <desc>Folio 70v</desc>
+            <graphic url="lsb-t-014-0176-070v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-71r">
+            <desc>Folio 71r</desc>
+            <graphic url="lsb-t-014-0177-071r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-71v">
+            <desc>Folio 71v</desc>
+            <graphic url="lsb-t-014-0178-071v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-72r">
+            <desc>Folio 72r</desc>
+            <graphic url="lsb-t-014-0179-072r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-72v">
+            <desc>Folio 72v</desc>
+            <graphic url="lsb-t-014-0180-072v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-73r">
+            <desc>Folio 73r</desc>
+            <graphic url="lsb-t-014-0181-073r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-73v">
+            <desc>Folio 73v</desc>
+            <graphic url="lsb-t-014-0182-073v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-74r">
+            <desc>Folio 74r</desc>
+            <graphic url="lsb-t-014-0183-074r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-74v">
+            <desc>Folio 74v</desc>
+            <graphic url="lsb-t-014-0184-074v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-75r">
+            <desc>Folio 75r</desc>
+            <graphic url="lsb-t-014-0185-075r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-75v">
+            <desc>Folio 75v</desc>
+            <graphic url="lsb-t-014-0186-075v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-76r">
+            <desc>Folio 76r</desc>
+            <graphic url="lsb-t-014-0187-076r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-76v">
+            <desc>Folio 76v</desc>
+            <graphic url="lsb-t-014-0188-076v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-77r">
+            <desc>Folio 77r</desc>
+            <graphic url="lsb-t-014-0189-077r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-77v">
+            <desc>Folio 77v</desc>
+            <graphic url="lsb-t-014-0190-077v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-78r">
+            <desc>Folio 78r</desc>
+            <graphic url="lsb-t-014-0191-078r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-78v">
+            <desc>Folio 78v</desc>
+            <graphic url="lsb-t-014-0192-078v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-79r">
+            <desc>Folio 79r</desc>
+            <graphic url="lsb-t-014-0193-079r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-79v">
+            <desc>Folio 79v</desc>
+            <graphic url="lsb-t-014-0194-079v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-80r">
+            <desc>Folio 80r</desc>
+            <graphic url="lsb-t-014-0195-080r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-80v">
+            <desc>Folio 80v</desc>
+            <graphic url="lsb-t-014-0196-080v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-81r">
+            <desc>Folio 81r</desc>
+            <graphic url="lsb-t-014-0197-081r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-81v">
+            <desc>Folio 81v</desc>
+            <graphic url="lsb-t-014-0198-081v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-82r">
+            <desc>Folio 82r</desc>
+            <graphic url="lsb-t-014-0199-082r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-82v">
+            <desc>Folio 82v</desc>
+            <graphic url="lsb-t-014-0200-082v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-83r">
+            <desc>Folio 83r</desc>
+            <graphic url="lsb-t-014-0201-083r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-83v">
+            <desc>Folio 83v</desc>
+            <graphic url="lsb-t-014-0202-083v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-84r">
+            <desc>Folio 84r</desc>
+            <graphic url="lsb-t-014-0203-084r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-84v">
+            <desc>Folio 84v</desc>
+            <graphic url="lsb-t-014-0204-084v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-85r">
+            <desc>Folio 85r</desc>
+            <graphic url="lsb-t-014-0205-085r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-85v">
+            <desc>Folio 85v</desc>
+            <graphic url="lsb-t-014-0206-085v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-86r">
+            <desc>Folio 86r</desc>
+            <graphic url="lsb-t-014-0207-086r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-86v">
+            <desc>Folio 86v</desc>
+            <graphic url="lsb-t-014-0208-086v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-87r">
+            <desc>Folio 87r</desc>
+            <graphic url="lsb-t-014-0209-087r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-87v">
+            <desc>Folio 87v</desc>
+            <graphic url="lsb-t-014-0210-087v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-88r">
+            <desc>Folio 88r</desc>
+            <graphic url="lsb-t-014-0211-088r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-88v">
+            <desc>Folio 88v</desc>
+            <graphic url="lsb-t-014-0212-088v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-89r">
+            <desc>Folio 89r</desc>
+            <graphic url="lsb-t-014-0213-089r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-89v">
+            <desc>Folio 89v</desc>
+            <graphic url="lsb-t-014-0214-089v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-90r">
+            <desc>Folio 90r</desc>
+            <graphic url="lsb-t-014-0215-090r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-90v">
+            <desc>Folio 90v</desc>
+            <graphic url="lsb-t-014-0216-090v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-91r">
+            <desc>Folio 91r</desc>
+            <graphic url="lsb-t-014-0217-091r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-91v">
+            <desc>Folio 91v</desc>
+            <graphic url="lsb-t-014-0218-091v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-92r">
+            <desc>Folio 92r</desc>
+            <graphic url="lsb-t-014-0219-092r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-92v">
+            <desc>Folio 92v</desc>
+            <graphic url="lsb-t-014-0220-092v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-93r">
+            <desc>Folio 93r</desc>
+            <graphic url="lsb-t-014-0221-093r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-93v">
+            <desc>Folio 93v</desc>
+            <graphic url="lsb-t-014-0222-093v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-94r">
+            <desc>Folio 94r</desc>
+            <graphic url="lsb-t-014-0223-094r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-94v">
+            <desc>Folio 94v</desc>
+            <graphic url="lsb-t-014-0224-094v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-95r">
+            <desc>Folio 95r</desc>
+            <graphic url="lsb-t-014-0225-095r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-95v">
+            <desc>Folio 95v</desc>
+            <graphic url="lsb-t-014-0226-095v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-96r">
+            <desc>Folio 96r</desc>
+            <graphic url="lsb-t-014-0227-096r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-96v">
+            <desc>Folio 96v</desc>
+            <graphic url="lsb-t-014-0228-096v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-97r">
+            <desc>Folio 97r</desc>
+            <graphic url="lsb-t-014-0229-097r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-97v">
+            <desc>Folio 97v</desc>
+            <graphic url="lsb-t-014-0230-097v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-98r">
+            <desc>Folio 98r</desc>
+            <graphic url="lsb-t-014-0231-098r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-98v">
+            <desc>Folio 98v</desc>
+            <graphic url="lsb-t-014-0232-098v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-99r">
+            <desc>Folio 99r</desc>
+            <graphic url="lsb-t-014-0233-099r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-99v">
+            <desc>Folio 99v</desc>
+            <graphic url="lsb-t-014-0234-099v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-100r">
+            <desc>Folio 100r</desc>
+            <graphic url="lsb-t-014-0235-100r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-100v">
+            <desc>Folio 100v</desc>
+            <graphic url="lsb-t-014-0236-100v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-101r">
+            <desc>Folio 101r</desc>
+            <graphic url="lsb-t-014-0237-101r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-101v">
+            <desc>Folio 101v</desc>
+            <graphic url="lsb-t-014-0238-101v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-102r">
+            <desc>Folio 102r</desc>
+            <graphic url="lsb-t-014-0239-102r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-102v">
+            <desc>Folio 102v</desc>
+            <graphic url="lsb-t-014-0240-102v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-103r">
+            <desc>Folio 103r</desc>
+            <graphic url="lsb-t-014-0241-103r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-103v">
+            <desc>Folio 103v</desc>
+            <graphic url="lsb-t-014-0242-103v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-104r">
+            <desc>Folio 104r</desc>
+            <graphic url="lsb-t-014-0243-104r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-104v">
+            <desc>Folio 104v</desc>
+            <graphic url="lsb-t-014-0244-104v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-105r">
+            <desc>Folio 105r</desc>
+            <graphic url="lsb-t-014-0245-105r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-105v">
+            <desc>Folio 105v</desc>
+            <graphic url="lsb-t-014-0246-105v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-106r">
+            <desc>Folio 106r</desc>
+            <graphic url="lsb-t-014-0247-106r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-106v">
+            <desc>Folio 106v</desc>
+            <graphic url="lsb-t-014-0248-106v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-107r">
+            <desc>Folio 107r</desc>
+            <graphic url="lsb-t-014-0249-107r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-107v">
+            <desc>Folio 107v</desc>
+            <graphic url="lsb-t-014-0250-107v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-108r">
+            <desc>Folio 108r</desc>
+            <graphic url="lsb-t-014-0251-108r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-108v">
+            <desc>Folio 108v</desc>
+            <graphic url="lsb-t-014-0252-108v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-109r">
+            <desc>Folio 109r</desc>
+            <graphic url="lsb-t-014-0253-109r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-109v">
+            <desc>Folio 109v</desc>
+            <graphic url="lsb-t-014-0254-109v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-110r">
+            <desc>Folio 110r</desc>
+            <graphic url="lsb-t-014-0255-110r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-110v">
+            <desc>Folio 110v</desc>
+            <graphic url="lsb-t-014-0256-110v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-111r">
+            <desc>Folio 111r</desc>
+            <graphic url="lsb-t-014-0257-111r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-111v">
+            <desc>Folio 111v</desc>
+            <graphic url="lsb-t-014-0258-111v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-112r">
+            <desc>Folio 112r</desc>
+            <graphic url="lsb-t-014-0259-112r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-112v">
+            <desc>Folio 112v</desc>
+            <graphic url="lsb-t-014-0260-112v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-113r">
+            <desc>Folio 113r</desc>
+            <graphic url="lsb-t-014-0261-113r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-113v">
+            <desc>Folio 113v</desc>
+            <graphic url="lsb-t-014-0262-113v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-114r">
+            <desc>Folio 114r</desc>
+            <graphic url="lsb-t-014-0263-114r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-114v">
+            <desc>Folio 114v</desc>
+            <graphic url="lsb-t-014-0264-114v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-115r">
+            <desc>Folio 115r</desc>
+            <graphic url="lsb-t-014-0265-115r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-115v">
+            <desc>Folio 115v</desc>
+            <graphic url="lsb-t-014-0266-115v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-116r">
+            <desc>Folio 116r</desc>
+            <graphic url="lsb-t-014-0267-116r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-116v">
+            <desc>Folio 116v</desc>
+            <graphic url="lsb-t-014-0268-116v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-117r">
+            <desc>Folio 117r</desc>
+            <graphic url="lsb-t-014-0269-117r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-117v">
+            <desc>Folio 117v</desc>
+            <graphic url="lsb-t-014-0270-117v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-118r">
+            <desc>Folio 118r</desc>
+            <graphic url="lsb-t-014-0271-118r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-118v">
+            <desc>Folio 118v</desc>
+            <graphic url="lsb-t-014-0272-118v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-119r">
+            <desc>Folio 119r</desc>
+            <graphic url="lsb-t-014-0273-119r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-119v">
+            <desc>Folio 119v</desc>
+            <graphic url="lsb-t-014-0274-119v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-120r">
+            <desc>Folio 120r</desc>
+            <graphic url="lsb-t-014-0275-120r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-120v">
+            <desc>Folio 120v</desc>
+            <graphic url="lsb-t-014-0276-120v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-121r">
+            <desc>Folio 121r</desc>
+            <graphic url="lsb-t-014-0277-121r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-121v">
+            <desc>Folio 121v</desc>
+            <graphic url="lsb-t-014-0278-121v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-122r">
+            <desc>Folio 122r</desc>
+            <graphic url="lsb-t-014-0279-122r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-122v">
+            <desc>Folio 122v</desc>
+            <graphic url="lsb-t-014-0280-122v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-123r">
+            <desc>Folio 123r</desc>
+            <graphic url="lsb-t-014-0281-123r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-123v">
+            <desc>Folio 123v</desc>
+            <graphic url="lsb-t-014-0282-123v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-124r">
+            <desc>Folio 124r</desc>
+            <graphic url="lsb-t-014-0283-124r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-124v">
+            <desc>Folio 124v</desc>
+            <graphic url="lsb-t-014-0284-124v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-125r">
+            <desc>Folio 125r</desc>
+            <graphic url="lsb-t-014-0285-125r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-125v">
+            <desc>Folio 125v</desc>
+            <graphic url="lsb-t-014-0286-125v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-126r">
+            <desc>Folio 126r</desc>
+            <graphic url="lsb-t-014-0287-126r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-126v">
+            <desc>Folio 126v</desc>
+            <graphic url="lsb-t-014-0288-126v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-127r">
+            <desc>Folio 127r</desc>
+            <graphic url="lsb-t-014-0289-127r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-127v">
+            <desc>Folio 127v</desc>
+            <graphic url="lsb-t-014-0290-127v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-128r">
+            <desc>Folio 128r</desc>
+            <graphic url="lsb-t-014-0291-128r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-128v">
+            <desc>Folio 128v</desc>
+            <graphic url="lsb-t-014-0292-128v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-129r">
+            <desc>Folio 129r</desc>
+            <graphic url="lsb-t-014-0293-129r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-129v">
+            <desc>Folio 129v</desc>
+            <graphic url="lsb-t-014-0294-129v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-130r">
+            <desc>Folio 130r</desc>
+            <graphic url="lsb-t-014-0295-130r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-130v">
+            <desc>Folio 130v</desc>
+            <graphic url="lsb-t-014-0296-130v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-131r">
+            <desc>Folio 131r</desc>
+            <graphic url="lsb-t-014-0297-131r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-131v">
+            <desc>Folio 131v</desc>
+            <graphic url="lsb-t-014-0298-131v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-132r">
+            <desc>Folio 132r</desc>
+            <graphic url="lsb-t-014-0299-132r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-132v">
+            <desc>Folio 132v</desc>
+            <graphic url="lsb-t-014-0300-132v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-133r">
+            <desc>Folio 133r</desc>
+            <graphic url="lsb-t-014-0301-133r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-133v">
+            <desc>Folio 133v</desc>
+            <graphic url="lsb-t-014-0302-133v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-134r">
+            <desc>Folio 134r</desc>
+            <graphic url="lsb-t-014-0303-134r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-134v">
+            <desc>Folio 134v</desc>
+            <graphic url="lsb-t-014-0304-134v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-135r">
+            <desc>Folio 135r</desc>
+            <graphic url="lsb-t-014-0305-135r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-135v">
+            <desc>Folio 135v</desc>
+            <graphic url="lsb-t-014-0306-135v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-136r">
+            <desc>Folio 136r</desc>
+            <graphic url="lsb-t-014-0307-136r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-136v">
+            <desc>Folio 136v</desc>
+            <graphic url="lsb-t-014-0308-136v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-137r">
+            <desc>Folio 137r</desc>
+            <graphic url="lsb-t-014-0309-137r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-137v">
+            <desc>Folio 137v</desc>
+            <graphic url="lsb-t-014-0310-137v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-138r">
+            <desc>Folio 138r</desc>
+            <graphic url="lsb-t-014-0311-138r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-138v">
+            <desc>Folio 138v</desc>
+            <graphic url="lsb-t-014-0312-138v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-139r">
+            <desc>Folio 139r</desc>
+            <graphic url="lsb-t-014-0313-139r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-139v">
+            <desc>Folio 139v</desc>
+            <graphic url="lsb-t-014-0314-139v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-140r">
+            <desc>Folio 140r</desc>
+            <graphic url="lsb-t-014-0315-140r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-140v">
+            <desc>Folio 140v</desc>
+            <graphic url="lsb-t-014-0316-140v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-141r">
+            <desc>Folio 141r</desc>
+            <graphic url="lsb-t-014-0317-141r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-141v">
+            <desc>Folio 141v</desc>
+            <graphic url="lsb-t-014-0318-141v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-142r">
+            <desc>Folio 142r</desc>
+            <graphic url="lsb-t-014-0319-142r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-142v">
+            <desc>Folio 142v</desc>
+            <graphic url="lsb-t-014-0320-142v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-143r">
+            <desc>Folio 143r</desc>
+            <graphic url="lsb-t-014-0321-143r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-143v">
+            <desc>Folio 143v</desc>
+            <graphic url="lsb-t-014-0322-143v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-144r">
+            <desc>Folio 144r</desc>
+            <graphic url="lsb-t-014-0323-144r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-144v">
+            <desc>Folio 144v</desc>
+            <graphic url="lsb-t-014-0324-144v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-145r">
+            <desc>Folio 145r</desc>
+            <graphic url="lsb-t-014-0325-145r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-145v">
+            <desc>Folio 145v</desc>
+            <graphic url="lsb-t-014-0326-145v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-146r">
+            <desc>Folio 146r</desc>
+            <graphic url="lsb-t-014-0327-146r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-146v">
+            <desc>Folio 146v</desc>
+            <graphic url="lsb-t-014-0328-146v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-147r">
+            <desc>Folio 147r</desc>
+            <graphic url="lsb-t-014-0329-147r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-147v">
+            <desc>Folio 147v</desc>
+            <graphic url="lsb-t-014-0330-147v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-148r">
+            <desc>Folio 148r</desc>
+            <graphic url="lsb-t-014-0331-148r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-148v">
+            <desc>Folio 148v</desc>
+            <graphic url="lsb-t-014-0332-148v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-149r">
+            <desc>Folio 149r</desc>
+            <graphic url="lsb-t-014-0333-149r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-149v">
+            <desc>Folio 149v</desc>
+            <graphic url="lsb-t-014-0334-149v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-150r">
+            <desc>Folio 150r</desc>
+            <graphic url="lsb-t-014-0335-150r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-150v">
+            <desc>Folio 150v</desc>
+            <graphic url="lsb-t-014-0336-150v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-151r">
+            <desc>Folio 151r</desc>
+            <graphic url="lsb-t-014-0337-151r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-151v">
+            <desc>Folio 151v</desc>
+            <graphic url="lsb-t-014-0338-151v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-152r">
+            <desc>Folio 152r</desc>
+            <graphic url="lsb-t-014-0339-152r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-152v">
+            <desc>Folio 152v</desc>
+            <graphic url="lsb-t-014-0340-152v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-153r">
+            <desc>Folio 153r</desc>
+            <graphic url="lsb-t-014-0341-153r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-153v">
+            <desc>Folio 153v</desc>
+            <graphic url="lsb-t-014-0342-153v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-154r">
+            <desc>Folio 154r</desc>
+            <graphic url="lsb-t-014-0343-154r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-154v">
+            <desc>Folio 154v</desc>
+            <graphic url="lsb-t-014-0344-154v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-155r">
+            <desc>Folio 155r</desc>
+            <graphic url="lsb-t-014-0345-155r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-155v">
+            <desc>Folio 155v</desc>
+            <graphic url="lsb-t-014-0346-155v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-156r">
+            <desc>Folio 156r</desc>
+            <graphic url="lsb-t-014-0347-156r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-156v">
+            <desc>Folio 156v</desc>
+            <graphic url="lsb-t-014-0348-156v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-157r">
+            <desc>Folio 157r</desc>
+            <graphic url="lsb-t-014-0349-157r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-157v">
+            <desc>Folio 157v</desc>
+            <graphic url="lsb-t-014-0350-157v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-158r">
+            <desc>Folio 158r</desc>
+            <graphic url="lsb-t-014-0351-158r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-158v">
+            <desc>Folio 158v</desc>
+            <graphic url="lsb-t-014-0352-158v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-159r">
+            <desc>Folio 159r</desc>
+            <graphic url="lsb-t-014-0353-159r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-159v">
+            <desc>Folio 159v</desc>
+            <graphic url="lsb-t-014-0354-159v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-160r">
+            <desc>Folio 160r</desc>
+            <graphic url="lsb-t-014-0355-160r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-160v">
+            <desc>Folio 160v</desc>
+            <graphic url="lsb-t-014-0356-160v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-161r">
+            <desc>Folio 161r</desc>
+            <graphic url="lsb-t-014-0357-161r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-161v">
+            <desc>Folio 161v</desc>
+            <graphic url="lsb-t-014-0358-161v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-162r">
+            <desc>Folio 162r</desc>
+            <graphic url="lsb-t-014-0359-162r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-162v">
+            <desc>Folio 162v</desc>
+            <graphic url="lsb-t-014-0360-162v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-163r">
+            <desc>Folio 163r</desc>
+            <graphic url="lsb-t-014-0361-163r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-163v">
+            <desc>Folio 163v</desc>
+            <graphic url="lsb-t-014-0362-163v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-164r">
+            <desc>Folio 164r</desc>
+            <graphic url="lsb-t-014-0363-164r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-164v">
+            <desc>Folio 164v</desc>
+            <graphic url="lsb-t-014-0364-164v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-165r">
+            <desc>Folio 165r</desc>
+            <graphic url="lsb-t-014-0365-165r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-165v">
+            <desc>Folio 165v</desc>
+            <graphic url="lsb-t-014-0366-165v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-166r">
+            <desc>Folio 166r</desc>
+            <graphic url="lsb-t-014-0367-166r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-166v">
+            <desc>Folio 166v</desc>
+            <graphic url="lsb-t-014-0368-166v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-167r">
+            <desc>Folio 167r</desc>
+            <graphic url="lsb-t-014-0369-167r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-167v">
+            <desc>Folio 167v</desc>
+            <graphic url="lsb-t-014-0370-167v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-168r">
+            <desc>Folio 168r</desc>
+            <graphic url="lsb-t-014-0371-168r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-168v">
+            <desc>Folio 168v</desc>
+            <graphic url="lsb-t-014-0372-168v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-169r">
+            <desc>Folio 169r</desc>
+            <graphic url="lsb-t-014-0373-169r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-169v">
+            <desc>Folio 169v</desc>
+            <graphic url="lsb-t-014-0374-169v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-170r">
+            <desc>Folio 170r</desc>
+            <graphic url="lsb-t-014-0375-170r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-170v">
+            <desc>Folio 170v</desc>
+            <graphic url="lsb-t-014-0376-170v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-171r">
+            <desc>Folio 171r</desc>
+            <graphic url="lsb-t-014-0377-171r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-171v">
+            <desc>Folio 171v</desc>
+            <graphic url="lsb-t-014-0378-171v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-172r">
+            <desc>Folio 172r</desc>
+            <graphic url="lsb-t-014-0379-172r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-172v">
+            <desc>Folio 172v</desc>
+            <graphic url="lsb-t-014-0380-172v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-173r">
+            <desc>Folio 173r</desc>
+            <graphic url="lsb-t-014-0381-173r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-173v">
+            <desc>Folio 173v</desc>
+            <graphic url="lsb-t-014-0382-173v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-174r">
+            <desc>Folio 174r</desc>
+            <graphic url="lsb-t-014-0383-174r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-174v">
+            <desc>Folio 174v</desc>
+            <graphic url="lsb-t-014-0384-174v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-175r">
+            <desc>Folio 175r</desc>
+            <graphic url="lsb-t-014-0385-175r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-175v">
+            <desc>Folio 175v</desc>
+            <graphic url="lsb-t-014-0386-175v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-176r">
+            <desc>Folio 176r</desc>
+            <graphic url="lsb-t-014-0387-176r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-176v">
+            <desc>Folio 176v</desc>
+            <graphic url="lsb-t-014-0388-176v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-177r">
+            <desc>Folio 177r</desc>
+            <graphic url="lsb-t-014-0389-177r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-177v">
+            <desc>Folio 177v</desc>
+            <graphic url="lsb-t-014-0390-177v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-178r">
+            <desc>Folio 178r</desc>
+            <graphic url="lsb-t-014-0391-178r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-178v">
+            <desc>Folio 178v</desc>
+            <graphic url="lsb-t-014-0392-178v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-179r">
+            <desc>Folio 179r</desc>
+            <graphic url="lsb-t-014-0393-179r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-179v">
+            <desc>Folio 179v</desc>
+            <graphic url="lsb-t-014-0394-179v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-180r">
+            <desc>Folio 180r</desc>
+            <graphic url="lsb-t-014-0395-180r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-180v">
+            <desc>Folio 180v</desc>
+            <graphic url="lsb-t-014-0396-180v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-181r">
+            <desc>Folio 181r</desc>
+            <graphic url="lsb-t-014-0397-181r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-181v">
+            <desc>Folio 181v</desc>
+            <graphic url="lsb-t-014-0398-181v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-182r">
+            <desc>Folio 182r</desc>
+            <graphic url="lsb-t-014-0399-182r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-182v">
+            <desc>Folio 182v</desc>
+            <graphic url="lsb-t-014-0400-182v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-183r">
+            <desc>Folio 183r</desc>
+            <graphic url="lsb-t-014-0401-183r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-183v">
+            <desc>Folio 183v</desc>
+            <graphic url="lsb-t-014-0402-183v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-184r">
+            <desc>Folio 184r</desc>
+            <graphic url="lsb-t-014-0403-184r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-184v">
+            <desc>Folio 184v</desc>
+            <graphic url="lsb-t-014-0404-184v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-185r">
+            <desc>Folio 185r</desc>
+            <graphic url="lsb-t-014-0405-185r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-185v">
+            <desc>Folio 185v</desc>
+            <graphic url="lsb-t-014-0406-185v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-186r">
+            <desc>Folio 186r</desc>
+            <graphic url="lsb-t-014-0407-186r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-186v">
+            <desc>Folio 186v</desc>
+            <graphic url="lsb-t-014-0408-186v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-187r">
+            <desc>Folio 187r</desc>
+            <graphic url="lsb-t-014-0409-187r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-187v">
+            <desc>Folio 187v</desc>
+            <graphic url="lsb-t-014-0410-187v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-188r">
+            <desc>Folio 188r</desc>
+            <graphic url="lsb-t-014-0411-188r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-188v">
+            <desc>Folio 188v</desc>
+            <graphic url="lsb-t-014-0412-188v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-189r">
+            <desc>Folio 189r</desc>
+            <graphic url="lsb-t-014-0413-189r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-189v">
+            <desc>Folio 189v</desc>
+            <graphic url="lsb-t-014-0414-189v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-190r">
+            <desc>Folio 190r</desc>
+            <graphic url="lsb-t-014-0415-190r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-190v">
+            <desc>Folio 190v</desc>
+            <graphic url="lsb-t-014-0416-190v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-191r">
+            <desc>Folio 191r</desc>
+            <graphic url="lsb-t-014-0417-191r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-191v">
+            <desc>Folio 191v</desc>
+            <graphic url="lsb-t-014-0418-191v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-192r">
+            <desc>Folio 192r</desc>
+            <graphic url="lsb-t-014-0419-192r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-192v">
+            <desc>Folio 192v</desc>
+            <graphic url="lsb-t-014-0420-192v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-193r">
+            <desc>Folio 193r</desc>
+            <graphic url="lsb-t-014-0421-193r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-193v">
+            <desc>Folio 193v</desc>
+            <graphic url="lsb-t-014-0422-193v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-194r">
+            <desc>Folio 194r</desc>
+            <graphic url="lsb-t-014-0423-194r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-194v">
+            <desc>Folio 194v</desc>
+            <graphic url="lsb-t-014-0424-194v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-195r">
+            <desc>Folio 195r</desc>
+            <graphic url="lsb-t-014-0425-195r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-195v">
+            <desc>Folio 195v</desc>
+            <graphic url="lsb-t-014-0426-195v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-196r">
+            <desc>Folio 196r</desc>
+            <graphic url="lsb-t-014-0427-196r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-196v">
+            <desc>Folio 196v</desc>
+            <graphic url="lsb-t-014-0428-196v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-197r">
+            <desc>Folio 197r</desc>
+            <graphic url="lsb-t-014-0429-197r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-197v">
+            <desc>Folio 197v</desc>
+            <graphic url="lsb-t-014-0430-197v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-198r">
+            <desc>Folio 198r</desc>
+            <graphic url="lsb-t-014-0431-198r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-198v">
+            <desc>Folio 198v</desc>
+            <graphic url="lsb-t-014-0432-198v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-199r">
+            <desc>Folio 199r</desc>
+            <graphic url="lsb-t-014-0433-199r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-199v">
+            <desc>Folio 199v</desc>
+            <graphic url="lsb-t-014-0434-199v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-200r">
+            <desc>Folio 200r</desc>
+            <graphic url="lsb-t-014-0435-200r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-200v">
+            <desc>Folio 200v</desc>
+            <graphic url="lsb-t-014-0436-200v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-201r">
+            <desc>Folio 201r</desc>
+            <graphic url="lsb-t-014-0437-201r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-201v">
+            <desc>Folio 201v</desc>
+            <graphic url="lsb-t-014-0438-201v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-202r">
+            <desc>Folio 202r</desc>
+            <graphic url="lsb-t-014-0439-202r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-202v">
+            <desc>Folio 202v</desc>
+            <graphic url="lsb-t-014-0440-202v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-203r">
+            <desc>Folio 203r</desc>
+            <graphic url="lsb-t-014-0441-203r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-203v">
+            <desc>Folio 203v</desc>
+            <graphic url="lsb-t-014-0442-203v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-204r">
+            <desc>Folio 204r</desc>
+            <graphic url="lsb-t-014-0443-204r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-204v">
+            <desc>Folio 204v</desc>
+            <graphic url="lsb-t-014-0444-204v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-205r">
+            <desc>Folio 205r</desc>
+            <graphic url="lsb-t-014-0445-205r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-205v">
+            <desc>Folio 205v</desc>
+            <graphic url="lsb-t-014-0446-205v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-206r">
+            <desc>Folio 206r</desc>
+            <graphic url="lsb-t-014-0447-206r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-206v">
+            <desc>Folio 206v</desc>
+            <graphic url="lsb-t-014-0448-206v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-207r">
+            <desc>Folio 207r</desc>
+            <graphic url="lsb-t-014-0449-207r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-207v">
+            <desc>Folio 207v</desc>
+            <graphic url="lsb-t-014-0450-207v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-208r">
+            <desc>Folio 208r</desc>
+            <graphic url="lsb-t-014-0451-208r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-208v">
+            <desc>Folio 208v</desc>
+            <graphic url="lsb-t-014-0452-208v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-209r">
+            <desc>Folio 209r</desc>
+            <graphic url="lsb-t-014-0453-209r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-209v">
+            <desc>Folio 209v</desc>
+            <graphic url="lsb-t-014-0454-209v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-210r">
+            <desc>Folio 210r</desc>
+            <graphic url="lsb-t-014-0455-210r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-210v">
+            <desc>Folio 210v</desc>
+            <graphic url="lsb-t-014-0456-210v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-211r">
+            <desc>Folio 211r</desc>
+            <graphic url="lsb-t-014-0457-211r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-211v">
+            <desc>Folio 211v</desc>
+            <graphic url="lsb-t-014-0458-211v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-212r">
+            <desc>Folio 212r</desc>
+            <graphic url="lsb-t-014-0459-212r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-212v">
+            <desc>Folio 212v</desc>
+            <graphic url="lsb-t-014-0460-212v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-213r">
+            <desc>Folio 213r</desc>
+            <graphic url="lsb-t-014-0461-213r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-213v">
+            <desc>Folio 213v</desc>
+            <graphic url="lsb-t-014-0462-213v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-214r">
+            <desc>Folio 214r</desc>
+            <graphic url="lsb-t-014-0463-214r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-214v">
+            <desc>Folio 214v</desc>
+            <graphic url="lsb-t-014-0464-214v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-215r">
+            <desc>Folio 215r</desc>
+            <graphic url="lsb-t-014-0465-215r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-215v">
+            <desc>Folio 215v</desc>
+            <graphic url="lsb-t-014-0466-215v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-216r">
+            <desc>Folio 216r</desc>
+            <graphic url="lsb-t-014-0467-216r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-216v">
+            <desc>Folio 216v</desc>
+            <graphic url="lsb-t-014-0468-216v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-217r">
+            <desc>Folio 217r</desc>
+            <graphic url="lsb-t-014-0469-217r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-217v">
+            <desc>Folio 217v</desc>
+            <graphic url="lsb-t-014-0470-217v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-218r">
+            <desc>Folio 218r</desc>
+            <graphic url="lsb-t-014-0471-218r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-218v">
+            <desc>Folio 218v</desc>
+            <graphic url="lsb-t-014-0472-218v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-219r">
+            <desc>Folio 219r</desc>
+            <graphic url="lsb-t-014-0473-219r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-219v">
+            <desc>Folio 219v</desc>
+            <graphic url="lsb-t-014-0474-219v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-220r">
+            <desc>Folio 220r</desc>
+            <graphic url="lsb-t-014-0475-220r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-220v">
+            <desc>Folio 220v</desc>
+            <graphic url="lsb-t-014-0476-220v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-221r">
+            <desc>Folio 221r</desc>
+            <graphic url="lsb-t-014-0477-221r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-221v">
+            <desc>Folio 221v</desc>
+            <graphic url="lsb-t-014-0478-221v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-222r">
+            <desc>Folio 222r</desc>
+            <graphic url="lsb-t-014-0479-222r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-222v">
+            <desc>Folio 222v</desc>
+            <graphic url="lsb-t-014-0480-222v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-223r">
+            <desc>Folio 223r</desc>
+            <graphic url="lsb-t-014-0481-223r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-223v">
+            <desc>Folio 223v</desc>
+            <graphic url="lsb-t-014-0482-223v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-224r">
+            <desc>Folio 224r</desc>
+            <graphic url="lsb-t-014-0483-224r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-224v">
+            <desc>Folio 224v</desc>
+            <graphic url="lsb-t-014-0484-224v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-225r">
+            <desc>Folio 225r</desc>
+            <graphic url="lsb-t-014-0485-225r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-225v">
+            <desc>Folio 225v</desc>
+            <graphic url="lsb-t-014-0486-225v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-226r">
+            <desc>Folio 226r</desc>
+            <graphic url="lsb-t-014-0487-226r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-226v">
+            <desc>Folio 226v</desc>
+            <graphic url="lsb-t-014-0488-226v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-227r">
+            <desc>Folio 227r</desc>
+            <graphic url="lsb-t-014-0489-227r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-227v">
+            <desc>Folio 227v</desc>
+            <graphic url="lsb-t-014-0490-227v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-228r">
+            <desc>Folio 228r</desc>
+            <graphic url="lsb-t-014-0491-228r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-228v">
+            <desc>Folio 228v</desc>
+            <graphic url="lsb-t-014-0492-228v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-229r">
+            <desc>Folio 229r</desc>
+            <graphic url="lsb-t-014-0493-229r.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-229v">
+            <desc>Folio 229v</desc>
+            <graphic url="lsb-t-014-0494-229v.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-cr">
+            <desc>Folio cr</desc>
+            <graphic url="lsb-t-014-0495-cr.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-cv">
+            <desc>Folio cv</desc>
+            <graphic url="lsb-t-014-0496-cv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-dr">
+            <desc>Folio dr</desc>
+            <graphic url="lsb-t-014-0497-dr.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-dv">
+            <desc>Folio dv</desc>
+            <graphic url="lsb-t-014-0498-dv.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-RCI">
+            <desc>Right cover, inside</desc>
+            <graphic url="lsb-t-014-0499-RCI.tif"/>
+        </surface>
+        <surface xml:id="lsb-t-014-RCO">
+            <desc>Right cover, outside</desc>
+            <graphic url="lsb-t-014-0500-RCO.tif"/>
+        </surface>
+    </facsimile>
+</TEI>

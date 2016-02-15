@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" version="5.0" xml:id="lsb-saml-024-26">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>Linköping Diocesan Library, Saml 24:26</title>
+                <respStmt xml:id="BC">
+                    <persName>
+                        <forename>Barbara</forename>
+                        <surname>Crostini Lappin</surname>
+                    </persName>
+                    <resp key="cataloguer"/>                    
+                </respStmt>                
+                <respStmt xml:id="PG">
+                    <persName>
+                        <forename>Patrik</forename>
+                        <surname>Granholm</surname>
+                    </persName>
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Uppsala University Library</authority>
+                <pubPlace>Uppsala</pubPlace>
+                <date when="2015"/>
+                <availability status="free">
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Sweden</country>
+                        <settlement>Linköping</settlement>
+                        <institution>Linköping Diocesan Library</institution>
+                        <repository>Linköping Diocesan Library</repository>
+                        <idno type="shelfmark">Saml 24:26</idno>
+                    </msIdentifier>
+                    <head/>
+                    <msContents>
+                        <msItem class="left_endleaf">
+                            <locus from="" to="" scheme="folios"/>
+                            <note/>
+                        </msItem>
+                        <msItem class="right_endleaf">
+                            <locus from="" to="" scheme="folios"/>
+                            <note/>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <extent>
+                                    <measure type="left_flyleaves" quantity=""/>
+                                    <measure type="right_flyleaves" quantity=""/>
+                                </extent>
+                                <foliation/>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                    <history>
+                        <origin/>
+                        <provenance/>
+                        <acquisition/>
+                    </history>
+                    <additional>
+                        <listBibl> </listBibl>
+                    </additional>
+                    <msPart>
+                        <msIdentifier>
+                            <idno type="codicological_unit">1</idno>
+                        </msIdentifier>
+                        <msContents>
+                            
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc material="parchment">
+                                    <support>
+                                        <p/>
+                                    </support>
+                                    <extent>
+                                        <measure type="textblock_leaves" quantity="1"/>
+                                    </extent>
+                                    <foliation/>
+                                </supportDesc>
+                            </objectDesc>
+                        </physDesc>
+                        <history>
+                            <origin/>
+                            <provenance/>
+                            <acquisition/>
+                        </history>
+                    </msPart>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc status="draft">
+            <change status="draft" when="2016-01-19" who="#PG">First draft</change>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface xml:id="lsb-saml-024-26-001r">
+            <desc>Folio 1r</desc>
+            <graphic url="lsb-saml-024-26-0001-001r.tif"/>
+        </surface>
+        <surface xml:id="saml-024-26-001v">
+            <desc>Folio 1v</desc>
+            <graphic url="lsb-saml-024-26-0002-001v.tif"/>
+        </surface>
+    </facsimile>
+</TEI>

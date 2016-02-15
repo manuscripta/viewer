@@ -4,13 +4,16 @@ $(document).ready(function () {
     $('#diva-wrapper').diva({                
         iipServerURL: "http://www.manuscripta.se/iipsrv/iipsrv.fcgi",
         objectData: "metadata/diva/" + shelfmark + ".json",
-        imageDir: "/srv/" + shelfmark,
+        imageDir: shelfmark,
+//      If using IIIF omit iipServerURL and imageDir and comment out the following line
+//      objectData: "iiif/" + shelfmark + "/manifest.json",
         viewerWidthPadding: 0,        
         enableAutoWidth: false,
         enableAutoHeight: false,
+        fixedHeightGrid: true,
         enableFilename: false,
         minZoomLevel: 0,
-        zoomLevel: 1,
+        zoomLevel: 2,
         pagesPerRow: 2,
         maxPagesPerRow: 10,        
         verticallyOriented: true,

@@ -131,19 +131,19 @@
                             <handNote>
                                 <locus from="L2r" to="220r" scheme="folios"/>
                                 <persName role="librarian" cert="medium" evidence="conjecture">
-                        <forename>Pehr</forename>
-                        <forename>Fabian</forename>
-                        <surname>Aurivillius</surname>
-                    </persName>
+                           <forename>Pehr</forename>
+                           <forename>Fabian</forename>
+                           <surname>Aurivillius</surname>
+                        </persName>
                                 Pagination and brief marginal notes in a <term type="script">modern</term> hand, for example in the upper margin on <locus from="28v" to="28v" scheme="folios"/>.
                             </handNote>
                             <handNote>
                                 <locus from="1r" to="220r" scheme="folios"/>
                                 <persName role="cataloguer" cert="high" evidence="external">
-                        <forename>Stig</forename>
-                        <forename>Yngve</forename>
-                        <surname>Rudberg</surname>
-                    </persName>
+                           <forename>Stig</forename>
+                           <forename>Yngve</forename>
+                           <surname>Rudberg</surname>
+                        </persName>
                                 Foliation in pencil in a <term type="script">modern</term> hand.
                             </handNote>
                         </handDesc>
@@ -169,7 +169,7 @@
                         </bindingDesc>
                     </physDesc>
                     <history>
-                        <origin>Probably written in the <origDate from="1250" to="1300">second half of the thirteenth century</origDate>. Place unknown.</origin>
+                        <origin>Probably written in the <origDate notBefore="1250" notAfter="1300">second half of the thirteenth century</origDate>. Place unknown.</origin>
                         <provenance>At some point the volume came to <placeName type="settlement">Venice</placeName>, where it came on the market in the <date notBefore="1692" notAfter="1694">late seventeenth century</date>.</provenance>
                         <acquisition>It was acquired there by <persName>
                         <forename>Johan</forename>
@@ -181,91 +181,91 @@
                     <additional>
                         <listBibl>
                             <bibl>
-                                <ref target="http://www.manuscripta.se/bibliography/Benzelius1706"/>
-               <author>
-                    <persName>
-                        <forename>Erik</forename>
-                        <surname>Benzelius</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/9857012</idno>
-                </author>
-               <title level="m">Catalogus centuriae librorum rarissimorum manuscript. et partim impressorum, arabicorum, persicorum, turcicorum, græcorum, latinorum, etc.</title>
-               <pubPlace>Uppsala</pubPlace>
-               <date when="1706"/>
-            <citedRange unit="page" from="49" to="49"/>
-                            </bibl>
+                        <ref target="http://www.manuscripta.se/bibliography/Benzelius1706"/>
+                        <author>
+                           <persName>
+                              <forename>Erik</forename>
+                              <surname>Benzelius</surname>
+                           </persName>
+                           <idno type="URI">http://viaf.org/viaf/9857012</idno>
+                        </author>
+                        <title level="m">Catalogus centuriae librorum rarissimorum manuscript. et partim impressorum, arabicorum, persicorum, turcicorum, græcorum, latinorum, etc.</title>
+                        <pubPlace>Uppsala</pubPlace>
+                        <date when="1706"/>
+                        <citedRange unit="page" from="49" to="49"/>
+                     </bibl>
                             <bibl>
-                                <ref target="http://www.manuscripta.se/bibliography/Aurivillius1783"/>
-               <author>
-                    <persName>
-                        <forename>Pehr</forename>
-                        <forename>Fabian</forename>
-                        <surname>Aurivillius</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/76670119</idno>
-                </author>
-               <title level="m">Codex Græcus novi foederis e biblioth. acad. Upsal. descriptus et collatus, etc.</title>
-               <pubPlace>Uppsala</pubPlace>
-               <date from="1783" to="1786"/>
-               <biblScope unit="volume" from="1" to="5"/>
-            </bibl>
+                        <ref target="http://www.manuscripta.se/bibliography/Aurivillius1783"/>
+                        <author>
+                           <persName>
+                              <forename>Pehr</forename>
+                              <forename>Fabian</forename>
+                              <surname>Aurivillius</surname>
+                           </persName>
+                           <idno type="URI">http://viaf.org/viaf/76670119</idno>
+                        </author>
+                        <title level="m">Codex Græcus novi foederis e biblioth. acad. Upsal. descriptus et collatus, etc.</title>
+                        <pubPlace>Uppsala</pubPlace>
+                        <date from="1783" to="1786"/>
+                        <biblScope unit="volume" from="1" to="5"/>
+                     </bibl>
                             <bibl>
-                                <ref target="http://www.manuscripta.se/bibliography/Graux1889"/>
-               <author>
-                    <persName>
-                        <forename>Charles</forename>
-                        <surname>Graux</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/66552680</idno>
-                </author>
-               <author>
-                    <persName>
-                        <forename>Albert</forename>
-                        <surname>Martin</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/54139197</idno>
-                </author>
-               <title level="m">Notices sommaires des manuscrits grecs de Suède</title>
-               <pubPlace>Paris</pubPlace>
-               <date when="1889"/>
-            <citedRange unit="page" from="26" to="26"/>
-                            </bibl>
+                        <ref target="http://www.manuscripta.se/bibliography/Graux1889"/>
+                        <author>
+                           <persName>
+                              <forename>Charles</forename>
+                              <surname>Graux</surname>
+                           </persName>
+                           <idno type="URI">http://viaf.org/viaf/66552680</idno>
+                        </author>
+                        <author>
+                           <persName>
+                              <forename>Albert</forename>
+                              <surname>Martin</surname>
+                           </persName>
+                           <idno type="URI">http://viaf.org/viaf/54139197</idno>
+                        </author>
+                        <title level="m">Notices sommaires des manuscrits grecs de Suède</title>
+                        <pubPlace>Paris</pubPlace>
+                        <date when="1889"/>
+                        <citedRange unit="page" from="26" to="26"/>
+                     </bibl>
                             <bibl>
-                                <ref target="http://www.manuscripta.se/bibliography/Gregory1909"/>
-               <author>
-                    <persName>
-                        <forename>Caspar</forename>
-                        <forename>René</forename>
-                        <surname>Gregory</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/74647960</idno>
-                </author>
-               <title level="m">Textkritik des Neuen Testamentes</title>
-               <pubPlace>Leipzig</pubPlace>
-               <date when="1909"/>
-               <biblScope unit="volume" from="1" to="3"/>
-               <idno type="URI">http://worldcat.org/entity/work/id/7144664</idno>
-            <citedRange unit="volume" from="1" to="1"/>
-                                <citedRange unit="page" from="270" to="270"/>
-                                <citedRange unit="volume" from="3" to="3"/>
-                                <citedRange unit="page" from="1106" to="1106"/>
-                            </bibl>
+                        <ref target="http://www.manuscripta.se/bibliography/Gregory1909"/>
+                        <author>
+                           <persName>
+                              <forename>Caspar</forename>
+                              <forename>René</forename>
+                              <surname>Gregory</surname>
+                           </persName>
+                           <idno type="URI">http://viaf.org/viaf/74647960</idno>
+                        </author>
+                        <title level="m">Textkritik des Neuen Testamentes</title>
+                        <pubPlace>Leipzig</pubPlace>
+                        <date when="1909"/>
+                        <biblScope unit="volume" from="1" to="3"/>
+                        <idno type="URI">http://worldcat.org/entity/work/id/7144664</idno>
+                        <citedRange unit="volume" from="1" to="1"/>
+                        <citedRange unit="page" from="270" to="270"/>
+                        <citedRange unit="volume" from="3" to="3"/>
+                        <citedRange unit="page" from="1106" to="1106"/>
+                     </bibl>
                             <bibl>
-                                <ref target="http://www.manuscripta.se/bibliography/Wasserman2010"/>
-               <author>
-                    <persName>
-                        <forename>Tommy</forename>
-                        <surname>Wasserman</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/36685714</idno>
-                </author>
-               <title level="a">The Greek New Testament Manuscripts in Sweden with an Excursus on the Jerusalem Colophon</title>
-               <title level="j">Svensk Exegetisk Årsbok</title>
-               <date when="2010"/>
-               <biblScope from="75" to="75" unit="volume"/>
-               <biblScope from="77" to="107" unit="page"/>
-            <citedRange from="79" to="85" unit="page"/>
-                            </bibl>
+                        <ref target="http://www.manuscripta.se/bibliography/Wasserman2010"/>
+                        <author>
+                           <persName>
+                              <forename>Tommy</forename>
+                              <surname>Wasserman</surname>
+                           </persName>
+                           <idno type="URI">http://viaf.org/viaf/36685714</idno>
+                        </author>
+                        <title level="a">The Greek New Testament Manuscripts in Sweden with an Excursus on the Jerusalem Colophon</title>
+                        <title level="j">Svensk Exegetisk Årsbok</title>
+                        <date when="2010"/>
+                        <biblScope from="75" to="75" unit="volume"/>
+                        <biblScope from="77" to="107" unit="page"/>
+                        <citedRange from="79" to="85" unit="page"/>
+                     </bibl>
                         </listBibl>
                     </additional>
                     <msPart>
@@ -282,63 +282,63 @@
                                 <textLang mainLang="grc"/>
                                 <author>
                                     <persName evidence="external" cert="unknown">
-                        <forename>Oecumenius</forename>
-                        <addName>Philosophus</addName>
-                    </persName>
+                              <forename>Oecumenius</forename>
+                              <addName>Philosophus</addName>
+                           </persName>
                                 </author>
                                 <title ref="http://pinakes.irht.cnrs.fr/rech_oeuvre/resultOeuvre/filter_auteur/4839/filter_oeuvre/9016" type="uniform" xml:lang="la">Catena in Acta Apostolorum</title>
                                 <rubric>None</rubric>
                                 <incipit xml:lang="grc" defective="true">
-                                    <supplied xml:lang="grc" reason="omitted">τοῦ</supplied>το ἀληθὲς καὶ τὸ τῶν σημείων Πνεῦμα</incipit>
+                           <supplied xml:lang="grc" reason="omitted">τοῦ</supplied>το ἀληθὲς καὶ τὸ τῶν σημείων Πνεῦμα</incipit>
                                 <finalRubric xml:lang="grc">τέλος τοῦ κειμένου καὶ τῆς ἑρμηνείας τῶν πράξεων</finalRubric>
                                 <note>The manuscript has lost its first folia and the text starts mid-sentence with the commentary to Acts VIII:9–15. Cf. <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange from="118" to="118" unit="volume"/>
-                                        <citedRange from="157C" to="157C" unit="column"/>
-                                    </bibl>. After the catena to Acts but before the final rubric, the <foreign xml:lang="la">Peregrinatio Pauli Apostoli</foreign> is also included (<bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange from="118" to="118" unit="volume"/>
-                                        <citedRange from="312B" to="313A" unit="column"/>
-                                    </bibl>). Lastly, there is a stichometric note and a question-and-answer about the number of epistles by Paul.</note>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange from="118" to="118" unit="volume"/>
+                              <citedRange from="157C" to="157C" unit="column"/>
+                           </bibl>. After the catena to Acts but before the final rubric, the <foreign xml:lang="la">Peregrinatio Pauli Apostoli</foreign> is also included (<bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange from="118" to="118" unit="volume"/>
+                              <citedRange from="312B" to="313A" unit="column"/>
+                           </bibl>). Lastly, there is a stichometric note and a question-and-answer about the number of epistles by Paul.</note>
                                 <bibl>
-                                    <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="118" to="118"/>
-                                    <citedRange unit="column" from="44" to="308"/>
-                                    <citedRange unit="column" from="312B" to="313A"/>
-                                </bibl>
+                           <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                           <author role="critEd">
+                              <persName>
+                                 <forename>Jacques-Paul</forename>
+                                 <surname>Migne</surname>
+                              </persName>
+                              <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                           </author>
+                           <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                           <title level="m" type="short">PG</title>
+                           <pubPlace>Paris</pubPlace>
+                           <date from="1857" to="1866"/>
+                           <citedRange unit="volume" from="118" to="118"/>
+                           <citedRange unit="column" from="44" to="308"/>
+                           <citedRange unit="column" from="312B" to="313A"/>
+                        </bibl>
 
                             </msItem>
                             <msItem n="2" class="caten" defective="true">
@@ -346,9 +346,9 @@
                                 <textLang mainLang="grc"/>
                                 <author>
                                     <persName evidence="external" cert="unknown">
-                        <forename>Oecumenius</forename>
-                        <addName>Philosophus</addName>
-                    </persName>
+                              <forename>Oecumenius</forename>
+                              <addName>Philosophus</addName>
+                           </persName>
                                 </author>
                                 <title ref="http://pinakes.irht.cnrs.fr/rech_oeuvre/resultOeuvre/filter_auteur/4839/filter_oeuvre/9015" type="uniform" xml:lang="la">Catena in Pauli Epistulas</title>
                                 <msItem n="2.1" class="caten" defective="false">
@@ -369,21 +369,21 @@
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς πρὸς Ῥωμαίους ἐπιστολῆς</rubric>
                                     <note>A list of the Epistles of Paul and the Catholic Epistles follows upon the Argumentum. At the end of the text a stichometric note: <foreign xml:lang="grc">ἡ πρὸς Ῥωμαίους ἐπιστολὴ. ἐγράφη ἀπὸ Κορίνθου διὰ Φοίβης τῆς διακόνου τῆς ἐν Κεγχρεαῖς· στίχοι ϡκʹ</foreign>.</note>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="118" to="118"/>
-                                        <citedRange unit="column" from="317" to="636"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="118" to="118"/>
+                              <citedRange unit="column" from="317" to="636"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="2.2" class="caten" defective="true">
                                     <locusGrp>
@@ -397,37 +397,37 @@
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς πρὸς Κορινθίους πρώτης ἐπιστολῆς</rubric>
                                     <explicit xml:lang="grc" defective="true">ἀλλ’ ἀξιόπιστον ποιῶν</explicit>
                                     <note>Note that this explicit is situated at the bottom of <locus from="83v" to="83v" scheme="folios"/>, not on <locus from="91v" to="91v" scheme="folios"/> as one could have expected.; cf. <bibl>
-                                            <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange from="118" to="118" unit="volume"/>
-                                            <citedRange from="873A" to="873A" unit="column"/>
-                                        </bibl>.</note>
+                                 <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                                 <author role="critEd">
+                                    <persName>
+                                       <forename>Jacques-Paul</forename>
+                                       <surname>Migne</surname>
+                                    </persName>
+                                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                                 </author>
+                                 <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                                 <title level="m" type="short">PG</title>
+                                 <pubPlace>Paris</pubPlace>
+                                 <date from="1857" to="1866"/>
+                                 <citedRange from="118" to="118" unit="volume"/>
+                                 <citedRange from="873A" to="873A" unit="column"/>
+                              </bibl>.</note>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="118" to="118"/>
-                                        <citedRange unit="column" from="636" to="906"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="118" to="118"/>
+                              <citedRange unit="column" from="636" to="906"/>
+                           </bibl>
                                 </msItem>
                             </msItem>
                         </msContents>
@@ -486,11 +486,11 @@
                                             <locus scheme="folios" from="84r" to="91v"/>; 
                                             <locus scheme="folios" from="80r" to="83v"/> (binion). It is also probable that another three quires were lost at the beginning of the volume, if one is to assume that the text originally covered a complete Commentary to the Acts, i.e. also to Acts I–VIII, 8.</p>
                                         <signatures>
-                                            <term>none</term>
-                                        </signatures>
+                                 <term>none</term>
+                              </signatures>
                                         <catchwords>
-                                            <term>none</term>
-                                        </catchwords>
+                                 <term>none</term>
+                              </catchwords>
                                     </collation>
                                 </supportDesc>
                                 <layoutDesc>
@@ -499,27 +499,27 @@
                                         <term type="layout">ruling pattern</term>
                                         <term type="proximity">identical with</term>
                                         <bibl>
-                                            <ref target="http://www.manuscripta.se/bibliography/Sautel1995"/>
-               <author>
-                    <persName>
-                        <forename>Jacques-Hubert</forename>
-                        <surname>Sautel</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/29694003</idno>
-                </author>
-               <author>
-                    <persName>
-                        <forename>Julien</forename>
-                        <surname>Leroy</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/4932629</idno>
-                </author>
-               <title level="m" type="main">Répertoire de réglures dans les manuscrits grecs sur parchemin: base de données</title>
-               <title level="m" type="short">Sautel</title>               
-               <pubPlace>Turnhout</pubPlace>
-               <date when="1995"/>               
-            <citedRange unit="number" from="20D1" to="20D1"/>
-                                        </bibl>
+                                 <ref target="http://www.manuscripta.se/bibliography/Sautel1995"/>
+                                 <author>
+                                    <persName>
+                                       <forename>Jacques-Hubert</forename>
+                                       <surname>Sautel</surname>
+                                    </persName>
+                                    <idno type="URI">http://viaf.org/viaf/29694003</idno>
+                                 </author>
+                                 <author>
+                                    <persName>
+                                       <forename>Julien</forename>
+                                       <surname>Leroy</surname>
+                                    </persName>
+                                    <idno type="URI">http://viaf.org/viaf/4932629</idno>
+                                 </author>
+                                 <title level="m" type="main">Répertoire de réglures dans les manuscrits grecs sur parchemin: base de données</title>
+                                 <title level="m" type="short">Sautel</title>
+                                 <pubPlace>Turnhout</pubPlace>
+                                 <date when="1995"/>
+                                 <citedRange unit="number" from="20D1" to="20D1"/>
+                              </bibl>
                                         <dimensions type="written">
                                             <height min="185" max="190" unit="mm"/>
                                             <width min="125" max="130" unit="mm"/>
@@ -548,9 +548,9 @@
                                 <textLang mainLang="grc"/>
                                 <author>
                                     <persName evidence="external" cert="unknown">
-                        <forename>Oecumenius</forename>
-                        <addName>Philosophus</addName>
-                    </persName>
+                              <forename>Oecumenius</forename>
+                              <addName>Philosophus</addName>
+                           </persName>
                                 </author>
                                 <title ref="http://pinakes.irht.cnrs.fr/rech_oeuvre/resultOeuvre/filter_auteur/4839/filter_oeuvre/9015" type="uniform" xml:lang="la">Catena in Pauli Epistulas</title>
                                 <msItem n="1.1" class="caten" defective="true">
@@ -559,37 +559,37 @@
                                     <rubric>None</rubric>
                                     <incipit xml:lang="grc" defective="true">καὶ ἀσχημοσύνην τοῦτο ἡγεῖται</incipit>
                                     <note>The epistle starts mid-text, at 1 Cor. 13:5, as a completion of the preceding codicological unit; cf. <bibl>
-                                            <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange from="118" to="118" unit="volume"/>
-                                            <citedRange from="836A" to="836A" unit="column"/>
-                                        </bibl>. More or less the same passage of the catena is covered in <locus scheme="folios" from="80r" to="83v"/> and in <locus scheme="folios" from="92r" to="96r"/>. A stichometric note at the end: <foreign xml:lang="grc">ἀναγνώσεις εʹ, κεφάλαια θʹ, μαρτυρίαι ιζʹ· στίχοι ωνʹ</foreign>.</note>
+                                 <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                                 <author role="critEd">
+                                    <persName>
+                                       <forename>Jacques-Paul</forename>
+                                       <surname>Migne</surname>
+                                    </persName>
+                                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                                 </author>
+                                 <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                                 <title level="m" type="short">PG</title>
+                                 <pubPlace>Paris</pubPlace>
+                                 <date from="1857" to="1866"/>
+                                 <citedRange from="118" to="118" unit="volume"/>
+                                 <citedRange from="836A" to="836A" unit="column"/>
+                              </bibl>. More or less the same passage of the catena is covered in <locus scheme="folios" from="80r" to="83v"/> and in <locus scheme="folios" from="92r" to="96r"/>. A stichometric note at the end: <foreign xml:lang="grc">ἀναγνώσεις εʹ, κεφάλαια θʹ, μαρτυρίαι ιζʹ· στίχοι ωνʹ</foreign>.</note>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="118" to="118"/>
-                                        <citedRange unit="column" from="640" to="906"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="118" to="118"/>
+                              <citedRange unit="column" from="640" to="906"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="1.2" class="caten" defective="false">
                                     <locus from="100v" to="123r" scheme="folios"/>
@@ -597,21 +597,21 @@
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς πρὸς Κορινθίους βʹ ἐπιστολῆς</rubric>
                                     <note>Ends with the stichometric number <foreign xml:lang="grc">στίχοι φϟʹ</foreign>.</note>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="118" to="118"/>
-                                        <citedRange unit="column" from="905C" to="1088C"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="118" to="118"/>
+                              <citedRange unit="column" from="905C" to="1088C"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="1.3" class="caten" defective="false">
                                     <locus from="123r" to="130v" scheme="folios"/>
@@ -619,21 +619,21 @@
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς πρὸς Γαλάτας ἐπιστολῆς</rubric>
                                     <note>Ends with the stichometric number <foreign xml:lang="grc">στίχοι σγʹ</foreign>.</note>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="118" to="118"/>
-                                        <citedRange unit="column" from="1089A" to="1165B"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="118" to="118"/>
+                              <citedRange unit="column" from="1089A" to="1165B"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="1.4" class="caten" defective="false">
                                     <locus from="130v" to="138r" scheme="folios"/>
@@ -641,21 +641,21 @@
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς πρὸς Ἐφεσίους ἐπιστολῆς</rubric>
                                     <finalRubric xml:lang="grc">Πρὸς Ἐφεσίους ἐγράφη ἀπὸ Ῥώμης διὰ Τυχικοῦ· στίχοι τιβʹ</finalRubric>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="118" to="118"/>
-                                        <citedRange unit="column" from="1165D" to="1256B"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="118" to="118"/>
+                              <citedRange unit="column" from="1165D" to="1256B"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="1.5" class="caten" defective="false">
                                     <locus from="138r" to="143r" scheme="folios"/>
@@ -663,21 +663,21 @@
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς πρὸς Φιλιππησίους ἐπιστολῆς</rubric>
                                     <finalRubric xml:lang="grc">Πρὸς Φιλιππησίους ἐγράφη ἀπὸ Ῥώμης δι’ Ἐπαφραδίτου· στίχοι σηʹ</finalRubric>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="118" to="118"/>
-                                        <citedRange unit="column" from="1256C" to="1325D"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="118" to="118"/>
+                              <citedRange unit="column" from="1256C" to="1325D"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="1.6" class="caten" defective="false">
                                     <locus from="143r" to="148r" scheme="folios"/>
@@ -685,21 +685,21 @@
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς πρὸς Κολοσσαεῖς ἐπιστολῆς</rubric>
                                     <finalRubric xml:lang="grc">Πρὸς Κολοσσαεῖς· ἐγράφη ὑπὸ Παύλου καὶ Τιμοθέου· ἀπεστάλη διὰ Τυχικοῦ καὶ Ὀνησίμου</finalRubric>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="119" to="119"/>
-                                        <citedRange unit="column" from="9" to="56"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="119" to="119"/>
+                              <citedRange unit="column" from="9" to="56"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="1.7" class="caten" defective="false">
                                     <locus from="148r" to="153v" scheme="folios"/>
@@ -707,21 +707,21 @@
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς πρὸς Θεσσαλονικεῖς πρώτης ἐπιστολῆς</rubric>
                                     <finalRubric xml:lang="grc">Πρὸς Θεσσαλονικεῖς πρώτη. ἐγράφη ἀπὸ Ἀθηνῶν· στίχοι ρϟγʹ</finalRubric>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="119" to="119"/>
-                                        <citedRange unit="column" from="57" to="105Β"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="119" to="119"/>
+                              <citedRange unit="column" from="57" to="105Β"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="1.8" class="caten" defective="false">
                                     <locus from="153v" to="156v" scheme="folios"/>
@@ -729,21 +729,21 @@
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς πρὸς Θεσσαλονικεῖς βʹ ἐπιστολῆς</rubric>
                                     <finalRubric xml:lang="grc">Πρὸς Θεσσαλονικεῖς βʹ ἐγράφη ἀπὸ Ἀθηνῶν· στίχοι ρϛʹ</finalRubric>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="119" to="119"/>
-                                        <citedRange unit="column" from="105C" to="133Α"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="119" to="119"/>
+                              <citedRange unit="column" from="105C" to="133Α"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="1.9" class="caten" defective="false">
                                     <locus from="156v" to="178v" scheme="folios"/>
@@ -752,21 +752,21 @@
                                     <incipit xml:lang="grc" defective="inapplicable">Τοῖς ἐν Ιερουσαλὴμ πεπιστευκόσιν Ἰουδαίοις γράφει σφόδρα κακουμένοις</incipit>
                                     <finalRubric xml:lang="grc">Πρὸς Ἑβραίους ἐγράφη ἀπὸ Ἰταλίας διὰ Τιμοθέου· στίχοι ψγʹ</finalRubric>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="119" to="119"/>
-                                        <citedRange unit="column" from="272D" to="452B"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="119" to="119"/>
+                              <citedRange unit="column" from="272D" to="452B"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="1.10" class="caten" defective="false">
                                     <locus from="178v" to="187v" scheme="folios"/>
@@ -774,21 +774,21 @@
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς πρὸς Τιμόθεον αʹ ἐπιστολῆς</rubric>
                                     <finalRubric xml:lang="grc">Πρὸς Τιμόθεον αʹ ἐγράφη ἀπὸ Λαοδικείας, ἥτις ἐστὶ μητρόπολις Φρυγίας τῆς Παρακατιανῆς· στίχοι σλʹ</finalRubric>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="119" to="119"/>
-                                        <citedRange unit="column" from="133Β" to="196C"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="119" to="119"/>
+                              <citedRange unit="column" from="133Β" to="196C"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="1.11" class="caten" defective="false">
                                     <locus from="187v" to="193v" scheme="folios"/>
@@ -796,21 +796,21 @@
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς πρὸς Τιμόθεον βʹ ἐπιστολῆς</rubric>
                                     <note>At the end a stichometric note: <foreign xml:lang="grc">στίχοι ροʹ</foreign>.</note>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="119" to="119"/>
-                                        <citedRange unit="column" from="196D" to="240C"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="119" to="119"/>
+                              <citedRange unit="column" from="196D" to="240C"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="1.12" class="caten" defective="false">
                                     <locus from="193v" to="196v" scheme="folios"/>
@@ -818,21 +818,21 @@
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς πρὸς Τίτον ἐπιστολῆς</rubric>
                                     <finalRubric xml:lang="grc">Πρὸς Τίτον, τῆς Κρητῶν ἐκκλησίας πρώτον ἐπίσκοπον χειροτονηθέντα· ἐγράφη ἀπὸ Νικοπόλεως τῆς Μακεδονίας· στίχοι ϟζʹ</finalRubric>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="119" to="119"/>
-                                        <citedRange unit="column" from="241" to="261B"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="119" to="119"/>
+                              <citedRange unit="column" from="241" to="261B"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="1.13" class="caten" defective="false">
                                     <locus from="197r" to="198v" scheme="folios"/>
@@ -840,30 +840,30 @@
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς πρὸς Φιλήμονα ἐπιστολῆς</rubric>
                                     <finalRubric xml:lang="grc">Πρὸς Φιλήμονα καὶ Ἀπφίαν, δεσπότας Ὀνησίμου, καὶ πρὸς Ἄρχιππον τῆς ἐν Κολασσαῖς ἐκκλησίας· ἐγράφη ἀπὸ Ῥώμης διὰ Ὀνησίμου οἰκέτου· στίχοι λζʹ</finalRubric>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="119" to="119"/>
-                                        <citedRange unit="column" from="261C" to="272C"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="119" to="119"/>
+                              <citedRange unit="column" from="261C" to="272C"/>
+                           </bibl>
                                 </msItem>
                             </msItem>
                             <msItem n="2" class="caten" defective="false">
                                 <locus from="199r" to="220v" scheme="folios"/>
                                 <author>
                                     <persName evidence="external" cert="unknown">
-                        <forename>Oecumenius</forename>
-                        <addName>Philosophus</addName>
-                    </persName>
+                              <forename>Oecumenius</forename>
+                              <addName>Philosophus</addName>
+                           </persName>
                                 </author>
                                 <title type="uniform" xml:lang="la">Catena in Epistulas Catholicas</title>
                                 <msItem n="2.1" class="caten" defective="false">
@@ -871,21 +871,21 @@
                                     <title type="uniform" xml:lang="la">Commentarius in Epistolam catholicam Jacobi</title>
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς Ἰακώβου καθολικῆς ἐπιστολῆς</rubric>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="119" to="119"/>
-                                        <citedRange unit="column" from="452C" to="509A"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="119" to="119"/>
+                              <citedRange unit="column" from="452C" to="509A"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="2.2" class="caten" defective="false">
                                     <locus from="204v" to="209v" scheme="folios"/>
@@ -893,63 +893,63 @@
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς Πέτρου καθολικῆς ἐπιστολῆς</rubric>
                                     <note>At the end a stichometric note in the margin: <foreign xml:lang="grc">στίχοι σλϛʹ</foreign>.</note>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="119" to="119"/>
-                                        <citedRange unit="column" from="509B" to="577A"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="119" to="119"/>
+                              <citedRange unit="column" from="509B" to="577A"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="2.3" class="caten" defective="false">
                                     <locus from="209v" to="212v" scheme="folios"/>
                                     <title type="uniform" xml:lang="la">Commentarius in Epistolam secundam Petri</title>
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς βʹ ἐπιστολῆς Πέτρου</rubric>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="119" to="119"/>
-                                        <citedRange unit="column" from="577Β" to="617A"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="119" to="119"/>
+                              <citedRange unit="column" from="577Β" to="617A"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="2.4" class="caten" defective="false">
                                     <locus from="212v" to="217v" scheme="folios"/>
                                     <title type="uniform" xml:lang="la">Commentarius in Epistolam primam Joannis</title>
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς Ἰωάννου πρώτης ἐπιστολῆς</rubric>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="119" to="119"/>
-                                        <citedRange unit="column" from="617Α" to="684C"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="119" to="119"/>
+                              <citedRange unit="column" from="617Α" to="684C"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="2.5" class="caten" defective="false">
                                     <locus from="217v" to="218r" scheme="folios"/>
@@ -957,38 +957,38 @@
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς Ἰωάννου βʹ καθολικῆς ἐπιστολῆς</rubric>
                                     <listBibl>
                                         <bibl>
-                                            <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="119" to="119"/>
-                                            <citedRange unit="column" from="684D" to="696D"/>
-                                        </bibl>
+                                 <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                                 <author role="critEd">
+                                    <persName>
+                                       <forename>Jacques-Paul</forename>
+                                       <surname>Migne</surname>
+                                    </persName>
+                                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                                 </author>
+                                 <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                                 <title level="m" type="short">PG</title>
+                                 <pubPlace>Paris</pubPlace>
+                                 <date from="1857" to="1866"/>
+                                 <citedRange unit="volume" from="119" to="119"/>
+                                 <citedRange unit="column" from="684D" to="696D"/>
+                              </bibl>
                                         <bibl>
-                                            <ref target="http://www.manuscripta.se/bibliography/Cramer1840"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>John</forename>
-                        <forename>Anthony</forename>
-                        <surname>Cramer</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/90638812</idno>
-                </author>
-               <title level="m">Catenae Graecorum patrum in Novum Testamentum</title>
-               <pubPlace>Oxford</pubPlace>
-               <date when="1840"/>
-               <biblScope unit="volume" from="1" to="8"/>
-            <citedRange unit="volume" from="8" to="8"/>
-                                            <citedRange unit="page" from="146" to="148"/>
-                                        </bibl>
+                                 <ref target="http://www.manuscripta.se/bibliography/Cramer1840"/>
+                                 <author role="critEd">
+                                    <persName>
+                                       <forename>John</forename>
+                                       <forename>Anthony</forename>
+                                       <surname>Cramer</surname>
+                                    </persName>
+                                    <idno type="URI">http://viaf.org/viaf/90638812</idno>
+                                 </author>
+                                 <title level="m">Catenae Graecorum patrum in Novum Testamentum</title>
+                                 <pubPlace>Oxford</pubPlace>
+                                 <date when="1840"/>
+                                 <biblScope unit="volume" from="1" to="8"/>
+                                 <citedRange unit="volume" from="8" to="8"/>
+                                 <citedRange unit="page" from="146" to="148"/>
+                              </bibl>
                                     </listBibl>
                                 </msItem>
                                 <msItem n="2.6" class="caten" defective="false">
@@ -996,21 +996,21 @@
                                     <title type="uniform" xml:lang="la">Commentarius in Epistolam tertiam Joannis</title>
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς Ἰωάννου γʹ ἐπιστολῆς</rubric>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="119" to="119"/>
-                                        <citedRange unit="column" from="697A" to="704A"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="119" to="119"/>
+                              <citedRange unit="column" from="697A" to="704A"/>
+                           </bibl>
                                 </msItem>
                                 <msItem n="2.7" class="caten" defective="false">
                                     <locus from="218v" to="220v" scheme="folios"/>
@@ -1018,21 +1018,21 @@
                                     <rubric xml:lang="grc">Ὑπόθεσις τῆς καθολικῆς ἐπιστολῆς Ἰούδα</rubric>
                                     <explicit xml:lang="grc" defective="false">οἱ ἀπὸ Σίμωνος καὶ τῶν ὁμοίων ἐπιτήδευον κατὰ τοὺς προειρημένους λόγους</explicit>
                                     <bibl>
-                                        <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
-               <author role="critEd">
-                    <persName>
-                        <forename>Jacques-Paul</forename>
-                        <surname>Migne</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/64009375</idno>
-                </author>
-               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
-               <title level="m" type="short">PG</title>
-               <pubPlace>Paris</pubPlace>
-               <date from="1857" to="1866"/>
-            <citedRange unit="volume" from="119" to="119"/>
-                                        <citedRange unit="column" from="704A" to="721C"/>
-                                    </bibl>
+                              <ref target="http://www.manuscripta.se/bibliography/Migne1857"/>
+                              <author role="critEd">
+                                 <persName>
+                                    <forename>Jacques-Paul</forename>
+                                    <surname>Migne</surname>
+                                 </persName>
+                                 <idno type="URI">http://viaf.org/viaf/64009375</idno>
+                              </author>
+                              <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+                              <title level="m" type="short">PG</title>
+                              <pubPlace>Paris</pubPlace>
+                              <date from="1857" to="1866"/>
+                              <citedRange unit="volume" from="119" to="119"/>
+                              <citedRange unit="column" from="704A" to="721C"/>
+                           </bibl>
                                 </msItem>
                             </msItem>
                         </msContents>
@@ -1058,11 +1058,11 @@
                                             <hi rend="sub">Q17–29</hi>13.IV<hi rend="super">f.195</hi> + <hi rend="sub">Q30</hi>(IV + 3f.<hi rend="super">f.196–198</hi>)<hi rend="super">f.206</hi>: 3 single leaves pasted together and onto the following quaternion + <hi rend="sub">Q31</hi>IV<hi rend="super">f.214</hi> + <hi rend="sub">Q32</hi>III<hi rend="super">f.220</hi>
                                         </formula>
                                         <signatures>
-                                            <term>none</term>
-                                        </signatures>
+                                 <term>none</term>
+                              </signatures>
                                         <catchwords>
-                                            <term>none</term>
-                                        </catchwords>
+                                 <term>none</term>
+                              </catchwords>
                                     </collation>
                                 </supportDesc>
                                 <layoutDesc>
@@ -1071,53 +1071,53 @@
                                         <term type="layout">ruling pattern</term>
                                         <term type="proximity">identical with</term>
                                         <bibl>
-                                            <ref target="http://www.manuscripta.se/bibliography/Sautel1995"/>
-               <author>
-                    <persName>
-                        <forename>Jacques-Hubert</forename>
-                        <surname>Sautel</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/29694003</idno>
-                </author>
-               <author>
-                    <persName>
-                        <forename>Julien</forename>
-                        <surname>Leroy</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/4932629</idno>
-                </author>
-               <title level="m" type="main">Répertoire de réglures dans les manuscrits grecs sur parchemin: base de données</title>
-               <title level="m" type="short">Sautel</title>               
-               <pubPlace>Turnhout</pubPlace>
-               <date when="1995"/>               
-            <citedRange unit="number" from="20D1" to="20D1"/>
-                                        </bibl>
+                                 <ref target="http://www.manuscripta.se/bibliography/Sautel1995"/>
+                                 <author>
+                                    <persName>
+                                       <forename>Jacques-Hubert</forename>
+                                       <surname>Sautel</surname>
+                                    </persName>
+                                    <idno type="URI">http://viaf.org/viaf/29694003</idno>
+                                 </author>
+                                 <author>
+                                    <persName>
+                                       <forename>Julien</forename>
+                                       <surname>Leroy</surname>
+                                    </persName>
+                                    <idno type="URI">http://viaf.org/viaf/4932629</idno>
+                                 </author>
+                                 <title level="m" type="main">Répertoire de réglures dans les manuscrits grecs sur parchemin: base de données</title>
+                                 <title level="m" type="short">Sautel</title>
+                                 <pubPlace>Turnhout</pubPlace>
+                                 <date when="1995"/>
+                                 <citedRange unit="number" from="20D1" to="20D1"/>
+                              </bibl>
                                         <dimensions type="written">
                                             <height min="195" max="200" unit="mm"/>
                                             <width min="130" max="135" unit="mm"/>
                                         </dimensions>
                                         <note>On some pages the <term type="layout">ruling pattern</term> is closer to <bibl>
-                                                <ref target="http://www.manuscripta.se/bibliography/Sautel1995"/>
-               <author>
-                    <persName>
-                        <forename>Jacques-Hubert</forename>
-                        <surname>Sautel</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/29694003</idno>
-                </author>
-               <author>
-                    <persName>
-                        <forename>Julien</forename>
-                        <surname>Leroy</surname>
-                    </persName>
-                    <idno type="URI">http://viaf.org/viaf/4932629</idno>
-                </author>
-               <title level="m" type="main">Répertoire de réglures dans les manuscrits grecs sur parchemin: base de données</title>
-               <title level="m" type="short">Sautel</title>               
-               <pubPlace>Turnhout</pubPlace>
-               <date when="1995"/>               
-            <citedRange unit="number" from="20A1" to="20A1"/>
-                                            </bibl>, although this may be due to the scribe being less accurate in the execution.
+                                    <ref target="http://www.manuscripta.se/bibliography/Sautel1995"/>
+                                    <author>
+                                       <persName>
+                                          <forename>Jacques-Hubert</forename>
+                                          <surname>Sautel</surname>
+                                       </persName>
+                                       <idno type="URI">http://viaf.org/viaf/29694003</idno>
+                                    </author>
+                                    <author>
+                                       <persName>
+                                          <forename>Julien</forename>
+                                          <surname>Leroy</surname>
+                                       </persName>
+                                       <idno type="URI">http://viaf.org/viaf/4932629</idno>
+                                    </author>
+                                    <title level="m" type="main">Répertoire de réglures dans les manuscrits grecs sur parchemin: base de données</title>
+                                    <title level="m" type="short">Sautel</title>
+                                    <pubPlace>Turnhout</pubPlace>
+                                    <date when="1995"/>
+                                    <citedRange unit="number" from="20A1" to="20A1"/>
+                                 </bibl>, although this may be due to the scribe being less accurate in the execution.
                                         </note>
                                     </layout>
                                 </layoutDesc>

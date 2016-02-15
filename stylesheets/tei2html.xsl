@@ -207,7 +207,7 @@
                                         <xsl:apply-templates/>
                                     </xsl:when>
                                     <xsl:otherwise>
-                                        <span class="unit_nr">Bookblock: </span>
+                                        <span class="unit_nr">Endleaves: </span>
                                         <xsl:apply-templates/>
                                     </xsl:otherwise>
                                 </xsl:choose>

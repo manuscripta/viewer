@@ -1,0 +1,2802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" version="5.0" xml:id="uub-gr-010">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>Uppsala University Library, Gr. 10</title>
+                <respStmt xml:id="BC">
+                    <persName>
+                        <forename>Barbara</forename>
+                        <surname>Crostini Lappin</surname>
+                    </persName>
+                    <resp key="cataloguer"/>                    
+                </respStmt>
+                <respStmt xml:id="PG">
+                    <persName>
+                        <forename>Patrik</forename>
+                        <surname>Granholm</surname>
+                    </persName>                    
+                    <resp key="encoder"/>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Uppsala University Library</authority>
+                <pubPlace>Uppsala</pubPlace>
+                <date when="2016"/>
+                <availability status="free">
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Sweden</country>
+                        <settlement>Uppsala</settlement>
+                        <institution>Uppsala University</institution>
+                        <repository>Uppsala University Library</repository>
+                        <idno type="shelfmark">Gr. 10</idno>
+                    </msIdentifier>
+                    <head/>
+                    <msContents>
+                        <msItem class="left_endleaf">
+                            <locus from="L01r" to="L01v" scheme="folios"/>
+                            <note/>
+                        </msItem>
+                        <msItem class="right_endleaf">
+                            <locus from="R01r" to="R01v" scheme="folios"/>
+                            <note/>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <extent>
+                                    <measure type="left_flyleaves" quantity="1"/>
+                                    <measure type="right_flyleaves" quantity="1"/>
+                                </extent>
+                                <foliation/>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                    <history>
+                        <origin/>
+                        <provenance/>
+                        <acquisition/>
+                    </history>
+                    <additional>
+                        <listBibl>
+                            <bibl>
+                        <ref target="http://www.manuscripta.se/bibliography/Graux1889"/>
+                        <author>
+                           <persName>
+                              <forename>Charles</forename>
+                              <surname>Graux</surname>
+                           </persName>
+                           <idno type="URI">http://viaf.org/viaf/66552680</idno>
+                        </author>
+                        <author>
+                           <persName>
+                              <forename>Albert</forename>
+                              <surname>Martin</surname>
+                           </persName>
+                           <idno type="URI">http://viaf.org/viaf/54139197</idno>
+                        </author>
+                        <title level="m">Notices sommaires des manuscrits grecs de Suède</title>
+                        <pubPlace>Paris</pubPlace>
+                        <date when="1889"/>
+                        <citedRange from="41" to="42" unit="page"/>
+                     </bibl>
+                        </listBibl>
+                    </additional>
+                    <msPart>
+                        <msIdentifier>
+                            <idno type="codicological_unit">1</idno>
+                        </msIdentifier>
+                        <msContents>
+                            <msItem n="1" class="liturg">
+                                <locus from="1r" to="28v" scheme="folios"/>
+                                <title type="desc" xml:lang="en">Liturgical troparia</title>
+                            </msItem>
+                            <msItem n="2" class="">
+                                <locus from="29r" to="32v" scheme="folios"/>
+                                <author>
+                                    <persName>
+                              <forename>Eusebius</forename>
+                              <addName>Caesariensis</addName>
+                           </persName>                                    
+                                </author>
+                                <title type="desc" xml:lang="en">On the diapsalma</title>
+                            </msItem>
+                            <msItem n="3" class="">
+                                <locus from="33r" to="33v" scheme="folios"/>
+                                <title type="desc" xml:lang="en">Indications for the liturgical reading of the Psalter</title>
+                                <rubric xml:lang="grc">Ἑρμηνία τοῦ ψαλτῆρος· πῶς ὀφείλει στιχολογεῖσθαι τῇ ἅγιᾳ καὶ μεγάλῃ</rubric>
+                                <note>
+                           <locus from="34r" to="34v" scheme="folios"/> is blank.</note>
+                            </msItem>
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc material="parchment">
+                                    <support>
+                                        <p>
+                                            <locus from="1r" to="327v" scheme="folios"/>
+                                            <material>Parchment</material>
+                                            <dimensions type="leaf">
+                                                <height quantity="150" unit="mm"/>
+                                                <width quantity="110" unit="mm"/>
+                                            </dimensions>
+                                            Supple parchment of medium thickness, with evident difference between hair and flesh sides.</p>
+                                    </support>
+                                    <extent>
+                                        <measure type="textblock_leaves" quantity="327"/>
+                                    </extent>
+                                    <foliation>Modern foliation in pencil at top right corner of each recto. Occasional folio numbers written in ink, e.g. <locus from="220" to="220" scheme="folios"/>. At <locus from="305" to="305" scheme="folios"/>, the folio number, written in black ink, has been struck out and replaced with the correct number, 304, in pencil.</foliation>
+                                </supportDesc>
+                            </objectDesc>
+                        </physDesc>
+                        <history>
+                            <origin>It is likely that the manuscript was written in Greece, probably on the Holy Mountain or a monastery in Meteora. The ms is dated <origDate when="1368">1368</origDate> by its colophon; this dating contrasts with the more ancient appearance of the ms and its script, which is therefore to be considered extremely conservative.
+                            </origin>
+                            <provenance>Although the scribe is named as Nicholas the Cretan, I could only find the village of Caiaphas on a modern map on the Western coast of the Peloponnese. However it is more likely that Nicholas belonged to one of the main monastic centres, or at least that he had models available to him from there.</provenance>
+                            <acquisition/>
+                        </history>
+                    </msPart>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc status="draft">
+            <change status="draft" when="2016-01-18" who="#PG">First draft</change>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface xml:id="uub-gr-010-QP-card">
+            <desc>QP card</desc>
+            <graphic url="uub-gr-010-0000-QP-card.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-LCO">
+            <desc>Left cover, outside</desc>
+            <graphic url="uub-gr-010-0001-LCO.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-LCI">
+            <desc>Left cover, inside</desc>
+            <graphic url="uub-gr-010-0002-LCI.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-L1r">
+            <desc>Left flyleaf 1r</desc>
+            <graphic url="uub-gr-010-0003-L01r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-L1v">
+            <desc>Left flyleaf 1v</desc>
+            <graphic url="uub-gr-010-0004-L01v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-1r">
+            <desc>Folio 1r</desc>
+            <graphic url="uub-gr-010-0005-001r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-1v">
+            <desc>Folio 1v</desc>
+            <graphic url="uub-gr-010-0006-001v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-2r">
+            <desc>Folio 2r</desc>
+            <graphic url="uub-gr-010-0007-002r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-2v">
+            <desc>Folio 2v</desc>
+            <graphic url="uub-gr-010-0008-002v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-3r">
+            <desc>Folio 3r</desc>
+            <graphic url="uub-gr-010-0009-003r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-3v">
+            <desc>Folio 3v</desc>
+            <graphic url="uub-gr-010-0010-003v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-4r">
+            <desc>Folio 4r</desc>
+            <graphic url="uub-gr-010-0011-004r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-4v">
+            <desc>Folio 4v</desc>
+            <graphic url="uub-gr-010-0012-004v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-5r">
+            <desc>Folio 5r</desc>
+            <graphic url="uub-gr-010-0013-005r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-5v">
+            <desc>Folio 5v</desc>
+            <graphic url="uub-gr-010-0014-005v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-6r">
+            <desc>Folio 6r</desc>
+            <graphic url="uub-gr-010-0015-006r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-6v">
+            <desc>Folio 6v</desc>
+            <graphic url="uub-gr-010-0016-006v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-7r">
+            <desc>Folio 7r</desc>
+            <graphic url="uub-gr-010-0017-007r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-7v">
+            <desc>Folio 7v</desc>
+            <graphic url="uub-gr-010-0018-007v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-8r">
+            <desc>Folio 8r</desc>
+            <graphic url="uub-gr-010-0019-008r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-8v">
+            <desc>Folio 8v</desc>
+            <graphic url="uub-gr-010-0020-008v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-9r">
+            <desc>Folio 9r</desc>
+            <graphic url="uub-gr-010-0021-009r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-9v">
+            <desc>Folio 9v</desc>
+            <graphic url="uub-gr-010-0022-009v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-10r">
+            <desc>Folio 10r</desc>
+            <graphic url="uub-gr-010-0023-010r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-10v">
+            <desc>Folio 10v</desc>
+            <graphic url="uub-gr-010-0024-010v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-11r">
+            <desc>Folio 11r</desc>
+            <graphic url="uub-gr-010-0025-011r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-11v">
+            <desc>Folio 11v</desc>
+            <graphic url="uub-gr-010-0026-011v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-12r">
+            <desc>Folio 12r</desc>
+            <graphic url="uub-gr-010-0027-012r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-12v">
+            <desc>Folio 12v</desc>
+            <graphic url="uub-gr-010-0028-012v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-13r">
+            <desc>Folio 13r</desc>
+            <graphic url="uub-gr-010-0029-013r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-13v">
+            <desc>Folio 13v</desc>
+            <graphic url="uub-gr-010-0030-013v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-14r">
+            <desc>Folio 14r</desc>
+            <graphic url="uub-gr-010-0031-014r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-14v">
+            <desc>Folio 14v</desc>
+            <graphic url="uub-gr-010-0032-014v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-15r">
+            <desc>Folio 15r</desc>
+            <graphic url="uub-gr-010-0033-015r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-15v">
+            <desc>Folio 15v</desc>
+            <graphic url="uub-gr-010-0034-015v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-16r">
+            <desc>Folio 16r</desc>
+            <graphic url="uub-gr-010-0035-016r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-16v">
+            <desc>Folio 16v</desc>
+            <graphic url="uub-gr-010-0036-016v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-17r">
+            <desc>Folio 17r</desc>
+            <graphic url="uub-gr-010-0037-017r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-17v">
+            <desc>Folio 17v</desc>
+            <graphic url="uub-gr-010-0038-017v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-18r">
+            <desc>Folio 18r</desc>
+            <graphic url="uub-gr-010-0039-018r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-18v">
+            <desc>Folio 18v</desc>
+            <graphic url="uub-gr-010-0040-018v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-19r">
+            <desc>Folio 19r</desc>
+            <graphic url="uub-gr-010-0041-019r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-19v">
+            <desc>Folio 19v</desc>
+            <graphic url="uub-gr-010-0042-019v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-20r">
+            <desc>Folio 20r</desc>
+            <graphic url="uub-gr-010-0043-020r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-20v">
+            <desc>Folio 20v</desc>
+            <graphic url="uub-gr-010-0044-020v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-21r">
+            <desc>Folio 21r</desc>
+            <graphic url="uub-gr-010-0045-021r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-21v">
+            <desc>Folio 21v</desc>
+            <graphic url="uub-gr-010-0046-021v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-22r">
+            <desc>Folio 22r</desc>
+            <graphic url="uub-gr-010-0047-022r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-22v">
+            <desc>Folio 22v</desc>
+            <graphic url="uub-gr-010-0048-022v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-23r">
+            <desc>Folio 23r</desc>
+            <graphic url="uub-gr-010-0049-023r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-23v">
+            <desc>Folio 23v</desc>
+            <graphic url="uub-gr-010-0050-023v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-24r">
+            <desc>Folio 24r</desc>
+            <graphic url="uub-gr-010-0051-024r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-24v">
+            <desc>Folio 24v</desc>
+            <graphic url="uub-gr-010-0052-024v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-25r">
+            <desc>Folio 25r</desc>
+            <graphic url="uub-gr-010-0053-025r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-25v">
+            <desc>Folio 25v</desc>
+            <graphic url="uub-gr-010-0054-025v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-26r">
+            <desc>Folio 26r</desc>
+            <graphic url="uub-gr-010-0055-026r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-26v">
+            <desc>Folio 26v</desc>
+            <graphic url="uub-gr-010-0056-026v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-27r">
+            <desc>Folio 27r</desc>
+            <graphic url="uub-gr-010-0057-027r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-27v">
+            <desc>Folio 27v</desc>
+            <graphic url="uub-gr-010-0058-027v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-28r">
+            <desc>Folio 28r</desc>
+            <graphic url="uub-gr-010-0059-028r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-28v">
+            <desc>Folio 28v</desc>
+            <graphic url="uub-gr-010-0060-028v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-29r">
+            <desc>Folio 29r</desc>
+            <graphic url="uub-gr-010-0061-029r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-29v">
+            <desc>Folio 29v</desc>
+            <graphic url="uub-gr-010-0062-029v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-30r">
+            <desc>Folio 30r</desc>
+            <graphic url="uub-gr-010-0063-030r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-30v">
+            <desc>Folio 30v</desc>
+            <graphic url="uub-gr-010-0064-030v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-31r">
+            <desc>Folio 31r</desc>
+            <graphic url="uub-gr-010-0065-031r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-31v">
+            <desc>Folio 31v</desc>
+            <graphic url="uub-gr-010-0066-031v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-32r">
+            <desc>Folio 32r</desc>
+            <graphic url="uub-gr-010-0067-032r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-32v">
+            <desc>Folio 32v</desc>
+            <graphic url="uub-gr-010-0068-032v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-33r">
+            <desc>Folio 33r</desc>
+            <graphic url="uub-gr-010-0069-033r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-33v">
+            <desc>Folio 33v</desc>
+            <graphic url="uub-gr-010-0070-033v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-34r">
+            <desc>Folio 34r</desc>
+            <graphic url="uub-gr-010-0071-034r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-34v">
+            <desc>Folio 34v</desc>
+            <graphic url="uub-gr-010-0072-034v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-35r">
+            <desc>Folio 35r</desc>
+            <graphic url="uub-gr-010-0073-035r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-35v">
+            <desc>Folio 35v</desc>
+            <graphic url="uub-gr-010-0074-035v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-36r">
+            <desc>Folio 36r</desc>
+            <graphic url="uub-gr-010-0075-036r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-36v">
+            <desc>Folio 36v</desc>
+            <graphic url="uub-gr-010-0076-036v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-37r">
+            <desc>Folio 37r</desc>
+            <graphic url="uub-gr-010-0077-037r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-37v">
+            <desc>Folio 37v</desc>
+            <graphic url="uub-gr-010-0078-037v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-38r">
+            <desc>Folio 38r</desc>
+            <graphic url="uub-gr-010-0079-038r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-38v">
+            <desc>Folio 38v</desc>
+            <graphic url="uub-gr-010-0080-038v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-39r">
+            <desc>Folio 39r</desc>
+            <graphic url="uub-gr-010-0081-039r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-39v">
+            <desc>Folio 39v</desc>
+            <graphic url="uub-gr-010-0082-039v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-40r">
+            <desc>Folio 40r</desc>
+            <graphic url="uub-gr-010-0083-040r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-40v">
+            <desc>Folio 40v</desc>
+            <graphic url="uub-gr-010-0084-040v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-41r">
+            <desc>Folio 41r</desc>
+            <graphic url="uub-gr-010-0085-041r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-41v">
+            <desc>Folio 41v</desc>
+            <graphic url="uub-gr-010-0086-041v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-42r">
+            <desc>Folio 42r</desc>
+            <graphic url="uub-gr-010-0087-042r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-42v">
+            <desc>Folio 42v</desc>
+            <graphic url="uub-gr-010-0088-042v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-43r">
+            <desc>Folio 43r</desc>
+            <graphic url="uub-gr-010-0089-043r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-43v">
+            <desc>Folio 43v</desc>
+            <graphic url="uub-gr-010-0090-043v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-44r">
+            <desc>Folio 44r</desc>
+            <graphic url="uub-gr-010-0091-044r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-44v">
+            <desc>Folio 44v</desc>
+            <graphic url="uub-gr-010-0092-044v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-45r">
+            <desc>Folio 45r</desc>
+            <graphic url="uub-gr-010-0093-045r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-45v">
+            <desc>Folio 45v</desc>
+            <graphic url="uub-gr-010-0094-045v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-46r">
+            <desc>Folio 46r</desc>
+            <graphic url="uub-gr-010-0095-046r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-46v">
+            <desc>Folio 46v</desc>
+            <graphic url="uub-gr-010-0096-046v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-47r">
+            <desc>Folio 47r</desc>
+            <graphic url="uub-gr-010-0097-047r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-47v">
+            <desc>Folio 47v</desc>
+            <graphic url="uub-gr-010-0098-047v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-48r">
+            <desc>Folio 48r</desc>
+            <graphic url="uub-gr-010-0099-048r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-48v">
+            <desc>Folio 48v</desc>
+            <graphic url="uub-gr-010-0100-048v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-49r">
+            <desc>Folio 49r</desc>
+            <graphic url="uub-gr-010-0101-049r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-49v">
+            <desc>Folio 49v</desc>
+            <graphic url="uub-gr-010-0102-049v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-50r">
+            <desc>Folio 50r</desc>
+            <graphic url="uub-gr-010-0103-050r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-50v">
+            <desc>Folio 50v</desc>
+            <graphic url="uub-gr-010-0104-050v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-51r">
+            <desc>Folio 51r</desc>
+            <graphic url="uub-gr-010-0105-051r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-51v">
+            <desc>Folio 51v</desc>
+            <graphic url="uub-gr-010-0106-051v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-52r">
+            <desc>Folio 52r</desc>
+            <graphic url="uub-gr-010-0107-052r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-52v">
+            <desc>Folio 52v</desc>
+            <graphic url="uub-gr-010-0108-052v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-53r">
+            <desc>Folio 53r</desc>
+            <graphic url="uub-gr-010-0109-053r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-53v">
+            <desc>Folio 53v</desc>
+            <graphic url="uub-gr-010-0110-053v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-54r">
+            <desc>Folio 54r</desc>
+            <graphic url="uub-gr-010-0111-054r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-54v">
+            <desc>Folio 54v</desc>
+            <graphic url="uub-gr-010-0112-054v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-55r">
+            <desc>Folio 55r</desc>
+            <graphic url="uub-gr-010-0113-055r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-55v">
+            <desc>Folio 55v</desc>
+            <graphic url="uub-gr-010-0114-055v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-56r">
+            <desc>Folio 56r</desc>
+            <graphic url="uub-gr-010-0115-056r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-56v">
+            <desc>Folio 56v</desc>
+            <graphic url="uub-gr-010-0116-056v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-57r">
+            <desc>Folio 57r</desc>
+            <graphic url="uub-gr-010-0117-057r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-57v">
+            <desc>Folio 57v</desc>
+            <graphic url="uub-gr-010-0118-057v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-58r">
+            <desc>Folio 58r</desc>
+            <graphic url="uub-gr-010-0119-058r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-58v">
+            <desc>Folio 58v</desc>
+            <graphic url="uub-gr-010-0120-058v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-59r">
+            <desc>Folio 59r</desc>
+            <graphic url="uub-gr-010-0121-059r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-59v">
+            <desc>Folio 59v</desc>
+            <graphic url="uub-gr-010-0122-059v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-60r">
+            <desc>Folio 60r</desc>
+            <graphic url="uub-gr-010-0123-060r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-60v">
+            <desc>Folio 60v</desc>
+            <graphic url="uub-gr-010-0124-060v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-61r">
+            <desc>Folio 61r</desc>
+            <graphic url="uub-gr-010-0125-061r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-61v">
+            <desc>Folio 61v</desc>
+            <graphic url="uub-gr-010-0126-061v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-62r">
+            <desc>Folio 62r</desc>
+            <graphic url="uub-gr-010-0127-062r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-62v">
+            <desc>Folio 62v</desc>
+            <graphic url="uub-gr-010-0128-062v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-63r">
+            <desc>Folio 63r</desc>
+            <graphic url="uub-gr-010-0129-063r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-63v">
+            <desc>Folio 63v</desc>
+            <graphic url="uub-gr-010-0130-063v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-64r">
+            <desc>Folio 64r</desc>
+            <graphic url="uub-gr-010-0131-064r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-64v">
+            <desc>Folio 64v</desc>
+            <graphic url="uub-gr-010-0132-064v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-65r">
+            <desc>Folio 65r</desc>
+            <graphic url="uub-gr-010-0133-065r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-65v">
+            <desc>Folio 65v</desc>
+            <graphic url="uub-gr-010-0134-065v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-66r">
+            <desc>Folio 66r</desc>
+            <graphic url="uub-gr-010-0135-066r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-66v">
+            <desc>Folio 66v</desc>
+            <graphic url="uub-gr-010-0136-066v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-67r">
+            <desc>Folio 67r</desc>
+            <graphic url="uub-gr-010-0137-067r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-67v">
+            <desc>Folio 67v</desc>
+            <graphic url="uub-gr-010-0138-067v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-68r">
+            <desc>Folio 68r</desc>
+            <graphic url="uub-gr-010-0139-068r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-68v">
+            <desc>Folio 68v</desc>
+            <graphic url="uub-gr-010-0140-068v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-69r">
+            <desc>Folio 69r</desc>
+            <graphic url="uub-gr-010-0141-069r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-69v">
+            <desc>Folio 69v</desc>
+            <graphic url="uub-gr-010-0142-069v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-70r">
+            <desc>Folio 70r</desc>
+            <graphic url="uub-gr-010-0143-070r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-70v">
+            <desc>Folio 70v</desc>
+            <graphic url="uub-gr-010-0144-070v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-71r">
+            <desc>Folio 71r</desc>
+            <graphic url="uub-gr-010-0145-071r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-71v">
+            <desc>Folio 71v</desc>
+            <graphic url="uub-gr-010-0146-071v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-72r">
+            <desc>Folio 72r</desc>
+            <graphic url="uub-gr-010-0147-072r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-72v">
+            <desc>Folio 72v</desc>
+            <graphic url="uub-gr-010-0148-072v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-73r">
+            <desc>Folio 73r</desc>
+            <graphic url="uub-gr-010-0149-073r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-73v">
+            <desc>Folio 73v</desc>
+            <graphic url="uub-gr-010-0150-073v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-74r">
+            <desc>Folio 74r</desc>
+            <graphic url="uub-gr-010-0151-074r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-74v">
+            <desc>Folio 74v</desc>
+            <graphic url="uub-gr-010-0152-074v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-75r">
+            <desc>Folio 75r</desc>
+            <graphic url="uub-gr-010-0153-075r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-75v">
+            <desc>Folio 75v</desc>
+            <graphic url="uub-gr-010-0154-075v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-76r">
+            <desc>Folio 76r</desc>
+            <graphic url="uub-gr-010-0155-076r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-76v">
+            <desc>Folio 76v</desc>
+            <graphic url="uub-gr-010-0156-076v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-77r">
+            <desc>Folio 77r</desc>
+            <graphic url="uub-gr-010-0157-077r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-77v">
+            <desc>Folio 77v</desc>
+            <graphic url="uub-gr-010-0158-077v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-78r">
+            <desc>Folio 78r</desc>
+            <graphic url="uub-gr-010-0159-078r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-78v">
+            <desc>Folio 78v</desc>
+            <graphic url="uub-gr-010-0160-078v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-79r">
+            <desc>Folio 79r</desc>
+            <graphic url="uub-gr-010-0161-079r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-79v">
+            <desc>Folio 79v</desc>
+            <graphic url="uub-gr-010-0162-079v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-80r">
+            <desc>Folio 80r</desc>
+            <graphic url="uub-gr-010-0163-080r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-80v">
+            <desc>Folio 80v</desc>
+            <graphic url="uub-gr-010-0164-080v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-81r">
+            <desc>Folio 81r</desc>
+            <graphic url="uub-gr-010-0165-081r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-81v">
+            <desc>Folio 81v</desc>
+            <graphic url="uub-gr-010-0166-081v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-82r">
+            <desc>Folio 82r</desc>
+            <graphic url="uub-gr-010-0167-082r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-82v">
+            <desc>Folio 82v</desc>
+            <graphic url="uub-gr-010-0168-082v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-83r">
+            <desc>Folio 83r</desc>
+            <graphic url="uub-gr-010-0169-083r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-83v">
+            <desc>Folio 83v</desc>
+            <graphic url="uub-gr-010-0170-083v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-84r">
+            <desc>Folio 84r</desc>
+            <graphic url="uub-gr-010-0171-084r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-84v">
+            <desc>Folio 84v</desc>
+            <graphic url="uub-gr-010-0172-084v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-85r">
+            <desc>Folio 85r</desc>
+            <graphic url="uub-gr-010-0173-085r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-85v">
+            <desc>Folio 85v</desc>
+            <graphic url="uub-gr-010-0174-085v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-86r">
+            <desc>Folio 86r</desc>
+            <graphic url="uub-gr-010-0175-086r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-86v">
+            <desc>Folio 86v</desc>
+            <graphic url="uub-gr-010-0176-086v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-87r">
+            <desc>Folio 87r</desc>
+            <graphic url="uub-gr-010-0177-087r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-87v">
+            <desc>Folio 87v</desc>
+            <graphic url="uub-gr-010-0178-087v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-88r">
+            <desc>Folio 88r</desc>
+            <graphic url="uub-gr-010-0179-088r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-88v">
+            <desc>Folio 88v</desc>
+            <graphic url="uub-gr-010-0180-088v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-89r">
+            <desc>Folio 89r</desc>
+            <graphic url="uub-gr-010-0181-089r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-89v">
+            <desc>Folio 89v</desc>
+            <graphic url="uub-gr-010-0182-089v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-90r">
+            <desc>Folio 90r</desc>
+            <graphic url="uub-gr-010-0183-090r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-90v">
+            <desc>Folio 90v</desc>
+            <graphic url="uub-gr-010-0184-090v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-91r">
+            <desc>Folio 91r</desc>
+            <graphic url="uub-gr-010-0185-091r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-91v">
+            <desc>Folio 91v</desc>
+            <graphic url="uub-gr-010-0186-091v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-92r">
+            <desc>Folio 92r</desc>
+            <graphic url="uub-gr-010-0187-092r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-92v">
+            <desc>Folio 92v</desc>
+            <graphic url="uub-gr-010-0188-092v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-93r">
+            <desc>Folio 93r</desc>
+            <graphic url="uub-gr-010-0189-093r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-93v">
+            <desc>Folio 93v</desc>
+            <graphic url="uub-gr-010-0190-093v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-94r">
+            <desc>Folio 94r</desc>
+            <graphic url="uub-gr-010-0191-094r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-94v">
+            <desc>Folio 94v</desc>
+            <graphic url="uub-gr-010-0192-094v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-95r">
+            <desc>Folio 95r</desc>
+            <graphic url="uub-gr-010-0193-095r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-95v">
+            <desc>Folio 95v</desc>
+            <graphic url="uub-gr-010-0194-095v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-96r">
+            <desc>Folio 96r</desc>
+            <graphic url="uub-gr-010-0195-096r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-96v">
+            <desc>Folio 96v</desc>
+            <graphic url="uub-gr-010-0196-096v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-97r">
+            <desc>Folio 97r</desc>
+            <graphic url="uub-gr-010-0197-097r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-97v">
+            <desc>Folio 97v</desc>
+            <graphic url="uub-gr-010-0198-097v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-98r">
+            <desc>Folio 98r</desc>
+            <graphic url="uub-gr-010-0199-098r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-98v">
+            <desc>Folio 98v</desc>
+            <graphic url="uub-gr-010-0200-098v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-99r">
+            <desc>Folio 99r</desc>
+            <graphic url="uub-gr-010-0201-099r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-99v">
+            <desc>Folio 99v</desc>
+            <graphic url="uub-gr-010-0202-099v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-100r">
+            <desc>Folio 100r</desc>
+            <graphic url="uub-gr-010-0203-100r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-100v">
+            <desc>Folio 100v</desc>
+            <graphic url="uub-gr-010-0204-100v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-101r">
+            <desc>Folio 101r</desc>
+            <graphic url="uub-gr-010-0205-101r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-101v">
+            <desc>Folio 101v</desc>
+            <graphic url="uub-gr-010-0206-101v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-102r">
+            <desc>Folio 102r</desc>
+            <graphic url="uub-gr-010-0207-102r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-102v">
+            <desc>Folio 102v</desc>
+            <graphic url="uub-gr-010-0208-102v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-103r">
+            <desc>Folio 103r</desc>
+            <graphic url="uub-gr-010-0209-103r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-103v">
+            <desc>Folio 103v</desc>
+            <graphic url="uub-gr-010-0210-103v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-104r">
+            <desc>Folio 104r</desc>
+            <graphic url="uub-gr-010-0211-104r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-104v">
+            <desc>Folio 104v</desc>
+            <graphic url="uub-gr-010-0212-104v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-105r">
+            <desc>Folio 105r</desc>
+            <graphic url="uub-gr-010-0213-105r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-105v">
+            <desc>Folio 105v</desc>
+            <graphic url="uub-gr-010-0214-105v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-106r">
+            <desc>Folio 106r</desc>
+            <graphic url="uub-gr-010-0215-106r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-106v">
+            <desc>Folio 106v</desc>
+            <graphic url="uub-gr-010-0216-106v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-107r">
+            <desc>Folio 107r</desc>
+            <graphic url="uub-gr-010-0217-107r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-107v">
+            <desc>Folio 107v</desc>
+            <graphic url="uub-gr-010-0218-107v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-108r">
+            <desc>Folio 108r</desc>
+            <graphic url="uub-gr-010-0219-108r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-108v">
+            <desc>Folio 108v</desc>
+            <graphic url="uub-gr-010-0220-108v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-109r">
+            <desc>Folio 109r</desc>
+            <graphic url="uub-gr-010-0221-109r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-109v">
+            <desc>Folio 109v</desc>
+            <graphic url="uub-gr-010-0222-109v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-110r">
+            <desc>Folio 110r</desc>
+            <graphic url="uub-gr-010-0223-110r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-110v">
+            <desc>Folio 110v</desc>
+            <graphic url="uub-gr-010-0224-110v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-111r">
+            <desc>Folio 111r</desc>
+            <graphic url="uub-gr-010-0225-111r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-111v">
+            <desc>Folio 111v</desc>
+            <graphic url="uub-gr-010-0226-111v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-112r">
+            <desc>Folio 112r</desc>
+            <graphic url="uub-gr-010-0227-112r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-112v">
+            <desc>Folio 112v</desc>
+            <graphic url="uub-gr-010-0228-112v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-113r">
+            <desc>Folio 113r</desc>
+            <graphic url="uub-gr-010-0229-113r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-113v">
+            <desc>Folio 113v</desc>
+            <graphic url="uub-gr-010-0230-113v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-114r">
+            <desc>Folio 114r</desc>
+            <graphic url="uub-gr-010-0231-114r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-114v">
+            <desc>Folio 114v</desc>
+            <graphic url="uub-gr-010-0232-114v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-115r">
+            <desc>Folio 115r</desc>
+            <graphic url="uub-gr-010-0233-115r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-115v">
+            <desc>Folio 115v</desc>
+            <graphic url="uub-gr-010-0234-115v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-116r">
+            <desc>Folio 116r</desc>
+            <graphic url="uub-gr-010-0235-116r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-116v">
+            <desc>Folio 116v</desc>
+            <graphic url="uub-gr-010-0236-116v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-117r">
+            <desc>Folio 117r</desc>
+            <graphic url="uub-gr-010-0237-117r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-117v">
+            <desc>Folio 117v</desc>
+            <graphic url="uub-gr-010-0238-117v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-118r">
+            <desc>Folio 118r</desc>
+            <graphic url="uub-gr-010-0239-118r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-118v">
+            <desc>Folio 118v</desc>
+            <graphic url="uub-gr-010-0240-118v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-119r">
+            <desc>Folio 119r</desc>
+            <graphic url="uub-gr-010-0241-119r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-119v">
+            <desc>Folio 119v</desc>
+            <graphic url="uub-gr-010-0242-119v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-120r">
+            <desc>Folio 120r</desc>
+            <graphic url="uub-gr-010-0243-120r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-120v">
+            <desc>Folio 120v</desc>
+            <graphic url="uub-gr-010-0244-120v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-121r">
+            <desc>Folio 121r</desc>
+            <graphic url="uub-gr-010-0245-121r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-121v">
+            <desc>Folio 121v</desc>
+            <graphic url="uub-gr-010-0246-121v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-122r">
+            <desc>Folio 122r</desc>
+            <graphic url="uub-gr-010-0247-122r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-122v">
+            <desc>Folio 122v</desc>
+            <graphic url="uub-gr-010-0248-122v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-123r">
+            <desc>Folio 123r</desc>
+            <graphic url="uub-gr-010-0249-123r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-123v">
+            <desc>Folio 123v</desc>
+            <graphic url="uub-gr-010-0250-123v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-124r">
+            <desc>Folio 124r</desc>
+            <graphic url="uub-gr-010-0251-124r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-124v">
+            <desc>Folio 124v</desc>
+            <graphic url="uub-gr-010-0252-124v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-125r">
+            <desc>Folio 125r</desc>
+            <graphic url="uub-gr-010-0253-125r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-125v">
+            <desc>Folio 125v</desc>
+            <graphic url="uub-gr-010-0254-125v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-126r">
+            <desc>Folio 126r</desc>
+            <graphic url="uub-gr-010-0255-126r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-126v">
+            <desc>Folio 126v</desc>
+            <graphic url="uub-gr-010-0256-126v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-127r">
+            <desc>Folio 127r</desc>
+            <graphic url="uub-gr-010-0257-127r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-127v">
+            <desc>Folio 127v</desc>
+            <graphic url="uub-gr-010-0258-127v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-128r">
+            <desc>Folio 128r</desc>
+            <graphic url="uub-gr-010-0259-128r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-128v">
+            <desc>Folio 128v</desc>
+            <graphic url="uub-gr-010-0260-128v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-129r">
+            <desc>Folio 129r</desc>
+            <graphic url="uub-gr-010-0261-129r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-129v">
+            <desc>Folio 129v</desc>
+            <graphic url="uub-gr-010-0262-129v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-130r">
+            <desc>Folio 130r</desc>
+            <graphic url="uub-gr-010-0263-130r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-130v">
+            <desc>Folio 130v</desc>
+            <graphic url="uub-gr-010-0264-130v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-131r">
+            <desc>Folio 131r</desc>
+            <graphic url="uub-gr-010-0265-131r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-131v">
+            <desc>Folio 131v</desc>
+            <graphic url="uub-gr-010-0266-131v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-132r">
+            <desc>Folio 132r</desc>
+            <graphic url="uub-gr-010-0267-132r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-132v">
+            <desc>Folio 132v</desc>
+            <graphic url="uub-gr-010-0268-132v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-133r">
+            <desc>Folio 133r</desc>
+            <graphic url="uub-gr-010-0269-133r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-133v">
+            <desc>Folio 133v</desc>
+            <graphic url="uub-gr-010-0270-133v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-134r">
+            <desc>Folio 134r</desc>
+            <graphic url="uub-gr-010-0271-134r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-134v">
+            <desc>Folio 134v</desc>
+            <graphic url="uub-gr-010-0272-134v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-135r">
+            <desc>Folio 135r</desc>
+            <graphic url="uub-gr-010-0273-135r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-135v">
+            <desc>Folio 135v</desc>
+            <graphic url="uub-gr-010-0274-135v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-136r">
+            <desc>Folio 136r</desc>
+            <graphic url="uub-gr-010-0275-136r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-136v">
+            <desc>Folio 136v</desc>
+            <graphic url="uub-gr-010-0276-136v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-137r">
+            <desc>Folio 137r</desc>
+            <graphic url="uub-gr-010-0277-137r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-137v">
+            <desc>Folio 137v</desc>
+            <graphic url="uub-gr-010-0278-137v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-138r">
+            <desc>Folio 138r</desc>
+            <graphic url="uub-gr-010-0279-138r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-138v">
+            <desc>Folio 138v</desc>
+            <graphic url="uub-gr-010-0280-138v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-139r">
+            <desc>Folio 139r</desc>
+            <graphic url="uub-gr-010-0281-139r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-139v">
+            <desc>Folio 139v</desc>
+            <graphic url="uub-gr-010-0282-139v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-140r">
+            <desc>Folio 140r</desc>
+            <graphic url="uub-gr-010-0283-140r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-140v">
+            <desc>Folio 140v</desc>
+            <graphic url="uub-gr-010-0284-140v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-141r">
+            <desc>Folio 141r</desc>
+            <graphic url="uub-gr-010-0285-141r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-141v">
+            <desc>Folio 141v</desc>
+            <graphic url="uub-gr-010-0286-141v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-142r">
+            <desc>Folio 142r</desc>
+            <graphic url="uub-gr-010-0287-142r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-142v">
+            <desc>Folio 142v</desc>
+            <graphic url="uub-gr-010-0288-142v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-143r">
+            <desc>Folio 143r</desc>
+            <graphic url="uub-gr-010-0289-143r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-143v">
+            <desc>Folio 143v</desc>
+            <graphic url="uub-gr-010-0290-143v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-144r">
+            <desc>Folio 144r</desc>
+            <graphic url="uub-gr-010-0291-144r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-144v">
+            <desc>Folio 144v</desc>
+            <graphic url="uub-gr-010-0292-144v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-145r">
+            <desc>Folio 145r</desc>
+            <graphic url="uub-gr-010-0293-145r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-145v">
+            <desc>Folio 145v</desc>
+            <graphic url="uub-gr-010-0294-145v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-146r">
+            <desc>Folio 146r</desc>
+            <graphic url="uub-gr-010-0295-146r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-146v">
+            <desc>Folio 146v</desc>
+            <graphic url="uub-gr-010-0296-146v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-147r">
+            <desc>Folio 147r</desc>
+            <graphic url="uub-gr-010-0297-147r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-147v">
+            <desc>Folio 147v</desc>
+            <graphic url="uub-gr-010-0298-147v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-148r">
+            <desc>Folio 148r</desc>
+            <graphic url="uub-gr-010-0299-148r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-148v">
+            <desc>Folio 148v</desc>
+            <graphic url="uub-gr-010-0300-148v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-149r">
+            <desc>Folio 149r</desc>
+            <graphic url="uub-gr-010-0301-149r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-149v">
+            <desc>Folio 149v</desc>
+            <graphic url="uub-gr-010-0302-149v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-150r">
+            <desc>Folio 150r</desc>
+            <graphic url="uub-gr-010-0303-150r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-150v">
+            <desc>Folio 150v</desc>
+            <graphic url="uub-gr-010-0304-150v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-151r">
+            <desc>Folio 151r</desc>
+            <graphic url="uub-gr-010-0305-151r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-151v">
+            <desc>Folio 151v</desc>
+            <graphic url="uub-gr-010-0306-151v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-152r">
+            <desc>Folio 152r</desc>
+            <graphic url="uub-gr-010-0307-152r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-152v">
+            <desc>Folio 152v</desc>
+            <graphic url="uub-gr-010-0308-152v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-153r">
+            <desc>Folio 153r</desc>
+            <graphic url="uub-gr-010-0309-153r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-153v">
+            <desc>Folio 153v</desc>
+            <graphic url="uub-gr-010-0310-153v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-154r">
+            <desc>Folio 154r</desc>
+            <graphic url="uub-gr-010-0311-154r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-154v">
+            <desc>Folio 154v</desc>
+            <graphic url="uub-gr-010-0312-154v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-155r">
+            <desc>Folio 155r</desc>
+            <graphic url="uub-gr-010-0313-155r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-155v">
+            <desc>Folio 155v</desc>
+            <graphic url="uub-gr-010-0314-155v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-156r">
+            <desc>Folio 156r</desc>
+            <graphic url="uub-gr-010-0315-156r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-156v">
+            <desc>Folio 156v</desc>
+            <graphic url="uub-gr-010-0316-156v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-157r">
+            <desc>Folio 157r</desc>
+            <graphic url="uub-gr-010-0317-157r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-157v">
+            <desc>Folio 157v</desc>
+            <graphic url="uub-gr-010-0318-157v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-158r">
+            <desc>Folio 158r</desc>
+            <graphic url="uub-gr-010-0319-158r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-158v">
+            <desc>Folio 158v</desc>
+            <graphic url="uub-gr-010-0320-158v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-159r">
+            <desc>Folio 159r</desc>
+            <graphic url="uub-gr-010-0321-159r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-159v">
+            <desc>Folio 159v</desc>
+            <graphic url="uub-gr-010-0322-159v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-160r">
+            <desc>Folio 160r</desc>
+            <graphic url="uub-gr-010-0323-160r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-160v">
+            <desc>Folio 160v</desc>
+            <graphic url="uub-gr-010-0324-160v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-161r">
+            <desc>Folio 161r</desc>
+            <graphic url="uub-gr-010-0325-161r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-161v">
+            <desc>Folio 161v</desc>
+            <graphic url="uub-gr-010-0326-161v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-162r">
+            <desc>Folio 162r</desc>
+            <graphic url="uub-gr-010-0327-162r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-162v">
+            <desc>Folio 162v</desc>
+            <graphic url="uub-gr-010-0328-162v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-163r">
+            <desc>Folio 163r</desc>
+            <graphic url="uub-gr-010-0329-163r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-163v">
+            <desc>Folio 163v</desc>
+            <graphic url="uub-gr-010-0330-163v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-164r">
+            <desc>Folio 164r</desc>
+            <graphic url="uub-gr-010-0331-164r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-164v">
+            <desc>Folio 164v</desc>
+            <graphic url="uub-gr-010-0332-164v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-165r">
+            <desc>Folio 165r</desc>
+            <graphic url="uub-gr-010-0333-165r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-165v">
+            <desc>Folio 165v</desc>
+            <graphic url="uub-gr-010-0334-165v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-166r">
+            <desc>Folio 166r</desc>
+            <graphic url="uub-gr-010-0335-166r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-166v">
+            <desc>Folio 166v</desc>
+            <graphic url="uub-gr-010-0336-166v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-167r">
+            <desc>Folio 167r</desc>
+            <graphic url="uub-gr-010-0337-167r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-167v">
+            <desc>Folio 167v</desc>
+            <graphic url="uub-gr-010-0338-167v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-168r">
+            <desc>Folio 168r</desc>
+            <graphic url="uub-gr-010-0339-168r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-168v">
+            <desc>Folio 168v</desc>
+            <graphic url="uub-gr-010-0340-168v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-169r">
+            <desc>Folio 169r</desc>
+            <graphic url="uub-gr-010-0341-169r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-169v">
+            <desc>Folio 169v</desc>
+            <graphic url="uub-gr-010-0342-169v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-170r">
+            <desc>Folio 170r</desc>
+            <graphic url="uub-gr-010-0343-170r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-170v">
+            <desc>Folio 170v</desc>
+            <graphic url="uub-gr-010-0344-170v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-171r">
+            <desc>Folio 171r</desc>
+            <graphic url="uub-gr-010-0345-171r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-171v">
+            <desc>Folio 171v</desc>
+            <graphic url="uub-gr-010-0346-171v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-172r">
+            <desc>Folio 172r</desc>
+            <graphic url="uub-gr-010-0347-172r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-172v">
+            <desc>Folio 172v</desc>
+            <graphic url="uub-gr-010-0348-172v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-173r">
+            <desc>Folio 173r</desc>
+            <graphic url="uub-gr-010-0349-173r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-173v">
+            <desc>Folio 173v</desc>
+            <graphic url="uub-gr-010-0350-173v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-174r">
+            <desc>Folio 174r</desc>
+            <graphic url="uub-gr-010-0351-174r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-174v">
+            <desc>Folio 174v</desc>
+            <graphic url="uub-gr-010-0352-174v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-175r">
+            <desc>Folio 175r</desc>
+            <graphic url="uub-gr-010-0353-175r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-175v">
+            <desc>Folio 175v</desc>
+            <graphic url="uub-gr-010-0354-175v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-176r">
+            <desc>Folio 176r</desc>
+            <graphic url="uub-gr-010-0355-176r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-176v">
+            <desc>Folio 176v</desc>
+            <graphic url="uub-gr-010-0356-176v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-177r">
+            <desc>Folio 177r</desc>
+            <graphic url="uub-gr-010-0357-177r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-177v">
+            <desc>Folio 177v</desc>
+            <graphic url="uub-gr-010-0358-177v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-178r">
+            <desc>Folio 178r</desc>
+            <graphic url="uub-gr-010-0359-178r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-178v">
+            <desc>Folio 178v</desc>
+            <graphic url="uub-gr-010-0360-178v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-179r">
+            <desc>Folio 179r</desc>
+            <graphic url="uub-gr-010-0361-179r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-179v">
+            <desc>Folio 179v</desc>
+            <graphic url="uub-gr-010-0362-179v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-180r">
+            <desc>Folio 180r</desc>
+            <graphic url="uub-gr-010-0363-180r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-180v">
+            <desc>Folio 180v</desc>
+            <graphic url="uub-gr-010-0364-180v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-181r">
+            <desc>Folio 181r</desc>
+            <graphic url="uub-gr-010-0365-181r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-181v">
+            <desc>Folio 181v</desc>
+            <graphic url="uub-gr-010-0366-181v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-182r">
+            <desc>Folio 182r</desc>
+            <graphic url="uub-gr-010-0367-182r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-182v">
+            <desc>Folio 182v</desc>
+            <graphic url="uub-gr-010-0368-182v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-183r">
+            <desc>Folio 183r</desc>
+            <graphic url="uub-gr-010-0369-183r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-183v">
+            <desc>Folio 183v</desc>
+            <graphic url="uub-gr-010-0370-183v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-184r">
+            <desc>Folio 184r</desc>
+            <graphic url="uub-gr-010-0371-184r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-184v">
+            <desc>Folio 184v</desc>
+            <graphic url="uub-gr-010-0372-184v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-185r">
+            <desc>Folio 185r</desc>
+            <graphic url="uub-gr-010-0373-185r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-185v">
+            <desc>Folio 185v</desc>
+            <graphic url="uub-gr-010-0374-185v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-186r">
+            <desc>Folio 186r</desc>
+            <graphic url="uub-gr-010-0375-186r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-186v">
+            <desc>Folio 186v</desc>
+            <graphic url="uub-gr-010-0376-186v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-187r">
+            <desc>Folio 187r</desc>
+            <graphic url="uub-gr-010-0377-187r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-187v">
+            <desc>Folio 187v</desc>
+            <graphic url="uub-gr-010-0378-187v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-188r">
+            <desc>Folio 188r</desc>
+            <graphic url="uub-gr-010-0379-188r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-188v">
+            <desc>Folio 188v</desc>
+            <graphic url="uub-gr-010-0380-188v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-189r">
+            <desc>Folio 189r</desc>
+            <graphic url="uub-gr-010-0381-189r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-189v">
+            <desc>Folio 189v</desc>
+            <graphic url="uub-gr-010-0382-189v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-190r">
+            <desc>Folio 190r</desc>
+            <graphic url="uub-gr-010-0383-190r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-190v">
+            <desc>Folio 190v</desc>
+            <graphic url="uub-gr-010-0384-190v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-191r">
+            <desc>Folio 191r</desc>
+            <graphic url="uub-gr-010-0385-191r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-191v">
+            <desc>Folio 191v</desc>
+            <graphic url="uub-gr-010-0386-191v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-192r">
+            <desc>Folio 192r</desc>
+            <graphic url="uub-gr-010-0387-192r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-192v">
+            <desc>Folio 192v</desc>
+            <graphic url="uub-gr-010-0388-192v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-193r">
+            <desc>Folio 193r</desc>
+            <graphic url="uub-gr-010-0389-193r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-193v">
+            <desc>Folio 193v</desc>
+            <graphic url="uub-gr-010-0390-193v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-194r">
+            <desc>Folio 194r</desc>
+            <graphic url="uub-gr-010-0391-194r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-194v">
+            <desc>Folio 194v</desc>
+            <graphic url="uub-gr-010-0392-194v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-195r">
+            <desc>Folio 195r</desc>
+            <graphic url="uub-gr-010-0393-195r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-195v">
+            <desc>Folio 195v</desc>
+            <graphic url="uub-gr-010-0394-195v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-196r">
+            <desc>Folio 196r</desc>
+            <graphic url="uub-gr-010-0395-196r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-196v">
+            <desc>Folio 196v</desc>
+            <graphic url="uub-gr-010-0396-196v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-197r">
+            <desc>Folio 197r</desc>
+            <graphic url="uub-gr-010-0397-197r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-197v">
+            <desc>Folio 197v</desc>
+            <graphic url="uub-gr-010-0398-197v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-198r">
+            <desc>Folio 198r</desc>
+            <graphic url="uub-gr-010-0399-198r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-198v">
+            <desc>Folio 198v</desc>
+            <graphic url="uub-gr-010-0400-198v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-199r">
+            <desc>Folio 199r</desc>
+            <graphic url="uub-gr-010-0401-199r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-199v">
+            <desc>Folio 199v</desc>
+            <graphic url="uub-gr-010-0402-199v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-200r">
+            <desc>Folio 200r</desc>
+            <graphic url="uub-gr-010-0403-200r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-200v">
+            <desc>Folio 200v</desc>
+            <graphic url="uub-gr-010-0404-200v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-201r">
+            <desc>Folio 201r</desc>
+            <graphic url="uub-gr-010-0405-201r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-201v">
+            <desc>Folio 201v</desc>
+            <graphic url="uub-gr-010-0406-201v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-202r">
+            <desc>Folio 202r</desc>
+            <graphic url="uub-gr-010-0407-202r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-202v">
+            <desc>Folio 202v</desc>
+            <graphic url="uub-gr-010-0408-202v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-203r">
+            <desc>Folio 203r</desc>
+            <graphic url="uub-gr-010-0409-203r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-203v">
+            <desc>Folio 203v</desc>
+            <graphic url="uub-gr-010-0410-203v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-204r">
+            <desc>Folio 204r</desc>
+            <graphic url="uub-gr-010-0411-204r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-204v">
+            <desc>Folio 204v</desc>
+            <graphic url="uub-gr-010-0412-204v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-205r">
+            <desc>Folio 205r</desc>
+            <graphic url="uub-gr-010-0413-205r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-205v">
+            <desc>Folio 205v</desc>
+            <graphic url="uub-gr-010-0414-205v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-206r">
+            <desc>Folio 206r</desc>
+            <graphic url="uub-gr-010-0415-206r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-206v">
+            <desc>Folio 206v</desc>
+            <graphic url="uub-gr-010-0416-206v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-207r">
+            <desc>Folio 207r</desc>
+            <graphic url="uub-gr-010-0417-207r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-207v">
+            <desc>Folio 207v</desc>
+            <graphic url="uub-gr-010-0418-207v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-208r">
+            <desc>Folio 208r</desc>
+            <graphic url="uub-gr-010-0419-208r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-208v">
+            <desc>Folio 208v</desc>
+            <graphic url="uub-gr-010-0420-208v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-209r">
+            <desc>Folio 209r</desc>
+            <graphic url="uub-gr-010-0421-209r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-209v">
+            <desc>Folio 209v</desc>
+            <graphic url="uub-gr-010-0422-209v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-210r">
+            <desc>Folio 210r</desc>
+            <graphic url="uub-gr-010-0423-210r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-210v">
+            <desc>Folio 210v</desc>
+            <graphic url="uub-gr-010-0424-210v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-211r">
+            <desc>Folio 211r</desc>
+            <graphic url="uub-gr-010-0425-211r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-211v">
+            <desc>Folio 211v</desc>
+            <graphic url="uub-gr-010-0426-211v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-212r">
+            <desc>Folio 212r</desc>
+            <graphic url="uub-gr-010-0427-212r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-212v">
+            <desc>Folio 212v</desc>
+            <graphic url="uub-gr-010-0428-212v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-213r">
+            <desc>Folio 213r</desc>
+            <graphic url="uub-gr-010-0429-213r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-213v">
+            <desc>Folio 213v</desc>
+            <graphic url="uub-gr-010-0430-213v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-214r">
+            <desc>Folio 214r</desc>
+            <graphic url="uub-gr-010-0431-214r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-214v">
+            <desc>Folio 214v</desc>
+            <graphic url="uub-gr-010-0432-214v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-215r">
+            <desc>Folio 215r</desc>
+            <graphic url="uub-gr-010-0433-215r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-215v">
+            <desc>Folio 215v</desc>
+            <graphic url="uub-gr-010-0434-215v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-216r">
+            <desc>Folio 216r</desc>
+            <graphic url="uub-gr-010-0435-216r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-216v">
+            <desc>Folio 216v</desc>
+            <graphic url="uub-gr-010-0436-216v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-217r">
+            <desc>Folio 217r</desc>
+            <graphic url="uub-gr-010-0437-217r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-217v">
+            <desc>Folio 217v</desc>
+            <graphic url="uub-gr-010-0438-217v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-218r">
+            <desc>Folio 218r</desc>
+            <graphic url="uub-gr-010-0439-218r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-218v">
+            <desc>Folio 218v</desc>
+            <graphic url="uub-gr-010-0440-218v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-219r">
+            <desc>Folio 219r</desc>
+            <graphic url="uub-gr-010-0441-219r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-219v">
+            <desc>Folio 219v</desc>
+            <graphic url="uub-gr-010-0442-219v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-220r">
+            <desc>Folio 220r</desc>
+            <graphic url="uub-gr-010-0443-220r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-220v">
+            <desc>Folio 220v</desc>
+            <graphic url="uub-gr-010-0444-220v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-221r">
+            <desc>Folio 221r</desc>
+            <graphic url="uub-gr-010-0445-221r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-221v">
+            <desc>Folio 221v</desc>
+            <graphic url="uub-gr-010-0446-221v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-222r">
+            <desc>Folio 222r</desc>
+            <graphic url="uub-gr-010-0447-222r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-222v">
+            <desc>Folio 222v</desc>
+            <graphic url="uub-gr-010-0448-222v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-223r">
+            <desc>Folio 223r</desc>
+            <graphic url="uub-gr-010-0449-223r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-223v">
+            <desc>Folio 223v</desc>
+            <graphic url="uub-gr-010-0450-223v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-224r">
+            <desc>Folio 224r</desc>
+            <graphic url="uub-gr-010-0451-224r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-224v">
+            <desc>Folio 224v</desc>
+            <graphic url="uub-gr-010-0452-224v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-225r">
+            <desc>Folio 225r</desc>
+            <graphic url="uub-gr-010-0453-225r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-225v">
+            <desc>Folio 225v</desc>
+            <graphic url="uub-gr-010-0454-225v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-226r">
+            <desc>Folio 226r</desc>
+            <graphic url="uub-gr-010-0455-226r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-226v">
+            <desc>Folio 226v</desc>
+            <graphic url="uub-gr-010-0456-226v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-227r">
+            <desc>Folio 227r</desc>
+            <graphic url="uub-gr-010-0457-227r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-227v">
+            <desc>Folio 227v</desc>
+            <graphic url="uub-gr-010-0458-227v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-228r">
+            <desc>Folio 228r</desc>
+            <graphic url="uub-gr-010-0459-228r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-228v">
+            <desc>Folio 228v</desc>
+            <graphic url="uub-gr-010-0460-228v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-229r">
+            <desc>Folio 229r</desc>
+            <graphic url="uub-gr-010-0461-229r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-229v">
+            <desc>Folio 229v</desc>
+            <graphic url="uub-gr-010-0462-229v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-230r">
+            <desc>Folio 230r</desc>
+            <graphic url="uub-gr-010-0463-230r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-230v">
+            <desc>Folio 230v</desc>
+            <graphic url="uub-gr-010-0464-230v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-231r">
+            <desc>Folio 231r</desc>
+            <graphic url="uub-gr-010-0465-231r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-231v">
+            <desc>Folio 231v</desc>
+            <graphic url="uub-gr-010-0466-231v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-232r">
+            <desc>Folio 232r</desc>
+            <graphic url="uub-gr-010-0467-232r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-232v">
+            <desc>Folio 232v</desc>
+            <graphic url="uub-gr-010-0468-232v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-233r">
+            <desc>Folio 233r</desc>
+            <graphic url="uub-gr-010-0469-233r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-233v">
+            <desc>Folio 233v</desc>
+            <graphic url="uub-gr-010-0470-233v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-234r">
+            <desc>Folio 234r</desc>
+            <graphic url="uub-gr-010-0471-234r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-234v">
+            <desc>Folio 234v</desc>
+            <graphic url="uub-gr-010-0472-234v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-235r">
+            <desc>Folio 235r</desc>
+            <graphic url="uub-gr-010-0473-235r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-235v">
+            <desc>Folio 235v</desc>
+            <graphic url="uub-gr-010-0474-235v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-236r">
+            <desc>Folio 236r</desc>
+            <graphic url="uub-gr-010-0475-236r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-236v">
+            <desc>Folio 236v</desc>
+            <graphic url="uub-gr-010-0476-236v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-237r">
+            <desc>Folio 237r</desc>
+            <graphic url="uub-gr-010-0477-237r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-237v">
+            <desc>Folio 237v</desc>
+            <graphic url="uub-gr-010-0478-237v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-238r">
+            <desc>Folio 238r</desc>
+            <graphic url="uub-gr-010-0479-238r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-238v">
+            <desc>Folio 238v</desc>
+            <graphic url="uub-gr-010-0480-238v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-239r">
+            <desc>Folio 239r</desc>
+            <graphic url="uub-gr-010-0481-239r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-239v">
+            <desc>Folio 239v</desc>
+            <graphic url="uub-gr-010-0482-239v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-240r">
+            <desc>Folio 240r</desc>
+            <graphic url="uub-gr-010-0483-240r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-240v">
+            <desc>Folio 240v</desc>
+            <graphic url="uub-gr-010-0484-240v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-241r">
+            <desc>Folio 241r</desc>
+            <graphic url="uub-gr-010-0485-241r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-241v">
+            <desc>Folio 241v</desc>
+            <graphic url="uub-gr-010-0486-241v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-242r">
+            <desc>Folio 242r</desc>
+            <graphic url="uub-gr-010-0487-242r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-242v">
+            <desc>Folio 242v</desc>
+            <graphic url="uub-gr-010-0488-242v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-243r">
+            <desc>Folio 243r</desc>
+            <graphic url="uub-gr-010-0489-243r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-243v">
+            <desc>Folio 243v</desc>
+            <graphic url="uub-gr-010-0490-243v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-244r">
+            <desc>Folio 244r</desc>
+            <graphic url="uub-gr-010-0491-244r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-244v">
+            <desc>Folio 244v</desc>
+            <graphic url="uub-gr-010-0492-244v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-245r">
+            <desc>Folio 245r</desc>
+            <graphic url="uub-gr-010-0493-245r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-245v">
+            <desc>Folio 245v</desc>
+            <graphic url="uub-gr-010-0494-245v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-246r">
+            <desc>Folio 246r</desc>
+            <graphic url="uub-gr-010-0495-246r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-246v">
+            <desc>Folio 246v</desc>
+            <graphic url="uub-gr-010-0496-246v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-247r">
+            <desc>Folio 247r</desc>
+            <graphic url="uub-gr-010-0497-247r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-247v">
+            <desc>Folio 247v</desc>
+            <graphic url="uub-gr-010-0498-247v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-248r">
+            <desc>Folio 248r</desc>
+            <graphic url="uub-gr-010-0499-248r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-248v">
+            <desc>Folio 248v</desc>
+            <graphic url="uub-gr-010-0500-248v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-249r">
+            <desc>Folio 249r</desc>
+            <graphic url="uub-gr-010-0501-249r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-249v">
+            <desc>Folio 249v</desc>
+            <graphic url="uub-gr-010-0502-249v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-250r">
+            <desc>Folio 250r</desc>
+            <graphic url="uub-gr-010-0503-250r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-250v">
+            <desc>Folio 250v</desc>
+            <graphic url="uub-gr-010-0504-250v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-251r">
+            <desc>Folio 251r</desc>
+            <graphic url="uub-gr-010-0505-251r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-251v">
+            <desc>Folio 251v</desc>
+            <graphic url="uub-gr-010-0506-251v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-252r">
+            <desc>Folio 252r</desc>
+            <graphic url="uub-gr-010-0507-252r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-252v">
+            <desc>Folio 252v</desc>
+            <graphic url="uub-gr-010-0508-252v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-253r">
+            <desc>Folio 253r</desc>
+            <graphic url="uub-gr-010-0509-253r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-253v">
+            <desc>Folio 253v</desc>
+            <graphic url="uub-gr-010-0510-253v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-254r">
+            <desc>Folio 254r</desc>
+            <graphic url="uub-gr-010-0511-254r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-254v">
+            <desc>Folio 254v</desc>
+            <graphic url="uub-gr-010-0512-254v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-255r">
+            <desc>Folio 255r</desc>
+            <graphic url="uub-gr-010-0513-255r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-255v">
+            <desc>Folio 255v</desc>
+            <graphic url="uub-gr-010-0514-255v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-256r">
+            <desc>Folio 256r</desc>
+            <graphic url="uub-gr-010-0515-256r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-256v">
+            <desc>Folio 256v</desc>
+            <graphic url="uub-gr-010-0516-256v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-257r">
+            <desc>Folio 257r</desc>
+            <graphic url="uub-gr-010-0517-257r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-257v">
+            <desc>Folio 257v</desc>
+            <graphic url="uub-gr-010-0518-257v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-258r">
+            <desc>Folio 258r</desc>
+            <graphic url="uub-gr-010-0519-258r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-258v">
+            <desc>Folio 258v</desc>
+            <graphic url="uub-gr-010-0520-258v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-259r">
+            <desc>Folio 259r</desc>
+            <graphic url="uub-gr-010-0521-259r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-259v">
+            <desc>Folio 259v</desc>
+            <graphic url="uub-gr-010-0522-259v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-260r">
+            <desc>Folio 260r</desc>
+            <graphic url="uub-gr-010-0523-260r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-260v">
+            <desc>Folio 260v</desc>
+            <graphic url="uub-gr-010-0524-260v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-261r">
+            <desc>Folio 261r</desc>
+            <graphic url="uub-gr-010-0525-261r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-261v">
+            <desc>Folio 261v</desc>
+            <graphic url="uub-gr-010-0526-261v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-262r">
+            <desc>Folio 262r</desc>
+            <graphic url="uub-gr-010-0527-262r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-262v">
+            <desc>Folio 262v</desc>
+            <graphic url="uub-gr-010-0528-262v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-263r">
+            <desc>Folio 263r</desc>
+            <graphic url="uub-gr-010-0529-263r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-263v">
+            <desc>Folio 263v</desc>
+            <graphic url="uub-gr-010-0530-263v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-264r">
+            <desc>Folio 264r</desc>
+            <graphic url="uub-gr-010-0531-264r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-264v">
+            <desc>Folio 264v</desc>
+            <graphic url="uub-gr-010-0532-264v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-265r">
+            <desc>Folio 265r</desc>
+            <graphic url="uub-gr-010-0533-265r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-265v">
+            <desc>Folio 265v</desc>
+            <graphic url="uub-gr-010-0534-265v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-266r">
+            <desc>Folio 266r</desc>
+            <graphic url="uub-gr-010-0535-266r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-266v">
+            <desc>Folio 266v</desc>
+            <graphic url="uub-gr-010-0536-266v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-267r">
+            <desc>Folio 267r</desc>
+            <graphic url="uub-gr-010-0537-267r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-267v">
+            <desc>Folio 267v</desc>
+            <graphic url="uub-gr-010-0538-267v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-268r">
+            <desc>Folio 268r</desc>
+            <graphic url="uub-gr-010-0539-268r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-268v">
+            <desc>Folio 268v</desc>
+            <graphic url="uub-gr-010-0540-268v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-269r">
+            <desc>Folio 269r</desc>
+            <graphic url="uub-gr-010-0541-269r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-269v">
+            <desc>Folio 269v</desc>
+            <graphic url="uub-gr-010-0542-269v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-270r">
+            <desc>Folio 270r</desc>
+            <graphic url="uub-gr-010-0543-270r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-270v">
+            <desc>Folio 270v</desc>
+            <graphic url="uub-gr-010-0544-270v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-271r">
+            <desc>Folio 271r</desc>
+            <graphic url="uub-gr-010-0545-271r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-271v">
+            <desc>Folio 271v</desc>
+            <graphic url="uub-gr-010-0546-271v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-272r">
+            <desc>Folio 272r</desc>
+            <graphic url="uub-gr-010-0547-272r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-272v">
+            <desc>Folio 272v</desc>
+            <graphic url="uub-gr-010-0548-272v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-273r">
+            <desc>Folio 273r</desc>
+            <graphic url="uub-gr-010-0549-273r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-273v">
+            <desc>Folio 273v</desc>
+            <graphic url="uub-gr-010-0550-273v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-274r">
+            <desc>Folio 274r</desc>
+            <graphic url="uub-gr-010-0551-274r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-274v">
+            <desc>Folio 274v</desc>
+            <graphic url="uub-gr-010-0552-274v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-275r">
+            <desc>Folio 275r</desc>
+            <graphic url="uub-gr-010-0553-275r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-275v">
+            <desc>Folio 275v</desc>
+            <graphic url="uub-gr-010-0554-275v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-276r">
+            <desc>Folio 276r</desc>
+            <graphic url="uub-gr-010-0555-276r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-276v">
+            <desc>Folio 276v</desc>
+            <graphic url="uub-gr-010-0556-276v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-277r">
+            <desc>Folio 277r</desc>
+            <graphic url="uub-gr-010-0557-277r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-277v">
+            <desc>Folio 277v</desc>
+            <graphic url="uub-gr-010-0558-277v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-278r">
+            <desc>Folio 278r</desc>
+            <graphic url="uub-gr-010-0559-278r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-278v">
+            <desc>Folio 278v</desc>
+            <graphic url="uub-gr-010-0560-278v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-279r">
+            <desc>Folio 279r</desc>
+            <graphic url="uub-gr-010-0561-279r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-279v">
+            <desc>Folio 279v</desc>
+            <graphic url="uub-gr-010-0562-279v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-280r">
+            <desc>Folio 280r</desc>
+            <graphic url="uub-gr-010-0563-280r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-280v">
+            <desc>Folio 280v</desc>
+            <graphic url="uub-gr-010-0564-280v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-281r">
+            <desc>Folio 281r</desc>
+            <graphic url="uub-gr-010-0565-281r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-281v">
+            <desc>Folio 281v</desc>
+            <graphic url="uub-gr-010-0566-281v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-282r">
+            <desc>Folio 282r</desc>
+            <graphic url="uub-gr-010-0567-282r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-282v">
+            <desc>Folio 282v</desc>
+            <graphic url="uub-gr-010-0568-282v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-283r">
+            <desc>Folio 283r</desc>
+            <graphic url="uub-gr-010-0569-283r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-283v">
+            <desc>Folio 283v</desc>
+            <graphic url="uub-gr-010-0570-283v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-284r">
+            <desc>Folio 284r</desc>
+            <graphic url="uub-gr-010-0571-284r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-284v">
+            <desc>Folio 284v</desc>
+            <graphic url="uub-gr-010-0572-284v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-285r">
+            <desc>Folio 285r</desc>
+            <graphic url="uub-gr-010-0573-285r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-285v">
+            <desc>Folio 285v</desc>
+            <graphic url="uub-gr-010-0574-285v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-286r">
+            <desc>Folio 286r</desc>
+            <graphic url="uub-gr-010-0575-286r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-286v">
+            <desc>Folio 286v</desc>
+            <graphic url="uub-gr-010-0576-286v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-287r">
+            <desc>Folio 287r</desc>
+            <graphic url="uub-gr-010-0577-287r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-287v">
+            <desc>Folio 287v</desc>
+            <graphic url="uub-gr-010-0578-287v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-288r">
+            <desc>Folio 288r</desc>
+            <graphic url="uub-gr-010-0579-288r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-288v">
+            <desc>Folio 288v</desc>
+            <graphic url="uub-gr-010-0580-288v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-289r">
+            <desc>Folio 289r</desc>
+            <graphic url="uub-gr-010-0581-289r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-289v">
+            <desc>Folio 289v</desc>
+            <graphic url="uub-gr-010-0582-289v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-290r">
+            <desc>Folio 290r</desc>
+            <graphic url="uub-gr-010-0583-290r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-290v">
+            <desc>Folio 290v</desc>
+            <graphic url="uub-gr-010-0584-290v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-291r">
+            <desc>Folio 291r</desc>
+            <graphic url="uub-gr-010-0585-291r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-291v">
+            <desc>Folio 291v</desc>
+            <graphic url="uub-gr-010-0586-291v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-292r">
+            <desc>Folio 292r</desc>
+            <graphic url="uub-gr-010-0587-292r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-292v">
+            <desc>Folio 292v</desc>
+            <graphic url="uub-gr-010-0588-292v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-293r">
+            <desc>Folio 293r</desc>
+            <graphic url="uub-gr-010-0589-293r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-293v">
+            <desc>Folio 293v</desc>
+            <graphic url="uub-gr-010-0590-293v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-294r">
+            <desc>Folio 294r</desc>
+            <graphic url="uub-gr-010-0591-294r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-294v">
+            <desc>Folio 294v</desc>
+            <graphic url="uub-gr-010-0592-294v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-295r">
+            <desc>Folio 295r</desc>
+            <graphic url="uub-gr-010-0593-295r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-295v">
+            <desc>Folio 295v</desc>
+            <graphic url="uub-gr-010-0594-295v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-296r">
+            <desc>Folio 296r</desc>
+            <graphic url="uub-gr-010-0595-296r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-296v">
+            <desc>Folio 296v</desc>
+            <graphic url="uub-gr-010-0596-296v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-297r">
+            <desc>Folio 297r</desc>
+            <graphic url="uub-gr-010-0597-297r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-297v">
+            <desc>Folio 297v</desc>
+            <graphic url="uub-gr-010-0598-297v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-298r">
+            <desc>Folio 298r</desc>
+            <graphic url="uub-gr-010-0599-298r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-298v">
+            <desc>Folio 298v</desc>
+            <graphic url="uub-gr-010-0600-298v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-299r">
+            <desc>Folio 299r</desc>
+            <graphic url="uub-gr-010-0601-299r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-299v">
+            <desc>Folio 299v</desc>
+            <graphic url="uub-gr-010-0602-299v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-300r">
+            <desc>Folio 300r</desc>
+            <graphic url="uub-gr-010-0603-300r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-300v">
+            <desc>Folio 300v</desc>
+            <graphic url="uub-gr-010-0604-300v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-301r">
+            <desc>Folio 301r</desc>
+            <graphic url="uub-gr-010-0605-301r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-301v">
+            <desc>Folio 301v</desc>
+            <graphic url="uub-gr-010-0606-301v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-302r">
+            <desc>Folio 302r</desc>
+            <graphic url="uub-gr-010-0607-302r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-302v">
+            <desc>Folio 302v</desc>
+            <graphic url="uub-gr-010-0608-302v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-303r">
+            <desc>Folio 303r</desc>
+            <graphic url="uub-gr-010-0609-303r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-303v">
+            <desc>Folio 303v</desc>
+            <graphic url="uub-gr-010-0610-303v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-304r">
+            <desc>Folio 304r</desc>
+            <graphic url="uub-gr-010-0611-304r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-304v">
+            <desc>Folio 304v</desc>
+            <graphic url="uub-gr-010-0612-304v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-305r">
+            <desc>Folio 305r</desc>
+            <graphic url="uub-gr-010-0613-305r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-305v">
+            <desc>Folio 305v</desc>
+            <graphic url="uub-gr-010-0614-305v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-306r">
+            <desc>Folio 306r</desc>
+            <graphic url="uub-gr-010-0615-306r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-306v">
+            <desc>Folio 306v</desc>
+            <graphic url="uub-gr-010-0616-306v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-307r">
+            <desc>Folio 307r</desc>
+            <graphic url="uub-gr-010-0617-307r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-307v">
+            <desc>Folio 307v</desc>
+            <graphic url="uub-gr-010-0618-307v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-308r">
+            <desc>Folio 308r</desc>
+            <graphic url="uub-gr-010-0619-308r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-308v">
+            <desc>Folio 308v</desc>
+            <graphic url="uub-gr-010-0620-308v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-309r">
+            <desc>Folio 309r</desc>
+            <graphic url="uub-gr-010-0621-309r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-309v">
+            <desc>Folio 309v</desc>
+            <graphic url="uub-gr-010-0622-309v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-310r">
+            <desc>Folio 310r</desc>
+            <graphic url="uub-gr-010-0623-310r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-310v">
+            <desc>Folio 310v</desc>
+            <graphic url="uub-gr-010-0624-310v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-311r">
+            <desc>Folio 311r</desc>
+            <graphic url="uub-gr-010-0625-311r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-311v">
+            <desc>Folio 311v</desc>
+            <graphic url="uub-gr-010-0626-311v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-312r">
+            <desc>Folio 312r</desc>
+            <graphic url="uub-gr-010-0627-312r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-312v">
+            <desc>Folio 312v</desc>
+            <graphic url="uub-gr-010-0628-312v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-313r">
+            <desc>Folio 313r</desc>
+            <graphic url="uub-gr-010-0629-313r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-313v">
+            <desc>Folio 313v</desc>
+            <graphic url="uub-gr-010-0630-313v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-314r">
+            <desc>Folio 314r</desc>
+            <graphic url="uub-gr-010-0631-314r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-314v">
+            <desc>Folio 314v</desc>
+            <graphic url="uub-gr-010-0632-314v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-315r">
+            <desc>Folio 315r</desc>
+            <graphic url="uub-gr-010-0633-315r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-315v">
+            <desc>Folio 315v</desc>
+            <graphic url="uub-gr-010-0634-315v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-316r">
+            <desc>Folio 316r</desc>
+            <graphic url="uub-gr-010-0635-316r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-316v">
+            <desc>Folio 316v</desc>
+            <graphic url="uub-gr-010-0636-316v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-317r">
+            <desc>Folio 317r</desc>
+            <graphic url="uub-gr-010-0637-317r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-317v">
+            <desc>Folio 317v</desc>
+            <graphic url="uub-gr-010-0638-317v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-318r">
+            <desc>Folio 318r</desc>
+            <graphic url="uub-gr-010-0639-318r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-318v">
+            <desc>Folio 318v</desc>
+            <graphic url="uub-gr-010-0640-318v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-319r">
+            <desc>Folio 319r</desc>
+            <graphic url="uub-gr-010-0641-319r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-319v">
+            <desc>Folio 319v</desc>
+            <graphic url="uub-gr-010-0642-319v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-320r">
+            <desc>Folio 320r</desc>
+            <graphic url="uub-gr-010-0643-320r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-320v">
+            <desc>Folio 320v</desc>
+            <graphic url="uub-gr-010-0644-320v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-321r">
+            <desc>Folio 321r</desc>
+            <graphic url="uub-gr-010-0645-321r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-321v">
+            <desc>Folio 321v</desc>
+            <graphic url="uub-gr-010-0646-321v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-322r">
+            <desc>Folio 322r</desc>
+            <graphic url="uub-gr-010-0647-322r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-322v">
+            <desc>Folio 322v</desc>
+            <graphic url="uub-gr-010-0648-322v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-323r">
+            <desc>Folio 323r</desc>
+            <graphic url="uub-gr-010-0649-323r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-323v">
+            <desc>Folio 323v</desc>
+            <graphic url="uub-gr-010-0650-323v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-324r">
+            <desc>Folio 324r</desc>
+            <graphic url="uub-gr-010-0651-324r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-324v">
+            <desc>Folio 324v</desc>
+            <graphic url="uub-gr-010-0652-324v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-325r">
+            <desc>Folio 325r</desc>
+            <graphic url="uub-gr-010-0653-325r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-325v">
+            <desc>Folio 325v</desc>
+            <graphic url="uub-gr-010-0654-325v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-326r">
+            <desc>Folio 326r</desc>
+            <graphic url="uub-gr-010-0655-326r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-326v">
+            <desc>Folio 326v</desc>
+            <graphic url="uub-gr-010-0656-326v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-327r">
+            <desc>Folio 327r</desc>
+            <graphic url="uub-gr-010-0657-327r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-327v">
+            <desc>Folio 327v</desc>
+            <graphic url="uub-gr-010-0658-327v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-R1r">
+            <desc>Right flyleaf 1r</desc>
+            <graphic url="uub-gr-010-0659-R01r.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-R1v">
+            <desc>Right flyleaf 1v</desc>
+            <graphic url="uub-gr-010-0660-R01v.tif"/>
+        </surface>
+        <surface xml:id="uub-gr-010-RCI">
+            <desc>Right cover, inside</desc>
+            <graphic url="uub-gr-010-0661-RCI.tif"/>
+        </surface>
+    </facsimile>
+</TEI>

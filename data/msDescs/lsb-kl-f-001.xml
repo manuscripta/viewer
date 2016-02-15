@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" version="5.0" xml:id="lsb-kl-f-001">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>Linköping Diocesan Library, Kl f 1</title>
+                <respStmt xml:id="PG">
+                    <persName>
+                        <forename>Patrik</forename>
+                        <surname>Granholm</surname>
+                    </persName>
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Uppsala University Library</authority>
+                <pubPlace>Uppsala</pubPlace>
+                <date when="2016"/>
+                <availability status="free">
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Sweden</country>
+                        <settlement>Linköping</settlement>
+                        <institution>Linköping Diocesan Library</institution>
+                        <repository>Linköping Diocesan Library</repository>
+                        <idno type="shelfmark">Kl f 1</idno>
+                    </msIdentifier>
+                    <head/>
+                    <msContents>
+                        
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <extent>
+                                    <measure type="left_flyleaves" quantity="3"/>
+                                    <measure type="right_flyleaves" quantity="2"/>
+                                </extent>
+                                <foliation/>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                    <history>
+                        <origin/>
+                        <provenance/>
+                        <acquisition/>
+                    </history>
+                    <additional>
+                        <listBibl> </listBibl>
+                    </additional>
+                    <msPart>
+                        <msIdentifier>
+                            <idno type="codicological_unit">1</idno>
+                        </msIdentifier>
+                        <msContents>
+                            
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc material="paper">
+                                    <support>
+                                        <p/>
+                                    </support>
+                                    <extent>
+                                        <measure type="textblock_leaves" quantity="24"/>
+                                    </extent>
+                                    <foliation/>
+                                </supportDesc>
+                            </objectDesc>
+                        </physDesc>
+                        <history>
+                            <origin/>
+                            <provenance/>
+                            <acquisition/>
+                        </history>
+                    </msPart>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc status="draft">
+            <change status="draft" when="2016-02-03" who="#PG">First draft</change>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface xml:id="lsb-kl-f-001-QP-card">
+            <desc>QP card</desc>
+            <graphic url="lsb-kl-f-001-0000-QP-card.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-LCO">
+            <desc>Left cover, outside</desc>
+            <graphic url="lsb-kl-f-001-0001-LCO.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-LCI">
+            <desc>Left cover, inside</desc>
+            <graphic url="lsb-kl-f-001-0002-LCI.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-Ir">
+            <desc>Folio Ir</desc>
+            <graphic url="lsb-kl-f-001-0003-Ir.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-Iv">
+            <desc>Folio Iv</desc>
+            <graphic url="lsb-kl-f-001-0004-Iv.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-IIr">
+            <desc>Folio IIr</desc>
+            <graphic url="lsb-kl-f-001-0005-IIr.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-IIv">
+            <desc>Folio IIv</desc>
+            <graphic url="lsb-kl-f-001-0006-IIv.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-IIIr">
+            <desc>Folio IIIr</desc>
+            <graphic url="lsb-kl-f-001-0007-IIIr.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-IIIv">
+            <desc>Folio IIIv</desc>
+            <graphic url="lsb-kl-f-001-0008-IIIv.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-1r">
+            <desc>Folio 1r</desc>
+            <graphic url="lsb-kl-f-001-0009-001r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-1v">
+            <desc>Folio 1v</desc>
+            <graphic url="lsb-kl-f-001-0010-001v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-2r">
+            <desc>Folio 2r</desc>
+            <graphic url="lsb-kl-f-001-0011-002r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-2v">
+            <desc>Folio 2v</desc>
+            <graphic url="lsb-kl-f-001-0012-002v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-3r">
+            <desc>Folio 3r</desc>
+            <graphic url="lsb-kl-f-001-0013-003r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-3v">
+            <desc>Folio 3v</desc>
+            <graphic url="lsb-kl-f-001-0014-003v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-4r">
+            <desc>Folio 4r</desc>
+            <graphic url="lsb-kl-f-001-0015-004r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-4v">
+            <desc>Folio 4v</desc>
+            <graphic url="lsb-kl-f-001-0016-004v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-5r">
+            <desc>Folio 5r</desc>
+            <graphic url="lsb-kl-f-001-0017-005r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-5v">
+            <desc>Folio 5v</desc>
+            <graphic url="lsb-kl-f-001-0018-005v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-6r">
+            <desc>Folio 6r</desc>
+            <graphic url="lsb-kl-f-001-0019-006r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-6v">
+            <desc>Folio 6v</desc>
+            <graphic url="lsb-kl-f-001-0020-006v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-7r">
+            <desc>Folio 7r</desc>
+            <graphic url="lsb-kl-f-001-0021-007r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-7v">
+            <desc>Folio 7v</desc>
+            <graphic url="lsb-kl-f-001-0022-007v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-8r">
+            <desc>Folio 8r</desc>
+            <graphic url="lsb-kl-f-001-0023-008r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-8v">
+            <desc>Folio 8v</desc>
+            <graphic url="lsb-kl-f-001-0024-008v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-9r">
+            <desc>Folio 9r</desc>
+            <graphic url="lsb-kl-f-001-0025-009r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-9v">
+            <desc>Folio 9v</desc>
+            <graphic url="lsb-kl-f-001-0026-009v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-10r">
+            <desc>Folio 10r</desc>
+            <graphic url="lsb-kl-f-001-0027-010r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-10v">
+            <desc>Folio 10v</desc>
+            <graphic url="lsb-kl-f-001-0028-010v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-11r">
+            <desc>Folio 11r</desc>
+            <graphic url="lsb-kl-f-001-0029-011r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-11v">
+            <desc>Folio 11v</desc>
+            <graphic url="lsb-kl-f-001-0030-011v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-12r">
+            <desc>Folio 12r</desc>
+            <graphic url="lsb-kl-f-001-0031-012r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-12v">
+            <desc>Folio 12v</desc>
+            <graphic url="lsb-kl-f-001-0032-012v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-13r">
+            <desc>Folio 13r</desc>
+            <graphic url="lsb-kl-f-001-0033-013r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-13v">
+            <desc>Folio 13v</desc>
+            <graphic url="lsb-kl-f-001-0034-013v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-14r">
+            <desc>Folio 14r</desc>
+            <graphic url="lsb-kl-f-001-0035-014r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-14v">
+            <desc>Folio 14v</desc>
+            <graphic url="lsb-kl-f-001-0036-014v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-15r">
+            <desc>Folio 15r</desc>
+            <graphic url="lsb-kl-f-001-0037-015r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-15v">
+            <desc>Folio 15v</desc>
+            <graphic url="lsb-kl-f-001-0038-015v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-16r">
+            <desc>Folio 16r</desc>
+            <graphic url="lsb-kl-f-001-0039-016r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-16v">
+            <desc>Folio 16v</desc>
+            <graphic url="lsb-kl-f-001-0040-016v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-17r">
+            <desc>Folio 17r</desc>
+            <graphic url="lsb-kl-f-001-0041-017r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-17v">
+            <desc>Folio 17v</desc>
+            <graphic url="lsb-kl-f-001-0042-017v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-18r">
+            <desc>Folio 18r</desc>
+            <graphic url="lsb-kl-f-001-0043-018r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-18v">
+            <desc>Folio 18v</desc>
+            <graphic url="lsb-kl-f-001-0044-018v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-19r">
+            <desc>Folio 19r</desc>
+            <graphic url="lsb-kl-f-001-0045-019r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-19v">
+            <desc>Folio 19v</desc>
+            <graphic url="lsb-kl-f-001-0046-019v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-20r">
+            <desc>Folio 20r</desc>
+            <graphic url="lsb-kl-f-001-0047-020r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-20v">
+            <desc>Folio 20v</desc>
+            <graphic url="lsb-kl-f-001-0048-020v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-21r">
+            <desc>Folio 21r</desc>
+            <graphic url="lsb-kl-f-001-0049-021r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-21v">
+            <desc>Folio 21v</desc>
+            <graphic url="lsb-kl-f-001-0050-021v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-22r">
+            <desc>Folio 22r</desc>
+            <graphic url="lsb-kl-f-001-0051-022r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-22v">
+            <desc>Folio 22v</desc>
+            <graphic url="lsb-kl-f-001-0052-022v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-23r">
+            <desc>Folio 23r</desc>
+            <graphic url="lsb-kl-f-001-0053-023r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-23v">
+            <desc>Folio 23v</desc>
+            <graphic url="lsb-kl-f-001-0054-023v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-24r">
+            <desc>Folio 24r</desc>
+            <graphic url="lsb-kl-f-001-0055-024r.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-24v">
+            <desc>Folio 24v</desc>
+            <graphic url="lsb-kl-f-001-0056-024v.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-IVr">
+            <desc>Folio IVr</desc>
+            <graphic url="lsb-kl-f-001-0057-IVr.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-IVv">
+            <desc>Folio IVv</desc>
+            <graphic url="lsb-kl-f-001-0058-IVv.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-Vr">
+            <desc>Folio Vr</desc>
+            <graphic url="lsb-kl-f-001-0059-Vr.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-Vv">
+            <desc>Folio Vv</desc>
+            <graphic url="lsb-kl-f-001-0060-Vv.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-RCI">
+            <desc>Right cover, inside</desc>
+            <graphic url="lsb-kl-f-001-0061-RCI.tif"/>
+        </surface>
+        <surface xml:id="lsb-kl-f-001-RCO">
+            <desc>Right cover, outside</desc>
+            <graphic url="lsb-kl-f-001-0062-RCO.tif"/>
+        </surface>
+    </facsimile>
+</TEI>
