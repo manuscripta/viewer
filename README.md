@@ -68,7 +68,7 @@ ScriptAlias /iipsrv/ "/var/www/html/fcgi-bin/"
 AddHandler fastcgi-script fcg fcgi fpl
 
 # Initialise some variables for the FCGI server
-FastCgiServer //var/www/html/fcgi-bin/iipsrv.fcgi \
+FastCgiServer /var/www/html/fcgi-bin/iipsrv.fcgi \
 -initial-env LOGFILE=/tmp/iipsrv.log \
 -initial-env VERBOSITY=2 \
 -initial-env MAX_IMAGE_CACHE_SIZE=20 \
