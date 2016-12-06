@@ -13,7 +13,7 @@ eXist-db webapp for manuscripta.se
 
 ### Install build essentials
 
-`sudo apt-get install build-essential git autoconf automake libtool checkinstall`
+`sudo apt-get install build-essential git autoconf automake libtool checkinstall pkg-config`
 
 ### Install IIP Image Server
 
