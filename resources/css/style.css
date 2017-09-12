@@ -1,5 +1,5 @@
 body{
-    font-size:1.6em;
+    font-size: 1.6em;
 }
 /*h1{
     font-size:1.8em;
@@ -29,66 +29,65 @@ h4{
 /*.short_description{
     margin-top:20px;
 }*/
-
 .italic{
-    font-style:italic;
+    font-style: italic;
 }
 .spacing{
-    letter-spacing:0.1em;
+    letter-spacing: 0.1em;
 }
 .small-caps{
-    font-variant:small-caps;
+    font-variant: small-caps;
 }
 .summary p{
-    display:inline;
-    padding-right:30px;
+    display: inline;
+    padding-right: 30px;
 }
 .msContents,
 .physDesc,
 .history,
 .additional,
 .lastRevision{
-    display:block;
+    display: block;
     /*margin-right:50px;*/
-    margin-top:20px;
+    margin-top: 20px;
 }
 .biblItem{
-    display:inline;    
+    display: inline;
 }
 .bibl_author{
-    display:inline;
+    display: inline;
 }
 .bibl_book_title{
-    display:inline;
-    font-style:italic;
+    display: inline;
+    font-style: italic;
 }
 .bibl_journal_title{
-    display:inline;
-    font-style:italic;
+    display: inline;
+    font-style: italic;
 }
 .bibliography .biblItem{
-    text-align:left;
-    display:list-item;
-    margin-left:30pt;
+    text-align: left;
+    display: list-item;
+    margin-left: 30pt;
 }
 .msItem{
-    display:block;
-    margin-bottom:20px;
+    display: block;
+    margin-bottom: 20px;
 }
 .sub_msItem{
-    display:block;
-    margin-left:30px;
+    display: block;
+    margin-left: 30px;
 }
 .msItem_nr,
 .sub_msItem_nr{
-    font-weight:bold;
+    font-weight: bold;
 }
 .author{
-    display:inline;
+    display: inline;
 }
 .bibl_book_title{
-    display:inline;
-    font-style:italic
+    display: inline;
+    font-style: italic
 }
 .incipit,
 .explicit,
@@ -97,8 +96,8 @@ h4{
 .colophon,
 .note,
 .editions{
-    display:block;
-    text-indent:1em;
+    display: block;
+    text-indent: 1em;
 }
 /*.incipit_head,
 .explicit_head,
@@ -110,13 +109,13 @@ h4{
     font-weight:bold;
 }*/
 .ms-item-bibl{
-    display:block;
-    text-indent:1em;
+    display: block;
+    text-indent: 1em;
 }
 .msItem_listBibl,
 .listBibl{
-    display:block;
-    text-indent:1em;
+    display: block;
+    text-indent: 1em;
 }
 .objectDesc,
 .supportDesc,
@@ -134,44 +133,44 @@ h4{
 .origin,
 .provenance,
 .acquisition{
-    display:block;
-    margin-top:10px;
+    display: block;
+    margin-top: 10px;
 }
 sub,
 sup{
-    font-size:70%;
-    line-height:0;
-    position:relative;
-    vertical-align:baseline;
+    font-size: 70%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 sup{
-    top:-0.4em;
+    top: -0.4em;
 }
 sub{
-    bottom:0em;
+    bottom: 0em;
 }
 .unit_nr{
-    display:inline;
-    font-weight:bold;
+    display: inline;
+    font-weight: bold;
 }
 a{
-    text-decoration:none;
+    text-decoration: none;
 }
 a:hover{
-    text-decoration:underline;
+    text-decoration: underline;
 }
 a.shortTitle{
-    text-decoration:none;
-    border-bottom:1px dotted #777;
+    text-decoration: none;
+    border-bottom: 1px dotted #777;
 }
 a.shortTitle:hover{
-    text-decoration:none;
+    text-decoration: none;
 }
 p:first-of-type{
-    display:inline;
+    display: inline;
 }
 p{
-    margin-top:0em;
-    margin-bottom:0em;
-    text-indent:1em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    text-indent: 1em;
 }

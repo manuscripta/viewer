@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <meta xmlns="http://exist-db.org/xquery/repo">
-    <description>Greek Manuscripts in Sweden</description>
+    <description>Manuscripta – A Digital Catalogue of Manuscripts in Sweden</description>
     <author/>
     <website/>
-    <status>alpha</status>
+    <status>beta</status>
     <license>GNU-LGPL</license>
     <copyright>true</copyright>
     <type>application</type>
     <target>manuscripta</target>
     <prepare>pre-install.xql</prepare>
     <finish/>
-
-
-<deployed>2016-01-13T14:58:50.775+01:00</deployed>
 </meta>

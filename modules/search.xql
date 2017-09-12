@@ -73,7 +73,7 @@ declare function search:beta_search($node as node(), $model as map(*)) {
         let $msitem := $mss//tei:msContents/tei:msItem
         let $title := $mss//tei:titleStmt/tei:title        
         let $summary := $mss//tei:msDesc/tei:head
-        let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
+        let $uri := concat('/ms/', replace(base-uri($mss), '.+/(.+)$', '$1'))
         let $query := request:get-parameter('q', '')
         let $mode := request:get-parameter('m', '')        
         return

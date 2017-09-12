@@ -2,47 +2,62 @@
 * Bootstrap mods
 */
 @font-face{
-    font-family:'dejavu_sansbook';
-    src:url('../fonts/DejaVuSans-webfont.eot');
-    src:url('../fonts/DejaVuSans-webfont.eot?#iefix') format('embedded-opentype'), 
+    font-family: 'dejavu_sansbook';
+    src: url('../fonts/DejaVuSans-webfont.eot');
+    src: url('../fonts/DejaVuSans-webfont.eot?#iefix') format('embedded-opentype'), 
 url('../fonts/DejaVuSans-webfont.woff') format('woff'), 
 url('../fonts/DejaVuSans-webfont.ttf') format('truetype'), 
 url('../fonts/DejaVuSans-webfont.svg#dejavu_sansbook') format('svg');
-    font-weight:normal;
-    font-style:normal;
+    font-weight: normal;
+    font-style: normal;
 }
 html{
-    margin:0px;
+    margin: 0px;
     /*overflow-y: hidden;*/
-    height:100%;
+    height: 100%;
 }
 body{
-    padding-top:50px;
+    padding-top: 50px;
     /* Padding required for fixed navbar */
 }
 span.hi{
-    background:none repeat scroll 0 0 #ffed3d;
+    background: none repeat scroll 0 0 #ffed3d;
 }
 #content{
-    font-family:"dejavu_sansbook", sans-serif;
+    font-family: "dejavu_sansbook", sans-serif;
 }
 .panel-title{
-    font-size:18px;
+    font-size: 18px;
+}
+h1{
+    font-size: 28px;
+}
+h2{
+    font-size: 20px;
+}
+h5{
+    font-weight: bold;
+    display: inline;
+}
+.logotype{
+    height: 100px;
+    padding-top: 20px;
+    padding-right: 20px;
 }
 /* 
 * diva.css mods 
 */
 
 .diva-outer.diva-fullscreen{
-    padding-top:50px;
+    padding-top: 50px;
     /* Padding required for fixed navbar */
 }
 .diva-tools.diva-fullscreen-tools{
-    top:50px !important;
+    top: 50px !important;
     /* Position required for fixed navbar */
 }
 .diva-tools .diva-tools-left .diva-buttons-label{
-    clear:none !important;
+    clear: none !important;
     /* To position Zoom level left of the zoom buttons */
 }
 
@@ -51,57 +66,99 @@ span.hi{
 */
 
 .head{
-    display:inline;
-    font-weight:bold;
+    display: inline;
+    font-weight: bold;
 }
 .container-msdesc,
 .container-viewer{
-    overflow-y:scroll;
+    overflow-y: scroll;
 }
 img.beta-image{
-    float:left;
-    top:0px;
-    left:0px;
+    float: left;
+    top: 0px;
+    left: 0px;
 }
 
 /* guidelines styles */
 div.egXML_valid{
-    background-color:#FFFFFC;
-    border-color:#000096;
-    border-width:1px;
+    background-color: #FFFFFC;
+    border-color: #000096;
+    border-width: 1px;
 }
-pre, div.pre, div.pre_eg, pre.eg, div.eg {
-  clear: both;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  
-  border-style: solid;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  color: #000000;
-  line-height: 1.1em;
-  font-family: monospace;
-  font-size: 12pt;
-  white-space: pre;
+pre,
+div.pre,
+div.pre_eg,
+pre.eg,
+div.eg{
+    clear: both;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    border-style: solid;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    color: #000000;
+    line-height: 1.1em;
+    font-family: monospace;
+    font-size: 12pt;
+    white-space: pre;
 }
 span.att,
 span.attribute{
-    color:#F5844C;
+    color: #F5844C;
 }
-span.attributevalue {  
-  color: #993300;
+span.attributevalue{
+    color: #993300;
 }
-span.element{    
-    color:#000096;
+span.element{
+    color: #000096;
 }
 span.specList-elementSpec:before{
-    content:"<";
+    content: "<";
 }
 span.specList-elementSpec:after{
-    content:">";
+    content: ">";
 }
-ul.specList li {
-  list-style: none;
+ul.specList li{
+    list-style: none;
+}
+
+/* Split.js */
+body,
+.container-fluid,
+.row{
+    height: 100%;
+}
+
+.split,
+.split-flex{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.gutter{
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.gutter.gutter-vertical{
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
+    cursor: ns-resize;
+}
+
+.gutter.gutter-horizontal{
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+    cursor: ew-resize;
+}
+
+.split.split-horizontal,
+.gutter.gutter-horizontal{
+    height: 100%;
+    float: left;
 }

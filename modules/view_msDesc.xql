@@ -8,50 +8,57 @@ import module namespace config="http://www.manuscripta.se/xquery/config" at "con
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 declare namespace xmldb="http://exist-db.org/xquery/xmldb";
 
-declare function view:view-msDesc-html($rec as node()){
-    transform:transform($rec, doc(concat($config:app-root, "/stylesheets/tei2html.xsl")),() )
-};
-
 declare function view:get-msDesc($node as node(), $model as map(*)) as node(){    
     let $displayURI := request:get-parameter('id', '')
     let $rec := doc(concat($config:data-root, "/msDescs/", $displayURI))/tei:TEI    
     return
-        <div class="container-msdesc col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                {view:view-msDesc-html($rec)}            
-        </div>
+        <div class="container-msdesc col-xs-12 col-sm-12 col-md-6 col-lg-6 split split-horizontal" id="ms-desc">
+                {view:view-msDesc-html($rec)}                
+        </div>        
 };
 
-declare function view:view-bibliography-html($rec as node()){
-    transform:transform($rec, doc(concat($config:app-root, "/stylesheets/bibl2html.xsl")),() )
+declare function view:view-msDesc-html($rec as node()){
+    if($rec/tei:teiHeader/@xml:lang = 'sv') then 
+    transform:transform($rec, doc(concat($config:app-root, "/stylesheets/tei2html_sv.xsl")),() )
+    else
+    transform:transform($rec, doc(concat($config:app-root, "/stylesheets/tei2html_en.xsl")),() )
 };
 
-declare function view:get-bibliography($node as node(), $model as map(*)) as node(){    
-    let $rec := doc(concat($config:data-root, "/authority_files/bibliography.xml"))    
+declare function view:get-person($node as node(), $model as map(*)) as node(){    
+    let $displayURI := request:get-parameter('person', '')
+    let $rec := doc(concat($config:data-root, "/id/person/", $displayURI))/tei:TEI    
     return
-        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-                {view:view-bibliography-html($rec)}                
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                {view:view-person-html($rec)}            
         </div>
 };
 
-declare function view:view-bibliography-item-html($item as node()){
-    transform:transform($item, doc(concat($config:app-root,"/stylesheets/biblitem2html.xsl")),() )
+declare function view:view-person-html($rec as node()){
+    transform:transform($rec, doc(concat($config:app-root, "/stylesheets/persons.xsl")),() )
 };
 
-declare function view:get-bibliography-item($node as node(), $model as map(*)) as node(){
-    let $bibID := request:get-parameter('item', '')
-    let $item := doc(concat($config:data-root, "/authority_files/bibliography.xml"))//tei:bibl[@xml:id=$bibID]
-    (:for $mss in collection($config:data-root || "/msDescs")//tei:additional//tei:bibl/tei:ref[@target=concat("http://beta.manuscripta.se/bibliography/" , $bibID)]
-    let $idno := $mss//tei:msDesc/tei:msIdentifier/tei:idno    :)
+declare function view:get-place($node as node(), $model as map(*)) as node(){    
+    let $displayURI := request:get-parameter('place', '')
+    let $rec := doc(concat($config:data-root, "/id/place/", $displayURI))/tei:TEI    
     return
-        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-                {view:view-bibliography-item-html($item)}                
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                {view:view-place-html($rec)}            
         </div>
 };
 
-declare function view:test($node as node(), $model as map(*)) as node(){
-    let $bibID := request:get-parameter('item', '')
-return
-    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-               <p>ID is {$bibID}</p>            
+declare function view:view-place-html($rec as node()){
+    transform:transform($rec, doc(concat($config:app-root, "/stylesheets/places.xsl")),() )
+};
+
+declare function view:get-bibl($node as node(), $model as map(*)) as node(){    
+    let $displayURI := request:get-parameter('bibl', '')
+    let $rec := doc(concat($config:data-root, "/id/bibl/", $displayURI))/tei:TEI    
+    return
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 split split-horizontal" id="bibl">
+                {view:view-bibl-html($rec)}                
         </div>
+};
+
+declare function view:view-bibl-html($rec as node()){
+    transform:transform($rec, doc(concat($config:app-root, "/stylesheets/bibl.xsl")),() )
 };
