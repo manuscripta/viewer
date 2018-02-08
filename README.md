@@ -19,7 +19,7 @@ eXist-db webapp for manuscripta.se
 
 Install memcached
 
-`sudo apt-get install memcached`
+`sudo apt-get install memcached libmemcached-dev`
 
 Build IIP
 
@@ -81,41 +81,69 @@ Restart Apache
 `sudo service apache2 restart`
 
 
-### Install eXist-db
+### Install Open JDK
 
-Install Open JDK
+`sudo apt-get install ant openjdk-8-jdk`
 
-`sudo apt-get install ant openjdk-7-jdk`
+Set JAVA_HOME
 
-Download eXist-db
+`sudo nano /etc/environment`
+Add: JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 
-`cd ~/`
+Load variable
 
-`wget http://downloads.sourceforge.net/project/exist/Stable/2.2/eXist-db-setup-2.2.jar`
+`source /etc/environment`
 
-Create directory for eXist
+### Build eXist-db
 
-`sudo mkdir /usr/local/eXist`
+Create directory for eXist-db
 
-Copy eXist to the created directory
+`sudo mkdir /usr/local/lib/exist`
 
-`sudo cp eXist-db-setup-2.2.jar /usr/local/eXist`
+Create directory for eXist database
 
-Change to eXist directory
+`sudo mkdir /usr/local/lib/exist-data`
 
-`cd /usr/local/eXist`
+`sudo chown $USER:staff exist`
+`sudo chown $USER:staff exist-data`
 
-Install eXist
+Clone eXist-db from GitHub
 
-`sudo java -jar eXist-db-setup-2.2.jar -console`
+`cd /usr/local/lib/exist`
+
+`git clone https://github.com/eXist-db/exist .`
+
+`cp build/scripts/build-impl.xml build/scripts/build-impl.xml.backup`
+
+`nano build/scripts/build-impl.xml`
+
+Replace:
+`<filter token="dataDir" value="webapp/WEB-INF/data"/>`
+
+With:
+`<filter token="dataDir" value="/usr/local/lib/exist-data"/>`
+
+Build eXist-db
+
+`./build.sh`
+
+Edit conf.xml to preserve whitespace in mixed content
+
+`sudo nano /usr/local/eXist/conf.xml`
+
+Change `preserve-whitespace-mixed-content="no"` to `preserve-whitespace-mixed-content="yes"`in
+```
+<indexer caseSensitive="yes" index-depth="5" preserve-whitespace-mixed-content="yes" 
+        stemming="no" suppress-whitespace="none"
+        tokenizer="org.exist.storage.analysis.SimpleTokenizer" track-term-freq="yes">
+```
 
 Start eXist-db
 
-`sudo tools/wrapper/bin/exist.sh install`
-
 `sudo service eXist-db start`
 
-Reverse proxy for eXist-db
+
+### Reverse proxy for eXist-db
 
 `sudo a2enmod proxy proxy_http rewrite`
 
@@ -140,13 +168,16 @@ Add the following to /etc/apache2/apache2.conf
 </VirtualHost>
 ```
 
-Edit conf.xml to preserve whitespace in mixed content
+### Enable Jetty logginig through Apache web proxy
 
-`sudo nano /usr/local/eXist/conf.xml`
+`nano /usr/local/lib/exist/tools/jetty/etc/jetty-requestlog.xml`
 
-Change `preserve-whitespace-mixed-content="no"` to `preserve-whitespace-mixed-content="yes"`in
-```
-<indexer caseSensitive="yes" index-depth="5" preserve-whitespace-mixed-content="yes" 
-        stemming="no" suppress-whitespace="none"
-        tokenizer="org.exist.storage.analysis.SimpleTokenizer" track-term-freq="yes">
-```
+After:
+`<Set name="LogTimeZone"><Property name="jetty.requestlog.timezone" deprecated="requestlog.timezone" default="GMT"/></Set>`
+
+Add:
+`<Set name="PreferProxiedForAddress">true</Set>`
+
+Restart eXist-db
+
+`sudo service eXist-db restart`
