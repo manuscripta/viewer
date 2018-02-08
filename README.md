@@ -73,6 +73,7 @@ AddHandler fastcgi-script fcg fcgi fpl
 FastCgiServer /var/www/html/fcgi-bin/iipsrv.fcgi \
 -initial-env LOGFILE=/tmp/iipsrv.log \
 -initial-env VERBOSITY=2 \
+-initial-env FILESYSTEM_PREFIX=/srv/images/ \
 -initial-env MAX_IMAGE_CACHE_SIZE=20 \
 -initial-env JPEG_QUALITY=90 \
 -initial-env MAX_CVT=5000
