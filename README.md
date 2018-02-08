@@ -7,6 +7,8 @@ eXist-db webapp for manuscripta.se
 
 `sudo apt-get install apache2 libapache2-mod-fastcgi`
 
+In Ubuntu 16.04 it is necessary to enable the multiverse repository in /etc/apt/sources.list
+
 `sudo a2enmod fastcgi`
 
 `sudo apache2ctl graceful`
