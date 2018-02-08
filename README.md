@@ -31,11 +31,11 @@ Build IIP
 
 `sudo apt-get install libjpeg-dev libtiff-dev`
 
-`sudo ./autogen.sh`
+`./autogen.sh`
 
-`sudo ./configure`
+`./configure`
 
-`sudo make`
+`make`
 
 `sudo mkdir /var/www/html/fcgi-bin`
 
@@ -88,6 +88,7 @@ Restart Apache
 Set JAVA_HOME
 
 `sudo nano /etc/environment`
+
 Add: JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 
 Load variable
@@ -104,7 +105,10 @@ Create directory for eXist database
 
 `sudo mkdir /usr/local/lib/exist-data`
 
+Change user and group for eXist directories
+
 `sudo chown $USER:staff exist`
+
 `sudo chown $USER:staff exist-data`
 
 Clone eXist-db from GitHub
@@ -113,15 +117,13 @@ Clone eXist-db from GitHub
 
 `git clone https://github.com/eXist-db/exist .`
 
+Change eXist data directory
+
 `cp build/scripts/build-impl.xml build/scripts/build-impl.xml.backup`
 
 `nano build/scripts/build-impl.xml`
 
-Replace:
-`<filter token="dataDir" value="webapp/WEB-INF/data"/>`
-
-With:
-`<filter token="dataDir" value="/usr/local/lib/exist-data"/>`
+Replace `<filter token="dataDir" value="webapp/WEB-INF/data"/>` with `<filter token="dataDir" value="/usr/local/lib/exist-data"/>`
 
 Build eXist-db
 
@@ -152,8 +154,7 @@ Add the following to /etc/apache2/apache2.conf
 ```
 <VirtualHost *:80>
 	ProxyRequests       off
-	ServerName      www.manuscripta.se
-	ServerAlias     manuscripta.se
+	ServerName      www.manuscripta.se	
 	<Proxy>
 	   Order deny,allow
 	   Allow from all
@@ -161,10 +162,7 @@ Add the following to /etc/apache2/apache2.conf
 	ProxyPass       /   http://localhost:8080/exist/apps/manuscripta/
 	ProxyPassReverse    /   http://localhost:8080/exist/apps/manuscripta/
 	ProxyPassReverseCookieDomain localhost manuscripta.se
-	ProxyPassReverseCookiePath / /exist
-	RewriteEngine       on
-	RewriteRule   ^(.*)$ http://www.manuscripta.se/$1 [R=301,L]
-	RewriteRule   ^\/?(.*)$     /$1   [PT]
+	ProxyPassReverseCookiePath / /exist	
 </VirtualHost>
 ```
 
@@ -172,11 +170,7 @@ Add the following to /etc/apache2/apache2.conf
 
 `nano /usr/local/lib/exist/tools/jetty/etc/jetty-requestlog.xml`
 
-After:
-`<Set name="LogTimeZone"><Property name="jetty.requestlog.timezone" deprecated="requestlog.timezone" default="GMT"/></Set>`
-
-Add:
-`<Set name="PreferProxiedForAddress">true</Set>`
+Add `<Set name="PreferProxiedForAddress">true</Set>` after `<Set name="LogTimeZone"><Property name="jetty.requestlog.timezone" deprecated="requestlog.timezone" default="GMT"/></Set>`
 
 Restart eXist-db
 
