@@ -122,11 +122,13 @@ Clone eXist-db from GitHub
 
 Change eXist data directory
 
-`cp build/scripts/build-impl.xml build/scripts/build-impl.xml.backup`
+`cp build.properties local.build.properties`
 
-`nano build/scripts/build-impl.xml`
+Edit local.build.properties
 
-Replace `<filter token="dataDir" value="webapp/WEB-INF/data"/>` with `<filter token="dataDir" value="/usr/local/lib/exist-data"/>`
+Change `config.dataDir = webapp/WEB-INF/data` to `config.dataDir = /usr/local/lib/exist-data`
+
+Change `config.journalDir = webapp/WEB-INF/data` to `config.journalDir = /usr/local/lib/exist-data`
 
 Build eXist-db
 
