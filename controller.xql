@@ -105,6 +105,22 @@ else if (matches($exist:path, '^/bibl/\d+$')) then
         </error-handler>
     </dispatch>
     
+else if (matches($exist:path, '^/org/\d+$')) then
+    let $id := $exist:resource
+    return
+    <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
+        <forward url="{$exist:controller}/view_org.html"/>
+        <view>
+            <forward url="{$exist:controller}/modules/view.xql">
+                <add-parameter name="org" value="{$id}.xml"/>
+            </forward>
+        </view>
+        <error-handler>
+	<forward url="{$exist:controller}/404.html" method="get"/>
+	<forward url="{$exist:controller}/modules/view.xql"/>
+        </error-handler>
+    </dispatch>
+
 else if (matches($exist:path, '^/xml/\d+$')) then
     let $id := $exist:resource
     return

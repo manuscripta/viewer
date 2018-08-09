@@ -262,14 +262,26 @@
                                 <xsl:for-each select="//support">
                                     <xsl:choose>
                                         <xsl:when test="ancestor::msPart">
-                                            <xsl:if test="count(//msPart) gt 1">
-                                                <h5>Enhet<xsl:text> </xsl:text>
-                                                    <xsl:number count="msPart" format="I"/>: </h5>
-                                            </xsl:if>
+                                            <xsl:choose>
+                                                <xsl:when test="count(//msPart) gt 1">
+                                                    <h5>
+                                                        Enhet
+                                                        <xsl:text> </xsl:text>
+                                                        <xsl:number count="msPart" format="I"/>
+                                                    </h5>
+                                                </xsl:when>
+                                                <xsl:otherwise>
+                                                    <h5>
+                                                        Inlaga
+                                                    </h5>
+                                                </xsl:otherwise>
+                                            </xsl:choose>
                                             <xsl:apply-templates/>
                                         </xsl:when>
                                         <xsl:otherwise>
-                                            <h5>Försättsblad: </h5>
+                                            <h5>
+                                                Försättsblad
+                                            </h5>
                                             <xsl:apply-templates/>
                                         </xsl:otherwise>
                                     </xsl:choose>
@@ -409,22 +421,125 @@
                     </div>
                 </div>
             </section>
-            <xsl:if test="//idno[@type = 'id'][@subtype = 'diktyon']">
-                <div>
-                    <xsl:text>Diktyon id: </xsl:text>
-                    <a href="http://pinakes.irht.cnrs.fr/notices/cote/{data(//idno[@type = 'id'][@subtype='diktyon'])}/">
-                        <xsl:value-of select="//idno[@type = 'id'][@subtype = 'diktyon']"/>
-                    </a>
+            <section class="additional panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a data-toggle="collapse" href="#metadata" aria-expanded="false" aria-controls="metadata" class="collapsed">
+                            Metadata
+                        </a>
+                    </h3>
                 </div>
-            </xsl:if>
-            <div>
-                <a href="/xml/{data(substring-after(TEI/@xml:id, 'ms-'))}">
-                    Ladda ner XML
-                </a>
-            </div>
-            <div class="lastRevision">
-                <xsl:apply-templates select="//change"/>
-            </div>
+                <div id="metadata" class="panel-collapse collapse" role="tabpanel" aria-labelledby="metadata" aria-expanded="false" style="height: 0px;">
+                    <div class="panel-body">
+                        <div>
+                            <h4>
+                                Upphovsuppgift
+                            </h4>
+                            <div>
+                                <xsl:if test="//respStmt/resp[@key = 'cataloguer']">
+                                    Katalogisering
+                                    <xsl:text>: </xsl:text>
+                                    <xsl:for-each select="//respStmt[resp[@key = 'cataloguer']]">
+                                        <xsl:apply-templates select="."/>
+                                        <xsl:if test="position() != last()">
+                                            <xsl:text>, </xsl:text>
+                                        </xsl:if>
+                                    </xsl:for-each>
+                                </xsl:if>
+                            </div>
+                            <div>
+                                <xsl:if test="//respStmt/resp[@key = 'encoder']">
+                                    Kodning
+                                    <xsl:text>: </xsl:text>
+                                    <xsl:for-each select="//respStmt[resp[@key = 'encoder']]">
+                                        <xsl:apply-templates select="."/>
+                                        <xsl:if test="position() != last()">
+                                            <xsl:text>, </xsl:text>
+                                        </xsl:if>
+                                    </xsl:for-each>
+                                </xsl:if>
+                            </div>
+                        </div>
+                        <xsl:if test="//idno[@type = 'id'][@subtype = 'diktyon'] or //idno[@type = 'id'][@subtype = 'Libris'] or //idno[@type = 'id'][@subtype = 'Alvin']">
+                            <div>
+                                <h4>
+                                    Externa identifikatorer
+                                </h4>
+                                <xsl:if test="//idno[@type = 'id'][@subtype = 'diktyon']">
+                                    <div>
+                                        Diktyon ID
+                                        <xsl:text>: </xsl:text>
+                                        <a href="http://pinakes.irht.cnrs.fr/notices/cote/{data(//idno[@type = 'id'][@subtype='diktyon'])}/">
+                                            <xsl:value-of select="//idno[@type = 'id'][@subtype = 'diktyon']"/>
+                                        </a>
+                                    </div>
+                                </xsl:if>
+                                <xsl:if test="//idno[@type = 'id'][@subtype = 'Libris']">
+                                    <div>
+                                        Libris ID
+                                        <xsl:text>: </xsl:text>
+                                        <a href="http://libris.kb.se/bib/{data(//idno[@type = 'id'][@subtype='Libris'])}">
+                                            <xsl:text>http://libris.kb.se/bib/</xsl:text>
+                                            <xsl:value-of select="//idno[@type = 'id'][@subtype = 'Libris']"/>
+                                        </a>
+                                    </div>
+                                </xsl:if>
+                                <xsl:if test="//idno[@type = 'id'][@subtype = 'Alvin']">
+                                    <div>
+                                        Alvin ID
+                                        <xsl:text>: </xsl:text>
+                                        <a href="https://www.alvin-portal.org/alvin/view.jsf?pid={data(//idno[@type = 'id'][@subtype='Alvin'])}">
+                                            <xsl:value-of select="//idno[@type = 'id'][@subtype = 'Alvin']"/>
+                                        </a>
+                                    </div>
+                                </xsl:if>
+                            </div>
+                        </xsl:if>
+                        <div>
+                            <h4>
+                                Interna identifikatorer
+                            </h4>
+                            XML
+                            <xsl:text>: </xsl:text>
+                            <a href="/xml/{data(substring-after(TEI/@xml:id, 'ms-'))}">
+                                <xsl:text>https://www.manuscripta.se/xml/</xsl:text>
+                                <xsl:value-of select="data(substring-after(TEI/@xml:id, 'ms-'))"/>
+                            </a>
+                        </div>
+                        <xsl:if test="//facsimile">
+                            <div>
+                                IIIF manifest
+                                <xsl:text>: </xsl:text>
+                                <a href="/iiif/{data(substring-after(TEI/@xml:id, 'ms-'))}/manifest.json">
+                                    <xsl:text>https://www.manuscripta.se/iiif/</xsl:text>
+                                    <xsl:value-of select="data(substring-after(TEI/@xml:id, 'ms-'))"/>
+                                    <xsl:text>/manifest.json</xsl:text>
+                                </a>
+                            </div>
+                        </xsl:if>
+                        <div>
+                            <h4>
+                                Licens
+                            </h4>
+                            <div xml:space="preserve">
+                                Beskrivning
+                                <xsl:text>: </xsl:text>
+                                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"> CC BY 4.0</a>
+                            </div>
+                            <xsl:if test="//facsimile">
+                                <div>
+                                    Bilder
+                                    <xsl:text>: </xsl:text>
+                                    <a href="https://creativecommons.org/publicdomain/zero/1.0/">Public Domain</a>
+                                </div>
+                            </xsl:if>
+                        </div>
+                        <div class="lastRevision">
+                            <xsl:apply-templates select="//change"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     </xsl:template>
 
@@ -968,7 +1083,8 @@
                 </xsl:choose>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:apply-templates/>
+                <xsl:value-of select="."/>
+                <!--<xsl:apply-templates />-->
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -1045,7 +1161,9 @@
         <xsl:apply-templates/>
     </xsl:template>
     <xsl:template match="decoNote">
-        <xsl:apply-templates/>
+        <div>
+            <xsl:apply-templates/>
+        </div>
     </xsl:template>
     <xsl:template match="del">
         <xsl:value-of select="."/>
@@ -1514,7 +1632,7 @@
         <!--<xsl:variable name="locusToURL" select="//surface[@xml:id=concat(//TEI/@xml:id,'_',$locusTo)]/graphic/@url"/>-->
         <xsl:variable name="locusToIndex" select="count(//surface[@xml:id = concat(//TEI/@xml:id, '_', $locusTo)]/preceding-sibling::*)"/>
         <xsl:choose>
-            <xsl:when test="parent::msItem or ancestor::additions">
+            <xsl:when test="parent::msItem or ancestor::additions or ancestor::decoDesc">
                 <xsl:if test="@scheme = 'folios'">
                     <xsl:choose>
                         <xsl:when test="@from = @to">
@@ -2086,7 +2204,7 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="persName">
-        <span class="persName">
+        <!--<span class="persName">-->
             <xsl:choose>
                 <xsl:when test="parent::author/parent::msItem">
                     <span class="small-caps">
@@ -2118,7 +2236,7 @@
                     </a>
                 </xsl:otherwise>
             </xsl:choose>
-        </span>
+        <!--</span>-->
     </xsl:template>
     <xsl:template match="persName" mode="abbreviated-name">
         <xsl:apply-templates select="surname"/>
@@ -2174,6 +2292,9 @@
     <!-- repository -->
     <!-- resp -->
     <!-- respStmt -->
+    <xsl:template match="respStmt">
+        <xsl:apply-templates/>
+    </xsl:template>
     <xsl:template match="revisionDesc">
         <xsl:if test="@status = 'draft'">
             <div class="alert alert-danger alert-dismissible fade in" role="alert">
@@ -2441,12 +2562,12 @@
         <xsl:apply-templates/>
     </xsl:template>
     <xsl:template match="watermark">
-<!--        <xsl:if test="watermark[string-length(.) != 0]">-->
-            <div>
-                <span class="watermark_nr">Vattenmärke<xsl:text> </xsl:text>
+        <!--        <xsl:if test="watermark[string-length(.) != 0]">-->
+        <div>
+            <span class="watermark_nr">Vattenmärke<xsl:text> </xsl:text>
                 <xsl:value-of select="@n"/>. </span>
-                <xsl:apply-templates/>
-            </div>
+            <xsl:apply-templates/>
+        </div>
         <!--</xsl:if>-->
     </xsl:template>
     <xsl:template match="width">

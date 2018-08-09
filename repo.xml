@@ -10,4 +10,6 @@
     <target>manuscripta</target>
     <prepare>pre-install.xql</prepare>
     <finish/>
+
+<deployed>2018-04-25T14:20:03.037+02:00</deployed>
 </meta>

@@ -51,7 +51,7 @@
             </div>
         </xsl:if>
         <xsl:apply-templates select="//editor"/>
-        
+
         <xsl:if test="exists(//monogr/title[@level = 'j'])">
             <div>
                 <span class="head">Journal title: </span>
@@ -166,11 +166,12 @@
         </xsl:if>
         <div>
             <span class="head">ID: </span>
-            <xsl:value-of select="substring-after(//publicationStmt/idno, 'http://www.manuscripta.se/bibl/')"/>
+            <!--<xsl:value-of select="substring-after(//publicationStmt/idno[@subtype='manuscripta'], 'https://www.manuscripta.se/bibl/')"/>-->
+            <xsl:value-of select="//biblStruct/@xml:id"/>
         </div>
         <div>
             <span class="head">URI: </span>
-            <xsl:value-of select="//publicationStmt/idno"/>
+            <xsl:value-of select="//publicationStmt/idno[@subtype = 'manuscripta']"/>
         </div>
 
     </xsl:template>
@@ -215,7 +216,14 @@
         <div>
             <span class="head">Editor: </span>
             <a href="{data(persName/@ref)}">
-                <xsl:value-of select="persName"/>
+                <xsl:choose>
+                    <xsl:when test="persName">
+                        <xsl:value-of select="persName"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:apply-templates/>
+                    </xsl:otherwise>
+                </xsl:choose>
             </a>
         </div>
     </xsl:template>

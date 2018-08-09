@@ -108,7 +108,6 @@ function browse:list-manuscripts($node as node(), $model as map(*)){
                     <td>{if ($textLang='sv') then 'Swedish' else if ($textLang='grc') then 'Greek' else if ($textLang='la') then 'Latin' else $textLang}</td>
                     <td>{$summary}</td>
                     <td>{if ($digitized=true()) then 'Yes' else 'No'}</td>
-                    <td>{if ($sponsor="TTT: Text till tiden! Medeltida texter i kontext – då och nu") then 'TTT' else if ($sponsor="Greek Manuscripts in Sweden project") then 'Greek' else 'Other'}</td>
                   </tr> 
     (:order by 
         if($browse:sort = 'summary') then $summary

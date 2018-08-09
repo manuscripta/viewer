@@ -162,3 +162,15 @@ body,
     height: 100%;
     float: left;
 }
+.carousel-caption{
+    background-color:rgba(0,0,0,0.3);
+    right:15%;
+    left:15%;
+}
+a.carousel-caption-link {
+    color:white;
+    text-decoration:underline;
+}
+.carousel-control{
+    width:10%
+}
