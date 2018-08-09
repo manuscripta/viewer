@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-at="content" data-template-with="templates/page_sv.html">
+    <form name="f-query" action="/sok" class="form form-horizontal" method="get" role="search">
+        <div class="col-md-3 col-md-push-9">
+            <div class="well well-sm">
+                <div class="form-group" data-toggle="tooltip" data-placement="bottom" title="For wildcard search use * and ?">
+                    <div class="col-md-12 col-xs-12">
+                        <span class="input-group">
+                            <input name="q" type="search" class="templates:form-control form-control" placeholder="Söksträng"/>
+                            <span class="input-group-btn">
+                                <button id="f-btn-search" type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-search"/>
+                                </button>
+                            </span>
+                        </span><!--<input type="hidden" name="field" value="text"/>-->
+                    </div>
+                </div>
+                <div class="form-group" data-toggle="tooltip" data-placement="left" title="Search Mode">
+                    <div class="col-md-12 col-xs-12">
+                        <select name="m" class="form-control templates:form-control">
+                            <option value="au" selected="selected">Författare</option>
+                            <option value="ti">Titel</option>
+                            <option value="pl">Platsnamn</option>
+                            <option value="in">Incipit</option>
+                            <option value="ex">Explicit</option>
+                            <option value="ru">Rubrik</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="col-md-12">
+        <div class="search:beta_search"/>
+    </div>
+</div>

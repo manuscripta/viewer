@@ -5,17 +5,27 @@
         <h3 class="page-header">
             <xsl:value-of select="//titleStmt/title"/>
         </h3>
-        <div>
-            <span class="head">Forename: </span>
-            <xsl:value-of select="//person/persName/forename"/>
-        </div>
-        <div>
-            <span class="head">Surname: </span>
-            <xsl:value-of select="//person/persName/surname"/>
-        </div>
+        <xsl:if test="//person/persName/forename">
+            <div>
+                <span class="head">Forename: </span>
+                <xsl:value-of select="//person/persName/forename"/>
+            </div>
+        </xsl:if>
+        <xsl:if test="//person/persName/surname">
+            <div>
+                <span class="head">Surname: </span>
+                <xsl:value-of select="//person/persName/surname"/>
+            </div>
+        </xsl:if>
+        <xsl:if test="//person/persName/addName">
+            <div>
+                <span class="head">Additional name: </span>
+                <xsl:value-of select="//person/persName/addName"/>
+            </div>
+        </xsl:if>
         <xsl:if test="//person/idno[@subtype = 'VIAF']">
             <div>
-                <span class="head">VIAF: </span>
+                <span class="head">VIAF ID: </span>
                 <a href="{data(//idno[@subtype='VIAF'])}">
                     <xsl:value-of select="//idno[@subtype = 'VIAF']"/>
                 </a>
@@ -30,8 +40,14 @@
                 </a>
             </div>
         </xsl:if>
-
-
+        <xsl:if test="//person/idno[@subtype = 'Libris']">
+            <div>
+                <span class="head">Libris ID: </span>
+                <a href="{data(//idno[@subtype='Libris'])}">
+                    <xsl:value-of select="//idno[@subtype = 'Libris']"/>
+                </a>
+            </div>
+        </xsl:if>
         <xsl:if test="exists(//note)">
             <div>
                 <span class="head">Note: </span>

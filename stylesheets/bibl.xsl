@@ -32,7 +32,7 @@
                 <span class="head">Monograph title: </span>
                 <xsl:choose>
                     <xsl:when test="exists(//monogr/title/@ref)">
-                        <a href="{data(//monogr/title/@ref)}">
+                        <a href="{data(replace(//monogr/title/@ref, 'www', 'dev'))}">
                             <xsl:value-of select="//monogr/title[@level = 'm']"/>
                         </a>
                     </xsl:when>
@@ -45,19 +45,19 @@
         <xsl:if test="exists(//series/title[@level = 's'])">
             <div>
                 <span class="head">Series title: </span>
-                <a href="{data(//series/title/@ref)}">
+                <a href="{data(replace(//series/title/@ref, 'www', 'dev'))}">
                     <xsl:value-of select="//series/title[@level = 's']"/>
                 </a>
             </div>
         </xsl:if>
         <xsl:apply-templates select="//editor"/>
-        
+
         <xsl:if test="exists(//monogr/title[@level = 'j'])">
             <div>
                 <span class="head">Journal title: </span>
                 <xsl:choose>
                     <xsl:when test="exists(//monogr/title/@ref)">
-                        <a href="{data(//monogr/title/@ref)}">
+                        <a href="{data(replace(//monogr/title/@ref, 'www', 'dev'))}">
                             <xsl:value-of select="//monogr/title[@level = 'j']"/>
                         </a>
                     </xsl:when>
@@ -70,7 +70,7 @@
         <xsl:if test="exists(//pubPlace)">
             <div>
                 <span class="head">Publication place: </span>
-                <a href="{data(//imprint/pubPlace/@ref)}">
+                <a href="{data(replace(//imprint/pubPlace/@ref, 'www', 'dev'))}">
                     <xsl:value-of select="//imprint/pubPlace"/>
                 </a>
             </div>
@@ -166,11 +166,12 @@
         </xsl:if>
         <div>
             <span class="head">ID: </span>
-            <xsl:value-of select="substring-after(//publicationStmt/idno, 'http://www.manuscripta.se/bibl/')"/>
+            <!--<xsl:value-of select="substring-after(//publicationStmt/idno[@subtype='manuscripta'], 'https://www.manuscripta.se/bibl/')"/>-->
+            <xsl:value-of select="//biblStruct/@xml:id"/>
         </div>
         <div>
             <span class="head">URI: </span>
-            <xsl:value-of select="//publicationStmt/idno"/>
+            <xsl:value-of select="//publicationStmt/idno[@subtype = 'manuscripta']"/>
         </div>
 
     </xsl:template>
@@ -180,7 +181,7 @@
             <xsl:when test="@role = 'origAuth'">
                 <div>
                     <span class="head">Author (original): </span>
-                    <a href="{data(persName/@ref)}">
+                    <a href="{data(replace(persName/@ref, 'www', 'dev'))}">
                         <xsl:value-of select=".[@role = 'origAuth']/persName"/>
                     </a>
                 </div>
@@ -188,7 +189,7 @@
             <xsl:when test="@role = 'critEd'">
                 <div>
                     <span class="head">Author (critical editor): </span>
-                    <a href="{data(persName/@ref)}">
+                    <a href="{data(replace(persName/@ref, 'www', 'dev'))}">
                         <xsl:value-of select=".[@role = 'critEd']/persName"/>
                     </a>
                 </div>
@@ -198,7 +199,7 @@
                     <span class="head">Author: </span>
                     <xsl:choose>
                         <xsl:when test="exists(persName)">
-                            <a href="{data(persName/@ref)}">
+                            <a href="{data(replace(persName/@ref, 'www', 'dev'))}">
                                 <xsl:value-of select="persName"/>
                             </a>
                         </xsl:when>
@@ -214,8 +215,15 @@
     <xsl:template match="editor">
         <div>
             <span class="head">Editor: </span>
-            <a href="{data(persName/@ref)}">
-                <xsl:value-of select="persName"/>
+            <a href="{data(replace(persName/@ref, 'www', 'dev'))}">
+                <xsl:choose>
+                    <xsl:when test="persName">
+                        <xsl:value-of select="persName"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:apply-templates/>
+                    </xsl:otherwise>
+                </xsl:choose>
             </a>
         </div>
     </xsl:template>

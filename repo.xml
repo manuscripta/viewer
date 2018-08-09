@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <meta xmlns="http://exist-db.org/xquery/repo">
-    <description>Manuscripta – A Digital Catalogue of Manuscripts in Sweden</description>
-    <author/>
-    <website/>
-    <status>beta</status>
+    <description>Manuscripta – A Digital Catalogue of Manuscripts in Sweden (dev)</description>
+    <author>Patrik Granholm</author>
+    <website>https://dev.manuscripta.se</website>
+    <status>alpha</status>
     <license>GNU-LGPL</license>
     <copyright>true</copyright>
     <type>application</type>
-    <target>manuscripta</target>
+    <target>manuscripta-dev</target>
     <prepare>pre-install.xql</prepare>
     <finish/>
 </meta>

@@ -54,7 +54,7 @@ function browse:incipits($node as node(), $model as map(*)) {
                     <td>{$incipit//text()}</td>
                     <td>{$author//text()}</td>
                     <td><em>{$title//text()}</em></td>
-                    <td>{$shelfmark/text()}, <a href="/ms/{substring-before($uri, '.xml')}">f. {data($locus/@from)}</a></td>
+                    <td>{$shelfmark/text()}, <a href="/{substring-before($uri, '.xml')}">f. {data($locus/@from)}</a></td>
                 </tr>
 };
 
@@ -88,7 +88,7 @@ declare %templates:wrap
 function browse:list-manuscripts($node as node(), $model as map(*)){
     for $mss in collection($config:data-root || "/msDescs")        
         let $repository := $mss//tei:msDesc/tei:msIdentifier/tei:repository
-        let $shelfmark := $mss//tei:msDesc/tei:msIdentifier/tei:idno[@type='shelfmark']        
+        let $shelfmark := $mss//tei:msDesc/tei:msIdentifier/tei:idno[@type='shelfmark']
         let $codicological_unit := $mss//tei:msPart
         let $unit_nr := $codicological_unit/tei:msIdentifier/tei:idno
         let $date := fn:string-join(if (exists($codicological_unit//tei:history/tei:origin//tei:origDate)) then $codicological_unit//tei:history/tei:origin//tei:origDate else $mss//tei:msDesc/tei:history/tei:origin//tei:origDate, ', ')        
@@ -98,7 +98,7 @@ function browse:list-manuscripts($node as node(), $model as map(*)){
         let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
         let $digitized := boolean($mss//tei:facsimile)
         let $sponsor := $mss//tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:sponsor
-        order by $mss//tei:TEI/@xml:id
+        order by $repository, $shelfmark
         return 
             <tr>
                     <td>{$repository}</td>
@@ -108,7 +108,7 @@ function browse:list-manuscripts($node as node(), $model as map(*)){
                     <td>{if ($textLang='sv') then 'Swedish' else if ($textLang='grc') then 'Greek' else if ($textLang='la') then 'Latin' else $textLang}</td>
                     <td>{$summary}</td>
                     <td>{if ($digitized=true()) then 'Yes' else 'No'}</td>
-                    <td>{if ($sponsor="TTT: Text till tiden! Medeltida texter i kontext – då och nu") then 'TTT' else if ($sponsor="Greek Manuscripts in Sweden project") then 'Greek' else 'Other'}</td>
+                    <td>{if ($sponsor="TTT: Text till tiden! Medeltida texter i kontext – då och nu") then 'TTT' else if ($sponsor="Greek Manuscripts in Sweden project") then 'Greek' else ''}</td>
                   </tr> 
     (:order by 
         if($browse:sort = 'summary') then $summary

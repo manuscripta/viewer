@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/viewer.html" data-template-at="content">
+    <style>
+        
+        body{
+        height: 100%;
+        }
+        
+        .container-fluid{
+        height: 100%;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        }
+        
+        .split p,
+        .split-flex p{
+        padding: 20px;
+        }
+        
+        .split,
+        .split-flex{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;            
+        overflow-y: auto;
+        overflow-x: hidden;
+        }
+        
+        .gutter{
+        background-color: #eee;            
+        background-repeat: no-repeat;
+        background-position: 50%;
+        }
+        
+        .gutter.gutter-vertical{
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
+        cursor: ns-resize;
+        }
+        
+        .gutter.gutter-horizontal{
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+        cursor: ew-resize;
+        }
+        
+        .split.split-horizontal,
+        .gutter.gutter-horizontal{
+        height: 100%;
+        float: left;
+        }
+    </style>
+            
+    
+        <div id="ms-desc" class="split split-horizontal">
+            <p>#left</p>
+        </div>
+        <div id="diva-wrapper" class="split split-horizontal">
+            <p>#right</p>
+        </div>
+    
+    
+</div>

@@ -1,23 +1,17 @@
 $(document).ready(function () {
     /* Get the @id from h1 to automatically generate url:s to objectData and ImageDir */
-    var shelfmark = $('h1').attr('id');
-    if(shelfmark.startsWith("ms-")){
-        var shelfmark2 = shelfmark.match(/\d+/g);  
-    }
-    else{
-        var shelfmark2 = shelfmark;
-    };
+    var xml_id = $('h1').attr('id');
+    var ms_id = xml_id.match(/\d+/g);  
+    
     var digitized = $('h1').attr('class');
     if (digitized == "digitized" || digitized == "digitized_partly") {
         $('#diva-wrapper').diva({
             iipServerURL: "https://www.manuscripta.se/iipsrv/iipsrv.fcgi",
-            /*        objectData: "metadata/diva/" + shelfmark + ".json",*/
-            objectData: "../iiif/" + shelfmark2 + "/manifest.json",
+            objectData: "../iiif/" + ms_id + "/manifest.json",
             isIIIF: true,
-            imageDir: shelfmark,
-            viewerWidthPadding: 0,
-            enableAutoWidth: true,
-            enableAutoHeight: false,            
+            /*enableIIIFMetadata: true,*/            
+            imageDir: ms_id,
+            viewerWidthPadding: 0,                     
             fixedHeightGrid: true,            
             enableFilename: false,
             minZoomLevel: 0,
@@ -26,7 +20,7 @@ $(document).ready(function () {
             maxPagesPerRow: 10,
             verticallyOriented: true,
             inFullscreen: false,
-            inGrid: false,
+            inGrid: false,            
             inBookLayout: false,
             enableLinkIcon: false,
             enableAutoTitle: false,

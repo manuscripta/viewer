@@ -66,7 +66,8 @@ declare function search:search($node as node(), $model as map(*)) {
     </table>
 };
 
-declare function search:beta_search($node as node(), $model as map(*)) {
+declare %templates:wrap
+function search:beta_search($node as node(), $model as map(*)) {
     <table class="table table-striped">
         {
         for $mss in collection($config:data-root || "/msDescs")

@@ -54,11 +54,36 @@ declare function view:get-bibl($node as node(), $model as map(*)) as node(){
     let $displayURI := request:get-parameter('bibl', '')
     let $rec := doc(concat($config:data-root, "/id/bibl/", $displayURI))/tei:TEI    
     return
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 split split-horizontal" id="bibl">
+         <div class="col-md-6 col-lg-6 split split-horizontal" id="bibl">
                 {view:view-bibl-html($rec)}                
         </div>
 };
 
 declare function view:view-bibl-html($rec as node()){
     transform:transform($rec, doc(concat($config:app-root, "/stylesheets/bibl.xsl")),() )
+};
+
+declare function view:get-org($node as node(), $model as map(*)) as node(){    
+    let $displayURI := request:get-parameter('org', '')
+    let $rec := doc(concat($config:data-root, "/id/org/", $displayURI))/tei:TEI    
+    return
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                {view:view-org-html($rec)}            
+        </div>
+};
+
+declare function view:view-org-html($rec as node()){
+    transform:transform($rec, doc(concat($config:app-root, "/stylesheets/organizations.xsl")),() )
+};
+
+(:List manuscripts where bibl occurs - Work in progress:)
+declare function view:get-bibl-mss-ref($rec as node()){
+    for $mss in collection($config:data-root || "/msDescs")
+    let $id := $rec//tei:bibl/tei:title/@ref
+    let $title := $mss//tei:titleStmt/tei:title
+    let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
+    return 
+     <tr>
+         <td><a href="/{substring-before($uri, '.xml')}">{$title}</a></td>
+     </tr>
 };

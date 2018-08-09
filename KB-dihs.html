@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="page-header">Digitaliserade KB handskrifter</h3>
+            <table id="manuscripts" class="tablesorter">
+                <thead>
+                    <tr>
+                        <th width="10%">Hyllsignum</th>
+                        <th>Titel</th>
+                        <th>Datering</th>
+                        <th>Omfång</th>
+                        <th>Libris ID</th>
+                        <th>Originalpost</th>
+                        <th>Katalogisatör</th>
+                        <th>Skapad</th>
+                        <th>Uppdaterad</th>                        
+                    </tr>
+                </thead>
+                <tbody data-template="libris:dihs"/>
+                <tfoot>
+                    <tr>
+                        <th colspan="9" class="ts-pager form-inline">
+                            <div class="btn-group btn-group-sm" role="group">
+                                <button type="button" class="btn btn-default first">
+                                    <span class="glyphicon glyphicon-step-backward"/>
+                                </button>
+                                <button type="button" class="btn btn-default prev">
+                                    <span class="glyphicon glyphicon-backward"/>
+                                </button>
+                            </div>
+                            <span class="pagedisplay"/>
+                            <div class="btn-group btn-group-sm" role="group">
+                                <button type="button" class="btn btn-default next">
+                                    <span class="glyphicon glyphicon-forward"/>
+                                </button>
+                                <button type="button" class="btn btn-default last">
+                                    <span class="glyphicon glyphicon-step-forward"/>
+                                </button>
+                            </div>
+                            <select class="form-control input-sm pagesize" title="Select page size">
+                                <option selected="selected" value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="all">All Rows</option>
+                            </select>
+                            <select class="form-control input-sm pagenum" title="Select page number"/>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>

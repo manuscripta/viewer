@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
     <head>
         <title>Simple Viewer</title>
         <meta charset="UTF-8"/>
@@ -11,18 +11,98 @@
                 position: fixed;
             }</style>
         <link rel="stylesheet" type="text/css" href="../resources/scripts/mirador/css/mirador-combined.css"/>
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>-->
         <script src="../resources/scripts/mirador/mirador.js"/>
+        <!--<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"/>        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"/>    -->
     </head>
     <body>
-        <div id="viewer"/>
+        <!--<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div id="header" class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"/>
+                        <span class="icon-bar"/>
+                        <span class="icon-bar"/>
+                    </button>
+                    <img class="beta-image" src="../beta.png" alt="beta"/>
+                    <a class="navbar-brand" href="/">Home</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Collections <b class="caret"/>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/greek">Greek manuscripts</a>
+                                </li>
+                                <li>
+                                    <a href="/swedish">Old Swedish manuscripts</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse <b class="caret"/>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/browse/manuscripts">Manuscripts</a>
+                                </li>
+                                <li>
+                                    <a href="/mirador">Digitizations</a>
+                                </li>
+                                <li>
+                                    <a href="/browse/authors">Authors and Works</a>
+                                </li>
+                                <li>
+                                    <a href="/browse/incipits">Incipits</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Digitizations <b class="caret"/>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/mirador_greek">Greek Manuscripts</a>
+                                </li>
+                                <li>
+                                    <a href="/mirador_ttt">Old Swedish Manuscripts</a>
+                                </li>                                
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/search">Search</a>
+                        </li>
+                        <li>
+                            <a href="/guidelines">Guidelines</a>
+                        </li>
+                        <li>
+                            <a href="/contact">Contact</a>
+                        </li>
+                        <li>
+                            <a href="/sv">På svenska</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-\-/.nav-collapse -\->
+            </div>
+            <!-\-/.container -\->
+        </nav>-->
+        <div id="viewer"/>            
         <script type="text/javascript">
       $(function() {
         Mirador({
           id: "viewer",
-          data: [{"collectionUri": "https://www.manuscripta.se/iiif/collection-ttt.json"}],
+          data: [{"collectionUri": "https://dev.manuscripta.se/iiif/collection-ttt.json"}],
           openManifestsPage: true
         });
       });
-    </script>
+        </script>        
     </body>
 </html>
