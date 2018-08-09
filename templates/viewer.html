@@ -11,21 +11,6 @@
         <link rel="stylesheet" type="text/css" href="resources/scripts/diva/css/diva.min.css"/>
         <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/diva.js/5.1.2/css/diva.min.css" integrity="sha256-vvkaRBeJAn6YiQpEIg5eV+rat2PZfu1iWZoLhM8/4Uw=" crossorigin="anonymous"/>-->
         <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>        
-        <!-- Matomo -->
-        <script type="text/javascript">
-  var _paq = _paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//analytics.kb.se/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', '66']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-        <!-- End Matomo Code -->
     </head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -40,7 +25,21 @@
                     <img class="beta-image" src="../beta.png" alt="beta"/>
                     <a class="navbar-brand" href="/">Home</a>
                 </div>
-                <div class="collapse navbar-collapse">                    
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Collections <b class="caret"/>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/greek">Greek manuscripts</a>
+                                </li>
+                                <li>
+                                    <a href="/fornsvenska">Old Swedish manuscripts</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse <b class="caret"/>
@@ -72,23 +71,9 @@
                         <li>
                             <a href="/search">Search</a>
                         </li>
-                        <!--<li>
+                        <li>
                             <a href="/guidelines">Guidelines</a>
-                        </li>-->
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"/>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="/greek">Greek manuscripts</a>
-                                    </li>
-                                    <li>
-                                        <a href="/fornsvenska">Old Swedish manuscripts</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                        </li>
                         <li>
                             <a href="/contact">Contact</a>
                         </li>
@@ -104,12 +89,44 @@
         <!-- Bootstrap core JavaScript
     ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"/>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"/>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"/>
         <script type="text/javascript" src="resources/scripts/diva/js/diva.min.js"/>
         <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/diva.js/5.1.2/js/diva.min.js" integrity="sha256-nR8sOg/mUX/vWvYKcZlJMULT9YyZFAYwsw2tDvEvqzs=" crossorigin="anonymous"/>-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.2.0/split.min.js" integrity="sha256-FSGFHqVQdKn0B1bd5fy3yN3qa6iJ4MrRdJ5SviQ9Q7g=" crossorigin="anonymous"/>
         <script type="text/javascript" src="resources/scripts/viewer.js"/>
+        <script src="../resources/scripts/mirador/mirador.min.js"/>
+        <script type="text/javascript">
+            $(function() {
+            Mirador({
+            "id": "viewer",
+            "mainMenuSettings" : {
+            'show' : false
+            },
+            "data": [
+            {"manifestUri": "https://www.manuscripta.se/iiif/100001/manifest.json",
+            "location": "My Repository"}
+            // For a working example, try...
+            // {"manifestUri": "http://dms-data.stanford.edu/data/manifests/Walters/qm670kv1873/manifest.json",
+            //  "location": "Stanford University"}
+            ],
+            "windowObjects": [
+            {
+            "loadedManifest": "https://www.manuscripta.se/iiif/100001/manifest.json",
+            
+            // For the example above:
+            // "loadedManifest": "http://dms-data.stanford.edu/data/manifests/Walters/qm670kv1873/manifest.json",
+            // "canvasID" : "http://dms-data.stanford.edu/data/manifests/Walters/qm670kv1873/canvas/canvas-1"
+            "viewType" : "ImageView",
+            "displayLayout": false,
+            "bottomPanel" : false,
+            "sidePanel" : false,
+            "annotationLayer" : false
+            }
+            ]
+            });
+            });
+        </script>
         <script type="text/javascript">
                        
                 $(document).ready(function() {

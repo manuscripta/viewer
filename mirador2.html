@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="shortcut icon" href="resources/images/favicon.ico"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="resources/css/starter-template.css"/>
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
+
+        <link rel="stylesheet" type="text/css" href="../resources/scripts/mirador/css/mirador-combined.css"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div id="header" class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"/>
+                        <span class="icon-bar"/>
+                        <span class="icon-bar"/>
+                    </button>
+                    <img class="beta-image" src="../beta.png" alt="beta"/>
+                    <a class="navbar-brand" href="/">Home</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Collections <b class="caret"/>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/greek">Greek manuscripts</a>
+                                </li>
+                                <li>
+                                    <a href="/fornsvenska">Old Swedish manuscripts</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse <b class="caret"/>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/browse/manuscripts">Manuscripts</a>
+                                </li>
+                                <li>
+                                    <a href="/browse/authors">Authors and Works</a>
+                                </li>
+                                <li>
+                                    <a href="/browse/incipits">Incipits</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/search">Search</a>
+                        </li>
+                        <li>
+                            <a href="/guidelines">Guidelines</a>
+                        </li>
+                        <li>
+                            <a href="/contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container -->
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="container-msdesc col-xs-12 col-sm-12 col-md-6 col-lg-6 split split-horizontal" id="ms-desc"/>
+                <div class="container-viewer col-md-6 col-lg-6 split split-horizontal" id="viewer"/>
+            </div>
+        </div>
+
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"/>
+        <script src="../resources/scripts/mirador/mirador.js"/>
+        <script type="text/javascript">
+            $(function() {
+            Mirador({
+            "id": "viewer",
+            "mainMenuSettings" : {
+            'show' : false
+            },
+            "data": [
+            {"manifestUri": "https://www.manuscripta.se/iiif/100001/manifest.json",
+            "location": "My Repository"}
+            // For a working example, try...
+            // {"manifestUri": "http://dms-data.stanford.edu/data/manifests/Walters/qm670kv1873/manifest.json",
+            //  "location": "Stanford University"}
+            ],
+            "windowObjects": [
+            {
+            "loadedManifest": "https://www.manuscripta.se/iiif/100001/manifest.json",
+            
+            // For the example above:
+            // "loadedManifest": "http://dms-data.stanford.edu/data/manifests/Walters/qm670kv1873/manifest.json",
+            // "canvasID" : "http://dms-data.stanford.edu/data/manifests/Walters/qm670kv1873/canvas/canvas-1"
+            "viewType" : "ImageView",
+            "displayLayout": false,
+            "bottomPanel" : false,
+            "sidePanel" : false,
+            "annotationLayer" : false
+            }
+            ]
+            });
+            });
+        </script>
+    </body>
+</html>

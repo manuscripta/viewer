@@ -54,7 +54,7 @@ function browse:incipits($node as node(), $model as map(*)) {
                     <td>{$incipit//text()}</td>
                     <td>{$author//text()}</td>
                     <td><em>{$title//text()}</em></td>
-                    <td>{$shelfmark/text()}, <a href="/ms/{substring-before($uri, '.xml')}">f. {data($locus/@from)}</a></td>
+                    <td>{$shelfmark/text()}, <a href="/{substring-before($uri, '.xml')}">f. {data($locus/@from)}</a></td>
                 </tr>
 };
 
@@ -108,6 +108,7 @@ function browse:list-manuscripts($node as node(), $model as map(*)){
                     <td>{if ($textLang='sv') then 'Swedish' else if ($textLang='grc') then 'Greek' else if ($textLang='la') then 'Latin' else $textLang}</td>
                     <td>{$summary}</td>
                     <td>{if ($digitized=true()) then 'Yes' else 'No'}</td>
+                    <td>{if ($sponsor="TTT: Text till tiden! Medeltida texter i kontext – då och nu") then 'TTT' else if ($sponsor="Greek Manuscripts in Sweden project") then 'Greek' else ''}</td>
                   </tr> 
     (:order by 
         if($browse:sort = 'summary') then $summary

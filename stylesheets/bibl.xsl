@@ -32,7 +32,7 @@
                 <span class="head">Monograph title: </span>
                 <xsl:choose>
                     <xsl:when test="exists(//monogr/title/@ref)">
-                        <a href="{data(//monogr/title/@ref)}">
+                        <a href="{data(replace(//monogr/title/@ref, 'www', 'test'))}">
                             <xsl:value-of select="//monogr/title[@level = 'm']"/>
                         </a>
                     </xsl:when>
@@ -45,7 +45,7 @@
         <xsl:if test="exists(//series/title[@level = 's'])">
             <div>
                 <span class="head">Series title: </span>
-                <a href="{data(//series/title/@ref)}">
+                <a href="{data(replace(//series/title/@ref, 'www', 'test'))}">
                     <xsl:value-of select="//series/title[@level = 's']"/>
                 </a>
             </div>
@@ -57,7 +57,7 @@
                 <span class="head">Journal title: </span>
                 <xsl:choose>
                     <xsl:when test="exists(//monogr/title/@ref)">
-                        <a href="{data(//monogr/title/@ref)}">
+                        <a href="{data(replace(//monogr/title/@ref, 'www', 'test'))}">
                             <xsl:value-of select="//monogr/title[@level = 'j']"/>
                         </a>
                     </xsl:when>
@@ -70,7 +70,7 @@
         <xsl:if test="exists(//pubPlace)">
             <div>
                 <span class="head">Publication place: </span>
-                <a href="{data(//imprint/pubPlace/@ref)}">
+                <a href="{data(replace(//imprint/pubPlace/@ref, 'www', 'test'))}">
                     <xsl:value-of select="//imprint/pubPlace"/>
                 </a>
             </div>
@@ -181,7 +181,7 @@
             <xsl:when test="@role = 'origAuth'">
                 <div>
                     <span class="head">Author (original): </span>
-                    <a href="{data(persName/@ref)}">
+                    <a href="{data(replace(persName/@ref, 'www', 'test'))}">
                         <xsl:value-of select=".[@role = 'origAuth']/persName"/>
                     </a>
                 </div>
@@ -189,7 +189,7 @@
             <xsl:when test="@role = 'critEd'">
                 <div>
                     <span class="head">Author (critical editor): </span>
-                    <a href="{data(persName/@ref)}">
+                    <a href="{data(replace(persName/@ref, 'www', 'test'))}">
                         <xsl:value-of select=".[@role = 'critEd']/persName"/>
                     </a>
                 </div>
@@ -199,7 +199,7 @@
                     <span class="head">Author: </span>
                     <xsl:choose>
                         <xsl:when test="exists(persName)">
-                            <a href="{data(persName/@ref)}">
+                            <a href="{data(replace(persName/@ref, 'www', 'test'))}">
                                 <xsl:value-of select="persName"/>
                             </a>
                         </xsl:when>
@@ -215,7 +215,7 @@
     <xsl:template match="editor">
         <div>
             <span class="head">Editor: </span>
-            <a href="{data(persName/@ref)}">
+            <a href="{data(replace(persName/@ref, 'www', 'test'))}">
                 <xsl:choose>
                     <xsl:when test="persName">
                         <xsl:value-of select="persName"/>

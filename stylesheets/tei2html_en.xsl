@@ -459,7 +459,7 @@
                                     </xsl:for-each>
                                 </xsl:if>
                             </div>
-                        <div>
+                            <div>
                                 Sponsor
                                 <xsl:text>: </xsl:text>
                                 <xsl:for-each select="//sponsor">
@@ -523,8 +523,8 @@
                                 Permalink
                                 <xsl:text>: </xsl:text>
                                 <xsl:value-of select="//idno[@subtype='Manuscripta']"/>
-                                </div>
-                        <div>
+                            </div>
+                            <div>
                                 XML
                                 <xsl:text>: </xsl:text>
                                 <a href="/xml/{data(substring-after(TEI/@xml:id, 'ms-'))}">
@@ -2237,37 +2237,37 @@
     </xsl:template>
     <xsl:template match="persName">
         <!--<span class="persName">-->
-            <xsl:choose>
-                <xsl:when test="parent::author/parent::msItem">
-                    <span class="small-caps">
-                        <xsl:choose>
-                            <xsl:when test="@evidence = 'external' or @evidence = 'conjecture'">
-                                <xsl:text>⟨</xsl:text>
-                                <!-- Mathematical left angle bracket U+27E8 -->
-                                <!--<xsl:apply-templates />-->
-                                <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
-                                    <xsl:value-of select="normalize-space(.)"/>
-                                </a>
-                                <!-- Removes whitespace before and after -->
-                                <xsl:text>⟩</xsl:text>
-                                <!-- Mathematical right angle bracket U+27E9 -->
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <!--<xsl:apply-templates />-->
-                                <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
-                                    <xsl:value-of select="normalize-space(.)"/>
-                                </a>
-                            </xsl:otherwise>
-                        </xsl:choose>
-                    </span>
-                    <xsl:text>, </xsl:text>
-                </xsl:when>
-                <xsl:otherwise>
-                    <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
-                        <xsl:value-of select="normalize-space(.)"/>
-                    </a>
-                </xsl:otherwise>
-            </xsl:choose>
+        <xsl:choose>
+            <xsl:when test="parent::author/parent::msItem">
+                <span class="small-caps">
+                    <xsl:choose>
+                        <xsl:when test="@evidence = 'external' or @evidence = 'conjecture'">
+                            <xsl:text>⟨</xsl:text>
+                            <!-- Mathematical left angle bracket U+27E8 -->
+                            <!--<xsl:apply-templates />-->
+                            <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
+                                <xsl:value-of select="normalize-space(.)"/>
+                            </a>
+                            <!-- Removes whitespace before and after -->
+                            <xsl:text>⟩</xsl:text>
+                            <!-- Mathematical right angle bracket U+27E9 -->
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <!--<xsl:apply-templates />-->
+                            <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
+                                <xsl:value-of select="normalize-space(.)"/>
+                            </a>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </span>
+                <xsl:text>, </xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+                <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
+                    <xsl:value-of select="normalize-space(.)"/>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
         <!--</span>-->
     </xsl:template>
     <xsl:template match="persName" mode="abbreviated-name">

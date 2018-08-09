@@ -13,9 +13,11 @@ import module namespace templates="http://exist-db.org/xquery/templates" ;
  :)
 import module namespace config="http://www.manuscripta.se/xquery/config" at "config.xqm";
 import module namespace browse="http://www.manuscripta.se/xquery/browse" at "browse.xql";
+import module namespace libris="http://www.manuscripta.se/xquery/libris" at "libris.xql";
 import module namespace search="http://www.manuscripta.se/xquery/search" at "search.xql";
+import module namespace dq="http://exist-db.org/xquery/documentation/search" at "dq_search.xql";
 import module namespace view="http://www.manuscripta.se/xquery/view" at "view_msDesc.xql";
-
+import module namespace beta_view="http://www.manuscripta.se/xquery/beta_view" at "beta_view_msDesc.xql";
 declare option exist:serialize "method=html5 media-type=text/html enforce-xhtml=yes";
 
 let $config := map {

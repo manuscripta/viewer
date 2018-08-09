@@ -54,7 +54,7 @@ declare function view:get-bibl($node as node(), $model as map(*)) as node(){
     let $displayURI := request:get-parameter('bibl', '')
     let $rec := doc(concat($config:data-root, "/id/bibl/", $displayURI))/tei:TEI    
     return
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 split split-horizontal" id="bibl">
+         <div class="col-md-6 col-lg-6 split split-horizontal" id="bibl">
                 {view:view-bibl-html($rec)}                
         </div>
 };

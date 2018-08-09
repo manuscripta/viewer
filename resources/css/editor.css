@@ -1,0 +1,240 @@
+/**
+    Editor styles
+**/
+body{
+    height:100%;
+}
+#content {
+    height: 100%;
+}
+#editor {
+    height: 100%;
+}
+#editorPanes{
+    height:100%;
+    display:-ms-flexbox;
+    display:-webkit-flex;
+    display:-moz-box;
+    display:flex;
+}
+.split-horizontal {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+.split-horizontal,.gutter-horizontal {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.gutter-horizontal {
+    cursor: ew-resize;
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+#editor-preview-pane .container-msdesc, #editor-preview .container-viewer {
+    overflow: inherit;
+}
+.spinner {
+    animation: spin 1s infinite linear;
+}
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+#editorForm label input, #editorForm label select, #editorForm label + select, #editorForm label + input  {
+    font-weight: normal;
+    margin: 0 1em 0 .5em;
+}
+#editorForm input, #editorForm select {
+    margin: 0 0.5em;
+}
+#editorForm label input[type=checkbox], #editorForm label input[type=radio] {
+    margin: 0;
+}
+#editorForm fieldset {
+    margin: 10px 0px;
+    padding: 1em;
+    border: 1px solid silver;
+}
+#editorForm legend {
+    width: auto;
+    font-size: inherit;
+    border: 0;
+    margin: 0 0 0 -.5em;
+}
+
+#editorForm .Locus input[type=text] {
+    width: 5em;
+}
+
+#editorForm .ZeroOrMore-item > * {
+    display:inline-block;
+}
+
+#editorForm .autocomplete-menu {
+    border-radius: 3px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    background: white;
+    border: lightgray;
+    padding: 2px 0;
+    font-size: 90%;
+    position: absolute;
+    overflow: auto;
+    max-height: 50vh;
+   /* margin-bottom: 100px; /* Otherwise the menu sometimes extends beyond bottom of the page; margin corelated with top menu size maybe?*/
+    z-index: 1000;
+}
+#editorForm .autocomplete-menu .item {
+    cursor: default;
+    padding: 2px 6px;
+}
+#editorForm .autocomplete-menu .item.highlighted {
+    cursor: pointer;
+    color: white;
+    background: hsl(200, 50%, 50%);
+}
+/*
+#provenanceForm {
+    height: 100%;
+}
+#provenanceForm > div {
+    height: 33%;
+}*/
+
+#editorForm .n-or-more-add, #editorForm .n-or-more-remove {
+    padding: 0.3em;
+    cursor: pointer;
+    margin: 5px 10px;
+}
+#editorForm .n-or-more-add:hover,#editorForm .n-or-more-remove:hover{ 
+    text-shadow: 0px 0px 1em currentColor;
+}
+#editorForm .n-or-more-add {
+    color: #5bc0de;
+}
+#editorForm .n-or-more-remove {
+    color: #d9534f;
+}
+
+.editor-textbox{
+    border: 2px ridge lightgrey;
+    padding: 2px;
+    outline: none;
+}
+.editor-textbox p, .editor-textbox div{
+    display: block !important; /* chrome is wierd with paragraphs in the editor (contenteditable) if they are not block style...  */
+}
+.editor-textbox:focus{
+    background-color: snow;
+}
+.editor-textbox span[data-elemName]:empty{
+    padding: 0 .5em;
+}
+.editor-textbox span[data-elemName]{
+    background: navajowhite;
+}
+.editor-textbox span[data-elemName].selected{
+    outline: 2px rgba(255, 0, 0, 0.75) solid;
+}
+
+/* Subelement colors */
+.editor-textbox span[data-elemName='ex']{
+    background-color: sandybrown;/*orange mediumspringgreen yellow whitesmoke rosybrown*/
+}
+.editor-textbox span[data-elemName='unclear']{
+    background-color: lightgrey;
+    padding: 0 .5em;
+}
+.editor-textbox span[data-elemName="locus"][data-attr-scheme="folios"]:before {
+    content: 'ff. ';
+}
+.editor-textbox span[data-elemName="locus"][data-attr-scheme="pages"]:before {
+    content: 'pp. ';
+}
+.editor-textbox span[data-elemName="locus"]:after {
+    content: attr(data-attr-from) "-" attr(data-attr-to);
+}
+
+#editorForm .dateEditor th{
+    text-align: justify;
+}
+#editorForm .dateEditor select{
+    width: 100%;
+}
+.editor-textbox-data-span-editor {
+    z-index: 900;
+    background: rgba(0, 0, 0, 0.05);
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.175);
+    padding: 15px;
+    background-image: linear-gradient(to bottom,#fff 0,#f8f8f8 100%);
+    background-repeat: repeat-x;
+}
+.editor-context-menu {
+    z-index: 1000;
+    min-width: 160px;
+    padding: 0 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.editor-context-menu-item {
+    display: block;
+    padding: 3px 10px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.editor-context-menu-item:hover {
+    color: #262626;
+    background-color: #e8e8e8;
+    background-image: linear-gradient(to bottom,#f5f5f5 0,#e8e8e8 100%);
+    background-repeat: repeat-x;
+}
+
+.editor-context-menu hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    /*border-bottom: 1px solid #eee;*/
+    margin: 3px 0 0 0;
+    padding: 0 0 3px 0;
+}
+
+.editor-textbox span[data-elemName]:hover{
+    /*border: dashed;
+    border-width: 1px;*/
+}
+
+#editor-preview-pane .react-tabs {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#editor-preview-pane .ReactTabs__TabPanel {
+    flex: 1 0;
+    display: flex;
+    flex-direction: column;
+}
+#editor-preview-pane #diva-outer {
+    flex: 1;
+    display:flex;
+    flex-direction: column;
+}
+
+#editor-preview-pane .diva-outer {
+    flex: 1;
+}
