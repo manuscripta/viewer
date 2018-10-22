@@ -6,8 +6,8 @@
     <xsl:template match="/">
         <main class="panel-group" id="msDescription" role="main">
             <xsl:apply-templates select="//revisionDesc"/>
-            <section class="summary">
-                <div class="page-header">
+            <section>
+                <div>
                     <h1>
                         <xsl:attribute name="id">
                             <xsl:value-of select="/TEI/@xml:id"/>
@@ -32,15 +32,8 @@
                             </xsl:choose>
                         </xsl:attribute>
                         <xsl:value-of select="//repository, //msDesc/msIdentifier/idno[@type = 'shelfmark']" separator=", "/>
-                        <xsl:if test="//msIdentifier/altIdentifier/idno[@type = 'access-nr']">
-                            <xsl:text> (</xsl:text>
-                            <xsl:value-of select="//msIdentifier/altIdentifier/idno[@type = 'access-nr']"/>
-                            <xsl:text>)</xsl:text>
-                        </xsl:if>
-                    </h1>
-                    <xsl:if test="//altIdentifier/idno[@type = 'formerShelfmark']">
-                        <div>
-                            <xsl:text>(</xsl:text>
+                        <xsl:if test="//altIdentifier/idno[@type = 'formerShelfmark']">
+                            <xsl:text> (Olim </xsl:text>
                             <xsl:for-each select="//altIdentifier/idno[@type = 'formerShelfmark']">
                                 <xsl:choose>
                                     <xsl:when test="position() != last()">
@@ -53,10 +46,15 @@
                                 </xsl:choose>
                             </xsl:for-each>
                             <xsl:text>)</xsl:text>
-                        </div>
-                    </xsl:if>
+                        </xsl:if>
+                        <!--<xsl:if test="//msIdentifier/altIdentifier/idno[@subtype = 'Access']">
+                            <xsl:text> (</xsl:text>
+                            <xsl:value-of select="//msIdentifier/altIdentifier/idno[@subtype = 'Access']"/>
+                            <xsl:text>)</xsl:text>
+                        </xsl:if>-->
+                    </h1>
                 </div>
-                <div>
+                <div class="summary-heading">
                     <h2>
                         <xsl:value-of select="//msDesc/head"/>
                     </h2>
@@ -126,18 +124,30 @@
                             units
                         </p>
                     </xsl:if>
+                    <p>
+                        <xsl:if test="//msContents/textLang/@mainLang = 'grc'">
+                            Greek
+                        </xsl:if>
+                        <xsl:if test="//msContents/textLang/@mainLang = 'lat'">
+                            Latin
+                        </xsl:if>
+                        <xsl:if test="//msContents/textLang/@mainLang = 'non-swe'">
+                            Old Swedish
+                        </xsl:if>
+                        <xsl:if test="//msContents/textLang/@mainLang = 'sv'">
+                            Swedish
+                        </xsl:if>
+                    </p>
                 </div>
             </section>
-            <section class="msContents panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        <a data-toggle="collapse" href="#msContents" aria-expanded="false" aria-controls="msContents" class="collapsed">
-                            Contents
-                        </a>
-                    </h3>
+            <section class="card">
+                <div class="card-header">
+                    <a data-toggle="collapse" href="#msContents" aria-expanded="false" aria-controls="msContents" class="card-link collapsed">
+                        Contents
+                    </a>
                 </div>
-                <div id="msContents" class="panel-collapse collapse" role="tabpanel" aria-labelledby="msContents" aria-expanded="false">
-                    <div class="panel-body">
+                <div id="msContents" class="collapse" role="tabpanel" aria-labelledby="msContents" aria-expanded="false">
+                    <div class="card-body">
                         <xsl:for-each select="//msPart">
                             <xsl:if test="count(//msPart) gt 1">
                                 <h4>
@@ -151,16 +161,14 @@
                     </div>
                 </div>
             </section>
-            <section class="physDesc panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        <a data-toggle="collapse" href="#physDesc" aria-expanded="false" aria-controls="physDesc" class="collapsed">
-                            Physical Description
-                        </a>
-                    </h3>
+            <section class="card">
+                <div class="card-header">
+                    <a data-toggle="collapse" href="#physDesc" aria-expanded="false" aria-controls="physDesc" class="collapsed">
+                        Physical Description
+                    </a>
                 </div>
                 <div id="physDesc" class="panel-collapse collapse" role="tabpanel" aria-labelledby="physDesc" aria-expanded="false" style="height: 0px;">
-                    <div class="panel-body">
+                    <div class="card-body">
                         <xsl:if test="//foliation[string-length(.) != 0]">
                             <div>
                                 <h4>
@@ -220,6 +228,32 @@
                                         </xsl:choose>
                                     </xsl:for-each>
                                 </div>
+                            </div>
+                        </xsl:if>
+                        <xsl:if test="//supportDesc/condition">
+                            <div>
+                                <h4>
+                                    Condition
+                                </h4>
+                                <xsl:for-each select="//supportDesc/condition">
+                                    <xsl:choose>
+                                        <xsl:when test="ancestor::msPart">
+                                            <p>
+                                                <xsl:if test="count(//msPart) gt 1">
+                                                    <h5>Unit<xsl:text> </xsl:text>
+                                                        <xsl:number count="msPart" format="I"/>: </h5>
+                                                </xsl:if>
+                                                <xsl:apply-templates/>
+                                            </p>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <p>
+                                                <h5>Endleaves: </h5>
+                                                <xsl:apply-templates/>
+                                            </p>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:for-each>
                             </div>
                         </xsl:if>
                         <!--<div>
@@ -388,30 +422,26 @@
                     </div>
                 </div>
             </section>
-            <section class="history panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        <a data-toggle="collapse" href="#history" aria-expanded="false" aria-controls="history" class="collapsed">
-                            History
-                        </a>
-                    </h3>
+            <section class="card">
+                <div class="card-header">
+                    <a data-toggle="collapse" href="#history" aria-expanded="false" aria-controls="history" class="collapsed">
+                        History
+                    </a>
                 </div>
                 <div id="history" class="panel-collapse collapse" role="tabpanel" aria-labelledby="history" aria-expanded="false" style="height: 0px;">
-                    <div class="panel-body">
+                    <div class="card-body">
                         <xsl:call-template name="history"/>
                     </div>
                 </div>
             </section>
-            <section class="additional panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        <a data-toggle="collapse" href="#additional" aria-expanded="false" aria-controls="additional" class="collapsed">
-                            Bibliography
-                        </a>
-                    </h3>
+            <section class="card">
+                <div class="card-header">
+                    <a data-toggle="collapse" href="#additional" aria-expanded="false" aria-controls="additional" class="collapsed">
+                        Bibliography
+                    </a>
                 </div>
                 <div id="additional" class="panel-collapse collapse" role="tabpanel" aria-labelledby="additional" aria-expanded="false" style="height: 0px;">
-                    <div class="panel-body">
+                    <div class="card-body">
                         <div class="bibliography">
                             <xsl:apply-templates select="//additional"/>
                         </div>
@@ -421,16 +451,14 @@
                     </div>
                 </div>
             </section>
-            <section class="additional panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        <a data-toggle="collapse" href="#metadata" aria-expanded="false" aria-controls="metadata" class="collapsed">
-                            Metadata
-                        </a>
-                    </h3>
+            <section class="card">
+                <div class="card-header">
+                    <a data-toggle="collapse" href="#metadata" aria-expanded="false" aria-controls="metadata" class="collapsed">
+                        Metadata
+                    </a>
                 </div>
                 <div id="metadata" class="panel-collapse collapse" role="tabpanel" aria-labelledby="metadata" aria-expanded="false" style="height: 0px;">
-                    <div class="panel-body">
+                    <div class="card-body">
                         <div>
                             <h4>
                                 Statement of Responsibility
@@ -522,7 +550,7 @@
                             <div>
                                 Permalink
                                 <xsl:text>: </xsl:text>
-                                <xsl:value-of select="//idno[@subtype='Manuscripta']"/>
+                                <xsl:value-of select="//idno[@subtype = 'Manuscripta']"/>
                             </div>
                             <div>
                                 XML
@@ -1293,7 +1321,7 @@
     <xsl:template match="formula">
         <xsl:apply-templates/>
     </xsl:template>
-    <xsl:template match="funder">        
+    <xsl:template match="funder">
         <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
             <xsl:apply-templates/>
         </a>
@@ -2105,7 +2133,7 @@
             <xsl:value-of select="."/>
             <xsl:text> </xsl:text>
             folding
-            <xsl:text>)</xsl:text>
+            <xsl:text xml:space="preserve">)</xsl:text>
         </xsl:if>
     </xsl:template>
     <!--<xsl:template match="msContents">
@@ -2363,7 +2391,7 @@
             </div>
         </xsl:if>
     </xsl:template>
-    <xsl:template match="sponsor">        
+    <xsl:template match="sponsor">
         <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
             <xsl:apply-templates/>
         </a>

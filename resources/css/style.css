@@ -1,5 +1,5 @@
 body{
-    font-size: 1.6em;
+/*    font-size: 1.6em;*/
 }
 /*h1{
     font-size:1.8em;
@@ -29,6 +29,9 @@ h4{
 /*.short_description{
     margin-top:20px;
 }*/
+.card-header > a{
+    color:black;
+}
 .italic{
     font-style: italic;
 }
@@ -38,18 +41,9 @@ h4{
 .small-caps{
     font-variant: small-caps;
 }
-.summary p{
+.summary-heading p{
     display: inline;
     padding-right: 30px;
-}
-.msContents,
-.physDesc,
-.history,
-.additional,
-.lastRevision{
-    display: block;
-    /*margin-right:50px;*/
-    margin-top: 20px;
 }
 .biblItem{
     display: inline;

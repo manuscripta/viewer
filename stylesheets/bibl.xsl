@@ -164,15 +164,8 @@
                 <xsl:value-of select="//biblScope[@unit = 'page']/@to"/>
             </div>
         </xsl:if>
-        <div>
-            <span class="head">ID: </span>
-            <!--<xsl:value-of select="substring-after(//publicationStmt/idno[@subtype='manuscripta'], 'https://www.manuscripta.se/bibl/')"/>-->
-            <xsl:value-of select="//biblStruct/@xml:id"/>
-        </div>
-        <div>
-            <span class="head">URI: </span>
-            <xsl:value-of select="//publicationStmt/idno[@subtype = 'manuscripta']"/>
-        </div>
+
+        <xsl:call-template name="footer"/>
 
     </xsl:template>
 
@@ -225,6 +218,35 @@
                     </xsl:otherwise>
                 </xsl:choose>
             </a>
+        </div>
+    </xsl:template>
+
+    <xsl:template name="footer">
+        <div>
+            <div>
+                <span class="head">Manuscripta ID: </span>
+                <xsl:value-of select="/TEI/@xml:id"/>
+            </div>
+            <div>
+                <span class="head">Stable URI: </span>
+                <xsl:value-of select="//publicationStmt/idno[@subtype = 'Manuscripta']"/>
+            </div>
+            <div>
+                <span class="head">XML: </span>
+                <a href="/bibl/{data(substring-after(TEI/@xml:id, 'bibl-'))}.xml">
+                    <xsl:text>https://www.manuscripta.se/bibl/</xsl:text>
+                    <xsl:value-of select="data(substring-after(TEI/@xml:id, 'bibl-'))"/>
+                    <xsl:text>.xml</xsl:text>
+                </a>
+            </div>
+            <div>
+                <span class="head">License: </span>
+                <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a>
+            </div>
+            <div>
+                <span class="head">Last revision: </span>
+                <xsl:value-of select="//change/@when"/>
+            </div>
         </div>
     </xsl:template>
 

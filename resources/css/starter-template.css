@@ -17,7 +17,7 @@ html{
     height: 100%;
 }
 body{
-    padding-top: 50px;
+    padding-top: 70px;
     /* Padding required for fixed navbar */
 }
 span.hi{
@@ -29,7 +29,7 @@ span.hi{
 .panel-title{
     font-size: 18px;
 }
-h1{
+/*h1{
     font-size: 28px;
 }
 h2{
@@ -38,7 +38,7 @@ h2{
 h5{
     font-weight: bold;
     display: inline;
-}
+}*/
 .logotype{
     height: 100px;
     padding-top: 20px;

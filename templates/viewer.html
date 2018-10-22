@@ -5,83 +5,61 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="shortcut icon" href="resources/images/favicon.ico"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+<!--        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>-->
+<!--                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>-->
         <link rel="stylesheet" type="text/css" href="resources/css/starter-template.css"/>
-        <link rel="stylesheet" type="text/css" href="resources/scripts/diva/css/diva.min.css"/>
-        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/diva.js/5.1.2/css/diva.min.css" integrity="sha256-vvkaRBeJAn6YiQpEIg5eV+rat2PZfu1iWZoLhM8/4Uw=" crossorigin="anonymous"/>-->
-        <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>        
+        <link rel="stylesheet" type="text/css" href="resources/scripts/diva-v6.0.0/diva.css"/>
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
     </head>
     <body>
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container-fluid">
-                <div id="header" class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"/>
-                        <span class="icon-bar"/>
-                        <span class="icon-bar"/>
-                    </button>
-                    <img class="beta-image" src="../beta.png" alt="beta"/>
-                    <a class="navbar-brand" href="/">Home</a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Collections <b class="caret"/>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="/greek">Greek manuscripts</a>
-                                </li>
-                                <li>
-                                    <a href="/fornsvenska">Old Swedish manuscripts</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse <b class="caret"/>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="/browse/manuscripts">Manuscripts</a>
-                                </li>
-                                <li>
-                                    <a href="/browse/authors">Authors and Works</a>
-                                </li>
-                                <li>
-                                    <a href="/browse/incipits">Incipits</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Digitizations <b class="caret"/>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="/mirador_greek">Greek Manuscripts</a>
-                                </li>
-                                <li>
-                                    <a href="/mirador_ttt">Old Swedish Manuscripts</a>
-                                </li>                                
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="/search">Search</a>
-                        </li>
-                        <li>
-                            <a href="/guidelines">Guidelines</a>
-                        </li>
-                        <li>
-                            <a href="/contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <!--/.nav-collapse -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" role="navigation">
+            <!--            <img class="beta-image" src="../beta.png" alt="beta"/>            -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"/>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span>
+                        </a>
+                    </li>                                                         
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Browse
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/browse/manuscripts">Manuscripts</a>
+                            <a class="dropdown-item" href="/browse/authors">Authors and Works</a>
+                            <a class="dropdown-item" href="/browse/incipits">Incipits</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Digitizations
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/mirador_greek">Greek Manuscripts</a>
+                            <a class="dropdown-item" href="/mirador_ttt">Old Swedish Manuscripts</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/search">Search</a>
+                    </li>   
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/greek">Greek Manuscripts</a>
+                            <a class="dropdown-item" href="/swedish">Old Swedish Manuscripts</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <!--/.container -->
         </nav>
 
         <div id="content" class="container-fluid"/>
@@ -89,14 +67,15 @@
         <!-- Bootstrap core JavaScript
     ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"/>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"/>
-        <script type="text/javascript" src="resources/scripts/diva/js/diva.min.js"/>
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/diva.js/5.1.2/js/diva.min.js" integrity="sha256-nR8sOg/mUX/vWvYKcZlJMULT9YyZFAYwsw2tDvEvqzs=" crossorigin="anonymous"/>-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.2.0/split.min.js" integrity="sha256-FSGFHqVQdKn0B1bd5fy3yN3qa6iJ4MrRdJ5SviQ9Q7g=" crossorigin="anonymous"/>
-        <script type="text/javascript" src="resources/scripts/viewer.js"/>
-        <script src="../resources/scripts/mirador/mirador.min.js"/>
-        <script type="text/javascript">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"/>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"/>
+        <script type="text/javascript" src="resources/scripts/diva-v6.0.0/diva.js"/>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.5.1/split.min.js" integrity="sha256-Ewot3jqiwVxsW6xYEL8Lnp6HPkp2O5CcNnk4yvq4PG8=" crossorigin="anonymous"/>
+        <script type="text/javascript" src="resources/scripts/viewer_diva_new.js"/>         
+<!--        <script src="../resources/scripts/mirador/mirador.min.js"/>-->
+        <!--<script type="text/javascript">
             $(function() {
             Mirador({
             "id": "viewer",
@@ -126,7 +105,7 @@
             ]
             });
             });
-        </script>
+        </script>-->
         <script type="text/javascript">
                        
                 $(document).ready(function() {

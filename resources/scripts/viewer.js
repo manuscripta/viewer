@@ -6,7 +6,7 @@ $(document).ready(function () {
     var digitized = $('h1').attr('class');
     if (digitized == "digitized" || digitized == "digitized_partly") {
         $('#diva-wrapper').diva({
-            iipServerURL: "https://iiif-dev.manuscripta.se/iipsrv/iipsrv.fcgi",
+            iipServerURL: "https://www.manuscripta.se/iipsrv/iipsrv.fcgi",
             objectData: "../iiif/" + ms_id + "/manifest.json",
             isIIIF: true,
             imageDir: ms_id,

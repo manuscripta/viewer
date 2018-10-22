@@ -56,7 +56,7 @@ if (url.startsWith('https://archive.org/details/')) {
         enableDownload: true,
         blockMobileMove: false
     });
-} 
+}
 else {
     null
 }

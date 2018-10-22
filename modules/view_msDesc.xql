@@ -55,8 +55,10 @@ declare function view:get-bibl($node as node(), $model as map(*)) as node(){
     let $rec := doc(concat($config:data-root, "/id/bibl/", $displayURI))/tei:TEI    
     return
          <div class="col-md-6 col-lg-6 split split-horizontal" id="bibl">
-                {view:view-bibl-html($rec)}                
+                {view:view-bibl-html($rec)}                             
         </div>
+        
+        
 };
 
 declare function view:view-bibl-html($rec as node()){
@@ -79,7 +81,7 @@ declare function view:view-org-html($rec as node()){
 (:List manuscripts where bibl occurs - Work in progress:)
 declare function view:get-bibl-mss-ref($rec as node()){
     for $mss in collection($config:data-root || "/msDescs")
-    let $id := $rec//tei:bibl/tei:title/@ref
+    for $bibl in $mss//tei:bibl/tei:title/@ref
     let $title := $mss//tei:titleStmt/tei:title
     let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
     return 
