@@ -14,12 +14,13 @@ declare %templates:wrap
 function browse:authors($node as node(), $model as map(*)) {
             for $mss in collection($config:data-root || "/msDescs")
             let $repository := $mss//tei:msDesc/tei:msIdentifier/tei:repository
-            let $shelfmark := $mss//tei:msDesc/tei:msIdentifier/tei:idno[@type='shelfmark']
+            let $shelfmark := $mss//tei:msDesc/tei:msIdentifier/tei:idno
             for $codicological_unit in $mss//tei:msPart
             for $msitem in $codicological_unit//tei:msContents/tei:msItem 
             let $author := $msitem/tei:author//tei:persName
             let $title := $msitem/tei:title[not(@type="alt")][1]
-            for $locus in $msitem/tei:locus            
+            for $locus in $msitem/tei:locus
+            let $idno := $mss//tei:msDesc/tei:msIdentifier/tei:idno[@type='shelfmark']
             let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
             let $item-nr := $msitem/@n
            (:order by 
@@ -67,7 +68,7 @@ function browse:scribes($node as node(), $model as map(*)) {
         </tr>{
             for $mss in collection($config:data-root || "/msDescs") 
             for $scribe in $mss//tei:handNote//tei:persName[@role="scribe"]            
-            for $idno in $mss//tei:msDesc/tei:msIdentifier/tei:idno[@type='shelfmark']
+            for $idno in $mss//tei:msDesc/tei:msIdentifier/tei:idno
             let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
             order by $scribe ascending
             return
@@ -104,10 +105,10 @@ function browse:list-manuscripts($node as node(), $model as map(*)){
                     <td><a href="/ms/{substring-before($uri, '.xml')}">{$shelfmark}</a></td>
                     <td>{$date}</td>
                     <td>{$support}</td>
-                    <td>{if ($textLang='sv') then 'Swedish' else if ($textLang='grc') then 'Greek' else if ($textLang='la') then 'Latin' else if ($textLang='non-swe') then 'Old Swedish' else $textLang}</td>
+                    <td>{if ($textLang='sv') then 'Swedish' else if ($textLang='grc') then 'Greek' else if ($textLang='la') then 'Latin' else $textLang}</td>
                     <td>{$summary}</td>
                     <td>{if ($digitized=true()) then 'Yes' else 'No'}</td>
-                    <td>{if ($sponsor="TTT: Text till tiden! Medeltida texter i kontext – då och nu") then 'TTT' else if ($sponsor="Greek manuscripts in Sweden – a digitization and cataloguing project") then 'Greek' else ''}</td>
+                    <td>{if ($sponsor="TTT: Text till tiden! Medeltida texter i kontext – då och nu") then 'TTT' else if ($sponsor="Greek Manuscripts in Sweden project") then 'Greek' else ''}</td>
                   </tr> 
     (:order by 
         if($browse:sort = 'summary') then $summary
