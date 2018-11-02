@@ -32,15 +32,8 @@
                             </xsl:choose>
                         </xsl:attribute>
                         <xsl:value-of select="//repository, //msDesc/msIdentifier/idno[@type = 'shelfmark']" separator=", "/>
-                        <xsl:if test="//msIdentifier/altIdentifier/idno[@type = 'access-nr']">
-                            <xsl:text> (</xsl:text>
-                            <xsl:value-of select="//msIdentifier/altIdentifier/idno[@type = 'access-nr']"/>
-                            <xsl:text>)</xsl:text>
-                        </xsl:if>
-                    </h1>
-                    <xsl:if test="//altIdentifier/idno[@type = 'formerShelfmark']">
-                        <div>
-                            <xsl:text>(</xsl:text>
+                        <xsl:if test="//altIdentifier/idno[@type = 'formerShelfmark']">
+                            <xsl:text> (Olim </xsl:text>
                             <xsl:for-each select="//altIdentifier/idno[@type = 'formerShelfmark']">
                                 <xsl:choose>
                                     <xsl:when test="position() != last()">
@@ -53,8 +46,13 @@
                                 </xsl:choose>
                             </xsl:for-each>
                             <xsl:text>)</xsl:text>
-                        </div>
-                    </xsl:if>
+                        </xsl:if>
+                        <!--<xsl:if test="//msIdentifier/altIdentifier/idno[@subtype = 'Access']">
+                            <xsl:text> (</xsl:text>
+                            <xsl:value-of select="//msIdentifier/altIdentifier/idno[@subtype = 'Access']"/>
+                            <xsl:text>)</xsl:text>
+                        </xsl:if>-->
+                    </h1>
                 </div>
                 <div>
                     <h2>
@@ -126,7 +124,7 @@
                             enheter
                         </p>
                     </xsl:if>
-                    <p>                       
+                    <p>
                         <xsl:if test="//msContents/textLang/@mainLang = 'grc'">
                             Grekiska
                         </xsl:if>
@@ -567,9 +565,10 @@
                             <div>
                                 XML
                                 <xsl:text>: </xsl:text>
-                                <a href="/xml/{data(substring-after(TEI/@xml:id, 'ms-'))}">
-                                    <xsl:text>https://www.manuscripta.se/xml/</xsl:text>
+                                <a href="/ms/{data(substring-after(TEI/@xml:id, 'ms-'))}.xml">
+                                    <xsl:text>https://www.manuscripta.se/ms/</xsl:text>
                                     <xsl:value-of select="data(substring-after(TEI/@xml:id, 'ms-'))"/>
+                                    <xsl:text>.xml</xsl:text>
                                 </a>
                             </div>
                         </div>
@@ -2145,7 +2144,7 @@
             <xsl:value-of select="."/>
             <xsl:text> </xsl:text>
             format
-            <xsl:text>)</xsl:text>
+            <xsl:text xml:space="preserve">)</xsl:text>
         </xsl:if>
     </xsl:template>
     <!--<xsl:template match="msContents">
