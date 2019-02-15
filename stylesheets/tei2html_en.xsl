@@ -32,15 +32,8 @@
                             </xsl:choose>
                         </xsl:attribute>
                         <xsl:value-of select="//repository, //msDesc/msIdentifier/idno[@type = 'shelfmark']" separator=", "/>
-                        <xsl:if test="//msIdentifier/altIdentifier/idno[@type = 'access-nr']">
-                            <xsl:text> (</xsl:text>
-                            <xsl:value-of select="//msIdentifier/altIdentifier/idno[@type = 'access-nr']"/>
-                            <xsl:text>)</xsl:text>
-                        </xsl:if>
-                    </h1>
-                    <xsl:if test="//altIdentifier/idno[@type = 'formerShelfmark']">
-                        <div>
-                            <xsl:text>(</xsl:text>
+                        <xsl:if test="//altIdentifier/idno[@type = 'formerShelfmark']">
+                            <xsl:text> (Olim </xsl:text>
                             <xsl:for-each select="//altIdentifier/idno[@type = 'formerShelfmark']">
                                 <xsl:choose>
                                     <xsl:when test="position() != last()">
@@ -53,8 +46,13 @@
                                 </xsl:choose>
                             </xsl:for-each>
                             <xsl:text>)</xsl:text>
-                        </div>
-                    </xsl:if>
+                        </xsl:if>
+                        <!--<xsl:if test="//msIdentifier/altIdentifier/idno[@subtype = 'Access']">
+                            <xsl:text> (</xsl:text>
+                            <xsl:value-of select="//msIdentifier/altIdentifier/idno[@subtype = 'Access']"/>
+                            <xsl:text>)</xsl:text>
+                        </xsl:if>-->
+                    </h1>
                 </div>
                 <div>
                     <h2>
@@ -126,6 +124,20 @@
                             units
                         </p>
                     </xsl:if>
+                    <p>
+                        <xsl:if test="//msContents/textLang/@mainLang = 'grc'">
+                            Greek
+                        </xsl:if>
+                        <xsl:if test="//msContents/textLang/@mainLang = 'lat'">
+                            Latin
+                        </xsl:if>
+                        <xsl:if test="//msContents/textLang/@mainLang = 'non-swe'">
+                            Old Swedish
+                        </xsl:if>
+                        <xsl:if test="//msContents/textLang/@mainLang = 'sv'">
+                            Swedish
+                        </xsl:if>
+                    </p>
                 </div>
             </section>
             <section class="msContents panel panel-default">
@@ -220,6 +232,32 @@
                                         </xsl:choose>
                                     </xsl:for-each>
                                 </div>
+                            </div>
+                        </xsl:if>
+                        <xsl:if test="//supportDesc/condition">
+                            <div>
+                                <h4>
+                                    Condition
+                                </h4>
+                                <xsl:for-each select="//supportDesc/condition">
+                                    <xsl:choose>
+                                        <xsl:when test="ancestor::msPart">
+                                            <p>
+                                                <xsl:if test="count(//msPart) gt 1">
+                                                    <h5>Unit<xsl:text> </xsl:text>
+                                                        <xsl:number count="msPart" format="I"/>: </h5>
+                                                </xsl:if>
+                                                <xsl:apply-templates/>
+                                            </p>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <p>
+                                                <h5>Endleaves: </h5>
+                                                <xsl:apply-templates/>
+                                            </p>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:for-each>
                             </div>
                         </xsl:if>
                         <!--<div>
@@ -459,7 +497,7 @@
                                     </xsl:for-each>
                                 </xsl:if>
                             </div>
-                        <div>
+                            <div>
                                 Sponsor
                                 <xsl:text>: </xsl:text>
                                 <xsl:for-each select="//sponsor">
@@ -522,14 +560,15 @@
                             <div>
                                 Permalink
                                 <xsl:text>: </xsl:text>
-                                <xsl:value-of select="//idno[@subtype='Manuscripta']"/>
-                                </div>
-                        <div>
+                                <xsl:value-of select="//idno[@subtype = 'Manuscripta']"/>
+                            </div>
+                            <div>
                                 XML
                                 <xsl:text>: </xsl:text>
-                                <a href="/xml/{data(substring-after(TEI/@xml:id, 'ms-'))}">
-                                    <xsl:text>https://www.manuscripta.se/xml/</xsl:text>
+                                <a href="/ms/{data(substring-after(TEI/@xml:id, 'ms-'))}.xml">
+                                    <xsl:text>https://www.manuscripta.se/ms/</xsl:text>
                                     <xsl:value-of select="data(substring-after(TEI/@xml:id, 'ms-'))"/>
+                                    <xsl:text>.xml</xsl:text>
                                 </a>
                             </div>
                         </div>
@@ -1293,7 +1332,7 @@
     <xsl:template match="formula">
         <xsl:apply-templates/>
     </xsl:template>
-    <xsl:template match="funder">        
+    <xsl:template match="funder">
         <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
             <xsl:apply-templates/>
         </a>
@@ -2105,7 +2144,7 @@
             <xsl:value-of select="."/>
             <xsl:text> </xsl:text>
             folding
-            <xsl:text>)</xsl:text>
+            <xsl:text xml:space="preserve">)</xsl:text>
         </xsl:if>
     </xsl:template>
     <!--<xsl:template match="msContents">
@@ -2237,37 +2276,37 @@
     </xsl:template>
     <xsl:template match="persName">
         <!--<span class="persName">-->
-            <xsl:choose>
-                <xsl:when test="parent::author/parent::msItem">
-                    <span class="small-caps">
-                        <xsl:choose>
-                            <xsl:when test="@evidence = 'external' or @evidence = 'conjecture'">
-                                <xsl:text>⟨</xsl:text>
-                                <!-- Mathematical left angle bracket U+27E8 -->
-                                <!--<xsl:apply-templates />-->
-                                <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
-                                    <xsl:value-of select="normalize-space(.)"/>
-                                </a>
-                                <!-- Removes whitespace before and after -->
-                                <xsl:text>⟩</xsl:text>
-                                <!-- Mathematical right angle bracket U+27E9 -->
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <!--<xsl:apply-templates />-->
-                                <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
-                                    <xsl:value-of select="normalize-space(.)"/>
-                                </a>
-                            </xsl:otherwise>
-                        </xsl:choose>
-                    </span>
-                    <xsl:text>, </xsl:text>
-                </xsl:when>
-                <xsl:otherwise>
-                    <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
-                        <xsl:value-of select="normalize-space(.)"/>
-                    </a>
-                </xsl:otherwise>
-            </xsl:choose>
+        <xsl:choose>
+            <xsl:when test="parent::author/parent::msItem">
+                <span class="small-caps">
+                    <xsl:choose>
+                        <xsl:when test="@evidence = 'external' or @evidence = 'conjecture'">
+                            <xsl:text>⟨</xsl:text>
+                            <!-- Mathematical left angle bracket U+27E8 -->
+                            <!--<xsl:apply-templates />-->
+                            <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
+                                <xsl:value-of select="normalize-space(.)"/>
+                            </a>
+                            <!-- Removes whitespace before and after -->
+                            <xsl:text>⟩</xsl:text>
+                            <!-- Mathematical right angle bracket U+27E9 -->
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <!--<xsl:apply-templates />-->
+                            <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
+                                <xsl:value-of select="normalize-space(.)"/>
+                            </a>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </span>
+                <xsl:text>, </xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+                <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
+                    <xsl:value-of select="normalize-space(.)"/>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
         <!--</span>-->
     </xsl:template>
     <xsl:template match="persName" mode="abbreviated-name">
@@ -2363,7 +2402,7 @@
             </div>
         </xsl:if>
     </xsl:template>
-    <xsl:template match="sponsor">        
+    <xsl:template match="sponsor">
         <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
             <xsl:apply-templates/>
         </a>
@@ -2584,10 +2623,19 @@
             </em>
         </xsl:if>
         <xsl:if test="@type = 'short'">
-            <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
-                <xsl:apply-templates/>
-            </a>
-        </xsl:if>
+            <xsl:choose>
+                <xsl:when test="starts-with(., 'https://www.manuscripta.se/')">
+                    <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
+                        <xsl:apply-templates/>
+                    </a>        
+                </xsl:when>
+                <xsl:otherwise>
+                    <a href="{data(@ref)}">
+                        <xsl:apply-templates/>
+                    </a>
+                </xsl:otherwise>
+            </xsl:choose>            
+        </xsl:if>        
     </xsl:template>
     <!-- titleStmt -->
     <xsl:template match="unclear">
