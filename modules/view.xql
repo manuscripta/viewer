@@ -13,6 +13,7 @@ import module namespace templates="http://exist-db.org/xquery/templates" ;
  :)
 import module namespace config="http://www.manuscripta.se/xquery/config" at "config.xqm";
 import module namespace browse="http://www.manuscripta.se/xquery/browse" at "browse.xql";
+import module namespace libris="http://www.manuscripta.se/xquery/libris" at "libris.xql";
 import module namespace search="http://www.manuscripta.se/xquery/search" at "search.xql";
 import module namespace view="http://www.manuscripta.se/xquery/view" at "view_msDesc.xql";
 
