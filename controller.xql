@@ -240,9 +240,9 @@ else if ($exist:path eq "/browse/manuscripts/greek") then
         </view>
     </dispatch>
     
-else if ($exist:path eq "/browse/manuscripts/ttt") then    
+else if ($exist:path eq "/browse/manuscripts/swedish") then    
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
-        <forward url="{$exist:controller}/manuscripts-ttt.html"/>
+        <forward url="{$exist:controller}/manuscripts-swedish.html"/>
         <view>
             <forward url="{$exist:controller}/modules/view.xql"/>
         </view>

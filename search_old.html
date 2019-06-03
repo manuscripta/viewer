@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-at="content" data-template-with="templates/page.html"><!--<form name="f-query" action="results.html" method="post" role="search">
+        <div class="form-group">
+            <label for="inputSearch" class="control-label col-sm-2">Author:</label>
+            <div class="col-sm-10">
+                <input id="inputSearch" name="au" type="text" class="form-control templates:form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputSearch" class="control-label col-sm-2">Title:</label>
+            <div class="col-sm-10">
+                <input id="inputSearch" name="ti" type="text" class="form-control templates:form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputSearch" class="control-label col-sm-2">Place:</label>
+            <div class="col-sm-10">
+                <input id="inputSearch" name="pl" type="text" class="form-control templates:form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button id="f-btn-search" class="btn btn-primary" type="submit">Search</button>
+            </div>
+        </div>
+    </form>    -->
+    <form name="f-query" action="/search" class="form form-horizontal" method="get" role="search">
+        <div class="col-md-3 col-md-push-9">
+            <div class="well well-sm">
+                <div class="form-group" data-toggle="tooltip" data-placement="bottom" title="For wildcard search use * and ?">
+                    <div class="col-md-12 col-xs-12">
+                        <span class="input-group">
+                            <input name="q" type="search" class="templates:form-control form-control" placeholder="Search String"/>
+                            <span class="input-group-btn">
+                                <button id="f-btn-search" type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-search"/>
+                                </button>
+                            </span>
+                        </span><!--<input type="hidden" name="field" value="text"/>-->
+                    </div>
+                </div>
+                <div class="form-group" data-toggle="tooltip" data-placement="left" title="Search Mode">
+                    <div class="col-md-12 col-xs-12">
+                        <select name="m" class="form-control templates:form-control">
+                            <option value="au" selected="selected">Author</option>
+                            <option value="ti">Title</option>
+                            <option value="pl">Place Name</option>
+                            <option value="in">Incipit</option>
+                            <option value="ex">Explicit</option>
+                            <option value="ru">Rubric</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="col-md-12">
+        <div class="search:beta_search"/>
+    </div>
+</div>

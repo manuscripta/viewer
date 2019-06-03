@@ -47,7 +47,8 @@ function browse:incipits($node as node(), $model as map(*)) {
                         let $author := $msitem/tei:author
                         let $title := $msitem/tei:title
                         let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
-            order by $incipit ascending collation "?lang=el" 
+            (:order by $incipit ascending collation "?lang=el":) 
+            order by $incipit ascending collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
             return
                 <tr>
                     <td>{$incipit//text()}</td>
@@ -97,16 +98,16 @@ function browse:list-manuscripts($node as node(), $model as map(*)){
         let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
         let $digitized := boolean($mss//tei:facsimile)
         let $sponsor := $mss//tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:sponsor
-        order by $mss//tei:TEI/@xml:id
+        order by $repository, $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
         return 
             <tr>
-                    <td>{$repository}</td>
+                    <td class="repository filter-select">{if ($repository='Kungliga biblioteket') then 'National Library' else if ($repository='Uppsala universitetsbibliotek') then 'Uppsala University Library' else $repository}</td>
                     <td><a href="/ms/{substring-before($uri, '.xml')}">{$shelfmark}</a></td>
                     <td>{$date}</td>
-                    <td>{$support}</td>
-                    <td>{if ($textLang='non-swe') then 'Old Swedish' else if ($textLang='grc') then 'Greek' else if ($textLang='el') then 'Modern Greek' else if ($textLang='la') then 'Latin' else $textLang}</td>
+                    <td class="filter-select">{$support}</td>
+                    <td  class="filter-select">{if ($textLang='sv') then 'Swedish' else if ($textLang='grc') then 'Greek' else if ($textLang='la') then 'Latin' else if ($textLang='non-swe') then 'Old Swedish' else if ($textLang='el') then 'Modern Greek' else if ($textLang='non-dan') then 'Old Danish' else $textLang}</td>
                     <td>{$summary}</td>
-                    <td>{if ($digitized=true()) then 'Yes' else 'No'}</td>
+                    <td  class="filter-select">{if ($digitized=true()) then 'Yes' else 'No'}</td>                  
                   </tr> 
     (:order by 
         if($browse:sort = 'summary') then $summary
@@ -133,7 +134,7 @@ function browse:list-greek-manuscripts($node as node(), $model as map(*)){
         let $digitized := boolean($mss//tei:facsimile)
         let $sponsor := $mss//tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:sponsor
         where $sponsor = 'Greek manuscripts in Sweden – a digitization and cataloguing project'
-        order by $mss//tei:TEI/@xml:id
+        order by $repository, $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
         return 
             <tr>
                     <td>{$repository}</td>
@@ -162,7 +163,7 @@ function browse:list-ttt-manuscripts($node as node(), $model as map(*)){
         let $digitized := boolean($mss//tei:facsimile)
         let $sponsor := $mss//tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:sponsor
         where $sponsor = 'TTT: Text till tiden! Medeltida texter i kontext – då och nu'
-        order by $mss//tei:TEI/@xml:id
+        order by $repository, $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
         return 
             <tr>
                     <td>{$repository}</td>
