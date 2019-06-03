@@ -45,7 +45,8 @@ else if (matches($exist:path, '^/ms/\d+$')) then
     let $id := $exist:resource
     return
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
-        <forward url="{$exist:controller}/view_sv.html"/>
+<!--  <forward url="{$exist:controller}/view_sv.html"/>-->
+        <forward url="{$exist:controller}/view.html"/>
         <view>
             <forward url="{$exist:controller}/modules/view.xql">
                 <add-parameter name="id" value="{$id}.xml"/>
@@ -57,7 +58,7 @@ else if (matches($exist:path, '^/ms/\d+$')) then
         </error-handler>
     </dispatch>
     
-    else if (matches($exist:path, '^/person/\d+$')) then
+else if (matches($exist:path, '^/person/\d+$')) then
     let $id := $exist:resource
     return
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
@@ -73,7 +74,7 @@ else if (matches($exist:path, '^/ms/\d+$')) then
         </error-handler>
     </dispatch>
     
-    else if (matches($exist:path, '^/place/\d+$')) then
+else if (matches($exist:path, '^/place/\d+$')) then
     let $id := $exist:resource
     return
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
@@ -89,7 +90,7 @@ else if (matches($exist:path, '^/ms/\d+$')) then
         </error-handler>
     </dispatch>
     
-    else if (matches($exist:path, '^/bibl/\d+$')) then
+else if (matches($exist:path, '^/bibl/\d+$')) then
     let $id := $exist:resource
     return
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
@@ -105,7 +106,7 @@ else if (matches($exist:path, '^/ms/\d+$')) then
         </error-handler>
     </dispatch>
     
-    else if (matches($exist:path, '^/org/\d+$')) then
+else if (matches($exist:path, '^/org/\d+$')) then
     let $id := $exist:resource
     return
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
@@ -120,17 +121,89 @@ else if (matches($exist:path, '^/ms/\d+$')) then
 	<forward url="{$exist:controller}/modules/view.xql"/>
         </error-handler>
     </dispatch>
-
-else if (matches($exist:path, '^/xml/\d+$')) then
+    
+else if (matches($exist:path, '^/work/\d+$')) then
     let $id := $exist:resource
     return
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
-        <forward url="{$exist:controller}/data/msDescs/{$id}.xml"/>        
+        <forward url="{$exist:controller}/view_work.html"/>
+        <view>
+            <forward url="{$exist:controller}/modules/view.xql">
+                <add-parameter name="work" value="{$id}.xml"/>
+            </forward>
+        </view>
         <error-handler>
 	<forward url="{$exist:controller}/404.html" method="get"/>
 	<forward url="{$exist:controller}/modules/view.xql"/>
         </error-handler>
     </dispatch>
+(:else if (matches($exist:path, '^/xml/\d+$')) then:)
+else if (matches($exist:path, '^/ms/\d+\.xml$')) then
+    let $id := $exist:resource
+    return
+    <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
+        <forward url="{$exist:controller}/data/msDescs/{$id}"/>        
+        <error-handler>
+	<forward url="{$exist:controller}/404.html" method="get"/>
+	<forward url="{$exist:controller}/modules/view.xql"/>
+        </error-handler>
+    </dispatch>
+    
+    else if (matches($exist:path, '^/bibl/\d+\.xml$')) then
+    let $id := $exist:resource
+    return
+    <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
+        <forward url="{$exist:controller}/data/id/bibl/{$id}"/>        
+        <error-handler>
+	<forward url="{$exist:controller}/404.html" method="get"/>
+	<forward url="{$exist:controller}/modules/view.xql"/>
+        </error-handler>
+    </dispatch>
+    
+    else if (matches($exist:path, '^/org/\d+\.xml$')) then
+    let $id := $exist:resource
+    return
+    <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
+        <forward url="{$exist:controller}/data/id/org/{$id}"/>        
+        <error-handler>
+	<forward url="{$exist:controller}/404.html" method="get"/>
+	<forward url="{$exist:controller}/modules/view.xql"/>
+        </error-handler>
+    </dispatch>
+    
+    else if (matches($exist:path, '^/person/\d+\.xml$')) then
+    let $id := $exist:resource
+    return
+    <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
+        <forward url="{$exist:controller}/data/id/person/{$id}"/>        
+        <error-handler>
+	<forward url="{$exist:controller}/404.html" method="get"/>
+	<forward url="{$exist:controller}/modules/view.xql"/>
+        </error-handler>
+    </dispatch>
+    
+else if (matches($exist:path, '^/place/\d+\.xml$')) then
+    let $id := $exist:resource
+    return
+    <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
+        <forward url="{$exist:controller}/data/id/place/{$id}"/>        
+        <error-handler>
+	<forward url="{$exist:controller}/404.html" method="get"/>
+	<forward url="{$exist:controller}/modules/view.xql"/>
+        </error-handler>
+    </dispatch>
+
+else if (matches($exist:path, '^/work/\d+\.xml$')) then
+    let $id := $exist:resource
+    return
+    <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
+        <forward url="{$exist:controller}/data/id/work/{$id}"/>        
+        <error-handler>
+	<forward url="{$exist:controller}/404.html" method="get"/>
+	<forward url="{$exist:controller}/modules/view.xql"/>
+        </error-handler>
+    </dispatch>
+
 
 else if ($exist:path eq "/guidelines") then
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
@@ -183,6 +256,14 @@ else if ($exist:path eq "/sok") then
 else if ($exist:path eq "/results") then    
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
         <forward url="{concat($exist:controller, "/results.html")}"/>
+        <view>
+            <forward url="{$exist:controller}/modules/view.xql"/>
+        </view>
+    </dispatch>
+
+else if ($exist:path eq "/resultat") then    
+    <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
+        <forward url="{concat($exist:controller, "/resultat.html")}"/>
         <view>
             <forward url="{$exist:controller}/modules/view.xql"/>
         </view>
@@ -247,6 +328,22 @@ else if ($exist:path eq "/fornsvenska") then
 else if ($exist:path eq "/browse/manuscripts") then    
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
         <forward url="{$exist:controller}/manuscripts.html"/>
+        <view>
+            <forward url="{$exist:controller}/modules/view.xql"/>
+        </view>
+    </dispatch>
+    
+else if ($exist:path eq "/browse/manuscripts/greek") then    
+    <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
+        <forward url="{$exist:controller}/manuscripts-greek.html"/>
+        <view>
+            <forward url="{$exist:controller}/modules/view.xql"/>
+        </view>
+    </dispatch>
+    
+else if ($exist:path eq "/browse/manuscripts/swedish") then    
+    <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
+        <forward url="{$exist:controller}/manuscripts-swedish.html"/>
         <view>
             <forward url="{$exist:controller}/modules/view.xql"/>
         </view>
@@ -319,6 +416,14 @@ else if ($exist:path eq "/mirador") then
     else if ($exist:path eq "/mirador_ttt") then    
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
         <forward url="{$exist:controller}/mirador_ttt.html"/>
+        <view>
+            <forward url="{$exist:controller}/modules/view.xql"/>
+        </view>
+    </dispatch>
+    
+    else if ($exist:path eq "/KB-medeltida") then    
+    <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
+        <forward url="{$exist:controller}/KB-medeltida.html"/>
         <view>
             <forward url="{$exist:controller}/modules/view.xql"/>
         </view>

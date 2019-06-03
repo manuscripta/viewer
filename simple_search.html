@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-at="content" data-template-with="templates/page.html">    
+    <form name="f-query" action="/search" class="form form-horizontal" method="get" role="search">
+        <div class="col-md-3 col-md-push-9">
+            <div class="well well-sm">
+                <div class="form-group" data-toggle="tooltip" data-placement="bottom" title="For wildcard search use * and ?">
+                    <div class="col-md-12 col-xs-12">
+                        <span class="input-group">
+                            <input name="q" type="search" class="templates:form-control form-control" placeholder="Search String"/>
+                            <span class="input-group-btn">
+                                <button id="f-btn-search" type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-search"/>
+                                </button>
+                            </span>
+                        </span><!--<input type="hidden" name="field" value="text"/>-->
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </form>
+    <div class="col-md-12">
+        <div class="search:search_simple"/>        
+    </div>
+</div>

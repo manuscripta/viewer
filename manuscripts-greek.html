@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/browse.html" data-template-at="content">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="page-header">Greek Manuscripts</h3>
+            <!--<div class="input-group-btn pull-left">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sort <span class="caret"/>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="?sort=date">Date</a>
+                    </li>
+                    <li>
+                        <a href="?sort=shelfmark">Shelfmark</a>
+                    </li>
+                    <li>
+                        <a href="?sort=summary">Summary</a>
+                    </li>
+                    <li>
+                        <a href="?sort=support">Support</a>
+                    </li>
+                </ul>
+            </div>-->
+            <div class="row">
+                <div class="col-md-12">
+                    <table id="manuscripts" class="tablesorter">
+                        <thead>
+                            <tr>
+                                <th class="filter-select" width="15%">Repository</th>
+                                <th width="10%">Shelfmark</th>
+                                <th width="10%">Date</th>
+                                <th class="filter-select" width="10%">Support</th>
+                                <th class="filter-select" width="10%">Language</th>
+                                <th width="40%">Summary</th>
+                                <th class="filter-select" width="5%">Digitized</th>                                
+                            </tr>
+                        </thead>
+                        <tbody data-template="browse:list-greek-manuscripts"/>
+                        <tfoot>
+                            <tr>
+                                <th colspan="7" class="ts-pager form-inline">
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-default first">
+                                            <span class="glyphicon glyphicon-step-backward"/>
+                                        </button>
+                                        <button type="button" class="btn btn-default prev">
+                                            <span class="glyphicon glyphicon-backward"/>
+                                        </button>
+                                    </div>
+                                    <span class="pagedisplay"/>
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-default next">
+                                            <span class="glyphicon glyphicon-forward"/>
+                                        </button>
+                                        <button type="button" class="btn btn-default last">
+                                            <span class="glyphicon glyphicon-step-forward"/>
+                                        </button>
+                                    </div>
+                                    <select class="form-control input-sm pagesize" title="Select page size">
+                                        <option selected="selected" value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                        <option value="all">All Rows</option>
+                                    </select>
+                                    <select class="form-control input-sm pagenum" title="Select page number"/>
+                                </th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

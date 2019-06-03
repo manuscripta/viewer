@@ -48,12 +48,12 @@
                                 <li>
                                     <a href="/bladdra/handskrifter">Handskrifter</a>
                                 </li>
-                                <li>
+                                <!--<li>
                                     <a href="/bladdra/forfattare">Författare och verk</a>
                                 </li>
                                 <li>
                                     <a href="/bladdra/incipit">Incipit</a>
-                                </li>
+                                </li>-->
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -82,7 +82,7 @@
                         </li>
                     </ul>
                 </div>
-                <!--/.nav-collapse -->
+                <!--/.nav-collapse -->                
             </div>
             <!--/.container -->
         </nav>
@@ -106,6 +106,16 @@
                 $(document).ready(function(){
                     $('[data-toggle="popover"]').popover({placement : 'top'});
                 });                
+        </script>
+        <script type="text/javascript">
+            <![CDATA[ 
+            $(document).ready(function () {
+  if (location.hash){
+    $(location.hash).collapse('show');
+    $(location.hash).parents('.accordion-body').collapse('show');
+  }
+});
+]]>
         </script>
     </body>
 </html>

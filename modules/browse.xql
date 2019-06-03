@@ -14,15 +14,15 @@ declare %templates:wrap
 function browse:authors($node as node(), $model as map(*)) {
             for $mss in collection($config:data-root || "/msDescs")
             let $repository := $mss//tei:msDesc/tei:msIdentifier/tei:repository
-            let $shelfmark := $mss//tei:msDesc/tei:msIdentifier/tei:idno
-            for $codicological_unit in $mss//tei:msPart
-            for $msitem in $codicological_unit//tei:msContents/tei:msItem 
-            let $author := $msitem/tei:author//tei:persName
-            let $title := $msitem/tei:title[not(@type="alt")][1]
-            for $locus in $msitem/tei:locus
-            let $idno := $mss//tei:msDesc/tei:msIdentifier/tei:idno[@type='shelfmark']
-            let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
-            let $item-nr := $msitem/@n
+            let $shelfmark := $mss//tei:msDesc/tei:msIdentifier/tei:idno[@type='shelfmark']
+                for $codicological_unit in $mss//tei:msPart
+                    for $msitem in $codicological_unit//tei:msContents/tei:msItem 
+                        let $author := $msitem/tei:author//tei:persName
+                        let $title := $msitem/tei:title[not(@type="alt")][1]
+                        for $locus in $msitem/tei:locus            
+                        let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
+                        let $item-nr := $msitem/@n
+                                    
            (:order by 
                 if($browse:sort = 'work') then $title
                 else if($browse:sort = 'shelfmark') then $idno
@@ -43,18 +43,20 @@ function browse:incipits($node as node(), $model as map(*)) {
                 for $mss in collection($config:data-root || "/msDescs")
                 let $shelfmark := $mss//tei:titleStmt/tei:title
                 for $msitem in $mss//tei:msContents/tei:msItem 
-                    for $incipit in $msitem/tei:incipit[@defective='true' or @defective='false']
+                    (:for $incipit in $msitem/tei:incipit[@defective='true' or @defective='false']:)
+                    for $incipit in $msitem/tei:incipit
                         let $locus := $msitem/tei:locus                        
                         let $author := $msitem/tei:author
                         let $title := $msitem/tei:title
                         let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
-            order by $incipit ascending collation "?lang=el" 
+            (:order by $incipit ascending collation "?lang=el":) 
+            order by $incipit ascending collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
             return
                 <tr>
                     <td>{$incipit//text()}</td>
                     <td>{$author//text()}</td>
                     <td><em>{$title//text()}</em></td>
-                    <td>{$shelfmark/text()}, <a href="/{substring-before($uri, '.xml')}">f. {data($locus/@from)}</a></td>
+                    <td>{$shelfmark/text()}, <a href="/ms/{substring-before($uri, '.xml')}">f. {data($locus/@from)}</a></td>
                 </tr>
 };
 
@@ -68,7 +70,7 @@ function browse:scribes($node as node(), $model as map(*)) {
         </tr>{
             for $mss in collection($config:data-root || "/msDescs") 
             for $scribe in $mss//tei:handNote//tei:persName[@role="scribe"]            
-            for $idno in $mss//tei:msDesc/tei:msIdentifier/tei:idno
+            for $idno in $mss//tei:msDesc/tei:msIdentifier/tei:idno[@type='shelfmark']
             let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
             order by $scribe ascending
             return
@@ -98,17 +100,17 @@ function browse:list-manuscripts($node as node(), $model as map(*)){
         let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
         let $digitized := boolean($mss//tei:facsimile)
         let $sponsor := $mss//tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:sponsor
-        order by $repository, $shelfmark
+        order by $repository, $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
         return 
             <tr>
-                    <td>{$repository}</td>
+                    <td class="repository filter-select">{if ($repository='Kungliga biblioteket') then 'National Library' else if ($repository='Uppsala universitetsbibliotek') then 'Uppsala University Library' else $repository}</td>
                     <td><a href="/ms/{substring-before($uri, '.xml')}">{$shelfmark}</a></td>
                     <td>{$date}</td>
-                    <td>{$support}</td>
-                    <td>{if ($textLang='sv') then 'Swedish' else if ($textLang='grc') then 'Greek' else if ($textLang='la') then 'Latin' else $textLang}</td>
+                    <td class="filter-select">{$support}</td>
+                    <td  class="filter-select">{if ($textLang='sv') then 'Swedish' else if ($textLang='grc') then 'Greek' else if ($textLang='la') then 'Latin' else if ($textLang='non-swe') then 'Old Swedish' else if ($textLang='el') then 'Modern Greek' else if ($textLang='non-dan') then 'Old Danish' else $textLang}</td>
                     <td>{$summary}</td>
-                    <td>{if ($digitized=true()) then 'Yes' else 'No'}</td>
-                    <td>{if ($sponsor="TTT: Text till tiden! Medeltida texter i kontext – då och nu") then 'TTT' else if ($sponsor="Greek Manuscripts in Sweden project") then 'Greek' else ''}</td>
+                    <td  class="filter-select">{if ($digitized=true()) then 'Yes' else 'No'}</td>
+                    <td  class="filter-select">{if ($sponsor="TTT: Text till tiden! Medeltida texter i kontext – då och nu") then 'TTT' else if ($sponsor="Greek manuscripts in Sweden – a digitization and cataloguing project") then 'Greek' else ''}</td>
                   </tr> 
     (:order by 
         if($browse:sort = 'summary') then $summary
@@ -119,6 +121,65 @@ function browse:list-manuscripts($node as node(), $model as map(*)){
         browse:display-manuscripts($repository, $shelfmark, $uri, $date, $support, $summary):)
 }; 
 
+declare %templates:wrap
+(: The %templates:wrap annotation copies the wrapper element :)
+function browse:list-greek-manuscripts($node as node(), $model as map(*)){
+    for $mss in collection($config:data-root || "/msDescs")        
+        let $repository := $mss//tei:msDesc/tei:msIdentifier/tei:repository
+        let $shelfmark := $mss//tei:msDesc/tei:msIdentifier/tei:idno[@type='shelfmark']
+        let $codicological_unit := $mss//tei:msPart
+        let $unit_nr := $codicological_unit/tei:msIdentifier/tei:idno
+        let $date := fn:string-join(if (exists($codicological_unit//tei:history/tei:origin//tei:origDate)) then $codicological_unit//tei:history/tei:origin//tei:origDate else $mss//tei:msDesc/tei:history/tei:origin//tei:origDate, ', ')        
+        let $support := fn:string-join(distinct-values($codicological_unit//tei:supportDesc/@material), ', ')
+        let $summary := $mss//tei:msDesc/tei:head
+        let $textLang := distinct-values($mss//tei:msContents/tei:textLang/@mainLang)
+        let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
+        let $digitized := boolean($mss//tei:facsimile)
+        let $sponsor := $mss//tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:sponsor
+        where $sponsor = 'Greek manuscripts in Sweden – a digitization and cataloguing project'
+        order by $repository, $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
+        return 
+            <tr>
+                    <td>{$repository}</td>
+                    <td><a href="/ms/{substring-before($uri, '.xml')}">{$shelfmark}</a></td>
+                    <td>{$date}</td>
+                    <td>{$support}</td>
+                    <td>{if ($textLang='sv') then 'Swedish' else if ($textLang='grc') then 'Greek' else if ($textLang='la') then 'Latin' else if ($textLang='non-swe') then 'Old Swedish' else $textLang}</td>
+                    <td>{$summary}</td>
+                    <td>{if ($digitized=true()) then 'Yes' else 'No'}</td>                    
+                  </tr>    
+}; 
+
+declare %templates:wrap
+(: The %templates:wrap annotation copies the wrapper element :)
+function browse:list-ttt-manuscripts($node as node(), $model as map(*)){
+    for $mss in collection($config:data-root || "/msDescs")        
+        let $repository := $mss//tei:msDesc/tei:msIdentifier/tei:repository
+        let $shelfmark := $mss//tei:msDesc/tei:msIdentifier/tei:idno[@type='shelfmark']
+        let $codicological_unit := $mss//tei:msPart
+        let $unit_nr := $codicological_unit/tei:msIdentifier/tei:idno
+        let $date := fn:string-join(if (exists($codicological_unit//tei:history/tei:origin//tei:origDate)) then $codicological_unit//tei:history/tei:origin//tei:origDate else $mss//tei:msDesc/tei:history/tei:origin//tei:origDate, ', ')        
+        let $support := fn:string-join(distinct-values($codicological_unit//tei:supportDesc/@material), ', ')
+        let $summary := $mss//tei:msDesc/tei:head
+        let $textLang := distinct-values($mss//tei:msContents/tei:textLang/@mainLang)
+        let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
+        let $digitized := boolean($mss//tei:facsimile)
+        let $sponsor := $mss//tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:sponsor
+        where $sponsor = 'TTT: Text till tiden! Medeltida texter i kontext – då och nu'
+        order by $repository, $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
+        return 
+            <tr>
+                    <td>{$repository}</td>
+                    <td><a href="/ms/{substring-before($uri, '.xml')}">{$shelfmark}</a></td>
+                    <td>{$date}</td>
+                    <td>{$support}</td>
+                    <td>{if ($textLang='sv') then 'Swedish' else if ($textLang='grc') then 'Greek' else if ($textLang='la') then 'Latin' else if ($textLang='non-swe') then 'Old Swedish' else $textLang}</td>
+                    <td>{$summary}</td>
+                    <td>{if ($digitized=true()) then 'Yes' else 'No'}</td>                    
+                  </tr>    
+}; 
+
+
 declare function browse:display-manuscripts($repository as xs:string?, $shelfmark as xs:string?, $uri as xs:anyURI?, $date as xs:string?, $support as xs:string*, $summary as xs:string*) as node()*{
                 <tr>
                     <td>{$repository}</td>
@@ -128,3 +189,20 @@ declare function browse:display-manuscripts($repository as xs:string?, $shelfmar
                     <td>{$summary}</td>
                   </tr> 
        };
+       
+       
+declare %templates:wrap 
+(: The %templates:wrap annotation copies the wrapper element :)
+function browse:bibliography($node as node(), $model as map(*)) {
+            for $bibl in collection($config:data-root || "/id/bibl")
+            let $author := $bibl//tei:biblStruct//tei:author
+            let $title := $bibl//tei:titleStmt//tei:title
+            let $ManuscriptaID := $bibl//tei:TEI/substring-after(@xml:id, 'bibl-') 
+(:            where starts-with($title, 'a'):)
+            return                
+                <tr>
+                    <td>{data($author)}</td>
+                    <td><em>{data($title)}</em></td>                    
+                    <td><a href="/bibl/{$ManuscriptaID}">{$ManuscriptaID}</a></td>
+                </tr>                
+};

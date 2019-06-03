@@ -5,13 +5,15 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <style>
-            #viewer{
+            #viewer {
                 width: 100%;
                 height: 100%;
                 position: fixed;
             }</style>
         <link rel="stylesheet" type="text/css" href="../resources/scripts/mirador/css/mirador-combined.css"/>
+        
         <script src="../resources/scripts/mirador/mirador.js"/>
+        
     </head>
     <body>
         <div id="viewer"/>
@@ -19,7 +21,10 @@
       $(function() {
         Mirador({
           id: "viewer",
-          data: [{"collectionUri": "https://dev.manuscripta.se/iiif/collection.json"}],
+          data: [
+            {"manifestUri": "https://www.manuscripta.se/iiif/100500/manifest.json"},
+            {"manifestUri": "https://www.manuscripta.se/iiif/100503/manifest.json"}
+          ],          
           openManifestsPage: true
         });
       });

@@ -24,7 +24,7 @@
             </div>
         </div>
     </form>    -->
-    <form name="f-query" action="/search" class="form form-horizontal" method="get" role="search">
+    <form name="f-query" action="/results" class="form form-horizontal" method="post" role="search">
         <div class="col-md-3 col-md-push-9">
             <div class="well well-sm">
                 <div class="form-group" data-toggle="tooltip" data-placement="bottom" title="For wildcard search use * and ?">
@@ -42,19 +42,20 @@
                 <div class="form-group" data-toggle="tooltip" data-placement="left" title="Search Mode">
                     <div class="col-md-12 col-xs-12">
                         <select name="m" class="form-control templates:form-control">
-                            <option value="au" selected="selected">Author</option>
-                            <option value="ti">Title</option>
-                            <option value="pl">Place Name</option>
-                            <option value="in">Incipit</option>
-                            <option value="ex">Explicit</option>
-                            <option value="ru">Rubric</option>
+                            <option value="author" selected="selected">Author</option>
+                            <option value="title">Title</option>
+                            <option value="person">Person</option>
+                            <option value="place">Place</option>
+                            <option value="incipit">Incipit</option>
+                            <option value="explicit">Explicit</option>
+                            <option value="rubric">Rubric</option>                            
                         </select>
                     </div>
                 </div>
             </div>
         </div>
     </form>
-    <div class="col-md-12">
-        <div class="search:beta_search"/>
-    </div>
+    <!--<div class="col-md-12">
+        <div class="search:beta_search"/>        
+    </div>-->
 </div>

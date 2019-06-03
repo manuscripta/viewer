@@ -166,8 +166,15 @@ a.shortTitle{
 a.shortTitle:hover{
     text-decoration: none;
 }
+/* Remove extra whitespace after p in td */
+td  p{
+    display: inline-block !important;
+}
+td em p{
+    display: inline !important;
+}
 p:first-of-type{
-    display: inline;
+    display: inline;    
 }
 p{
     margin-top: 0em;

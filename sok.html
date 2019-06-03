@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-at="content" data-template-with="templates/page_sv.html">
-    <form name="f-query" action="/sok" class="form form-horizontal" method="get" role="search">
+    <form name="f-query" action="/resultat" class="form form-horizontal" method="post" role="search">
         <div class="col-md-3 col-md-push-9">
             <div class="well well-sm">
                 <div class="form-group" data-toggle="tooltip" data-placement="bottom" title="For wildcard search use * and ?">
@@ -18,19 +18,20 @@
                 <div class="form-group" data-toggle="tooltip" data-placement="left" title="Search Mode">
                     <div class="col-md-12 col-xs-12">
                         <select name="m" class="form-control templates:form-control">
-                            <option value="au" selected="selected">Författare</option>
-                            <option value="ti">Titel</option>
-                            <option value="pl">Platsnamn</option>
-                            <option value="in">Incipit</option>
-                            <option value="ex">Explicit</option>
-                            <option value="ru">Rubrik</option>
+                            <option value="author" selected="selected">Författare</option>
+                            <option value="title">Titel</option>
+                            <option value="person">Person</option>
+                            <option value="place">Platsnamn</option>
+                            <option value="incipit">Incipit</option>
+                            <option value="explicit">Explicit</option>
+                            <option value="rubric">Rubrik</option>
                         </select>
                     </div>
                 </div>
             </div>
         </div>
     </form>
-    <div class="col-md-12">
+    <!--<div class="col-md-12">
         <div class="search:beta_search"/>
-    </div>
+    </div>-->
 </div>

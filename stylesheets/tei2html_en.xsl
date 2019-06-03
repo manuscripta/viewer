@@ -31,16 +31,33 @@
                                 </xsl:otherwise>
                             </xsl:choose>
                         </xsl:attribute>
-                        <xsl:value-of select="//repository, //msDesc/msIdentifier/idno[@type = 'shelfmark']" separator=", "/>
-                        <xsl:if test="//msIdentifier/altIdentifier/idno[@type = 'access-nr']">
-                            <xsl:text> (</xsl:text>
-                            <xsl:value-of select="//msIdentifier/altIdentifier/idno[@type = 'access-nr']"/>
-                            <xsl:text>)</xsl:text>
-                        </xsl:if>
-                    </h1>
-                    <xsl:if test="//altIdentifier/idno[@type = 'formerShelfmark']">
-                        <div>
-                            <xsl:text>(</xsl:text>
+                        <xsl:choose>
+                            <xsl:when test="not(//msFrag)">
+                                <xsl:value-of select="//repository, //msDesc/msIdentifier/idno[@type = 'shelfmark']" separator=", "/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="//msDesc/msIdentifier/idno[@type = 'shelfmark']"/>
+                                <xsl:text> (</xsl:text>
+                                <xsl:for-each select="//msFrag">
+                                    <xsl:choose>
+                                        <xsl:when test="position() != last()">
+                                            <xsl:value-of select="msIdentifier/repository"/>
+                                            <xsl:text> </xsl:text>
+                                            <xsl:value-of select="msIdentifier/idno[@type = 'shelfmark']"/>
+                                            <xsl:text>, </xsl:text>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:value-of select="msIdentifier/repository"/>
+                                            <xsl:text> </xsl:text>
+                                            <xsl:value-of select="msIdentifier/idno[@type = 'shelfmark']"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:for-each>
+                                <xsl:text>)</xsl:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:if test="//altIdentifier/idno[@type = 'formerShelfmark']">
+                            <xsl:text> (Olim </xsl:text>
                             <xsl:for-each select="//altIdentifier/idno[@type = 'formerShelfmark']">
                                 <xsl:choose>
                                     <xsl:when test="position() != last()">
@@ -53,8 +70,13 @@
                                 </xsl:choose>
                             </xsl:for-each>
                             <xsl:text>)</xsl:text>
-                        </div>
-                    </xsl:if>
+                        </xsl:if>
+                        <!--<xsl:if test="//msIdentifier/altIdentifier/idno[@subtype = 'Access']">
+                            <xsl:text> (</xsl:text>
+                            <xsl:value-of select="//msIdentifier/altIdentifier/idno[@subtype = 'Access']"/>
+                            <xsl:text>)</xsl:text>
+                        </xsl:if>-->
+                    </h1>
                 </div>
                 <div>
                     <h2>
@@ -62,7 +84,7 @@
                     </h2>
                     <p>
                         <xsl:if test="//origPlace">
-                            <xsl:for-each select="//origPlace/placeName">
+                            <xsl:for-each select="distinct-values(//origPlace/placeName)">
                                 <xsl:value-of select="."/>
                                 <xsl:text>, </xsl:text>
                             </xsl:for-each>
@@ -73,7 +95,7 @@
                             <xsl:value-of select="//origin/@notAfter"/>
                         </xsl:if>
                         <xsl:if test="//origDate">
-                            <xsl:apply-templates select="//origDate"/>
+                            <xsl:apply-templates select="distinct-values(//origDate)"/>
                         </xsl:if>
                     </p>
                     <p>
@@ -83,6 +105,14 @@
                             </xsl:if>
                             <xsl:if test=". = 'parchment'">
                                 parchment
+                            </xsl:if>
+                        </xsl:for-each>
+                        <xsl:for-each select="distinct-values(//msFrag//supportDesc/@material)">
+                            <xsl:if test=". = 'paper'">
+                                <xsl:text>Papier</xsl:text>
+                            </xsl:if>
+                            <xsl:if test=". = 'parchment'">
+                                <xsl:text>Pergament</xsl:text>
                             </xsl:if>
                         </xsl:for-each>
                     </p>
@@ -126,11 +156,11 @@
                             units
                         </p>
                     </xsl:if>
-                    <p>                       
+                    <p>
                         <xsl:if test="//msContents/textLang/@mainLang = 'grc'">
                             Greek
                         </xsl:if>
-                        <xsl:if test="//msContents/textLang/@mainLang = 'lat'">
+                        <xsl:if test="//msContents/textLang/@mainLang = 'la'">
                             Latin
                         </xsl:if>
                         <xsl:if test="//msContents/textLang/@mainLang = 'non-swe'">
@@ -160,6 +190,12 @@
                                     <xsl:value-of select="msIdentifier/idno[@type = 'codicologicalUnit']/text()"/>
                                 </h4>
                             </xsl:if>
+                            <xsl:apply-templates select="msContents"/>
+                        </xsl:for-each>
+                    <xsl:for-each select="//msFrag">
+                            <h4>
+                                <xsl:value-of select="msIdentifier/idno[@type = 'shelfmark']/text()"/>
+                            </h4>
                             <xsl:apply-templates select="msContents"/>
                         </xsl:for-each>
                     </div>
@@ -318,6 +354,12 @@
                                             </xsl:choose>
                                             <xsl:apply-templates/>
                                         </xsl:when>
+                                        <xsl:when test="//msFrag">
+                                            <h5>
+                                                <xsl:value-of select="ancestor::msFrag/msIdentifier/idno[@type = 'shelfmark']/text()"/>
+                                            </h5>
+                                            <xsl:apply-templates/>
+                                        </xsl:when>
                                         <xsl:otherwise>
                                             <h5>
                                                 Endleaves
@@ -343,6 +385,14 @@
                                                 </xsl:if>
                                                 <xsl:apply-templates select="handNote"/>
                                             </p>
+                                        </xsl:when>
+                                        <xsl:when test="//msFrag">
+                                            <p>
+                                                <h5>
+                                                    <xsl:value-of select="ancestor::msFrag/msIdentifier/idno[@type = 'shelfmark']/text()"/>
+                                                </h5>
+                                            </p>
+                                            <xsl:apply-templates/>
                                         </xsl:when>
                                         <xsl:otherwise>
                                             <p>
@@ -413,8 +463,31 @@
                                     Layout
                                 </h4>
                                 <xsl:for-each select="//layoutDesc">
-                                    <xsl:apply-templates/>
-                                </xsl:for-each>
+                                    <xsl:choose>
+                                        <xsl:when test="ancestor::msPart">
+                                            <div>
+                                                <xsl:if test="count(//msPart) gt 1">
+                                                    <h5>Unit<xsl:text> </xsl:text>
+                                                        <xsl:number count="msPart" format="I"/>: </h5>
+                                                </xsl:if>
+                                                <xsl:apply-templates/>
+                                            </div>
+                                        </xsl:when>
+                                        <xsl:when test="//msFrag">
+                                            <div>
+                                                <h5>
+                                                    <xsl:value-of select="ancestor::msFrag/msIdentifier/idno[@type = 'shelfmark']/text()"/>
+                                                </h5>
+                                            </div>
+                                            <xsl:apply-templates/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <div>
+                                                <xsl:apply-templates/>
+                                            </div>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:for-each>        
                             </div>
                         </xsl:if>
                         <xsl:if test="//bindingDesc[string-length(.) != 0]">
@@ -567,9 +640,10 @@
                             <div>
                                 XML
                                 <xsl:text>: </xsl:text>
-                                <a href="/xml/{data(substring-after(TEI/@xml:id, 'ms-'))}">
-                                    <xsl:text>https://www.manuscripta.se/xml/</xsl:text>
+                                <a href="/ms/{data(substring-after(TEI/@xml:id, 'ms-'))}.xml">
+                                    <xsl:text>https://www.manuscripta.se/ms/</xsl:text>
                                     <xsl:value-of select="data(substring-after(TEI/@xml:id, 'ms-'))"/>
+                                    <xsl:text>.xml</xsl:text>
                                 </a>
                             </div>
                         </div>
@@ -1380,40 +1454,54 @@
         </xsl:if>
     </xsl:template>
     <xsl:template name="history" match="history">
-        <div class="origin">
-            <h4>
-                Origin
-            </h4>
-            <p>
-                <xsl:apply-templates select="//msDesc/history/origin"/>
-            </p>
-            <xsl:for-each select="//msPart/history/origin">
+        <xsl:if test="//origin">
+            <div class="origin">
+                <h4>
+                    Origin
+                </h4>
                 <p>
-                    <h5>Unit<xsl:text> </xsl:text>
-                        <xsl:number count="msPart" format="I"/>: </h5>
-                    <xsl:apply-templates select="."/>
+                    <xsl:apply-templates select="//msDesc/history/origin"/>
                 </p>
-            </xsl:for-each>
-        </div>
-        <div class="provenance">
-            <h4>
-                Provenance
-            </h4>
+                <xsl:for-each select="//msPart/history/origin">
+                    <p>
+                        <h5>Unit<xsl:text> </xsl:text>
+                            <xsl:number count="msPart" format="I"/>: </h5>
+                        <xsl:apply-templates select="."/>
+                    </p>
+                </xsl:for-each>
+                <xsl:for-each select="//msFrag/history/origin">
+                    <p>
+                        <h5>
+                            <xsl:value-of select="ancestor::msFrag/msIdentifier/idno[@type = 'shelfmark']/text()"/>
+                        </h5>
+                        <xsl:apply-templates select="."/>
+                    </p>
+                </xsl:for-each>
+            </div>
+        </xsl:if>
+        <xsl:if test="//provenance">
+            <div class="provenance">
+                <h4>
+                    Provenance
+                </h4>
             <xsl:for-each select="//provenance">
-                <p>
-                    <xsl:apply-templates select="."/>
-                </p>
-            </xsl:for-each>
-        </div>
+                    <p>
+                        <xsl:apply-templates select="."/>
+                    </p>
+                </xsl:for-each>
+            </div>
+            </xsl:if>
         <!--<div class="formerShelfmarks">
             <xsl:apply-templates select="//idno" />
         </div>-->
-        <div class="acquisition">
-            <h4>
-                Acquisition
-            </h4>
+        <xsl:if test="acquisition">
+            <div class="acquisition">
+                <h4>
+                    Acquisition
+                </h4>
             <xsl:apply-templates select="//acquisition"/>
-        </div>
+            </div>
+            </xsl:if>
     </xsl:template>
     <xsl:template match="idno">
         <xsl:choose>
@@ -1439,41 +1527,46 @@
     </xsl:template>
     <!-- institution -->
     <!-- item -->
-    <!-- layout -->
+    <xsl:template match="layout">
+        <div>
+            <xsl:apply-templates select="locus | locusGrp"/>
+            <!-- Only show columns when greater than 1 -->
+            <xsl:if test="@columns[. gt '1']">
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="@columns"/>
+                <xsl:text> </xsl:text>
+                columns
+                <xsl:text>,</xsl:text>
+            </xsl:if>
+            <xsl:if test="@ruledLines">
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="concat(substring(@ruledLines, 1, 2), '–', substring(@ruledLines, 4, 5))"/>
+                <xsl:text> </xsl:text>
+                ruled lines
+                <xsl:text>,</xsl:text>
+            </xsl:if>
+            <xsl:if test="@writtenLines">
+                <xsl:text> </xsl:text>
+                <xsl:choose>
+                    <!-- Check for min and max values -->
+                    <xsl:when test="substring(@writtenLines, 4, 5)">
+                        <xsl:value-of select="concat(substring(@writtenLines, 1, 2), '–', substring(@writtenLines, 4, 5))"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="substring(@writtenLines, 1, 2)"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+                <xsl:text> </xsl:text>
+                written lines
+                <xsl:text>. </xsl:text>
+            </xsl:if>
+            <xsl:apply-templates select="dimensions"/>
+            <xsl:apply-templates select="note"/>
+        </div>
+    </xsl:template>
     <xsl:template match="layoutDesc">
         <xsl:for-each select="layout">
-            <p>
-                <xsl:apply-templates select="locus | locusGrp"/>
-                <!-- Only show columns when greater than 1 -->
-                <xsl:if test="@columns[. gt '1']">
-                    <xsl:value-of select="@columns"/>
-                    <xsl:text> </xsl:text>
-                    columns
-                    <xsl:text>, </xsl:text>
-                </xsl:if>
-                <xsl:if test="@ruledLines">
-                    <xsl:value-of select="concat(substring(@ruledLines, 1, 2), '–', substring(@ruledLines, 4, 5))"/>
-                    <xsl:text> </xsl:text>
-                    ruled lines
-                    <xsl:text>, </xsl:text>
-                </xsl:if>
-                <xsl:if test="@writtenLines">
-                    <xsl:choose>
-                        <!-- Check for min and max values -->
-                        <xsl:when test="substring(@writtenLines, 4, 5)">
-                            <xsl:value-of select="concat(substring(@writtenLines, 1, 2), '–', substring(@writtenLines, 4, 5))"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of select="substring(@writtenLines, 1, 2)"/>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                    <xsl:text> </xsl:text>
-                    written lines
-                    <xsl:text>. </xsl:text>
-                </xsl:if>
-                <xsl:apply-templates select="dimensions"/>
-                <xsl:apply-templates select="note"/>
-            </p>
+            <xsl:apply-templates/>
         </xsl:for-each>
     </xsl:template>
     <xsl:template match="lb">
@@ -1704,7 +1797,7 @@
         <!--<xsl:variable name="locusToURL" select="//surface[@xml:id=concat(//TEI/@xml:id,'_',$locusTo)]/graphic/@url"/>-->
         <xsl:variable name="locusToIndex" select="count(//surface[@xml:id = concat(//TEI/@xml:id, '_', $locusTo)]/preceding-sibling::*)"/>
         <xsl:choose>
-            <xsl:when test="parent::msItem or ancestor::additions or ancestor::decoDesc">
+            <xsl:when test="parent::msItem or ancestor::additions or ancestor::decoDesc or ancestor::layoutDesc">
                 <xsl:if test="@scheme = 'folios'">
                     <xsl:choose>
                         <xsl:when test="@from = @to">
@@ -2145,7 +2238,7 @@
             <xsl:value-of select="."/>
             <xsl:text> </xsl:text>
             folding
-            <xsl:text>)</xsl:text>
+            <xsl:text xml:space="preserve">)</xsl:text>
         </xsl:if>
     </xsl:template>
     <!--<xsl:template match="msContents">
@@ -2195,6 +2288,10 @@
             <xsl:apply-templates />
         </div>
     </xsl:template>-->
+
+    <xsl:template match="msFrag">
+        <xsl:apply-templates/>
+    </xsl:template>
 
     <xsl:template match="msItem">
         <xsl:for-each select="descendant-or-self::msItem">
@@ -2251,6 +2348,13 @@
     </xsl:template>
     <xsl:template match="objectDesc">
         <xsl:apply-templates/>
+    </xsl:template>
+    <xsl:template match="orgName">        
+        <span class="orgname">            
+            <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
+                <xsl:apply-templates/>
+            </a>
+        </span>
     </xsl:template>
     <!--origDate, see date-->
     <xsl:template match="origPlace">
@@ -2537,7 +2641,8 @@
                     <!--<xsl:call-template name="makeLang"/>-->
                     <xsl:choose>
                         <xsl:when test="exists(@ref)">
-                            <a href="{data(@ref)}">
+                            <!--<a href="{data(@ref)}">-->
+                            <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
                                 <xsl:apply-templates/>
                             </a>
                         </xsl:when>
@@ -2626,8 +2731,20 @@
         <xsl:if test="@type = 'short'">
             <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
                 <xsl:apply-templates/>
-            </a>
-        </xsl:if>
+                </a>            
+        <!--<xsl:choose>
+                <xsl:when test="starts-with(@ref, 'https://www.manuscripta.se/')">
+                    <a href="../{data(substring-after(@ref, 'https://www.manuscripta.se/'))}">
+                        <xsl:apply-templates/>
+                    </a>
+                </xsl:when>
+                <xsl:otherwise>
+                    <a href="{data(@ref)}">
+                        <xsl:apply-templates/>
+                    </a>
+                </xsl:otherwise>
+            </xsl:choose>-->
+        </xsl:if>        
     </xsl:template>
     <!-- titleStmt -->
     <xsl:template match="unclear">
