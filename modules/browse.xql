@@ -89,13 +89,13 @@ declare %templates:wrap
 (: The %templates:wrap annotation copies the wrapper element :)
 function browse:list-manuscripts($node as node(), $model as map(*)){
     for $mss in collection($config:data-root || "/msDescs")        
-        let $repository := $mss//tei:msDesc/tei:msIdentifier/tei:repository
-        let $shelfmark := $mss//tei:msDesc/tei:msIdentifier/tei:idno[@type='shelfmark']
+        let $repository := $mss//tei:msDesc/tei:msIdentifier/tei:repository/text()
+        let $shelfmark := $mss//tei:msDesc/tei:msIdentifier/tei:idno[@type='shelfmark']/text()
         let $codicological_unit := $mss//tei:msPart
         let $unit_nr := $codicological_unit/tei:msIdentifier/tei:idno
         let $date := fn:string-join(if (exists($codicological_unit//tei:history/tei:origin//tei:origDate)) then $codicological_unit//tei:history/tei:origin//tei:origDate else $mss//tei:msDesc/tei:history/tei:origin//tei:origDate, ', ')        
         let $support := fn:string-join(distinct-values($codicological_unit//tei:supportDesc/@material), ', ')
-        let $summary := $mss//tei:msDesc/tei:head
+        let $summary := $mss//tei:msDesc/tei:head/text()
         let $textLang := distinct-values($mss//tei:msContents/tei:textLang/@mainLang)
         let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
         let $digitized := boolean($mss//tei:facsimile)
@@ -125,13 +125,13 @@ declare %templates:wrap
 (: The %templates:wrap annotation copies the wrapper element :)
 function browse:list-greek-manuscripts($node as node(), $model as map(*)){
     for $mss in collection($config:data-root || "/msDescs")        
-        let $repository := $mss//tei:msDesc/tei:msIdentifier/tei:repository
-        let $shelfmark := $mss//tei:msDesc/tei:msIdentifier/tei:idno[@type='shelfmark']
+        let $repository := $mss//tei:msDesc/tei:msIdentifier/tei:repository/text()
+        let $shelfmark := $mss//tei:msDesc/tei:msIdentifier/tei:idno[@type='shelfmark']/text()
         let $codicological_unit := $mss//tei:msPart
         let $unit_nr := $codicological_unit/tei:msIdentifier/tei:idno
         let $date := fn:string-join(if (exists($codicological_unit//tei:history/tei:origin//tei:origDate)) then $codicological_unit//tei:history/tei:origin//tei:origDate else $mss//tei:msDesc/tei:history/tei:origin//tei:origDate, ', ')        
         let $support := fn:string-join(distinct-values($codicological_unit//tei:supportDesc/@material), ', ')
-        let $summary := $mss//tei:msDesc/tei:head
+        let $summary := $mss//tei:msDesc/tei:head/text()
         let $textLang := distinct-values($mss//tei:msContents/tei:textLang/@mainLang)
         let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
         let $digitized := boolean($mss//tei:facsimile)
@@ -144,7 +144,7 @@ function browse:list-greek-manuscripts($node as node(), $model as map(*)){
                     <td><a href="/ms/{substring-before($uri, '.xml')}">{$shelfmark}</a></td>
                     <td>{$date}</td>
                     <td>{$support}</td>
-                    <td>{if ($textLang='sv') then 'Swedish' else if ($textLang='grc') then 'Greek' else if ($textLang='la') then 'Latin' else if ($textLang='non-swe') then 'Old Swedish' else $textLang}</td>
+                    <td>{if ($textLang='sv') then 'Swedish' else if ($textLang='grc') then 'Greek' else if ($textLang='el') then 'Modern Greek' else if ($textLang='la') then 'Latin' else if ($textLang='non-swe') then 'Old Swedish' else $textLang}</td>
                     <td>{$summary}</td>
                     <td>{if ($digitized=true()) then 'Yes' else 'No'}</td>                    
                   </tr>    
@@ -154,13 +154,13 @@ declare %templates:wrap
 (: The %templates:wrap annotation copies the wrapper element :)
 function browse:list-ttt-manuscripts($node as node(), $model as map(*)){
     for $mss in collection($config:data-root || "/msDescs")        
-        let $repository := $mss//tei:msDesc/tei:msIdentifier/tei:repository
-        let $shelfmark := $mss//tei:msDesc/tei:msIdentifier/tei:idno[@type='shelfmark']
+        let $repository := $mss//tei:msDesc/tei:msIdentifier/tei:repository/text()
+        let $shelfmark := $mss//tei:msDesc/tei:msIdentifier/tei:idno[@type='shelfmark']/text()
         let $codicological_unit := $mss//tei:msPart
         let $unit_nr := $codicological_unit/tei:msIdentifier/tei:idno
         let $date := fn:string-join(if (exists($codicological_unit//tei:history/tei:origin//tei:origDate)) then $codicological_unit//tei:history/tei:origin//tei:origDate else $mss//tei:msDesc/tei:history/tei:origin//tei:origDate, ', ')        
         let $support := fn:string-join(distinct-values($codicological_unit//tei:supportDesc/@material), ', ')
-        let $summary := $mss//tei:msDesc/tei:head
+        let $summary := $mss//tei:msDesc/tei:head/text()
         let $textLang := distinct-values($mss//tei:msContents/tei:textLang/@mainLang)
         let $uri := replace(base-uri($mss), '.+/(.+)$', '$1')
         let $digitized := boolean($mss//tei:facsimile)
@@ -173,7 +173,7 @@ function browse:list-ttt-manuscripts($node as node(), $model as map(*)){
                     <td><a href="/ms/{substring-before($uri, '.xml')}">{$shelfmark}</a></td>
                     <td>{$date}</td>
                     <td>{$support}</td>
-                    <td>{if ($textLang='sv') then 'Swedish' else if ($textLang='grc') then 'Greek' else if ($textLang='la') then 'Latin' else if ($textLang='non-swe') then 'Old Swedish' else $textLang}</td>
+                    <td>{if ($textLang='sv') then 'Swedish' else if ($textLang='grc') then 'Greek' else if ($textLang='el') then 'Modern Greek' else if ($textLang='la') then 'Latin' else if ($textLang='non-swe') then 'Old Swedish' else $textLang}</td>
                     <td>{$summary}</td>
                     <td>{if ($digitized=true()) then 'Yes' else 'No'}</td>                    
                   </tr>    
