@@ -81,13 +81,23 @@ function search:beta_search($node as node(), $model as map(*)) {
         for $mss in collection($config:data-root || "/msDescs")        
             let $msitem := $mss//tei:msContents/tei:msItem        
             let $repository := $mss//tei:repository/text()
-            let $shelfmark := $mss//tei:msIdentifier/tei:idno[@type = 'shelfmark']        
+            let $shelfmark := $mss//tei:msIdentifier/tei:idno[@type = 'shelfmark']/text()        
             let $uri := concat('/ms/', replace(base-uri($mss), '.+/(.+)$', '$1'))
             let $query := request:get-parameter('q', '')
             let $mode := request:get-parameter('m', '')
             order by $repository, $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
             return
-                if ($mode eq 'author'  and ($query !='' and string-length($query) > 2)) then
+                if ($mode eq 'all'  and ($query !='' and string-length($query) > 2)) then
+                    for $hit in $mss//tei:msDesc[ft:query(., $query)]
+                    let $results := kwic:summarize($hit, <config xmlns="" width="200"/>)
+                        return
+                            <tr>
+                                <td>{$results}</td>
+                                <td>{$repository}</td>
+                                <td><a href="{substring-before($uri, '.xml')}">{$shelfmark}</a></td>
+                            </tr>
+            
+                else if ($mode eq 'author'  and ($query !='' and string-length($query) > 2)) then
                     for $hit in $msitem/tei:author[ft:query(., $query)]
                     let $results := kwic:summarize($hit, <config xmlns="" width="100"/>)
                     let $author := $hit/parent::tei:msItem/tei:author/normalize-space()                    
@@ -101,18 +111,7 @@ function search:beta_search($node as node(), $model as map(*)) {
                                 <td><a href="{substring-before($uri, '.xml')}">{$shelfmark}</a></td>
                             </tr>
                         
-                            (:<div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">{$repository}, {$shelfmark}</h3>
-                                </div>
-                                <div class="panel-body">
-                                    <p><b>Locus: </b>f. {$locus}</p>
-                                    <span><b>Author: </b>{kwic:summarize($author, <config xmlns="" width="100"/>)}</span>
-                                    <p><b>Title: </b>{data($work)}</p>
-                                </div>                        
-                            </div>:)
-                        
-                else if ($mode eq 'title') then
+                            else if ($mode eq 'title') then
                     for $hit in $msitem/tei:title[ft:query(., $query)]         
                         let $author := if (exists($hit/parent::tei:msItem/tei:author)) then concat($hit/parent::tei:msItem/tei:author/normalize-space(), ', ') else ()                        
                         order by $hit ascending collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
@@ -228,22 +227,3 @@ declare function search:search_simple_old($node as node(), $model as map(*)) {
          </table>
 };
 
-declare function search:search_simple($node as node(), $model as map(*)) {
-<table class="table table-striped">
-        {
-        for $mss in collection($config:data-root || "/msDescs")
-        let $ms := $mss/tei:TEI        
-        let $title := $ms//tei:titleStmt/tei:title
-        let $uri := concat('/ms/', replace(base-uri($mss), '.+/(.+)$', '$1'))
-        let $query := request:get-parameter('q', '')
-        return
-        for $hit in $ms[ft:query(., $query)]                                
-                order by $title ascending 
-                return                
-                    <tr>                    
-                        <td><a href="{substring-before($uri, '.xml')}">{$title}</a></td>
-                        <td>{kwic:summarize($hit, <config xmlns="" width="100"/>)}</td>                        
-                    </tr>
-         }
-         </table>
-};
