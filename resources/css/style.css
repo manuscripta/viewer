@@ -1,5 +1,5 @@
 body{
-    font-size: 1.6em;
+    font-size: 16px;
 }
 /*h1{
     font-size:1.8em;
@@ -29,12 +29,12 @@ h4{
 /*.short_description{
     margin-top:20px;
 }*/
-.italic{
+/*.italic{
     font-style: italic;
 }
 .spacing{
     letter-spacing: 0.1em;
-}
+}*/
 .small-caps{
     font-variant: small-caps;
 }
