@@ -18,15 +18,16 @@
                             <!-- Create class attribute to enable or disable the image viewer in viewer.js -->
                             <xsl:choose>
                                 <xsl:when test="//facsimile">
-                                    <xsl:choose>
-                                        <!-- Test if the number of images are greater than or equal to the number of textblock leaves * 2 -->
+                                    <xsl:text>digitized</xsl:text>
+                                    <!--<xsl:choose>
+                                        <!-\- Test if the number of images are greater than or equal to the number of textblock leaves * 2 -\->
                                         <xsl:when test="count(//facsimile/surface) ge sum(//measure[@type = 'textblockLeaves']/@quantity) * 2">
                                             <xsl:text>digitized</xsl:text>
                                         </xsl:when>
                                         <xsl:otherwise>
                                             <xsl:text>digitized_partly</xsl:text>
                                         </xsl:otherwise>
-                                    </xsl:choose>
+                                    </xsl:choose>-->
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <xsl:text>not_digitized</xsl:text>
@@ -58,21 +59,6 @@
                                 <xsl:text>)</xsl:text>
                             </xsl:otherwise>
                         </xsl:choose>
-                        <xsl:if test="//altIdentifier/idno[@type = 'formerShelfmark']">
-                            <xsl:text> (Olim </xsl:text>
-                            <xsl:for-each select="//altIdentifier/idno[@type = 'formerShelfmark']">
-                                <xsl:choose>
-                                    <xsl:when test="position() != last()">
-                                        <xsl:value-of select="."/>
-                                        <xsl:text>; </xsl:text>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:value-of select="."/>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                            </xsl:for-each>
-                            <xsl:text>)</xsl:text>
-                        </xsl:if>
                         <!--<xsl:if test="//msIdentifier/altIdentifier/idno[@subtype = 'Access']">
                             <xsl:text> (</xsl:text>
                             <xsl:value-of select="//msIdentifier/altIdentifier/idno[@subtype = 'Access']"/>
@@ -81,9 +67,9 @@
                     </h1>
                 </div>
                 <div>
-                    <h2>
+                    <h1 class="small">
                         <xsl:value-of select="//msDesc/head"/>
-                    </h2>
+                    </h1>
                     <p>
                         <xsl:if test="//origPlace">
                             <xsl:for-each select="distinct-values(//origPlace/placeName)">
@@ -98,15 +84,18 @@
                         </xsl:if>
                         <xsl:if test="//origDate">
                             <xsl:apply-templates select="distinct-values(//origDate)"/>
+                            <xsl:if test="//origDate[@cert = 'low']">
+                                <xsl:text> (?)</xsl:text>
+                            </xsl:if>
                         </xsl:if>
                     </p>
                     <p>
                         <xsl:for-each select="distinct-values(//msPart//supportDesc/@material)">
                             <xsl:if test=". = 'paper'">
-                                papper
+                                <xsl:text>papper</xsl:text>
                             </xsl:if>
                             <xsl:if test=". = 'parchment'">
-                                pergament
+                                <xsl:text>pergament</xsl:text>
                             </xsl:if>
                         </xsl:for-each>
                         <xsl:for-each select="distinct-values(//msFrag//supportDesc/@material)">
@@ -123,7 +112,15 @@
                             <xsl:number format="i" value="//measure[@type = 'leftFlyleaves']/@quantity"/>
                             <xsl:text>, </xsl:text>
                         </xsl:if>
-                        <xsl:value-of select="sum(//measure[@type = 'textblockLeaves']/@quantity)"/>
+                        <!--                        <xsl:value-of select="//measure[@type = 'textblockLeaves']/@quantity" separator=", "/>-->
+                        <xsl:choose>
+                            <xsl:when test="count(//msPart) eq 1 and not(matches(//measure[@type = 'textblockLeaves']/@quantity, '^\d{1,4}$'))">
+                                <xsl:value-of select="//measure[@type = 'textblockLeaves']/@quantity"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="sum(//measure[@type = 'textblockLeaves']/@quantity)"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
                         <xsl:if test="//measure[@type = 'rightFlyleaves' and @quantity ge '1']">
                             <xsl:text>, </xsl:text>
                             <xsl:number format="i" value="//measure[@type = 'rightFlyleaves']/@quantity"/>
@@ -155,49 +152,54 @@
                         <p>
                             <xsl:value-of select="count(//msPart)"/>
                             <xsl:text> </xsl:text>
-                            enheter
+                            <xsl:text>enheter</xsl:text>
                         </p>
                     </xsl:if>
                     <p>
                         <xsl:if test="//msContents/textLang/@mainLang = 'grc'">
-                            Grekiska
+                            <xsl:text>Grekiska</xsl:text>
                         </xsl:if>
                         <xsl:if test="//msContents/textLang/@mainLang = 'la'">
-                            Latin
+                            <xsl:text>Latin</xsl:text>
                         </xsl:if>
                         <xsl:if test="//msContents/textLang/@mainLang = 'non-swe'">
-                            Fornsvenska
+                            <xsl:text>Fornsvenska</xsl:text>
                         </xsl:if>
                         <xsl:if test="//msContents/textLang/@mainLang = 'sv'">
-                            Svenska
+                            <xsl:text>Svenska</xsl:text>
                         </xsl:if>
                     </p>
                 </div>
             </section>
             <section class="msContents panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">
+                    <h2 class="panel-title">
                         <a data-toggle="collapse" href="#msContents" aria-expanded="false" aria-controls="msContents" class="collapsed">
-                            Innehåll
+                            <xsl:text>Innehåll</xsl:text>
                         </a>
-                    </h3>
+                    </h2>
                 </div>
                 <div id="msContents" class="panel-collapse collapse" role="tabpanel" aria-labelledby="msContents" aria-expanded="false">
                     <div class="panel-body">
                         <xsl:for-each select="//msPart">
-                            <xsl:if test="count(//msPart) gt 1">
-                                <h4>
-                                    Enhet
-                                    <xsl:text> </xsl:text>
-                                    <xsl:value-of select="msIdentifier/idno[@type = 'codicologicalUnit']/text()"/>
-                                </h4>
+                            <div>
+                                <xsl:if test="count(//msPart) gt 1">
+                                    <h3>
+                                        <xsl:text>Enhet</xsl:text>
+                                        <xsl:text> </xsl:text>
+                                        <xsl:value-of select="msIdentifier/idno[@type = 'codicologicalUnit']/text()"/>
+                                    </h3>
+                                </xsl:if>
+                                <xsl:apply-templates select="msContents"/>
+                            </div>
+                            <xsl:if test="not(.[not(following-sibling::msPart)])">
+                                <hr class="hr-1"/>
                             </xsl:if>
-                            <xsl:apply-templates select="msContents"/>
                         </xsl:for-each>
                         <xsl:for-each select="//msFrag">
-                            <h4>
+                            <h3>
                                 <xsl:value-of select="msIdentifier/idno[@type = 'shelfmark']/text()"/>
-                            </h4>
+                            </h3>
                             <xsl:apply-templates select="msContents"/>
                         </xsl:for-each>
                     </div>
@@ -205,62 +207,114 @@
             </section>
             <section class="physDesc panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">
+                    <h2 class="panel-title">
                         <a data-toggle="collapse" href="#physDesc" aria-expanded="false" aria-controls="physDesc" class="collapsed">
-                            Fysisk beskrivning
+                            <xsl:text>Fysisk beskrivning</xsl:text>
                         </a>
-                    </h3>
+                    </h2>
                 </div>
                 <div id="physDesc" class="panel-collapse collapse" role="tabpanel" aria-labelledby="physDesc" aria-expanded="false" style="height: 0px;">
                     <div class="panel-body">
+                        <xsl:if test="//support[string-length(.) != 0]">
+                            <div>
+                                <h3>
+                                    <xsl:text>Skriftunderlag</xsl:text>
+                                </h3>
+                                <xsl:for-each select="//support">
+                                    <div>
+                                        <xsl:choose>
+                                            <xsl:when test="ancestor::msPart">
+                                                <xsl:choose>
+                                                    <xsl:when test="count(//msPart) gt 1">
+                                                        <h4>
+                                                            <xsl:text>Enhet</xsl:text>
+                                                            <xsl:text> </xsl:text>
+                                                            <xsl:number count="msPart"/>
+                                                        </h4>
+                                                    </xsl:when>
+                                                    <xsl:otherwise>
+                                                        <h4>
+                                                            <xsl:text>Textblock</xsl:text>
+                                                        </h4>
+                                                    </xsl:otherwise>
+                                                </xsl:choose>
+                                                <xsl:apply-templates select="p"/>
+                                            </xsl:when>
+                                            <xsl:when test="//msFrag">
+                                                <h4>
+                                                    <xsl:value-of select="ancestor::msFrag/msIdentifier/idno[@type = 'shelfmark']/text()"/>
+                                                </h4>
+                                                <xsl:apply-templates select="p"/>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <h4>
+                                                    <xsl:text>Försättsblad</xsl:text>
+                                                </h4>
+                                                <xsl:apply-templates select="p"/>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                    </div>
+                                </xsl:for-each>
+                                <hr class="hr-2"/>
+                            </div>
+                        </xsl:if>
                         <xsl:if test="//foliation[string-length(.) != 0]">
                             <div>
-                                <h4>
-                                    Foliering
-                                </h4>
+                                <h3>
+                                    <xsl:text>Foliering</xsl:text>
+                                </h3>
                                 <xsl:for-each select="//foliation">
                                     <xsl:choose>
                                         <xsl:when test="ancestor::msPart">
-                                            <p>
+                                            <div>
                                                 <xsl:if test="count(//msPart) gt 1">
-                                                    <h5>
-                                                        Enhet
+                                                    <h4>
+                                                        <xsl:text>Enhet</xsl:text>
                                                         <xsl:text> </xsl:text>
                                                         <xsl:number count="msPart"/>
-                                                    </h5>
+                                                    </h4>
                                                 </xsl:if>
                                                 <xsl:apply-templates/>
-                                            </p>
+                                            </div>
                                         </xsl:when>
                                         <xsl:otherwise>
-                                            <p>
+                                            <div>
                                                 <xsl:apply-templates/>
-                                            </p>
+                                            </div>
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:for-each>
-
                             </div>
-                            <hr/>
+                            <hr class="hr-2"/>
                         </xsl:if>
                         <xsl:if test="//collation/formula[string-length(.) != 0] or //collation/catchwords or //collation/signatures">
                             <div>
-                                <h4>
-                                    Läggstruktur
-                                </h4>
+                                <h3>
+                                    <xsl:text>Läggstruktur</xsl:text>
+                                </h3>
                                 <xsl:for-each select="//collation">
                                     <xsl:choose>
                                         <xsl:when test="ancestor::msPart">
-                                            <p>
-                                                <xsl:if test="count(//msPart) gt 1">
-                                                    <h5>
-                                                        Enhet
-                                                        <xsl:text> </xsl:text>
-                                                        <xsl:number count="msPart"/>
-                                                    </h5>
-                                                </xsl:if>
+                                            <div>
+                                                <xsl:choose>
+                                                    <xsl:when test="count(//msPart) gt 1">
+                                                        <h4>
+                                                            <xsl:text>Enhet</xsl:text>
+                                                            <xsl:text> </xsl:text>
+                                                            <xsl:number count="msPart"/>
+                                                        </h4>
+                                                    </xsl:when>
+                                                    <xsl:otherwise>
+                                                        <h4>
+                                                            <xsl:text>Textblock</xsl:text>
+                                                        </h4>
+                                                    </xsl:otherwise>
+                                                </xsl:choose>
                                                 <xsl:apply-templates/>
-                                            </p>
+                                            </div>
+                                            <xsl:if test="not(.[ancestor::msPart[not(following-sibling::msPart)]])">
+                                                <hr class="hr-1"/>
+                                            </xsl:if>
                                             <!--<xsl:if test="position() != last()">
                                                 <xsl:apply-templates select="physDesc//collation/formula" />
                                                 <xsl:text>| </xsl:text>
@@ -271,262 +325,209 @@
                                             </xsl:if>-->
                                         </xsl:when>
                                         <xsl:otherwise>
-                                            <p>
-                                                <h5>Försättsblad: </h5>
+                                            <div>
+                                                <h4>
+                                                    <xsl:text>Försättsblad</xsl:text>
+                                                </h4>
                                                 <xsl:apply-templates/>
-                                            </p>
+                                            </div>
+                                            <hr class="hr-1"/>
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:for-each>
-                                <hr/>
+                                <hr class="hr-2"/>
                             </div>
                         </xsl:if>
                         <xsl:if test="//supportDesc/condition">
                             <div>
-                                <h4>
-                                    Tillstånd
-                                </h4>
+                                <h3>
+                                    <xsl:text>Skick</xsl:text>
+                                </h3>
                                 <xsl:for-each select="//supportDesc/condition">
                                     <xsl:choose>
                                         <xsl:when test="ancestor::msPart">
-                                            <p>
+                                            <div>
                                                 <xsl:if test="count(//msPart) gt 1">
-                                                    <h5>
-                                                        Enhet
+                                                    <h4>
+                                                        <xsl:text>Enhet</xsl:text>
                                                         <xsl:text> </xsl:text>
                                                         <xsl:number count="msPart"/>
-                                                    </h5>
+                                                    </h4>
                                                 </xsl:if>
                                                 <xsl:apply-templates/>
-                                            </p>
+                                            </div>
                                         </xsl:when>
                                         <xsl:otherwise>
-                                            <p>
-                                                <h5>Försättsblad: </h5>
+                                            <div>
+                                                <h4>
+                                                    <xsl:text>Försättsblad</xsl:text>: </h4>
                                                 <xsl:apply-templates/>
-                                            </p>
+                                            </div>
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:for-each>
-                                <hr/>
-                            </div>
-                        </xsl:if>
-                        <!--<div>
-                            <h4>Signatures: </h4>
-                            <xsl:for-each select="//signatures">
-                                <xsl:choose>
-                                    <xsl:when test="//signatures[contains(., 'none')]">
-                                        <xsl:choose>
-                                            <xsl:when test="following-sibling::msPart[//signatures[not(contains(., 'none'))]]">
-                                                <p>
-                                                    <h5>Unit <xsl:number count="msPart" format="I" />: </h5> TEST </p>
-                                            </xsl:when>
-                                        </xsl:choose>
-
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <p>
-                                            <h5>Unit <xsl:number count="msPart" format="I" />: </h5>
-                                            <xsl:apply-templates select="." />
-                                        </p>
-                                    </xsl:otherwise>
-
-                                </xsl:choose>
-                            </xsl:for-each>
-                        </div>
-                        <div>
-                            <h4>Catchwords: </h4>
-                            <xsl:for-each select="//catchwords">
-                                <p>
-                                    <h5>Unit <xsl:number count="msPart" format="I" />: </h5>
-                                    <xsl:apply-templates select="." />
-                                </p>
-                            </xsl:for-each>
-                        </div>-->
-                        <xsl:if test="//support[string-length(.) != 0]">
-                            <div>
-                                <h4>
-                                    Material
-                                </h4>
-                                <xsl:for-each select="//support">
-                                    <xsl:choose>
-                                        <xsl:when test="ancestor::msPart">
-                                            <xsl:choose>
-                                                <xsl:when test="count(//msPart) gt 1">
-                                                    <h5>
-                                                        Enhet
-                                                        <xsl:text> </xsl:text>
-                                                        <xsl:number count="msPart"/>
-                                                    </h5>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                    <h5>
-                                                        Inlaga
-                                                    </h5>
-                                                </xsl:otherwise>
-                                            </xsl:choose>
-                                            <xsl:apply-templates/>
-                                        </xsl:when>
-                                        <xsl:when test="//msFrag">
-                                            <h5>
-                                                <xsl:value-of select="ancestor::msFrag/msIdentifier/idno[@type = 'shelfmark']/text()"/>
-                                            </h5>
-                                            <xsl:apply-templates/>
-                                        </xsl:when>
-                                        <xsl:otherwise>
-                                            <h5>
-                                                Försättsblad
-                                            </h5>
-                                            <xsl:apply-templates/>
-                                        </xsl:otherwise>
-                                    </xsl:choose>
-                                </xsl:for-each>
-                                <hr/>
-                            </div>
-                        </xsl:if>
-                        <xsl:if test="//handDesc[string-length(.) != 0]">
-                            <div>
-                                <h4>
-                                    Skrift
-                                </h4>
-                                <xsl:for-each select="//handDesc">
-                                    <xsl:choose>
-                                        <xsl:when test="ancestor::msPart">
-                                            <p>
-                                                <xsl:if test="count(//msPart) gt 1">
-                                                    <h5>
-                                                        Enhet
-                                                        <xsl:text> </xsl:text>
-                                                        <xsl:number count="msPart"/>
-                                                    </h5>
-                                                </xsl:if>
-                                                <xsl:apply-templates select="handNote"/>
-                                            </p>
-                                        </xsl:when>
-                                        <xsl:when test="//msFrag">
-                                            <p>
-                                                <h5>
-                                                    <xsl:value-of select="ancestor::msFrag/msIdentifier/idno[@type = 'shelfmark']/text()"/>
-                                                </h5>
-                                            </p>
-                                            <xsl:apply-templates/>
-                                        </xsl:when>
-                                        <xsl:otherwise>
-                                            <p>
-                                                <h5>Inlaga: </h5>
-                                                <xsl:apply-templates select="handNote"/>
-                                            </p>
-                                        </xsl:otherwise>
-                                    </xsl:choose>
-                                </xsl:for-each>
-                                <hr/>
-                            </div>
-                        </xsl:if>
-                        <xsl:if test="//decoDesc[string-length(.) != 0]">
-                            <div>
-                                <h4>
-                                    Dekorationer
-                                </h4>
-                                <xsl:for-each select="//decoDesc">
-                                    <xsl:choose>
-                                        <xsl:when test="ancestor::msPart">
-                                            <p>
-                                                <xsl:if test="count(//msPart) gt 1">
-                                                    <h5>
-                                                        Enhet
-                                                        <xsl:text> </xsl:text>
-                                                        <xsl:number count="msPart"/>
-                                                    </h5>
-                                                </xsl:if>
-                                                <xsl:apply-templates select="decoNote | p"/>
-                                            </p>
-                                        </xsl:when>
-                                        <xsl:otherwise>
-                                            <p>
-                                                <h5>Inlaga: </h5>
-                                                <xsl:apply-templates select="decoNote | p"/>
-                                            </p>
-                                        </xsl:otherwise>
-                                    </xsl:choose>
-                                </xsl:for-each>
-                                <hr/>
-                            </div>
-                        </xsl:if>
-                        <xsl:if test="//additions[string-length(.) != 0]">
-                            <div>
-                                <h4>
-                                    Tillägg
-                                </h4>
-                                <xsl:for-each select="//additions">
-                                    <xsl:choose>
-                                        <xsl:when test="ancestor::msPart">
-                                            <xsl:if test="count(//msPart) gt 1">
-                                                <h5>
-                                                    Enhet
-                                                    <xsl:text> </xsl:text>
-                                                    <xsl:number count="msPart"/>
-                                                </h5>
-                                            </xsl:if>
-                                            <xsl:if test="count(//msPart) eq 1">
-                                                <h5>
-                                                    Inlaga
-                                                </h5>
-                                            </xsl:if>
-                                            <xsl:apply-templates/>
-                                        </xsl:when>
-                                        <xsl:otherwise>
-                                            <h5>
-                                                Försättsblad
-                                            </h5>
-                                            <xsl:apply-templates/>
-                                        </xsl:otherwise>
-                                    </xsl:choose>
-                                </xsl:for-each>
-                                <hr/>
+                                <hr class="hr-2"/>
                             </div>
                         </xsl:if>
                         <xsl:if test="//layoutDesc[string-length(.) != 0]">
                             <div>
-                                <h4>
-                                    Layout
-                                </h4>
+                                <h3>
+                                    <xsl:text>Layout</xsl:text>
+                                </h3>
                                 <xsl:for-each select="//layoutDesc">
                                     <xsl:choose>
                                         <xsl:when test="ancestor::msPart">
                                             <div>
                                                 <xsl:if test="count(//msPart) gt 1">
-                                                    <h5>
-                                                        Enhet
+                                                    <h4>
+                                                        <xsl:text>Enhet</xsl:text>
                                                         <xsl:text> </xsl:text>
                                                         <xsl:number count="msPart"/>
-                                                    </h5>
+                                                    </h4>
                                                 </xsl:if>
-                                                <xsl:apply-templates/>
+                                                <xsl:apply-templates select="layout"/>
                                             </div>
                                         </xsl:when>
                                         <xsl:when test="//msFrag">
                                             <div>
-                                                <h5>
+                                                <h4>
                                                     <xsl:value-of select="ancestor::msFrag/msIdentifier/idno[@type = 'shelfmark']/text()"/>
-                                                </h5>
+                                                </h4>
+                                            </div>
+                                            <xsl:apply-templates select="layout"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <div>
+                                                <xsl:apply-templates select="layout"/>
+                                            </div>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:for-each>
+                                <hr class="hr-2"/>
+                            </div>
+                        </xsl:if>
+                        <xsl:if test="//handDesc[string-length(.) != 0]">
+                            <div>
+                                <h3>
+                                    <xsl:text>Skrift</xsl:text>
+                                </h3>
+                                <xsl:for-each select="//handDesc">
+                                    <xsl:choose>
+                                        <xsl:when test="ancestor::msPart">
+                                            <div>
+                                                <xsl:choose>
+                                                    <xsl:when test="count(//msPart) gt 1">
+                                                        <h4>
+                                                            <xsl:text>Enhet</xsl:text>
+                                                            <xsl:text> </xsl:text>
+                                                            <xsl:number count="msPart"/>
+                                                        </h4>
+                                                    </xsl:when>
+                                                    <xsl:otherwise>
+                                                        <h4>
+                                                            <xsl:text>Textblock</xsl:text>
+                                                        </h4>
+                                                    </xsl:otherwise>
+                                                </xsl:choose>
+                                                <xsl:apply-templates select="handNote"/>
+                                            </div>
+                                        </xsl:when>
+                                        <xsl:when test="//msFrag">
+                                            <div>
+                                                <h4>
+                                                    <xsl:value-of select="ancestor::msFrag/msIdentifier/idno[@type = 'shelfmark']/text()"/>
+                                                </h4>
                                             </div>
                                             <xsl:apply-templates/>
                                         </xsl:when>
                                         <xsl:otherwise>
                                             <div>
-                                                <xsl:apply-templates/>
+                                                <h4>
+                                                    <xsl:text>Bokblock</xsl:text>
+                                                </h4>
+                                                <xsl:apply-templates select="handNote"/>
                                             </div>
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:for-each>
-                                <hr/>
+                                <hr class="hr-2"/>
+                            </div>
+                        </xsl:if>
+                        <xsl:if test="//additions[string-length(.) != 0]">
+                            <div>
+                                <h3>
+                                    <xsl:text>Tillägg</xsl:text>
+                                </h3>
+                                <xsl:for-each select="//additions">
+                                    <xsl:choose>
+                                        <xsl:when test="ancestor::msPart">
+                                            <xsl:choose>
+                                                <xsl:when test="count(//msPart) gt 1">
+                                                    <h4>
+                                                        <xsl:text>Enhet</xsl:text>
+                                                        <xsl:text> </xsl:text>
+                                                        <xsl:number count="msPart"/>
+                                                    </h4>
+                                                </xsl:when>
+                                                <xsl:otherwise>
+                                                    <h4>
+                                                        <xsl:text>Textblock</xsl:text>
+                                                    </h4>
+                                                </xsl:otherwise>
+                                            </xsl:choose>
+                                            <xsl:apply-templates/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <h4>
+                                                <xsl:text>Försättsblad</xsl:text>
+                                            </h4>
+                                            <xsl:apply-templates/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:for-each>
+                                <hr class="hr-2"/>
+                            </div>
+                        </xsl:if>
+                        <xsl:if test="//decoDesc[string-length(.) != 0]">
+                            <div>
+                                <h3>
+                                    <xsl:text>Dekorationer</xsl:text>
+                                </h3>
+                                <xsl:for-each select="//decoDesc">
+                                    <xsl:choose>
+                                        <xsl:when test="ancestor::msPart">
+                                            <div>
+                                                <xsl:if test="count(//msPart) gt 1">
+                                                    <h4>
+                                                        <xsl:text>Enhet</xsl:text>
+                                                        <xsl:text> </xsl:text>
+                                                        <xsl:number count="msPart"/>
+                                                    </h4>
+                                                </xsl:if>
+                                                <xsl:apply-templates select="decoNote | p"/>
+                                            </div>
+                                            <xsl:if test="not(.[ancestor::msPart[not(following-sibling::msPart)]])">
+                                                <hr class="hr-1"/>
+                                            </xsl:if>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <div>
+                                                <h4>
+                                                    <xsl:text>Textblock</xsl:text>: </h4>
+                                                <xsl:apply-templates select="decoNote | p"/>
+                                            </div>
+                                            <hr class="hr-1"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:for-each>
+                                <hr class="hr-2"/>
                             </div>
                         </xsl:if>
                         <xsl:if test="//bindingDesc[string-length(.) != 0]">
                             <div>
-                                <h4>
-                                    Bokband
-                                </h4>
+                                <h3>
+                                    <xsl:text>Bokband</xsl:text>
+                                </h3>
                                 <xsl:apply-templates select="//bindingDesc"/>
                             </div>
                         </xsl:if>
@@ -535,11 +536,11 @@
             </section>
             <section class="history panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">
+                    <h2 class="panel-title">
                         <a data-toggle="collapse" href="#history" aria-expanded="false" aria-controls="history" class="collapsed">
-                            Historia
+                            <xsl:text>Historia</xsl:text>
                         </a>
-                    </h3>
+                    </h2>
                 </div>
                 <div id="history" class="panel-collapse collapse" role="tabpanel" aria-labelledby="history" aria-expanded="false" style="height: 0px;">
                     <div class="panel-body">
@@ -549,11 +550,11 @@
             </section>
             <section class="additional panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">
+                    <h2 class="panel-title">
                         <a data-toggle="collapse" href="#additional" aria-expanded="false" aria-controls="additional" class="collapsed">
-                            Bibliografi
+                            <xsl:text>Bibliografi</xsl:text>
                         </a>
-                    </h3>
+                    </h2>
                 </div>
                 <div id="additional" class="panel-collapse collapse" role="tabpanel" aria-labelledby="additional" aria-expanded="false" style="height: 0px;">
                     <div class="panel-body">
@@ -568,21 +569,21 @@
             </section>
             <section class="additional panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">
+                    <h2 class="panel-title">
                         <a data-toggle="collapse" href="#metadata" aria-expanded="false" aria-controls="metadata" class="collapsed">
-                            Metadata
+                            <xsl:text>Metadata</xsl:text>
                         </a>
-                    </h3>
+                    </h2>
                 </div>
                 <div id="metadata" class="panel-collapse collapse" role="tabpanel" aria-labelledby="metadata" aria-expanded="false" style="height: 0px;">
                     <div class="panel-body">
                         <div>
-                            <h4>
-                                Upphovsuppgift
-                            </h4>
+                            <h3>
+                                <xsl:text>Upphovsuppgift</xsl:text>
+                            </h3>
                             <div>
                                 <xsl:if test="//respStmt/resp[@key = 'cataloguer']">
-                                    Katalogisering
+                                    <xsl:text>Katalogisering</xsl:text>
                                     <xsl:text>: </xsl:text>
                                     <xsl:for-each select="//respStmt[resp[@key = 'cataloguer']]">
                                         <xsl:apply-templates select="persName"/>
@@ -594,7 +595,7 @@
                             </div>
                             <div>
                                 <xsl:if test="//respStmt/resp[@key = 'encoder']">
-                                    Kodning
+                                    <xsl:text>Kodning</xsl:text>
                                     <xsl:text>: </xsl:text>
                                     <xsl:for-each select="//respStmt[resp[@key = 'encoder']]">
                                         <xsl:apply-templates select="persName"/>
@@ -605,7 +606,7 @@
                                 </xsl:if>
                             </div>
                             <div>
-                                Sponsor
+                                <xsl:text>Sponsor</xsl:text>
                                 <xsl:text>: </xsl:text>
                                 <xsl:for-each select="//sponsor">
                                     <xsl:apply-templates select="."/>
@@ -615,7 +616,7 @@
                                 </xsl:for-each>
                             </div>
                             <div>
-                                Finansiär
+                                <xsl:text>Finansiär</xsl:text>
                                 <xsl:text>: </xsl:text>
                                 <xsl:for-each select="//funder">
                                     <xsl:apply-templates select="."/>
@@ -624,37 +625,44 @@
                                     </xsl:if>
                                 </xsl:for-each>
                             </div>
-                            <hr/>
+                            <hr class="hr-2"/>
                         </div>
                         <xsl:if test="//idno[@type = 'id'][@subtype = 'Diktyon'] or //idno[@type = 'id'][@subtype = 'Libris'] or //idno[@type = 'id'][@subtype = 'Alvin']">
                             <div>
-                                <h4>
-                                    Externa identifikatorer
-                                </h4>
+                                <h3>
+                                    <xsl:text>Externa identifikatorer</xsl:text>
+                                </h3>
                                 <xsl:if test="//idno[@type = 'id'][@subtype = 'Diktyon']">
                                     <div>
-                                        Diktyon ID
+                                        <xsl:text>Diktyon ID</xsl:text>
                                         <xsl:text>: </xsl:text>
-                                        <a href="http://pinakes.irht.cnrs.fr/notices/cote/{data(//idno[@type = 'id'][@subtype='Diktyon'])}/">
+                                        <a href="http://pinakes.irht.cnrs.fr/notices/cote/{data(//idno[@type = 'id'][@subtype='Diktyon'])}/" target="_blank">
                                             <xsl:value-of select="//idno[@type = 'id'][@subtype = 'Diktyon']"/>
                                         </a>
                                     </div>
                                 </xsl:if>
                                 <xsl:if test="//idno[@type = 'id'][@subtype = 'Libris']">
                                     <div>
-                                        Libris ID
+                                        <xsl:text>Libris ID</xsl:text>
                                         <xsl:text>: </xsl:text>
-                                        <a href="http://libris.kb.se/bib/{data(//idno[@type = 'id'][@subtype='Libris'])}">
+                                        <a href="http://libris.kb.se/bib/{data(//idno[@type = 'id'][@subtype='Libris'])}" target="_blank">
                                             <xsl:text>http://libris.kb.se/bib/</xsl:text>
                                             <xsl:value-of select="//idno[@type = 'id'][@subtype = 'Libris']"/>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <xsl:text>Digitalisering</xsl:text>
+                                        <xsl:text>: </xsl:text>
+                                        <a href="https://weburn.kb.se/metadata/{data(substring(//idno[@type = 'id'][@subtype='Libris'], 6))}/hs_{data(//idno[@type = 'id'][@subtype='Libris'])}.htm" target="_blank">
+                                            <xsl:text>PDF</xsl:text>
                                         </a>
                                     </div>
                                 </xsl:if>
                                 <xsl:if test="//idno[@type = 'id'][@subtype = 'Alvin']">
                                     <div>
-                                        Alvin ID
+                                        <xsl:text>Alvin ID</xsl:text>
                                         <xsl:text>: </xsl:text>
-                                        <a href="https://www.alvin-portal.org/alvin/view.jsf?pid={data(//idno[@type = 'id'][@subtype='Alvin'])}">
+                                        <a href="https://www.alvin-portal.org/alvin/view.jsf?pid={data(//idno[@type = 'id'][@subtype='Alvin'])}" target="_blank">
                                             <xsl:value-of select="//idno[@type = 'id'][@subtype = 'Alvin']"/>
                                         </a>
                                     </div>
@@ -662,16 +670,16 @@
                             </div>
                         </xsl:if>
                         <div>
-                            <h4>
-                                Interna identifikatorer
-                            </h4>
+                            <h3>
+                                <xsl:text>Interna identifikatorer</xsl:text>
+                            </h3>
                             <div>
-                                Permalänk
+                                <xsl:text>Permalänk</xsl:text>
                                 <xsl:text>: </xsl:text>
                                 <xsl:value-of select="//idno[@subtype = 'Manuscripta']"/>
                             </div>
                             <div>
-                                XML
+                                <xsl:text>XML</xsl:text>
                                 <xsl:text>: </xsl:text>
                                 <a href="/ms/{data(substring-after(TEI/@xml:id, 'ms-'))}.xml">
                                     <xsl:text>https://www.manuscripta.se/ms/</xsl:text>
@@ -682,33 +690,33 @@
                         </div>
                         <xsl:if test="//facsimile">
                             <div>
-                                IIIF manifest
+                                <xsl:text>IIIF manifest</xsl:text>
                                 <xsl:text>: </xsl:text>
                                 <a href="/iiif/{data(substring-after(TEI/@xml:id, 'ms-'))}/manifest.json">
                                     <xsl:text>https://www.manuscripta.se/iiif/</xsl:text>
                                     <xsl:value-of select="data(substring-after(TEI/@xml:id, 'ms-'))"/>
                                     <xsl:text>/manifest.json</xsl:text>
                                 </a>
-                                <hr/>
+                                <hr class="hr-2"/>
                             </div>
                         </xsl:if>
                         <div>
-                            <h4>
-                                Licens
-                            </h4>
+                            <h3>
+                                <xsl:text>Licens</xsl:text>
+                            </h3>
                             <div>
-                                Beskrivning
+                                <xsl:text>Beskrivning</xsl:text>
                                 <xsl:text>: </xsl:text>
                                 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"> CC BY 4.0</a>
                             </div>
                             <xsl:if test="//facsimile">
                                 <div>
-                                    Bilder
+                                    <xsl:text>Bilder</xsl:text>
                                     <xsl:text>: </xsl:text>
                                     <a href="https://creativecommons.org/publicdomain/zero/1.0/">Public Domain</a>
                                 </div>
                             </xsl:if>
-                            <hr/>
+                            <hr class="hr-2"/>
                         </div>
                         <div class="lastRevision">
                             <xsl:apply-templates select="//change"/>
@@ -721,7 +729,9 @@
 
     <!-- TEI -->
     <xsl:template match="acquisition">
-        <xsl:apply-templates/>
+        <div class="pb-2">
+            <xsl:apply-templates/>
+        </div>
     </xsl:template>
     <xsl:template match="add">
         <xsl:value-of select="."/>
@@ -803,8 +813,9 @@
     <xsl:template match="bibl">
         <xsl:choose>
             <xsl:when test="parent::msItem">
-                <div class="editions">
-                    <span class="head">Utgåva: </span>
+                <div class="pl-2">
+                    <label>
+                        <xsl:text>Utgåva</xsl:text>: </label>
                     <xsl:apply-templates select="title"/>
                     <xsl:text>, </xsl:text>
                     <xsl:choose>
@@ -842,6 +853,39 @@
                     <xsl:text>.</xsl:text>
                 </div>
             </xsl:when>
+            <xsl:when test="parent::listBibl/parent::msItem">
+                <xsl:apply-templates select="title"/>
+                <xsl:text>, </xsl:text>
+                <xsl:for-each select="citedRange">
+                    <xsl:if test="position() != last()">
+                        <xsl:apply-templates select="."/>
+                        <xsl:text>, </xsl:text>
+                    </xsl:if>
+                    <xsl:if test="position() = last()">
+                        <xsl:apply-templates select="."/>
+                    </xsl:if>
+                    <xsl:apply-templates/>
+                </xsl:for-each>
+                <xsl:if test="following-sibling::bibl">
+                    <xsl:text>; </xsl:text>
+                </xsl:if>
+                <xsl:if test="not(following-sibling::bibl)">
+                    <xsl:text>.</xsl:text>
+                </xsl:if>
+            </xsl:when>
+            <xsl:when test="ancestor::watermark">
+                <xsl:apply-templates select="title"/>
+                <xsl:text>, </xsl:text>
+                <xsl:for-each select="citedRange">
+                    <xsl:if test="position() != last()">
+                        <xsl:apply-templates select="."/>
+                        <xsl:text>, </xsl:text>
+                    </xsl:if>
+                    <xsl:if test="position() = last()">
+                        <xsl:apply-templates select="."/>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:when>
             <xsl:otherwise>
                 <xsl:apply-templates select="title"/>
                 <xsl:text>, </xsl:text>
@@ -877,7 +921,6 @@
                         </xsl:for-each>
                     </xsl:otherwise>
                 </xsl:choose>
-                <xsl:text>.</xsl:text>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -1183,13 +1226,13 @@
                     <xsl:when test="following-sibling::citedRange[@unit = 'volume']">
                         <xsl:choose>
                             <xsl:when test="@from = @to">
-                                vol.
+                                <xsl:text>vol.</xsl:text>
                                 <xsl:text> </xsl:text>
                                 <xsl:value-of select="@from"/>
                                 <xsl:text>, </xsl:text>
                             </xsl:when>
                             <xsl:otherwise>
-                                vol.
+                                <xsl:text>vol.</xsl:text>
                                 <xsl:text> </xsl:text>
                                 <xsl:value-of select="@from"/>–<xsl:value-of select="@to"/>
                                 <xsl:text>, </xsl:text>
@@ -1199,12 +1242,12 @@
                     <xsl:otherwise>
                         <xsl:choose>
                             <xsl:when test="@from = @to">
-                                vol.
+                                <xsl:text>vol.</xsl:text>
                                 <xsl:text> </xsl:text>
                                 <xsl:value-of select="@from"/>
                             </xsl:when>
                             <xsl:otherwise>
-                                vol.
+                                <xsl:text>vol.</xsl:text>
                                 <xsl:text> </xsl:text>
                                 <xsl:value-of select="@from"/>–<xsl:value-of select="@to"/>
                             </xsl:otherwise>
@@ -1214,28 +1257,68 @@
             </xsl:when>
             <xsl:when test="@unit = 'page'">
                 <xsl:choose>
+                    <xsl:when test="not(following-sibling::citedRange[@unit = 'page']) and not(preceding-sibling::citedRange[@unit = 'page'])">
+                        <xsl:if test="not(@from = @to)">
+                            <xsl:text>s.</xsl:text>
+                            <xsl:text> </xsl:text>
+                        </xsl:if>
+                        <xsl:if test="@from = @to">
+                            <xsl:text>s.</xsl:text>
+                            <xsl:text> </xsl:text>
+                        </xsl:if>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:if test="not(preceding-sibling::citedRange[@unit = 'page'])">
+                            <xsl:text>s.</xsl:text>
+                            <xsl:text> </xsl:text>
+                        </xsl:if>
+                    </xsl:otherwise>
+                </xsl:choose>
+                <xsl:choose>
                     <xsl:when test="@from = @to">
-                        s.
-                        <xsl:text> </xsl:text>
                         <xsl:value-of select="@from"/>
                     </xsl:when>
                     <xsl:otherwise>
-                        s.
-                        <xsl:text> </xsl:text>
                         <xsl:value-of select="@from"/>–<xsl:value-of select="@to"/>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:when>
             <xsl:when test="@unit = 'column'">
                 <xsl:choose>
+                    <xsl:when test="not(following-sibling::citedRange[@unit = 'column']) and not(preceding-sibling::citedRange[@unit = 'column'])">
+                        <xsl:if test="not(@from = @to)">
+                            <xsl:text>sp.</xsl:text>
+                            <xsl:text> </xsl:text>
+                        </xsl:if>
+                        <xsl:if test="@from = @to">
+                            <xsl:text>sp.</xsl:text>
+                            <xsl:text> </xsl:text>
+                        </xsl:if>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:if test="not(preceding-sibling::citedRange[@unit = 'column'])">
+                            <xsl:text>sp.</xsl:text>
+                            <xsl:text> </xsl:text>
+                        </xsl:if>
+                    </xsl:otherwise>
+                </xsl:choose>
+                <xsl:choose>
                     <xsl:when test="@from = @to">
-                        sp.
-                        <xsl:text> </xsl:text>
                         <xsl:value-of select="@from"/>
                     </xsl:when>
                     <xsl:otherwise>
-                        sp.
-                        <xsl:text> </xsl:text>
+                        <xsl:value-of select="@from"/>–<xsl:value-of select="@to"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:when>
+            <xsl:when test="@unit = 'folio'">
+                <xsl:choose>
+                    <xsl:when test="@from = @to">
+                        <xsl:text>f. </xsl:text>
+                        <xsl:value-of select="@from"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:text>ff. </xsl:text>
                         <xsl:value-of select="@from"/>–<xsl:value-of select="@to"/>
                     </xsl:otherwise>
                 </xsl:choose>
@@ -1247,22 +1330,42 @@
             <xsl:when test="@unit = 'number'">
                 <xsl:choose>
                     <xsl:when test="@from = @to">
-                        nr
+                        <xsl:text>nr</xsl:text>
                         <xsl:text> </xsl:text>
                         <xsl:value-of select="@from"/>
                     </xsl:when>
                     <xsl:otherwise>
-                        nr
+                        <xsl:text>nr</xsl:text>
                         <xsl:text> </xsl:text>
                         <xsl:value-of select="@from"/>–<xsl:value-of select="@to"/>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:when>
+            <xsl:when test="@unit = 'plate'">
+                <xsl:choose>
+                    <xsl:when test="@from = @to">
+                        <xsl:text>plansch</xsl:text>
+                        <xsl:text> </xsl:text>
+                        <xsl:value-of select="@from"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:text>plansch</xsl:text>
+                        <xsl:text> </xsl:text>
+                        <xsl:value-of select="@from"/>–<xsl:value-of select="@to"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:when>
+            <xsl:when test="ancestor::watermark">
+                <xsl:value-of select="."/>
+            </xsl:when>
             <xsl:otherwise>
                 <xsl:value-of select="."/>
-                <!--<xsl:apply-templates />-->
+                <!--                <xsl:apply-templates />-->
             </xsl:otherwise>
         </xsl:choose>
+        <!--<xsl:if test="not(following::citedRange)">
+            <xsl:text>.</xsl:text>
+        </xsl:if>-->
     </xsl:template>
     <xsl:template match="binding">
         <xsl:apply-templates/>
@@ -1274,14 +1377,15 @@
     <xsl:template match="catchwords">
         <xsl:if test="string-length(.) != 0">
             <div>
-                <h6>Kustoder: </h6>
+                <label>
+                    <xsl:text>Kustoder</xsl:text>: </label>
                 <xsl:apply-templates/>
             </div>
         </xsl:if>
     </xsl:template>
     <xsl:template match="change">
         <xsl:if test="position() = 1">
-            Senast ändrad
+            <xsl:text>Senast ändrad</xsl:text>
             <xsl:text>: </xsl:text>
             <xsl:value-of select="@when"/>
         </xsl:if>
@@ -1291,18 +1395,21 @@
         <xsl:apply-templates/>
     </xsl:template>
     <xsl:template match="collation/p">
-        <h6>Anmärkning: </h6>
+        <label>
+            <xsl:text>Anmärkning</xsl:text>: </label>
         <xsl:apply-templates/>
     </xsl:template>
     <xsl:template match="colophon">
-        <div class="colophon">
-            <span class="head">Kolofon: </span>
+        <div class="pl-2">
+            <label>
+                <xsl:text>Kolofon</xsl:text>: </label>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     <xsl:template match="condition">
         <div>
-            <h6>Tillstånd: </h6>
+            <label>
+                <xsl:text>Skick</xsl:text>: </label>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -1335,6 +1442,9 @@
                     </xsl:if>
                 </xsl:otherwise>
             </xsl:choose>
+            <xsl:if test="@cert = 'low'">
+                <xsl:text> (?)</xsl:text>
+            </xsl:if>
         </span>
     </xsl:template>
     <xsl:template match="decoDesc">
@@ -1343,28 +1453,36 @@
     <xsl:template match="decoNote">
         <div>
             <xsl:if test="@type = 'bookmarks'">
-                <h6>Bokmärken: </h6>
+                <label>
+                    <xsl:text>Bokmärken</xsl:text>: </label>
             </xsl:if>
             <xsl:if test="@type = 'edges'">
-                <h6>Snitt: </h6>
+                <label>
+                    <xsl:text>Snitt</xsl:text>: </label>
             </xsl:if>
             <xsl:if test="@type = 'endbands'">
-                <h6>Kapitälband: </h6>
+                <label>
+                    <xsl:text>Kapitälband</xsl:text>: </label>
             </xsl:if>
             <xsl:if test="@type = 'illuminations'">
-                <h6>Illumineringar: </h6>
+                <label>
+                    <xsl:text>Illumineringar</xsl:text>: </label>
             </xsl:if>
             <xsl:if test="@type = 'image'">
-                <h6>Bild: </h6>
+                <label>
+                    <xsl:text>Bild</xsl:text>: </label>
             </xsl:if>
             <xsl:if test="@type = 'initials'">
-                <h6>Initialer: </h6>
+                <label>
+                    <xsl:text>Initialer</xsl:text>: </label>
             </xsl:if>
             <xsl:if test="@type = 'lombards'">
-                <h6>Lombarder: </h6>
+                <label>
+                    <xsl:text>Lombarder</xsl:text>: </label>
             </xsl:if>
             <xsl:if test="@type = 'tooling'">
-                <h6>Pärmstämplar: </h6>
+                <label>
+                    <xsl:text>Pärmstämplar</xsl:text>: </label>
             </xsl:if>
             <xsl:apply-templates/>
         </div>
@@ -1387,24 +1505,37 @@
     <!--  desc  -->
     <xsl:template match="dimensions">
         <xsl:if test="@type = 'written'">
-            <h6>Skriftyta: </h6>
+            <label>
+                <xsl:text>Skriftyta</xsl:text>: </label>
             <xsl:apply-templates/>
         </xsl:if>
         <xsl:if test="@type = 'binding'">
-            <h6>Mått på bokband: </h6>
+            <label>
+                <xsl:text>Mått på bokband</xsl:text>: </label>
             <xsl:apply-templates/>
         </xsl:if>
         <xsl:if test="@type = 'watermark'">
-            <h6>Mått på vattenmärke: </h6>
-            <xsl:apply-templates/>
+            <div>
+                <label>
+                    <xsl:text>Mått på vattenmärke</xsl:text>: </label>
+                <xsl:apply-templates/>
+            </div>
         </xsl:if>
         <xsl:if test="@type = 'chainLines'">
-            <h6>Kedjelinjer: </h6>
-            <xsl:apply-templates/>
+            <div>
+                <xsl:for-each select=".[@type = 'chainLines']">
+                    <label>
+                        <xsl:text>Kedjelinjer</xsl:text>: </label>
+                    <xsl:apply-templates select="width"/>
+                </xsl:for-each>
+            </div>
         </xsl:if>
         <xsl:if test="@type = 'leaf'">
-            <h6>Bladstorlek: </h6>
-            <xsl:apply-templates/>
+            <div>
+                <label>
+                    <xsl:text>Bladstorlek</xsl:text>: </label>
+                <xsl:apply-templates/>
+            </div>
         </xsl:if>
     </xsl:template>
     <!--  div -->
@@ -1421,33 +1552,40 @@
         <xsl:text>)</xsl:text>
     </xsl:template>
     <xsl:template match="explicit">
-        <div class="explicit">
-            <span class="head">Explicit: </span>
+        <div class="pl-2">
+            <label>
+                <xsl:text>Explicit</xsl:text>: </label>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    <!--  extent  -->
+    <xsl:template match="extent">
+        <xsl:apply-templates/>
+    </xsl:template>
     <!--  facsimile  -->
     <!--  fileDesc  -->
     <xsl:template match="filiation">
-        <div class="note">
+        <div class="pl-2">
             <xsl:if test="@type = 'protograph'">
-                <span class="head">Förlaga: </span>
+                <label>
+                    <xsl:text>Förlaga</xsl:text>: </label>
                 <xsl:apply-templates/>
             </xsl:if>
             <xsl:if test="@type = 'apograph'">
-                <span class="head">Avskrift: </span>
+                <label>
+                    <xsl:text>Avskrift</xsl:text>: </label>
                 <xsl:apply-templates/>
             </xsl:if>
             <xsl:if test="@type = 'siglum'">
-                <span class="head">Sigla: </span>
+                <label>
+                    <xsl:text>Sigla</xsl:text>: </label>
                 <xsl:apply-templates/>
             </xsl:if>
         </div>
     </xsl:template>
     <xsl:template match="finalRubric">
-        <div class="final-rubric">
-            <span class="head">Slutrubrik: </span>
+        <div class="pl-2">
+            <label>
+                <xsl:text>Slutrubrik</xsl:text>: </label>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -1469,7 +1607,8 @@
     <xsl:template match="formula">
         <xsl:if test="string-length(.) != 0">
             <div>
-                <h6>Formel: </h6>
+                <label>
+                    <xsl:text>Formel</xsl:text>: </label>
                 <xsl:apply-templates/>
             </div>
         </xsl:if>
@@ -1491,7 +1630,25 @@
     <!--  graphic  -->
     <!--  handDesc  -->
     <xsl:template match="handNote">
-        <xsl:apply-templates/>
+        <xsl:choose>
+            <xsl:when test="@sameAs">
+                <div class="pb-2">
+                    <h5>Hand <xsl:value-of select="substring-after(@sameAs, '#hand-')"/>
+                    </h5>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:otherwise>
+                <div class="pb-2">
+                    <h5>Hand <xsl:value-of select="substring-after(@xml:id, 'hand-')"/>
+                    </h5>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:otherwise>
+        </xsl:choose>
+        <xsl:if test="not(ancestor::msPart) or not(.[ancestor::msPart[not(following-sibling::msPart)]])">
+            <hr class="hr-1"/>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="head">
         <xsl:apply-templates/>
@@ -1522,63 +1679,89 @@
     </xsl:template>
     <xsl:template name="history" match="history">
         <xsl:if test="//origin">
-            <div class="origin">
-                <h4>
-                    Ursprung
-                </h4>
-                <p>
-                    <xsl:apply-templates select="//msDesc/history/origin"/>
-                </p>
+            <div>
+                <h3>
+                    <xsl:text>Ursprung</xsl:text>
+                </h3>
+                <xsl:if test="//msDesc/history/origin">
+                    <div>
+                        <xsl:apply-templates select="//msDesc/history/origin"/>
+                    </div>
+                </xsl:if>
                 <xsl:for-each select="//msPart/history/origin">
-                    <p>
-                        <h5>
-                            Enhet
-                            <xsl:text> </xsl:text>
-                            <xsl:number count="msPart"/>
-                        </h5>
+                    <div>
+                        <xsl:if test="count(//msPart) gt 1">
+                            <h4>
+                                <xsl:text>Enhet</xsl:text>
+                                <xsl:text> </xsl:text>
+                                <xsl:number count="msPart"/>
+                            </h4>
+                        </xsl:if>
                         <xsl:apply-templates select="."/>
-                    </p>
+                    </div>
                 </xsl:for-each>
                 <xsl:for-each select="//msFrag/history/origin">
-                    <p>
-                        <h5>
+                    <div>
+                        <h4>
                             <xsl:value-of select="ancestor::msFrag/msIdentifier/idno[@type = 'shelfmark']/text()"/>
-                        </h5>
+                        </h4>
                         <xsl:apply-templates select="."/>
-                    </p>
+                    </div>
                 </xsl:for-each>
-                <hr/>
+                <hr class="hr-2"/>
             </div>
         </xsl:if>
         <xsl:if test="//provenance">
             <div>
-                <h4>
-                    Proveniens
-                </h4>
+                <h3>
+                    <xsl:text>Proveniens</xsl:text>
+                </h3>
                 <xsl:for-each select="//provenance">
                     <div>
                         <xsl:apply-templates select="."/>
                     </div>
                 </xsl:for-each>
-                <hr/>
+                <hr class="hr-2"/>
             </div>
         </xsl:if>
         <!--<div class="formerShelfmarks">
             <xsl:apply-templates select="//idno" />
         </div>-->
         <xsl:if test="//acquisition">
-            <div class="acquisition">
-                <h4>
-                    Förvärv
-                </h4>
+            <div>
+                <h3>
+                    <xsl:text>Förvärv</xsl:text>
+                </h3>
                 <xsl:apply-templates select="//acquisition"/>
             </div>
+            <xsl:if test="//altIdentifier/idno[@type = 'formerShelfmark']">
+                <hr class="hr-2"/>
+            </xsl:if>
+        </xsl:if>
+        <xsl:if test="//altIdentifier/idno[@type = 'formerShelfmark']">
+            <h3>
+                <xsl:text>Äldre signum</xsl:text>
+            </h3>
+            <xsl:for-each select="//altIdentifier/idno[@type = 'formerShelfmark']">
+                <div>
+                    <xsl:value-of select="."/>
+                </div>
+                <!--<xsl:choose>
+                    <xsl:when test="position() != last()">
+                        <xsl:value-of select="."/>
+                        <xsl:text>; </xsl:text>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="."/>
+                    </xsl:otherwise>
+                </xsl:choose>-->
+            </xsl:for-each>
         </xsl:if>
     </xsl:template>
     <xsl:template match="idno">
         <xsl:choose>
             <!--<xsl:when test="@type = 'formerShelfmark'">
-                <h4><msg:Former_shelfmarks />: </h4>
+                <h3><msg:Former_shelfmarks />: </h3>
                 <xsl:for-each select="idno">
                     <xsl:apply-templates />
                 </xsl:for-each>
@@ -1592,33 +1775,37 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="incipit">
-        <div class="incipit">
-            <span class="head">Incipit: </span>
+        <div class="pl-2">
+            <label>
+                <xsl:text>Incipit</xsl:text>: </label>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     <!-- institution -->
     <!-- item -->
     <xsl:template match="layout">
-        <div>
-            <p>
+        <div class="pb-2">
+            <h5>
+                <xsl:text>Layout</xsl:text>
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="position()"/>
+            </h5>
+            <div>
                 <xsl:apply-templates select="locus | locusGrp"/>
-            </p>
+            </div>
             <!-- Only show columns when greater than 1 -->
             <!--            <xsl:if test="@columns[. gt '1']">-->
             <xsl:if test="@columns">
-                <p>
-                    <h6>Kolumner: </h6>
+                <div>
+                    <label>
+                        <xsl:text>Kolumner</xsl:text>: </label>
                     <xsl:value-of select="@columns"/>
-                    <!--<xsl:text> </xsl:text>
-            <msg:columns/>
-            <xsl:text>,</xsl:text>-->
-                    <!--</xsl:if>-->
-                </p>
+                </div>
             </xsl:if>
-            <p>
-                <xsl:if test="@ruledLines">
-                    <h6>Linjerade rader: </h6>
+            <xsl:if test="@ruledLines">
+                <div>
+                    <label>
+                        <xsl:text>Linjerade rader</xsl:text>: </label>
                     <xsl:choose>
                         <!-- Check for min and max values -->
                         <xsl:when test="substring(@ruledLines, 4, 5)">
@@ -1628,14 +1815,15 @@
                             <xsl:value-of select="substring(@ruledLines, 1, 2)"/>
                         </xsl:otherwise>
                     </xsl:choose>
-                    <!--<xsl:text> </xsl:text>
+                </div>
+                <!--<xsl:text> </xsl:text>
                     <msg:ruled_lines/>
                     <xsl:text>,</xsl:text>-->
-                </xsl:if>
-            </p>
-            <p>
-                <xsl:if test="@writtenLines">
-                    <h6>Skrivna rader: </h6>
+            </xsl:if>
+            <xsl:if test="@writtenLines">
+                <div>
+                    <label>
+                        <xsl:text>Skrivna rader</xsl:text>: </label>
                     <xsl:choose>
                         <!-- Check for min and max values -->
                         <xsl:when test="substring(@writtenLines, 4, 5)">
@@ -1648,21 +1836,26 @@
                     <!--<xsl:text> </xsl:text>
                     <msg:written_lines/>
                     <xsl:text>. </xsl:text>-->
-                </xsl:if>
-            </p>
-            <p>
-                <xsl:apply-templates select="dimensions"/>
-            </p>
-            <p>
-                <xsl:apply-templates select="note"/>
-            </p>
+                </div>
+            </xsl:if>
+            <xsl:if test="dimensions">
+                <div>
+                    <xsl:apply-templates select="dimensions"/>
+                </div>
+            </xsl:if>
+            <xsl:if test="note">
+                <div>
+                    <xsl:apply-templates select="note"/>
+                </div>
+            </xsl:if>
         </div>
+        <xsl:if test="not(ancestor::msPart) or not(.[ancestor::msPart[not(following-sibling::msPart)]])">
+            <hr class="hr-1"/>
+        </xsl:if>
     </xsl:template>
-    <xsl:template match="layoutDesc">
-        <xsl:for-each select="layout">
-            <xsl:apply-templates/>
-        </xsl:for-each>
-    </xsl:template>
+    <!--<xsl:template match="layoutDesc">
+        <xsl:apply-templates/>
+    </xsl:template>-->
     <xsl:template match="lb">
         <xsl:text> | </xsl:text>
         <xsl:apply-templates/>
@@ -1688,8 +1881,9 @@
     <xsl:template match="listBibl">
         <xsl:choose>
             <xsl:when test="parent::msItem">
-                <div class="editions">
-                    <span class="head">Utgåvor: </span>
+                <div class="pl-2">
+                    <label>
+                        <xsl:text>Utgåvor</xsl:text>: </label>
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
@@ -1697,7 +1891,7 @@
                 <ul>
                     <xsl:for-each select="bibl">
                         <li>
-                            <xsl:apply-templates/>
+                            <xsl:apply-templates select="."/>
                         </li>
                     </xsl:for-each>
                 </ul>
@@ -1882,6 +2076,10 @@
         </xsl:choose>
     </xsl:template>-->
     <xsl:template match="locus">
+        <xsl:if test="parent::p/parent::support or parent::watermark/parent::p/parent::support or parent::layout">
+            <label>
+                <xsl:text>Lokalisering</xsl:text>: </label>
+        </xsl:if>
         <!--<xsl:variable name="locusFrom" select="if (@from[contains(.,':')]) then substring-before(@from,':') else if (@from[matches(.,'^\d{1,}$')]) then (concat(@from,'r')) else data(@from)" />
         <xsl:variable name="locusTo" select="if (@to[contains(.,':')]) then substring-before(@to,':') else if (@to[matches(.,'^\d{1,}$')]) then (concat(@to,'r')) else data(@to)" />-->
         <xsl:variable name="locusFrom" select="                 if (@from[contains(., ':')]) then                     substring-before(@from, ':')                 else                     if (@from[ends-with(., 'a')]) then                         substring-before(@from, 'a')                     else                         if (@from[ends-with(., 'b')]) then                             substring-before(@from, 'b')                         else                             if (@scheme = 'folios' and @from[not(contains(., 'r') or contains(., 'v'))]) then                                 (concat(@from, 'r'))                             else                                 data(@from)"/>
@@ -1891,11 +2089,10 @@
         <!--<xsl:variable name="locusToURL" select="//surface[@xml:id=concat(//TEI/@xml:id,'_',$locusTo)]/graphic/@url"/>-->
         <xsl:variable name="locusToIndex" select="count(//surface[@xml:id = concat(//TEI/@xml:id, '_', $locusTo)]/preceding-sibling::*)"/>
         <xsl:choose>
-            <xsl:when test="parent::msItem or ancestor::additions or ancestor::decoDesc or ancestor::layoutDesc">
+            <xsl:when test="parent::msItem or parent::handNote or ancestor::additions or ancestor::decoDesc">
                 <xsl:if test="@scheme = 'folios'">
                     <xsl:choose>
                         <xsl:when test="@from = @to">
-                            <!--<span class="locus">(f. <a onclick="$('#diva-wrapper').data('diva').gotoPageByName('{$locusFromURL}')" href="#">-->
                             <span class="locus">(f. <a class="facsimile" data-diva-index="{$locusFromIndex}" href="#">
                                     <xsl:value-of select="@from"/>
                                 </a>)<xsl:text/>
@@ -1914,14 +2111,14 @@
                 <xsl:if test="@scheme = 'pages'">
                     <xsl:choose>
                         <xsl:when test="@from = @to">
-                            <span class="locus">(s.
+                            <span class="locus">(<xsl:text>s.</xsl:text>
                                 <a class="facsimile" data-diva-index="{$locusFromIndex}" href="#">
                                     <xsl:value-of select="@from"/>
                                 </a>)<xsl:text/>
                             </span>
                         </xsl:when>
                         <xsl:otherwise>
-                            <span class="locus">(s.
+                            <span class="locus">(<xsl:text>s.</xsl:text>
                                 <a class="facsimile" data-diva-index="{$locusFromIndex}" href="#">
                                     <xsl:value-of select="@from"/>
                                 </a>–<a class="facsimile" data-diva-index="{$locusToIndex}" href="#">
@@ -2014,12 +2211,20 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="locusGrp">
+        <xsl:if test="parent::p/parent::support or parent::layout">
+            <label>
+                <xsl:text>Lokalisering</xsl:text>: </label>
+        </xsl:if>
         <xsl:choose>
             <xsl:when test="parent::watermark">
-                <xsl:if test="locus/@scheme = 'folios'">
+                <xsl:if test="locus/@scheme = 'folios' and not(preceding-sibling::locusGrp)">
+                    <label>
+                        <xsl:text>Lokalisering</xsl:text>: </label>
                     <xsl:text>ff. </xsl:text>
                 </xsl:if>
-                <xsl:if test="locus/@scheme = 'pages'">
+                <xsl:if test="locus/@scheme = 'pages' and not(preceding-sibling::locusGrp)">
+                    <label>
+                        <xsl:text>Lokalisering</xsl:text>: </label>
                     <xsl:text>pp. </xsl:text>
                 </xsl:if>
                 <!--<xsl:for-each select="locusGrp">-->
@@ -2078,7 +2283,7 @@
                 </xsl:if>
                 <!--<xsl:apply-templates />-->
             </xsl:when>
-            <xsl:when test="parent::msItem or ancestor::additions">
+            <xsl:when test="parent::msItem or parent::handNote or ancestor::additions">
                 <xsl:if test="locus/@scheme = 'folios'">
                     <xsl:text>(ff. </xsl:text>
                 </xsl:if>
@@ -2309,30 +2514,51 @@
         </xsl:choose>
     </xsl:template>-->
     <xsl:template match="material">
-        <xsl:apply-templates/>
+        <xsl:choose>
+            <xsl:when test="ancestor::support">
+                <div>
+                    <label>
+                        <xsl:text>Skriftunderlag</xsl:text>: </label>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     <xsl:template match="measure">
         <xsl:if test="@type = 'laidLinesIn20mm'">
-            <em>Lagda linjer per 20 mm : </em>
-            <xsl:if test="@quantity">
-                <xsl:value-of select="@quantity"/>
-            </xsl:if>
-            <xsl:if test="@min">
-                <xsl:value-of select="@min"/>
-                <xsl:text>/</xsl:text>
-                <xsl:value-of select="@max"/>
-            </xsl:if>
-            <xsl:if test="@unit = 'lines'">
-                <xsl:text> </xsl:text>
-                rader
-            </xsl:if>
+            <div>
+                <label>
+                    <xsl:text>Lagda linjer per 20 mm</xsl:text>: </label>
+                <xsl:if test="@quantity">
+                    <xsl:value-of select="@quantity"/>
+                </xsl:if>
+                <xsl:if test="@min">
+                    <xsl:value-of select="@min"/>
+                    <xsl:text>/</xsl:text>
+                    <xsl:value-of select="@max"/>
+                </xsl:if>
+                <xsl:if test="@unit = 'lines'">
+                    <xsl:text> </xsl:text>
+                    <xsl:text>rader</xsl:text>
+                </xsl:if>
+            </div>
         </xsl:if>
         <xsl:if test="@type = 'folding'">
-            <xsl:text> (</xsl:text>
-            <xsl:value-of select="."/>
-            <xsl:text> </xsl:text>
-            format
-            <xsl:text xml:space="preserve">)</xsl:text>
+            <div>
+                <label>
+                    <xsl:text>Format</xsl:text>: </label>
+                <xsl:value-of select="."/>
+            </div>
+        </xsl:if>
+        <xsl:if test="@type = 'textblockLeaves'">
+            <div>
+                <label>
+                    <xsl:text>Omfång</xsl:text>: </label>
+                <xsl:value-of select="@quantity"/>
+            </div>
         </xsl:if>
     </xsl:template>
     <!--<xsl:template match="msContents">
@@ -2395,7 +2621,7 @@
             <xsl:variable name="item-nr">
                 <xsl:number level="multiple" count="msItem" format="1.1"/>
             </xsl:variable>
-            <div class="msItem">
+            <div class="pb-4">
                 <span id="unit-{$unit-nr}-item-{$item-nr}" class="msItem_nr">
                     <xsl:value-of select="$item-nr"/>
                 </span>
@@ -2422,14 +2648,16 @@
     <xsl:template match="note">
         <xsl:choose>
             <xsl:when test="parent::msItem">
-                <div class="note">
-                    <span class="head">Anmärkning: </span>
+                <div class="pl-2">
+                    <label>
+                        <xsl:text>Anmärkning</xsl:text>: </label>
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
             <xsl:when test="parent::layout">
                 <div>
-                    <h6>Anmärkning: </h6>
+                    <label>
+                        <xsl:text>Anmärkning</xsl:text>: </label>
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
@@ -2440,25 +2668,29 @@
                 <xsl:choose>
                     <xsl:when test="@type = 'script'">
                         <div>
-                            <h6>Skrifttyp: </h6>
+                            <label>
+                                <xsl:text>Skrifttyp</xsl:text>: </label>
                             <xsl:apply-templates/>
                         </div>
                     </xsl:when>
                     <xsl:when test="@type = 'scribe'">
                         <div>
-                            <h6>Skrivare: </h6>
+                            <label>
+                                <xsl:text>Skrivare</xsl:text>: </label>
                             <xsl:apply-templates/>
                         </div>
                     </xsl:when>
                     <xsl:when test="@type = 'medium'">
                         <div>
-                            <h6>Skriftfärg: </h6>
+                            <label>
+                                <xsl:text>Skriftfärg</xsl:text>: </label>
                             <xsl:apply-templates/>
                         </div>
                     </xsl:when>
                     <xsl:otherwise>
                         <div>
-                            <h6>Anmärkning: </h6>
+                            <label>
+                                <xsl:text>Anmärkning</xsl:text>: </label>
                             <xsl:apply-templates/>
                         </div>
                     </xsl:otherwise>
@@ -2468,19 +2700,22 @@
                 <xsl:choose>
                     <xsl:when test="@type = 'description'">
                         <div>
-                            <h6>Beskrivning: </h6>
+                            <label>
+                                <xsl:text>Beskrivning</xsl:text>: </label>
                             <xsl:apply-templates/>
                         </div>
                     </xsl:when>
                     <xsl:when test="@type = 'binding-date'">
                         <div>
-                            <h6>Bokbandsdatering: </h6>
+                            <label>
+                                <xsl:text>Bokbandsdatering</xsl:text>: </label>
                             <xsl:apply-templates/>
                         </div>
                     </xsl:when>
                     <xsl:otherwise>
                         <div>
-                            <h6>Anmärkning: </h6>
+                            <label>
+                                <xsl:text>Anmärkning</xsl:text>: </label>
                             <xsl:apply-templates/>
                         </div>
                     </xsl:otherwise>
@@ -2488,7 +2723,8 @@
             </xsl:when>
             <xsl:otherwise>
                 <div>
-                    <h6>Anmärkning: </h6>
+                    <label>
+                        <xsl:text>Anmärkning</xsl:text>: </label>
                     <xsl:apply-templates/>
                 </div>
             </xsl:otherwise>
@@ -2519,8 +2755,28 @@
     </xsl:template>
     <xsl:template match="p">
         <xsl:choose>
-            <xsl:when test="parent::support or parent::additions">
+            <xsl:when test="parent::support">
+                <div class="pb-2">
+                    <h5>
+                        <xsl:text>Skriftunderlag</xsl:text>
+                        <xsl:text> </xsl:text>
+                        <xsl:value-of select="position()"/>
+                    </h5>
+                    <xsl:apply-templates/>
+                </div>
+                <xsl:if test="not(ancestor::msPart) or not(.[parent::support/ancestor::msPart[not(following-sibling::msPart)]])">
+                    <hr class="hr-1"/>
+                </xsl:if>
+            </xsl:when>
+            <xsl:when test="parent::additions or parent::decoDesc">
+                <div class="pb-2">
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="parent::binding and not(child::dimensions)">
                 <div>
+                    <label>
+                        <xsl:text>Beskrivning</xsl:text>: </label>
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
@@ -2611,7 +2867,9 @@
         </span>
     </xsl:template>
     <xsl:template match="provenance">
-        <xsl:apply-templates/>
+        <div class="pb-2">
+            <xsl:apply-templates/>
+        </div>
     </xsl:template>
     <xsl:template match="pubPlace">
         <span class="pubPlace">
@@ -2638,7 +2896,6 @@
     </xsl:template>
     <!-- repository -->
     <!-- resp -->
-    <!-- respStmt -->
     <xsl:template match="respStmt">
         <xsl:apply-templates/>
     </xsl:template>
@@ -2649,7 +2906,7 @@
                     <span aria-hidden="true">×</span>
                 </button>
                 <p>
-                    Denna beskrivning är ett preliminärt utkast och kan ändras utan förvarning
+                    <xsl:text>Denna beskrivning är ett preliminärt utkast och kan ändras utan förvarning</xsl:text>
                 </p>
             </div>
         </xsl:if>
@@ -2660,8 +2917,9 @@
         </span>
     </xsl:template>
     <xsl:template match="rubric">
-        <div class="rubric">
-            <span class="head">Rubrik: </span>
+        <div class="pl-2">
+            <label>
+                <xsl:text>Rubrik</xsl:text>: </label>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -2673,7 +2931,8 @@
     <xsl:template match="signatures">
         <xsl:if test="string-length(.) != 0">
             <div>
-                <h6>Läggsignaturer: </h6>
+                <label>
+                    <xsl:text>Läggsignaturer</xsl:text>: </label>
                 <xsl:apply-templates/>
             </div>
         </xsl:if>
@@ -2696,7 +2955,10 @@
         <!-- Mathematical right angle bracket U+27E9 -->
     </xsl:template>
     <xsl:template match="support">
-        <xsl:apply-templates/>
+        <xsl:for-each select="p">
+            <xsl:apply-templates/>
+        </xsl:for-each>
+
         <!--<xsl:if test="count(p) gt 1">
             <xsl:for-each select="p">
                 <xsl:number count="p" format="a" />
@@ -2707,7 +2969,7 @@
         <!--<xsl:apply-templates select="node()[not(self::watermark)]" />-->
         <!-- Excludes watermark -->
         <!--<div class="watermarks">
-            <h4>Watermarks: </h4>
+            <h3>Watermarks: </h3>
             <xsl:for-each select="p/watermark">
                 <p>
                     <span class="watermark_nr"><xsl:value-of select="@n" />. </span>
@@ -2784,10 +3046,16 @@
     <!-- teiHeader -->
     <xsl:template match="term">
         <xsl:choose>
-            <xsl:when test="@type = 'folding'">
-                <em>Format: </em>
-                <xsl:apply-templates/>
-                <xsl:text>. </xsl:text>
+            <xsl:when test="@type = 'watermarkMotif'">
+                <div>
+                    <label>
+                        <xsl:text>Motiv</xsl:text>: </label>
+                    <!--<xsl:apply-templates/>-->
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:when>
+            <xsl:when test="@type = 'proximity'">
+                <xsl:apply-templates select="node() | ref"/>                
             </xsl:when>
             <xsl:otherwise>
                 <xsl:apply-templates/>
@@ -2796,9 +3064,9 @@
     </xsl:template>
     <xsl:template match="text">
         <a name="{data(body/div/@xml:id)}"/>
-        <h3>
+        <h2>
             <xsl:value-of select="body/div/head/title"/>
-        </h3>
+        </h2>
         <xsl:text>(</xsl:text>
         <xsl:apply-templates select="body/div/head/locus"/>
         <xsl:text>) </xsl:text>
@@ -2930,11 +3198,32 @@
     </xsl:template>
     <xsl:template match="watermark">
         <!--        <xsl:if test="watermark[string-length(.) != 0]">-->
-        <div>
-            <span class="watermark_nr">Vattenmärke<xsl:text> </xsl:text>
-                <xsl:value-of select="@n"/>. </span>
-            <xsl:apply-templates/>
-        </div>
+        <xsl:choose>
+            <xsl:when test="parent::ref">
+                <a>
+                    <xsl:attribute name="href">
+                        <xsl:text>#watermark-</xsl:text>
+                        <xsl:value-of select="@n"/>
+                    </xsl:attribute>
+                    <xsl:text>Watermark </xsl:text>
+                    <xsl:value-of select="@n"/>
+                </a>
+            </xsl:when>
+            <xsl:otherwise>
+                <div class="pb-2 pl-2">
+                    <h6>
+                        <xsl:attribute name="id">
+                            <xsl:text>watermark-</xsl:text>
+                            <xsl:value-of select="@n"/>
+                        </xsl:attribute>
+                        <xsl:text>Vattenmärke</xsl:text>
+                        <xsl:text> </xsl:text>
+                        <xsl:value-of select="@n"/>
+                    </h6>
+                    <xsl:apply-templates/>
+                </div>
+            </xsl:otherwise>
+        </xsl:choose>
         <!--</xsl:if>-->
     </xsl:template>
     <xsl:template match="width">
@@ -2955,14 +3244,4 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <!--<xsl:template match="exist:match" priority="10">
-        <span class="hi">
-            <xsl:value-of select="."/>
-        </span>
-    </xsl:template>-->
-    <!--<xsl:template match="exist:match" priority="10">
-        <span style="background-color: yellow">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>-->
 </xsl:stylesheet>

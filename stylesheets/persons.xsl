@@ -7,31 +7,31 @@
     </xsl:template>
     <xsl:template match="addName">
         <div>
-            <h6>Additional name: </h6>
+            <label>Additional name: </label>
             <xsl:value-of select="."/>
         </div>
     </xsl:template>
     <xsl:template match="birth">
         <div>
-            <h6>Birth: </h6>
+            <label>Birth: </label>
             <xsl:value-of select="."/>
         </div>
     </xsl:template>
     <xsl:template match="death">
         <div>
-            <h6>Death: </h6>
+            <label>Death: </label>
             <xsl:value-of select="."/>
         </div>
     </xsl:template>
     <xsl:template match="forename">
         <div>
-            <h6>Forename: </h6>
+            <label>Forename: </label>
             <xsl:value-of select="."/>
         </div>
     </xsl:template>
     <xsl:template match="genName">
         <div>
-            <h6>Generational name: </h6>
+            <label>Generational name: </label>
             <xsl:value-of select="."/>
         </div>
     </xsl:template>
@@ -39,8 +39,8 @@
         <xsl:choose>
             <xsl:when test="parent::person">
                 <div>
-                    <h6>
-                        <xsl:value-of select="@subtype"/>: </h6>
+                    <label>
+                        <xsl:value-of select="@subtype"/>: </label>
                     <a href="{.}">
                         <xsl:value-of select="."/>
                     </a>
@@ -51,7 +51,7 @@
 
     <xsl:template match="nameLink">
         <div>
-            <h6>Name link: </h6>
+            <label>Name link: </label>
             <xsl:value-of select="."/>
         </div>
     </xsl:template>
@@ -59,20 +59,20 @@
     <xsl:template match="note">
         <xsl:if test="@xml:lang = 'en'">
             <div>
-                <h6>Note: </h6>
+                <label>Note: </label>
                 <xsl:apply-templates/>
             </div>
         </xsl:if>
         <xsl:if test="@xml:lang = 'sv'">
             <div>
-                <h6>Anteckning: </h6>
+                <label>Anteckning: </label>
                 <xsl:apply-templates/>
             </div>
         </xsl:if>
     </xsl:template>
     <xsl:template match="occupation">
         <div>
-            <h6>Occupation: </h6>
+            <label>Occupation: </label>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -91,43 +91,43 @@
     
     <xsl:template match="residence">
         <div>
-            <h6>Residence: </h6>
+            <label>Residence: </label>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
 
     <xsl:template match="roleName">
         <div>
-            <h6>Role name: </h6>
+            <label>Role name: </label>
             <xsl:value-of select="."/>
         </div>
     </xsl:template>
 
     <xsl:template match="surname">
         <div>
-            <h6>Surname: </h6>
+            <label>Surname: </label>
             <xsl:value-of select="."/>
         </div>
     </xsl:template>
 
     <xsl:template match="title">
-        <h3 class="page-header">
+        <h2 class="page-header">
             <xsl:value-of select="//titleStmt/title"/>
-        </h3>
+        </h2>
     </xsl:template>
 
     <xsl:template name="footer">
         <div>
             <div>
-                <h6>Manuscripta ID: </h6>
+                <label>Manuscripta ID: </label>
                 <xsl:value-of select="/TEI/@xml:id"/>
             </div>
             <div>
-                <h6>Stable URI: </h6>
+                <label>Stable URI: </label>
                 <xsl:value-of select="//publicationStmt/idno[@subtype = 'Manuscripta']"/>
             </div>
             <div>
-                <h6>XML: </h6>
+                <label>XML: </label>
                 <a href="/person/{data(substring-after(TEI/@xml:id, 'person-'))}.xml">
                     <xsl:text>https://www.manuscripta.se/person/</xsl:text>
                     <xsl:value-of select="data(substring-after(TEI/@xml:id, 'person-'))"/>
@@ -135,11 +135,11 @@
                 </a>
             </div>
             <div>
-                <h6>License: </h6>
+                <label>License: </label>
                 <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a>
             </div>
             <div>
-                <h6>Last revision: </h6>
+                <label>Last revision: </label>
                 <xsl:value-of select="//change/@when"/>
 
             </div>

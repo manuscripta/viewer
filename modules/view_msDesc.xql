@@ -30,15 +30,20 @@ declare function view:get-person($node as node(), $model as map(*)) as node() {
     let $displayURI := request:get-parameter('person', '')
     let $rec := doc(concat($config:data-root, "/id/person/", $displayURI))/tei:TEI
     return
-        <div class="col-md-12 col-lg-10">
+        <div
+            class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             {view:view-person-html($rec)}
             <h3>Associated Manuscripts</h3>
-            <table class='table table-striped'>
+            <table
+                class='table table-striped'>
                 <thead>
                     <tr>
-                        <th width='20%'>Repository</th>
-                        <th width='10%'>Shelfmark</th>
-                        <th width='70%'>Heading</th>
+                        <th
+                            width='20%'>Repository</th>
+                        <th
+                            width='10%'>Shelfmark</th>
+                        <th
+                            width='70%'>Heading</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -56,21 +61,26 @@ declare function view:get-place($node as node(), $model as map(*)) as node() {
     let $displayURI := request:get-parameter('place', '')
     let $rec := doc(concat($config:data-root, "/id/place/", $displayURI))/tei:TEI
     return
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <div
+            class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             {view:view-place-html($rec)}
             <h3>Associated Manuscripts</h3>
-            <table class='table table-striped'>
+            <table
+                class='table table-striped'>
                 <thead>
                     <tr>
-                        <th width='30%'>Repository</th>
-                        <th width='20%'>Shelfmark</th>
-                        <th width='50%'>Heading</th>
+                        <th
+                            width='30%'>Repository</th>
+                        <th
+                            width='20%'>Shelfmark</th>
+                        <th
+                            width='50%'>Heading</th>
                     </tr>
                 </thead>
                 <tbody>
                     {view:get-place-mss-ref($rec)}
                 </tbody>
-            </table>            
+            </table>
         </div>
 };
 
@@ -82,19 +92,42 @@ declare function view:get-bibl($node as node(), $model as map(*)) as node() {
     let $displayURI := request:get-parameter('bibl', '')
     let $rec := doc(concat($config:data-root, "/id/bibl/", $displayURI))/tei:TEI
     return
-        <div class="col-md-6 col-lg-6 split split-horizontal" id="bibl">
+        <div
+            class="col-md-6 col-lg-6 split split-horizontal"
+            id="bibl">
             {view:view-bibl-html($rec)}
             <h3>Associated Manuscripts</h3>
-            <table class='table table-striped'>
+            <table
+                class='table table-striped'>
                 <thead>
                     <tr>
-                        <th width='30%'>Repository</th>
-                        <th width='20%'>Shelfmark</th>
-                        <th width='50%'>Heading</th>
+                        <th
+                            width='30%'>Repository</th>
+                        <th
+                            width='20%'>Shelfmark</th>
+                        <th
+                            width='50%'>Heading</th>
                     </tr>
                 </thead>
                 <tbody>
                     {view:get-bibl-mss-ref($rec)}
+                </tbody>
+            </table>
+            <h3>Associated bibliographic works</h3>
+            <table
+                class='table table-striped'>
+                <thead>
+                    <tr>
+                        <th
+                            width='60%'>Title</th>
+                        <th
+                            width='20%'>Volume</th>
+                        <th
+                            width='20%'>Pages</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {view:get-bibl-ref($rec)}
                 </tbody>
             </table>
         </div>
@@ -108,15 +141,20 @@ declare function view:get-org($node as node(), $model as map(*)) as node() {
     let $displayURI := request:get-parameter('org', '')
     let $rec := doc(concat($config:data-root, "/id/org/", $displayURI))/tei:TEI
     return
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            {view:view-org-html($rec)}        
-        <h3>Associated Manuscripts</h3>
-            <table class='table table-striped'>
+        <div
+            class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            {view:view-org-html($rec)}
+            <h3>Associated Manuscripts</h3>
+            <table
+                class='table table-striped'>
                 <thead>
                     <tr>
-                        <th width='30%'>Repository</th>
-                        <th width='20%'>Shelfmark</th>
-                        <th width='50%'>Heading</th>
+                        <th
+                            width='30%'>Repository</th>
+                        <th
+                            width='20%'>Shelfmark</th>
+                        <th
+                            width='50%'>Heading</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -134,15 +172,20 @@ declare function view:get-work($node as node(), $model as map(*)) as node() {
     let $displayURI := request:get-parameter('work', '')
     let $rec := doc(concat($config:data-root, "/id/work/", $displayURI))/tei:TEI
     return
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <div
+            class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             {view:view-work-html($rec)}
             <h3>Associated Manuscripts</h3>
-            <table class='table table-striped'>
+            <table
+                class='table table-striped'>
                 <thead>
                     <tr>
-                        <th width='30%'>Repository</th>
-                        <th width='20%'>Shelfmark</th>
-                        <th width='50%'>Heading</th>
+                        <th
+                            width='30%'>Repository</th>
+                        <th
+                            width='20%'>Shelfmark</th>
+                        <th
+                            width='50%'>Heading</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -158,91 +201,120 @@ declare function view:view-work-html($rec as node()) {
 
 (:List manuscripts where bibl occurs:)
 declare function view:get-bibl-mss-ref($rec as node()) {
-    let $ref := $rec//tei:publicationStmt/tei:idno[@subtype = 'Manuscripta']    
-    for $mss in collection($config:data-root || "/msDescs")    
+    let $ref := $rec//tei:publicationStmt/tei:idno[@subtype = 'Manuscripta']
+    for $mss in collection($config:data-root || "/msDescs")
     let $repository := $mss//tei:repository
     let $shelfmark := $mss//tei:msIdentifier/tei:idno[@type = 'shelfmark']
     let $ManuscriptaID := $mss//tei:TEI/substring-after(@xml:id, 'ms-')
     let $head := $mss//tei:msDesc/tei:head
-    where $mss//*[tei:bibl/tei:title/@ref = $ref]
-    order by $repository, $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
-    return        
+        where $mss//*[tei:bibl/tei:title/@ref = $ref]
+        order by $repository,
+            $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
+    return
         <tr>
             <td>{$repository}</td>
-            <td><a href="../ms/{$ManuscriptaID}">{$shelfmark}</a></td>
+            <td><a
+                    href="../ms/{$ManuscriptaID}">{$shelfmark}</a></td>
             <td>{$head}</td>
-        </tr>        
+        </tr>
+};
+
+(:List manuscripts where bibl occurs:)
+declare function view:get-bibl-ref($rec as node()) {
+    let $ref := $rec//tei:publicationStmt/tei:idno[@subtype = 'Manuscripta']
+    for $bibl in collection($config:data-root || "/id/bibl")
+    let $ManuscriptaID := $bibl//tei:TEI/substring-after(@xml:id, 'bibl-')
+    let $title := $bibl//tei:titleStmt/tei:title/text()
+    let $biblScopeVolume := $bibl//tei:biblScope[@unit='vol']
+    let $biblScopePage := $bibl//tei:biblScope[@unit='page']
+        where $bibl//*[tei:biblStruct//tei:title/@ref = $ref]
+        order by $biblScopePage/@from collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
+    return
+        <tr>            
+            <td><a
+                    href="../bibl/{$ManuscriptaID}">{$title}</a></td>
+            <td>{data($biblScopeVolume/@from)}</td>
+            <td>{data($biblScopePage/@from)}-{data($biblScopePage/@to)}</td>
+        </tr>
 };
 
 (:List manuscripts where person occurs:)
 declare function view:get-person-mss-ref($rec as node()) {
-    let $ref := $rec//tei:publicationStmt/tei:idno[@subtype = 'Manuscripta']    
-    for $mss in collection($config:data-root || "/msDescs")    
+    let $ref := $rec//tei:publicationStmt/tei:idno[@subtype = 'Manuscripta']
+    for $mss in collection($config:data-root || "/msDescs")
     let $repository := $mss//tei:repository
     let $shelfmark := $mss//tei:msIdentifier/tei:idno[@type = 'shelfmark']
     let $ManuscriptaID := $mss//tei:TEI/substring-after(@xml:id, 'ms-')
-    let $head := $mss//tei:msDesc/tei:head    
-    where $mss//*[tei:persName/@ref = $ref]    
-    order by $repository, $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
-    return        
+    let $head := $mss//tei:msDesc/tei:head
+        where $mss//*[tei:persName/@ref = $ref]
+        order by $repository,
+            $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
+    return
         <tr>
             <td>{$repository}</td>
-            <td><a href="../ms/{$ManuscriptaID}">{$shelfmark}</a></td>
+            <td><a
+                    href="../ms/{$ManuscriptaID}">{$shelfmark}</a></td>
             <td>{$head}</td>
-        </tr>        
+        </tr>
 };
 
 (:List manuscripts where place occurs:)
 declare function view:get-place-mss-ref($rec as node()) {
-    let $ref := $rec//tei:publicationStmt/tei:idno[@subtype = 'Manuscripta']    
-    for $mss in collection($config:data-root || "/msDescs")    
+    let $ref := $rec//tei:publicationStmt/tei:idno[@subtype = 'Manuscripta']
+    for $mss in collection($config:data-root || "/msDescs")
     let $repository := $mss//tei:repository
     let $shelfmark := $mss//tei:msIdentifier/tei:idno[@type = 'shelfmark']
     let $ManuscriptaID := $mss//tei:TEI/substring-after(@xml:id, 'ms-')
-    let $head := $mss//tei:msDesc/tei:head    
-    where $mss//*[tei:placeName/@ref = $ref]    
-    order by $repository, $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
-    return        
+    let $head := $mss//tei:msDesc/tei:head
+        where $mss//*[tei:placeName/@ref = $ref]
+        order by $repository,
+            $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
+    return
         <tr>
             <td>{$repository}</td>
-            <td><a href="../ms/{$ManuscriptaID}">{$shelfmark}</a></td>
+            <td><a
+                    href="../ms/{$ManuscriptaID}">{$shelfmark}</a></td>
             <td>{$head}</td>
-        </tr>        
+        </tr>
 };
 
 (:List manuscripts where work occurs:)
 declare function view:get-work-mss-ref($rec as node()) {
-    let $ref := $rec//tei:publicationStmt/tei:idno[@subtype = 'Manuscripta']    
-    for $mss in collection($config:data-root || "/msDescs")    
+    let $ref := $rec//tei:publicationStmt/tei:idno[@subtype = 'Manuscripta']
+    for $mss in collection($config:data-root || "/msDescs")
     let $repository := $mss//tei:repository
     let $shelfmark := $mss//tei:msIdentifier/tei:idno[@type = 'shelfmark']
     let $ManuscriptaID := $mss//tei:TEI/substring-after(@xml:id, 'ms-')
-    let $head := $mss//tei:msDesc/tei:head    
-    where $mss//*[tei:msItem/tei:title/@ref = $ref]    
-    order by $repository, $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
-    return        
+    let $head := $mss//tei:msDesc/tei:head
+        where $mss//*[tei:msItem/tei:title/@ref = $ref]
+        order by $repository,
+            $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
+    return
         <tr>
             <td>{$repository}</td>
-            <td><a href="../ms/{$ManuscriptaID}">{$shelfmark}</a></td>
+            <td><a
+                    href="../ms/{$ManuscriptaID}">{$shelfmark}</a></td>
             <td>{$head}</td>
-        </tr>        
+        </tr>
 };
 
 (:List manuscripts where organization occurs:)
 declare function view:get-org-mss-ref($rec as node()) {
-    let $ref := $rec//tei:publicationStmt/tei:idno[@subtype = 'Manuscripta']    
-    for $mss in collection($config:data-root || "/msDescs")    
+    let $ref := $rec//tei:publicationStmt/tei:idno[@subtype = 'Manuscripta']
+    for $mss in collection($config:data-root || "/msDescs")
     let $repository := $mss//tei:repository
     let $shelfmark := $mss//tei:msIdentifier/tei:idno[@type = 'shelfmark']
     let $ManuscriptaID := $mss//tei:TEI/substring-after(@xml:id, 'ms-')
-    let $head := $mss//tei:msDesc/tei:head    
-    where $mss//*[tei:orgName/@ref = $ref]    
-    order by $repository, $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
-    return        
+    let $head := $mss//tei:msDesc/tei:head
+        where $mss//*[tei:orgName/@ref = $ref]
+        order by $repository,
+            $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
+    return
         <tr>
             <td>{$repository}</td>
-            <td><a href="../ms/{$ManuscriptaID}">{$shelfmark}</a></td>
+            <td><a
+                    href="../ms/{$ManuscriptaID}">{$shelfmark}</a></td>
             <td>{$head}</td>
-        </tr>        
+        </tr>
 };
 

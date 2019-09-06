@@ -33,25 +33,35 @@ h1 {
     font-size: 1.6em;
 }
 h2 {
+    font-size: 1.5em;
+}
+h3 {
     font-size: 1.4em;
+    font-variant: small-caps;
 }
 h4 {
     font-size: 1.2em;
 }
 h5 {
-    font-size: 1em;
-    font-weight: bold;    
+    font-size: 1.1em;
+    font-style: italic;
 }
 h6 {
     font-size: 1em;
+    font-style: italic;
+}
+label {
+    font-size: 1em;
     font-weight: bold;
-    /*font-style:italic;*/    
     display: inline;
 }
 .logotype {
     height: 100px;
     padding-top: 20px;
     padding-right: 20px;
+}
+.small {
+    font-size: 1.2em;
 }
 /* 
 * diva.css mods 
@@ -86,6 +96,36 @@ img.beta-image {
     float: left;
     top: 0px;
     left: 0px;
+}
+.pb-1 {
+    padding-bottom: 0.25em;
+}
+.pb-2 {
+    padding-bottom: 0.5em;
+}
+.pb-3 {
+    padding-bottom: 0.75em;
+}
+.pb-4 {
+    padding-bottom: 1em;
+}
+.pt-1 {
+    padding-top: 0.25em;
+}
+.pt-2 {
+    padding-top: 0.5em;
+}
+.pl-1 {
+    padding-left: 0.25em;
+}
+.pl-2 {
+    padding-left: 0.5em;
+}
+hr.hr-2 {
+    border-top: 1px solid #ddd;
+}
+hr.hr-2 {
+    border-top: 2px solid #ddd;
 }
 
 /* guidelines styles */

@@ -7,6 +7,8 @@
         <link rel="shortcut icon" href="resources/images/favicon.ico"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.28.5/css/theme.bootstrap_3.min.css" integrity="sha256-cerl+DYHeG2ZhV/9iueb8E+s7rubli1gsnKuMbKDvho=" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.28.5/css/jquery.tablesorter.pager.min.css" integrity="sha256-Db4i5PtehZw8eZMRwYlQ/ugoW3FORsqcn/ZWrlK2L4w=" crossorigin="anonymous"/>
         <link rel="stylesheet" type="text/css" href="resources/css/starter-template.css"/>
         <link rel="stylesheet" type="text/css" href="resources/scripts/diva/css/diva.min.css"/>
         <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
@@ -21,7 +23,7 @@
                         <span class="icon-bar"/>
                         <span class="icon-bar"/>
                     </button>
-                    <img class="beta-image" src="../beta.png" alt="beta"/>
+<!--                    <img class="beta-image" src="../beta.png" alt="beta"/>-->
                     <a class="navbar-brand" href="/">Home</a>
                 </div>
                 <div class="collapse navbar-collapse">
@@ -52,13 +54,7 @@
                                 </li>
                                 <li>
                                     <a href="/browse/manuscripts/swedish">Old Swedish manuscripts</a>
-                                </li>                                                                
-                                <!--<li>
-                                    <a href="/browse/authors">Authors and Works</a>
                                 </li>
-                                <li>
-                                    <a href="/browse/incipits">Incipits</a>
-                                </li>-->
                             </ul>
                         </li>                        
                         <li class="dropdown">
@@ -76,17 +72,17 @@
                         <li>
                             <a href="/search">Search</a>
                         </li>
-                        <!--<li>
-                            <a href="/beta_search.html">Beta Search</a>
-                        </li>
-                        <li>
-                            <a href="/beta_search_2.html">Beta Search 2</a>
-                        </li>
-                        <li>
-                            <a href="/bibliography">Bibliography</a>
-                        </li>-->
-                        <li>
-                            <a href="/guidelines">Guidelines</a>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"/>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/greek">Greek manuscripts</a>
+                                </li>
+                                <li>
+                                    <a href="/swedish">Old Swedish manuscripts</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="/contact">Contact</a>
@@ -104,18 +100,24 @@
     ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.28.5/js/jquery.tablesorter.min.js" integrity="sha256-qW1prHl/Pkqu4uMxFepBr/umy73wqs47F8ubIqK0w1A=" crossorigin="anonymous"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.28.5/js/jquery.tablesorter.widgets.min.js" integrity="sha256-FLqkOiW9slo+v9XYvuv733VRVQdyCGres0oNhFah454=" crossorigin="anonymous"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.28.5/js/extras/jquery.tablesorter.pager.min.js" integrity="sha256-GEOAUtPueDbpdxe9Rtm6DSMLKi8DcQru5rAbO65dv3c=" crossorigin="anonymous"/>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"/>
         <script src="resources/scripts/diva/js/diva.min.js"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.2.0/split.min.js" integrity="sha256-FSGFHqVQdKn0B1bd5fy3yN3qa6iJ4MrRdJ5SviQ9Q7g=" crossorigin="anonymous"/>
         <script src="https://www.google.com/books/jsapi.js"/>
         <script src="resources/scripts/viewer_bibl.js"/>
         <script>
-                $( document ).ready(function() {
+            <![CDATA[  
+            $( document ).ready(function() {
                     $('[data-toggle="tooltip"]').tooltip({'placement': 'left'});
                 });
-                $(document).ready(function(){
+            $(document).ready(function(){
                     $('[data-toggle="popover"]').popover({placement : 'top'});
                 });
+            
+        ]]>
         </script>
     </body>
 </html>
