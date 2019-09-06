@@ -137,7 +137,7 @@ function browse:list-greek-manuscripts($node as node(), $model as map(*)){
         order by $repository, $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
         return 
             <tr>
-                    <td>{$repository}</td>
+                    <td class="repository filter-select">{if ($repository='Kungliga biblioteket') then 'National Library' else if ($repository='Uppsala universitetsbibliotek') then 'Uppsala University Library' else $repository}</td>
                     <td><a href="/ms/{substring-before($uri, '.xml')}">{$shelfmark}</a></td>
                     <td>{$date}</td>
                     <td>{$support}</td>
@@ -166,7 +166,7 @@ function browse:list-ttt-manuscripts($node as node(), $model as map(*)){
         order by $repository, $shelfmark collation "http://www.w3.org/2013/collation/UCA?numeric=yes"
         return 
             <tr>
-                    <td>{$repository}</td>
+                    <td class="repository filter-select">{if ($repository='Kungliga biblioteket') then 'National Library' else if ($repository='Uppsala universitetsbibliotek') then 'Uppsala University Library' else $repository}</td>
                     <td><a href="/ms/{substring-before($uri, '.xml')}">{$shelfmark}</a></td>
                     <td>{$date}</td>
                     <td>{$support}</td>

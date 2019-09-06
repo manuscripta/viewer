@@ -3,62 +3,80 @@
     <xsl:output method="xhtml" indent="yes" encoding="utf-8"/>
     <xsl:template match="/">
         <xsl:apply-templates/>
-            <xsl:call-template name="footer"/>
-        </xsl:template>
-        <xsl:template match="addName">
-            <div>
-                <span class="head">Additional name: </span>
-                <xsl:value-of select="."/>
-            </div>
-        </xsl:template>
-        <xsl:template match="forename">
-            <div>
-                <span class="head">Forename: </span>
-                <xsl:value-of select="."/>
-            </div>
-        </xsl:template>
-        <xsl:template match="genName">
-            <div>
-                <span class="head">Generational name: </span>
-                <xsl:value-of select="."/>
-            </div>
-        </xsl:template>
-        <xsl:template match="idno">
+        <xsl:call-template name="footer"/>
+    </xsl:template>
+    <xsl:template match="addName">
+        <div>
+            <label>Additional name: </label>
+            <xsl:value-of select="."/>
+        </div>
+    </xsl:template>
+    <xsl:template match="birth">
+        <div>
+            <label>Birth: </label>
+            <xsl:value-of select="."/>
+        </div>
+    </xsl:template>
+    <xsl:template match="death">
+        <div>
+            <label>Death: </label>
+            <xsl:value-of select="."/>
+        </div>
+    </xsl:template>
+    <xsl:template match="forename">
+        <div>
+            <label>Forename: </label>
+            <xsl:value-of select="."/>
+        </div>
+    </xsl:template>
+    <xsl:template match="genName">
+        <div>
+            <label>Generational name: </label>
+            <xsl:value-of select="."/>
+        </div>
+    </xsl:template>
+    <xsl:template match="idno">
         <xsl:choose>
             <xsl:when test="parent::person">
-            <div>
-                <span class="head">
-                        <xsl:value-of select="@subtype"/>: </span>
-                <a href="{.}">
-                    <xsl:value-of select="."/>
-                </a>
-            </div>
-        </xsl:when>
+                <div>
+                    <label>
+                        <xsl:value-of select="@subtype"/>: </label>
+                    <a href="{.}">
+                        <xsl:value-of select="."/>
+                    </a>
+                </div>
+            </xsl:when>
         </xsl:choose>
-            </xsl:template>
+    </xsl:template>
 
     <xsl:template match="nameLink">
         <div>
-            <span class="head">Name link: </span>
+            <label>Name link: </label>
             <xsl:value-of select="."/>
         </div>
     </xsl:template>
 
     <xsl:template match="note">
-                <xsl:if test="@xml:lang = 'en'">
+        <xsl:if test="@xml:lang = 'en'">
             <div>
-                <span class="head">Note: </span>
+                <label>Note: </label>
                 <xsl:apply-templates/>
             </div>
         </xsl:if>
         <xsl:if test="@xml:lang = 'sv'">
             <div>
-                    <span class="head">Anteckning: </span>
+                <label>Anteckning: </label>
                 <xsl:apply-templates/>
             </div>
-            </xsl:if>
+        </xsl:if>
     </xsl:template>
-        <xsl:template match="persName">
+    <xsl:template match="occupation">
+        <div>
+            <label>Occupation: </label>
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    <xsl:template match="persName">
         <xsl:choose>
             <xsl:when test="parent::person">
                 <xsl:apply-templates/>
@@ -70,57 +88,64 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    
+    <xsl:template match="residence">
+        <div>
+            <label>Residence: </label>
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
 
     <xsl:template match="roleName">
         <div>
-            <span class="head">Role name: </span>
+            <label>Role name: </label>
             <xsl:value-of select="."/>
         </div>
     </xsl:template>
 
     <xsl:template match="surname">
         <div>
-            <span class="head">Surname: </span>
+            <label>Surname: </label>
             <xsl:value-of select="."/>
         </div>
     </xsl:template>
 
     <xsl:template match="title">
-        <h3 class="page-header">
+        <h2 class="page-header">
             <xsl:value-of select="//titleStmt/title"/>
-        </h3>
+        </h2>
     </xsl:template>
 
     <xsl:template name="footer">
         <div>
             <div>
-                <span class="head">Manuscripta ID: </span>
+                <label>Manuscripta ID: </label>
                 <xsl:value-of select="/TEI/@xml:id"/>
             </div>
             <div>
-                <span class="head">Stable URI: </span>
+                <label>Stable URI: </label>
                 <xsl:value-of select="//publicationStmt/idno[@subtype = 'Manuscripta']"/>
             </div>
             <div>
-                <span class="head">XML: </span>
+                <label>XML: </label>
                 <a href="/person/{data(substring-after(TEI/@xml:id, 'person-'))}.xml">
                     <xsl:text>https://www.manuscripta.se/person/</xsl:text>
-                <xsl:value-of select="data(substring-after(TEI/@xml:id, 'person-'))"/>
+                    <xsl:value-of select="data(substring-after(TEI/@xml:id, 'person-'))"/>
                     <xsl:text>.xml</xsl:text>
                 </a>
             </div>
-        <div>
-        <span class="head">License: </span>
-            <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a>
+            <div>
+                <label>License: </label>
+                <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a>
             </div>
             <div>
-                <span class="head">Last revision: </span>
+                <label>Last revision: </label>
                 <xsl:value-of select="//change/@when"/>
 
             </div>
         </div>
     </xsl:template>
-<xsl:template match="avalibility"/>
+    <xsl:template match="avalibility"/>
 
     <xsl:template match="funder"/>
 

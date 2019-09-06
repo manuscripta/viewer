@@ -11,8 +11,8 @@
         <xsl:choose>
             <xsl:when test="parent::org">
         <div>
-            <span class="head">
-                <xsl:value-of select="@subtype"/>: </span>
+            <label>
+                <xsl:value-of select="@subtype"/>: </label>
             <a href="{.}">
                 <xsl:value-of select="."/>
             </a>
@@ -24,13 +24,13 @@
     <xsl:template match="desc">
         <xsl:if test="@xml:lang = 'en'">
             <div>
-                <span class="head">Description: </span>
+                <label>Description: </label>
                 <xsl:apply-templates/>
             </div>
         </xsl:if>
         <xsl:if test="@xml:lang = 'sv'">
             <div>
-                <span class="head">Beskrivning: </span>
+                <label>Beskrivning: </label>
                 <xsl:apply-templates/>
             </div>
         </xsl:if>
@@ -40,13 +40,13 @@
             <xsl:when test="parent::org">
                 <xsl:if test="@xml:lang = 'en'">
                     <div>
-                        <span class="head">Name of organization (English): </span>
+                        <label>Name of organization (English): </label>
                         <xsl:value-of select=".[@xml:lang = 'en']"/>
                     </div>
                 </xsl:if>
                 <xsl:if test="@xml:lang = 'sv'">
                     <div>
-                        <span class="head">Name of organization (Swedish): </span>
+                        <label>Name of organization (Swedish): </label>
                         <xsl:value-of select=".[@xml:lang = 'sv']"/>
                     </div>
                 </xsl:if>
@@ -59,23 +59,23 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="title">
-        <h3 class="page-header">
+        <h2 class="page-header">
             <xsl:value-of select="//titleStmt/title"/>
-        </h3>
+        </h2>
     </xsl:template>
     
     <xsl:template name="footer">
         <div>
     <div>
-                <span class="head">Manuscripta ID: </span>
+                <label>Manuscripta ID: </label>
                 <xsl:value-of select="/TEI/@xml:id"/>
             </div>
             <div>
-                <span class="head">Stable URI: </span>
+                <label>Stable URI: </label>
                 <xsl:value-of select="//publicationStmt/idno[@subtype = 'Manuscripta']"/>
             </div>
             <div>
-                <span class="head">XML: </span>
+                <label>XML: </label>
                 <a href="/org/{data(substring-after(TEI/@xml:id, 'org-'))}.xml">
                     <xsl:text>https://www.manuscripta.se/org/</xsl:text>
                     <xsl:value-of select="data(substring-after(TEI/@xml:id, 'org-'))"/>
@@ -83,26 +83,23 @@
                 </a>
             </div>
             <div>
-                <span class="head">License: </span>
+                <label>License: </label>
                 <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a>
             </div>
             <div>
-                <span class="head">Last revision: </span>
+                <label>Last revision: </label>
                 <xsl:value-of select="//change/@when"/>
             </div>
         </div>
     </xsl:template>
 
-    <xsl:template match="avalibility"/>
-    
-    <xsl:template match="funder"/>
-    
-    <xsl:template match="licence"/>
-    
-    <xsl:template match="publisher"/>
-    
+    <xsl:template match="avalibility"/>    
+    <xsl:template match="funder"/>    
+    <xsl:template match="licence"/>    
+    <xsl:template match="publisher"/>    
     <xsl:template match="respStmt"/>
     <xsl:template match="revisionDesc"/>
     <xsl:template match="sourceDesc"/>
+    <xsl:template match="sponsor"/>
 
 </xsl:stylesheet>

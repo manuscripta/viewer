@@ -1,7 +1,7 @@
 /*
 * Bootstrap mods
 */
-@font-face{
+@font-face {
     font-family: 'dejavu_sansbook';
     src: url('../fonts/DejaVuSans-webfont.eot');
     src: url('../fonts/DejaVuSans-webfont.eot?#iefix') format('embedded-opentype'), 
@@ -11,52 +11,71 @@ url('../fonts/DejaVuSans-webfont.svg#dejavu_sansbook') format('svg');
     font-weight: normal;
     font-style: normal;
 }
-html{
+html {
     margin: 0px;
     /*overflow-y: hidden;*/
     height: 100%;
 }
-body{
+body {
     padding-top: 50px;
     /* Padding required for fixed navbar */
 }
-span.hi{
+span.hi {
     background: none repeat scroll 0 0 #ffed3d;
 }
-#content{
+#content {
     font-family: "dejavu_sansbook", sans-serif;
 }
-.panel-title{
-    font-size: 18px;
+.panel-title {
+    font-size: 1.2em;
 }
-h1{
-    font-size: 28px;
+h1 {
+    font-size: 1.6em;
 }
-h2{
-    font-size: 20px;
+h2 {
+    font-size: 1.5em;
 }
-h5{
+h3 {
+    font-size: 1.4em;
+    font-variant: small-caps;
+}
+h4 {
+    font-size: 1.2em;
+}
+h5 {
+    font-size: 1.1em;
+    font-style: italic;
+}
+h6 {
+    font-size: 1em;
+    font-style: italic;
+}
+label {
+    font-size: 1em;
     font-weight: bold;
     display: inline;
 }
-.logotype{
+.logotype {
     height: 100px;
     padding-top: 20px;
     padding-right: 20px;
+}
+.small {
+    font-size: 1.2em;
 }
 /* 
 * diva.css mods 
 */
 
-.diva-outer.diva-fullscreen{
+.diva-outer.diva-fullscreen {
     padding-top: 50px;
     /* Padding required for fixed navbar */
 }
-.diva-tools.diva-fullscreen-tools{
+.diva-tools.diva-fullscreen-tools {
     top: 50px !important;
     /* Position required for fixed navbar */
 }
-.diva-tools .diva-tools-left .diva-buttons-label{
+.diva-tools .diva-tools-left .diva-buttons-label {
     clear: none !important;
     /* To position Zoom level left of the zoom buttons */
 }
@@ -65,22 +84,52 @@ h5{
 * manuscripta mods 
 */
 
-.head{
+.head {
     display: inline;
     font-weight: bold;
 }
 .container-msdesc,
-.container-viewer{
+.container-viewer {
     overflow-y: scroll;
 }
-img.beta-image{
+img.beta-image {
     float: left;
     top: 0px;
     left: 0px;
 }
+.pb-1 {
+    padding-bottom: 0.25em;
+}
+.pb-2 {
+    padding-bottom: 0.5em;
+}
+.pb-3 {
+    padding-bottom: 0.75em;
+}
+.pb-4 {
+    padding-bottom: 1em;
+}
+.pt-1 {
+    padding-top: 0.25em;
+}
+.pt-2 {
+    padding-top: 0.5em;
+}
+.pl-1 {
+    padding-left: 0.25em;
+}
+.pl-2 {
+    padding-left: 0.5em;
+}
+hr.hr-2 {
+    border-top: 1px solid #ddd;
+}
+hr.hr-2 {
+    border-top: 2px solid #ddd;
+}
 
 /* guidelines styles */
-div.egXML_valid{
+div.egXML_valid {
     background-color: #FFFFFC;
     border-color: #000096;
     border-width: 1px;
@@ -89,7 +138,7 @@ pre,
 div.pre,
 div.pre_eg,
 pre.eg,
-div.eg{
+div.eg {
     clear: both;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -106,34 +155,34 @@ div.eg{
     white-space: pre;
 }
 span.att,
-span.attribute{
+span.attribute {
     color: #F5844C;
 }
-span.attributevalue{
+span.attributevalue {
     color: #993300;
 }
-span.element{
+span.element {
     color: #000096;
 }
-span.specList-elementSpec:before{
+span.specList-elementSpec:before {
     content: "<";
 }
-span.specList-elementSpec:after{
+span.specList-elementSpec:after {
     content: ">";
 }
-ul.specList li{
+ul.specList li {
     list-style: none;
 }
 
 /* Split.js */
 body,
 .container-fluid,
-.row{
+.row {
     height: 100%;
 }
 
 .split,
-.split-flex{
+.split-flex {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -141,36 +190,36 @@ body,
     overflow-x: hidden;
 }
 
-.gutter{
+.gutter {
     background-color: #eee;
     background-repeat: no-repeat;
     background-position: 50%;
 }
 
-.gutter.gutter-vertical{
+.gutter.gutter-vertical {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
     cursor: ns-resize;
 }
 
-.gutter.gutter-horizontal{
+.gutter.gutter-horizontal {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
     cursor: ew-resize;
 }
 
 .split.split-horizontal,
-.gutter.gutter-horizontal{
+.gutter.gutter-horizontal {
     height: 100%;
     float: left;
 }
-.carousel-caption{
-    background-color:rgba(0,0,0,0.3);
-    right:15%;
-    left:15%;
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.3);
+    right: 15%;
+    left: 15%;
 }
 a.carousel-caption-link {
-    color:white;
-    text-decoration:underline;
+    color: white;
+    text-decoration: underline;
 }
-.carousel-control{
-    width:10%
+.carousel-control {
+    width: 10%
 }

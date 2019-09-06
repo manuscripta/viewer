@@ -5,34 +5,34 @@
     <xsl:template match="/">
         <xsl:choose>
             <xsl:when test="starts-with(//biblStruct//idno[1], 'https://books.google.se/books?id=')">
-                <h3 id="{data(//biblStruct//idno[1])}" class="page-header">
+                <h2 id="{data(//biblStruct//idno[1])}" class="page-header">
                     <xsl:value-of select="//titleStmt/title"/>
-                </h3>
+                </h2>
             </xsl:when>
             <xsl:when test="starts-with(//biblStruct//idno[1], 'https://archive.org/details/')">
-                <h3 id="{data(//biblStruct//idno[1])}" class="page-header">
+                <h2 id="{data(//biblStruct//idno[1])}" class="page-header">
                     <xsl:value-of select="//titleStmt/title"/>
-                </h3>
+                </h2>
             </xsl:when>
             <xsl:otherwise>
-                <h3 class="page-header">
+                <h2 class="page-header">
                     <xsl:value-of select="//titleStmt/title"/>
-                </h3>
+                </h2>
             </xsl:otherwise>
         </xsl:choose>
         <xsl:apply-templates select="//author"/>
-        <xsl:if test="exists(//analytic/title[@level = 'a'])">
+        <xsl:if test="//analytic/title[@level = 'a']">
             <div>
-                <span class="head">Article title: </span>
+                <label>Article title: </label>
                 <xsl:value-of select="//title[@level = 'a']"/>
             </div>
         </xsl:if>
-        <xsl:if test="exists(//monogr/title[@level = 'm'])">
+        <xsl:if test="//monogr/title[@level = 'm']">
             <div>
-                <span class="head">Monograph title: </span>
+                <label>Monograph title: </label>
                 <xsl:choose>
-                    <xsl:when test="exists(//monogr/title/@ref)">
-                        <a href="{data(//monogr/title/@ref)}">
+                    <xsl:when test="//monogr/title/@ref">
+                        <a href="../{data(substring-after(//monogr/title/@ref, 'https://www.manuscripta.se/'))}">
                             <xsl:value-of select="//monogr/title[@level = 'm']"/>
                         </a>
                     </xsl:when>
@@ -42,22 +42,29 @@
                 </xsl:choose>
             </div>
         </xsl:if>
-        <xsl:if test="exists(//series/title[@level = 's'])">
+        <xsl:if test="//series/title[@level = 's']">
             <div>
-                <span class="head">Series title: </span>
-                <a href="{data(//series/title/@ref)}">
-                    <xsl:value-of select="//series/title[@level = 's']"/>
-                </a>
+                <label>Series title: </label>
+                <xsl:choose>
+                    <xsl:when test="//monogr/title/@ref">
+                        <a href="../{data(substring-after(//monogr/title/@ref, 'https://www.manuscripta.se/'))}">
+                            <xsl:value-of select="//monogr/title[@level = 's']"/>
+                        </a>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="//monogr/title[@level = 's']"/>
+                    </xsl:otherwise>
+                </xsl:choose>
             </div>
         </xsl:if>
         <xsl:apply-templates select="//editor"/>
 
-        <xsl:if test="exists(//monogr/title[@level = 'j'])">
+        <xsl:if test="//monogr/title[@level = 'j']">
             <div>
-                <span class="head">Journal title: </span>
+                <label>Journal title: </label>
                 <xsl:choose>
-                    <xsl:when test="exists(//monogr/title/@ref)">
-                        <a href="{data(//monogr/title/@ref)}">
+                    <xsl:when test="//monogr/title/@ref">
+                        <a href="../{data(substring-after(//monogr/title/@ref, 'https://www.manuscripta.se/'))}">
                             <xsl:value-of select="//monogr/title[@level = 'j']"/>
                         </a>
                     </xsl:when>
@@ -67,19 +74,19 @@
                 </xsl:choose>
             </div>
         </xsl:if>
-        <xsl:if test="exists(//pubPlace)">
+        <xsl:if test="//pubPlace">
             <div>
-                <span class="head">Publication place: </span>
-                <a href="{data(//imprint/pubPlace/@ref)}">
+                <label>Publication place: </label>
+                <a href="../{data(substring-after(//imprint/pubPlace/@ref, 'https://www.manuscripta.se/'))}">
                     <xsl:value-of select="//imprint/pubPlace"/>
                 </a>
             </div>
         </xsl:if>
-        <xsl:if test="exists(//imprint/date)">
+        <xsl:if test="//imprint/date">
             <div>
-                <span class="head">Publication year: </span>
+                <label>Publication year: </label>
                 <xsl:choose>
-                    <xsl:when test="exists(//imprint/date/@from)">
+                    <xsl:when test="//imprint/date/@from">
                         <xsl:value-of select="//imprint/date/@from"/>
                         <xsl:text>–</xsl:text>
                         <xsl:value-of select="//imprint/date/@to"/>
@@ -90,15 +97,15 @@
                 </xsl:choose>
             </div>
         </xsl:if>
-        <xsl:if test="exists(//biblScope[@unit = 'volume'])">
+        <xsl:if test="//biblScope[@unit = 'volume']">
             <div>
                 <xsl:choose>
                     <xsl:when test="//biblScope[@unit = 'volume']/@from = //biblScope[@unit = 'volume']/@to">
-                        <span class="head">Volume: </span>
+                        <label>Volume: </label>
                         <xsl:value-of select="//biblScope[@unit = 'volume']/@from"/>
                     </xsl:when>
                     <xsl:otherwise>
-                        <span class="head">Volumes: </span>
+                        <label>Volumes: </label>
                         <xsl:value-of select="//biblScope[@unit = 'volume']/@from"/>
                         <xsl:text>–</xsl:text>
                         <xsl:value-of select="//biblScope[@unit = 'volume']/@to"/>
@@ -106,15 +113,15 @@
                 </xsl:choose>
             </div>
         </xsl:if>
-        <xsl:if test="exists(//biblScope[@unit = 'issue'])">
+        <xsl:if test="//biblScope[@unit = 'issue']">
             <div>
                 <xsl:choose>
                     <xsl:when test="//biblScope[@unit = 'issue']/@from = //biblScope[@unit = 'issue']/@to">
-                        <span class="head">Issue: </span>
+                        <label>Issue: </label>
                         <xsl:value-of select="//biblScope[@unit = 'issue']/@from"/>
                     </xsl:when>
                     <xsl:otherwise>
-                        <span class="head">Issues: </span>
+                        <label>Issues: </label>
                         <xsl:value-of select="//biblScope[@unit = 'issue']/@from"/>
                         <xsl:text>–</xsl:text>
                         <xsl:value-of select="//biblScope[@unit = 'issue']/@to"/>
@@ -122,15 +129,15 @@
                 </xsl:choose>
             </div>
         </xsl:if>
-        <xsl:if test="exists(//biblScope[@unit = 'column'])">
+        <xsl:if test="//biblScope[@unit = 'column']">
             <div>
                 <xsl:choose>
                     <xsl:when test="//biblScope[@unit = 'column']/@from = //biblScope[@unit = 'column']/@to">
-                        <span class="head">Column: </span>
+                        <label>Column: </label>
                         <xsl:value-of select="//biblScope[@unit = 'column']/@from"/>
                     </xsl:when>
                     <xsl:otherwise>
-                        <span class="head">Columns: </span>
+                        <label>Columns: </label>
                         <xsl:value-of select="//biblScope[@unit = 'column']/@from"/>
                         <xsl:text>–</xsl:text>
                         <xsl:value-of select="//biblScope[@unit = 'column']/@to"/>
@@ -138,15 +145,15 @@
                 </xsl:choose>
             </div>
         </xsl:if>
-        <xsl:if test="exists(//biblScope[@unit = 'folio'])">
+        <xsl:if test="//biblScope[@unit = 'folio']">
             <div>
                 <xsl:choose>
                     <xsl:when test="//biblScope[@unit = 'folio']/@from = //biblScope[@unit = 'folio']/@to">
-                        <span class="head">Folio: </span>
+                        <label>Folio: </label>
                         <xsl:value-of select="//biblScope[@unit = 'folio']/@from"/>
                     </xsl:when>
                     <xsl:otherwise>
-                        <span class="head">Folios: </span>
+                        <label>Folios: </label>
                         <xsl:value-of select="//biblScope[@unit = 'folio']/@from"/>
                         <xsl:text>–</xsl:text>
                         <xsl:value-of select="//biblScope[@unit = 'folio']/@to"/>
@@ -154,9 +161,9 @@
                 </xsl:choose>
             </div>
         </xsl:if>
-        <xsl:if test="exists(//biblScope[@unit = 'page'])">
+        <xsl:if test="//biblScope[@unit = 'page']">
             <div>
-                <span class="head">Pages: </span>
+                <label>Pages: </label>
                 <span id="startPage">
                     <xsl:value-of select="//biblScope[@unit = 'page']/@from"/>
                 </span>
@@ -164,42 +171,70 @@
                 <xsl:value-of select="//biblScope[@unit = 'page']/@to"/>
             </div>
         </xsl:if>
-        
         <xsl:call-template name="footer"/>
-        
     </xsl:template>
 
     <xsl:template match="author">
         <xsl:choose>
             <xsl:when test="@role = 'origAuth'">
                 <div>
-                    <span class="head">Author (original): </span>
-                    <a href="{data(persName/@ref)}">
-                        <xsl:value-of select=".[@role = 'origAuth']/persName"/>
-                    </a>
+                    <label>Author (original): </label>
+                    <xsl:choose>
+                        <xsl:when test="persName/@ref">
+                            <a href="../{data(substring-after(persName/@ref, 'https://www.manuscripta.se/'))}">
+                                <xsl:value-of select="normalize-space(.)"/>
+                            </a>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="normalize-space(.)"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    <!--<a href="{data(replace(persName/@ref, 'www', 'dev'))}">
+                        <xsl:value-of select=".[@role = 'origAuth']/persName" />
+                    </a>-->
                 </div>
             </xsl:when>
             <xsl:when test="@role = 'critEd'">
                 <div>
-                    <span class="head">Author (critical editor): </span>
-                    <a href="{data(persName/@ref)}">
-                        <xsl:value-of select=".[@role = 'critEd']/persName"/>
-                    </a>
+                    <label>Author (critical editor): </label>
+                    <xsl:choose>
+                        <xsl:when test="persName/@ref">
+                            <a href="../{data(substring-after(persName/@ref, 'https://www.manuscripta.se/'))}">
+                                <xsl:value-of select="normalize-space(.)"/>
+                            </a>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="normalize-space(.)"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    <!--<a href="{data(replace(persName/@ref, 'www', 'dev'))}">
+                        <xsl:value-of select=".[@role = 'critEd']/persName" />
+                    </a>-->
                 </div>
             </xsl:when>
             <xsl:otherwise>
                 <div>
-                    <span class="head">Author: </span>
+                    <label>Author: </label>
                     <xsl:choose>
+                        <xsl:when test="persName/@ref">
+                            <a href="../{data(substring-after(persName/@ref, 'https://www.manuscripta.se/'))}">
+                                <xsl:value-of select="normalize-space(.)"/>
+                            </a>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="normalize-space(.)"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    <!--<xsl:choose>
                         <xsl:when test="exists(persName)">
-                            <a href="{data(persName/@ref)}">
+                            <a href="{data(replace(persName/@ref, 'www', 'dev'))}">
                                 <xsl:value-of select="persName"/>
                             </a>
                         </xsl:when>
                         <xsl:otherwise>
                             <xsl:value-of select="."/>
                         </xsl:otherwise>
-                    </xsl:choose>
+                    </xsl:choose>-->
                 </div>
             </xsl:otherwise>
         </xsl:choose>
@@ -207,32 +242,42 @@
 
     <xsl:template match="editor">
         <div>
-            <span class="head">Editor: </span>
-            <a href="{data(persName/@ref)}">
+            <label>Editor: </label>
+            <xsl:choose>
+                <xsl:when test="persName/@ref">
+                    <a href="../{data(substring-after(persName/@ref, 'https://www.manuscripta.se/'))}">
+                        <xsl:value-of select="normalize-space(.)"/>
+                    </a>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="normalize-space(.)"/>
+                </xsl:otherwise>
+            </xsl:choose>
+            <!--<a href="{data(replace(persName/@ref, 'www', 'dev'))}">
                 <xsl:choose>
                     <xsl:when test="persName">
-                        <xsl:value-of select="persName"/>
+                        <xsl:value-of select="persName" />
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:apply-templates/>
+                        <xsl:apply-templates />
                     </xsl:otherwise>
                 </xsl:choose>
-            </a>
+            </a>-->
         </div>
     </xsl:template>
 
-<xsl:template name="footer">
+    <xsl:template name="footer">
         <div>
             <div>
-                <span class="head">Manuscripta ID: </span>
+                <label>Manuscripta ID: </label>
                 <xsl:value-of select="/TEI/@xml:id"/>
             </div>
             <div>
-                <span class="head">Stable URI: </span>
+                <label>Stable URI: </label>
                 <xsl:value-of select="//publicationStmt/idno[@subtype = 'Manuscripta']"/>
             </div>
             <div>
-                <span class="head">XML: </span>
+                <label>XML: </label>
                 <a href="/bibl/{data(substring-after(TEI/@xml:id, 'bibl-'))}.xml">
                     <xsl:text>https://www.manuscripta.se/bibl/</xsl:text>
                     <xsl:value-of select="data(substring-after(TEI/@xml:id, 'bibl-'))"/>
@@ -240,11 +285,11 @@
                 </a>
             </div>
             <div>
-                <span class="head">License: </span>
+                <label>License: </label>
                 <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a>
             </div>
             <div>
-                <span class="head">Last revision: </span>
+                <label>Last revision: </label>
                 <xsl:value-of select="//change/@when"/>
             </div>
         </div>

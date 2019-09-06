@@ -1,5 +1,5 @@
-body{
-    font-size: 1.6em;
+body {
+    font-size: 16px;
 }
 /*h1{
     font-size:1.8em;
@@ -29,16 +29,16 @@ h4{
 /*.short_description{
     margin-top:20px;
 }*/
-.italic{
+/*.italic{
     font-style: italic;
 }
 .spacing{
     letter-spacing: 0.1em;
-}
-.small-caps{
+}*/
+.small-caps {
     font-variant: small-caps;
 }
-.summary p{
+.summary p {
     display: inline;
     padding-right: 30px;
 }
@@ -46,46 +46,46 @@ h4{
 .physDesc,
 .history,
 .additional,
-.lastRevision{
+.lastRevision {
     display: block;
     /*margin-right:50px;*/
     margin-top: 20px;
 }
-.biblItem{
+.biblItem {
     display: inline;
 }
-.bibl_author{
+.bibl_author {
     display: inline;
 }
-.bibl_book_title{
-    display: inline;
-    font-style: italic;
-}
-.bibl_journal_title{
+.bibl_book_title {
     display: inline;
     font-style: italic;
 }
-.bibliography .biblItem{
+.bibl_journal_title {
+    display: inline;
+    font-style: italic;
+}
+.bibliography .biblItem {
     text-align: left;
     display: list-item;
     margin-left: 30pt;
 }
-.msItem{
+.msItem {
     display: block;
     margin-bottom: 20px;
 }
-.sub_msItem{
+.sub_msItem {
     display: block;
     margin-left: 30px;
 }
 .msItem_nr,
-.sub_msItem_nr{
+.sub_msItem_nr {
     font-weight: bold;
 }
-.author{
+.author {
     display: inline;
 }
-.bibl_book_title{
+.bibl_book_title {
     display: inline;
     font-style: italic
 }
@@ -95,7 +95,7 @@ h4{
 .final-rubric,
 .colophon,
 .note,
-.editions{
+.editions {
     display: block;
     text-indent: 1em;
 }
@@ -108,12 +108,12 @@ h4{
     display:inline;
     font-weight:bold;
 }*/
-.ms-item-bibl{
+.ms-item-bibl {
     display: block;
     text-indent: 1em;
 }
 .msItem_listBibl,
-.listBibl{
+.listBibl {
     display: block;
     text-indent: 1em;
 }
@@ -132,51 +132,51 @@ h4{
 .decoDesc,
 .origin,
 .provenance,
-.acquisition{
+.acquisition {
     display: block;
     margin-top: 10px;
 }
 sub,
-sup{
+sup {
     font-size: 70%;
     line-height: 0;
     position: relative;
     vertical-align: baseline;
 }
-sup{
+sup {
     top: -0.4em;
 }
-sub{
+sub {
     bottom: 0em;
 }
-.unit_nr{
+.unit_nr {
     display: inline;
     font-weight: bold;
 }
-a{
+a {
     text-decoration: none;
 }
-a:hover{
+a:hover {
     text-decoration: underline;
 }
-a.shortTitle{
+a.shortTitle {
     text-decoration: none;
     border-bottom: 1px dotted #777;
 }
-a.shortTitle:hover{
+a.shortTitle:hover {
     text-decoration: none;
 }
 /* Remove extra whitespace after p in td */
-td  p{
+td p {
     display: inline-block !important;
 }
-td em p{
+td em p {
     display: inline !important;
 }
-p:first-of-type{
-    display: inline;    
+p:first-of-type {
+    display: inline;
 }
-p{
+p {
     margin-top: 0em;
     margin-bottom: 0em;
     text-indent: 1em;

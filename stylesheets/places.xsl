@@ -10,8 +10,8 @@
         <xsl:choose>
             <xsl:when test="parent::place">
                 <div>
-                    <span class="head">
-                        <xsl:value-of select="@subtype"/>: </span>
+                    <label>
+                        <xsl:value-of select="@subtype"/>: </label>
                     <a href="{.}">
             <xsl:value-of select="."/>
         </a>
@@ -23,13 +23,13 @@
     <xsl:template match="note">
         <xsl:if test="@xml:lang = 'en'">
             <div>
-            <span class="head">Note: </span>
+            <label>Note: </label>
             <xsl:apply-templates/>
         </div>
         </xsl:if>
         <xsl:if test="@xml:lang = 'sv'">
             <div>
-            <span class="head">Anteckning: </span>
+            <label>Anteckning: </label>
             <xsl:apply-templates/>
         </div>
         </xsl:if>
@@ -38,36 +38,36 @@
     <xsl:template match="placeName">
         <xsl:if test="@xml:lang = 'en'">
             <div>
-                <span class="head">Place name (English): </span>
+                <label>Place name (English): </label>
                 <xsl:value-of select="."/>
             </div>
         </xsl:if>
         <xsl:if test="@xml:lang = 'sv'">
             <div>
-            <span class="head">Place name (Swedish): </span>
+            <label>Place name (Swedish): </label>
             <xsl:value-of select="."/>
         </div>
         </xsl:if>
             </xsl:template>
 
     <xsl:template match="title">
-        <h3 class="page-header">
+        <h2 class="page-header">
             <xsl:value-of select="//titleStmt/title"/>
-        </h3>
+        </h2>
     </xsl:template>
 
     <xsl:template name="footer">
         <div>
             <div>
-                <span class="head">Manuscripta ID: </span>
+                <label>Manuscripta ID: </label>
                 <xsl:value-of select="/TEI/@xml:id"/>
             </div>
             <div>
-                <span class="head">Stable URI: </span>
+                <label>Stable URI: </label>
                 <xsl:value-of select="//publicationStmt/idno[@subtype = 'Manuscripta']"/>
             </div>
             <div>
-                <span class="head">XML: </span>
+                <label>XML: </label>
                 <a href="/place/{data(substring-after(TEI/@xml:id, 'place-'))}.xml">
                     <xsl:text>https://www.manuscripta.se/place/</xsl:text>
                 <xsl:value-of select="data(substring-after(TEI/@xml:id, 'place-'))"/>
@@ -75,11 +75,11 @@
                 </a>
             </div>
         <div>
-        <span class="head">License: </span>
+        <label>License: </label>
             <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a>
             </div>
             <div>
-                <span class="head">Last revision: </span>
+                <label>Last revision: </label>
                 <xsl:value-of select="//change/@when"/>
             </div>
         </div>

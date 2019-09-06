@@ -124,22 +124,23 @@ function search:beta_search($node as node(), $model as map(*)) {
                  
                  else if ($mode eq 'person') then
                     for $hit in $mss//tei:persName[ft:query(., $query)]
-                        let $context := $hit/name(parent::*)
+                        let $context := if ($hit/ancestor::tei:msContents) then 'Contents' else if ($hit/ancestor::tei:physDesc) then 'Physical description' else if ($hit/ancestor::tei:history) then 'History' else if ($hit/ancestor::tei:additional) then 'Bibliography' else 'Metadata'  
                         order by $hit ascending
                         return
                             <tr>
-                                <td>{kwic:summarize($hit, <config xmlns="" width="100"/>)}  ({$context})</td>
+                                <td>{kwic:summarize($hit, <config xmlns="" width="100"/>)} (&#8680; {$context})</td>
                                 <td>{$repository}</td>
                                 <td><a href="{substring-before($uri, '.xml')}">{$shelfmark}</a></td>
                             </tr>
                  
                  else if ($mode eq 'place') then
                     for $hit in $mss//tei:msDesc//tei:placeName[ft:query(., $query)]
-                        let $context := $hit/name(parent::*)
+                        (:let $context := $hit/name(parent::*):)
+                        let $context := if ($hit/ancestor::tei:msContents) then 'Contents' else if ($hit/ancestor::tei:physDesc) then 'Physical description' else if ($hit/ancestor::tei:history) then 'History' else if ($hit/ancestor::tei:additional) then 'Bibliography' else 'Metadata'
                         order by $hit ascending 
                         return
                             <tr>
-                                <td>{kwic:summarize($hit, <config xmlns="" width="100"/>)} ({$context})</td>
+                                <td>{kwic:summarize($hit, <config xmlns="" width="100"/>)} (&#8680; {$context})</td>
                                 <td>{$repository}</td>
                                 <td><a href="{substring-before($uri, '.xml')}">{distinct-values($shelfmark)}</a></td>
                             </tr>

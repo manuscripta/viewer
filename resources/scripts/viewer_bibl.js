@@ -1,5 +1,5 @@
 /* Get the url for Google books or Archive.org from @id in h3  */
-var url = $('h3').attr('id');
+var url = $('h2').attr('id');
 /* Check for a span with @id='startPage' */
 if (document.getElementById('startPage')) {
     var startPage = document.getElementById('startPage').innerHTML;
