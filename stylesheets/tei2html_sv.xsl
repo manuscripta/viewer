@@ -653,7 +653,7 @@
                                     <div>
                                         <xsl:text>Digitalisering</xsl:text>
                                         <xsl:text>: </xsl:text>
-                                        <a href="https://weburn.kb.se/metadata/{data(substring(//idno[@type = 'id'][@subtype='Libris'], 6))}/hs_{data(//idno[@type = 'id'][@subtype='Libris'])}.htm" target="_blank">
+                                        <a href="https://weburn.kb.se/metadata/{data(substring(//idno[@type = 'id'][@subtype='Libris'], string-length(//idno[@type = 'id'][@subtype='Libris']) - 2))}/hs_{data(//idno[@type = 'id'][@subtype='Libris'])}.htm" target="_blank">
                                             <xsl:text>PDF</xsl:text>
                                         </a>
                                     </div>
