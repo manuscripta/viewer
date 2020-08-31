@@ -8,6 +8,7 @@
     <xsl:template match="tei:TEI">
         <xsl:variable name="repository" select="//tei:repository" />
         <xsl:variable name="msID" select="substring-after(@xml:id,'ms-')" />
+        <xsl:variable name="baseURL" select="//tei:facsimile/@xml:base"/>
         <!-- variables for metadata -->
         <xsl:variable name="shelfmark" select="//tei:idno[@type = 'shelfmark']" />
         <xsl:variable name="head" select="//tei:msDesc/tei:head/normalize-space()" />
@@ -96,7 +97,7 @@
         "@id": "https://www.manuscripta.se/iiif/<xsl:value-of select="$msID" />/canvas/c-<xsl:value-of select="$start-canvas + 1"/>.json",
         "service": {
             "@context": "http://iiif.io/api/image/2/context.json",
-            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=<xsl:value-of select="$msID" />/<xsl:value-of select="$first-folio" />",
+            "@id": "<xsl:value-of select="$baseURL" /><xsl:value-of select="$msID" />/<xsl:value-of select="$first-folio" />",
             "profile": "http://iiif.io/api/image/2/level1.json"
         }
     },
@@ -131,10 +132,10 @@
                     "height": <xsl:value-of select="$height" />,
                     "width": <xsl:value-of select="$width" />,
                     "thumbnail": {
-                        "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=<xsl:value-of select="$msID" />/<xsl:value-of select="$image" />/full/90,/0/default.jpg",
+                        "@id": "<xsl:value-of select="$baseURL" /><xsl:value-of select="$msID" />/<xsl:value-of select="$image" />/full/90,/0/default.jpg",
                         "service": {
                             "@context": "http://iiif.io/api/image/2/context.json",
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=<xsl:value-of select="$msID" />/<xsl:value-of select="$image" />",
+                            "@id": "<xsl:value-of select="$baseURL" /><xsl:value-of select="$msID" />/<xsl:value-of select="$image" />",
                             "profile": "http://iiif.io/api/image/2/level1.json"
                         }
                     },
@@ -145,14 +146,14 @@
                             "motivation": "sc:painting",
                             "on": "https://www.manuscripta.se/iiif/<xsl:value-of select="$msID" />/canvas/c-<xsl:value-of select="$count-number" />.json",
                             "resource": {
-                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=<xsl:value-of select="$msID" />/<xsl:value-of select="$image" />/full/full/0/default.jpg",
+                                "@id": "<xsl:value-of select="$baseURL" /><xsl:value-of select="$msID" />/<xsl:value-of select="$image" />/full/full/0/default.jpg",
                                 "@type": "dctypes:Image",
                                 "format": "image/jpeg",
                                 "height": <xsl:value-of select="$height" />,
                                 "width": <xsl:value-of select="$width" />,
                                 "service": {
                                     "@context": "http://iiif.io/api/image/2/context.json",
-                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=<xsl:value-of select="$msID" />/<xsl:value-of select="$image" />",
+                                    "@id": "<xsl:value-of select="$baseURL" /><xsl:value-of select="$msID" />/<xsl:value-of select="$image" />",
                                     "profile": "http://iiif.io/api/image/2/level1.json"
                                 }
                             }
