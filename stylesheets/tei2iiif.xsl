@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" exclude-result-prefixes="xs tei" version="3.0">
+    <xsl:param name="output-result-document" select="'yes'"/><!-- set to 'yes' to use <result-document> -->
     <xsl:output indent="no" omit-xml-declaration="yes" method="text" encoding="utf-8" />
-    <xsl:variable name="schemaFile" select="doc('../schemas/manuscripta.rng')"/>
+    <xsl:variable name="schemaFile" select="if ($output-result-document='yes') then doc('../schemas/manuscripta.rng') else doc('../data/schemas/manuscripta.rng')"/>
+    <xsl:variable name="iiifFolder">
+        <xsl:text>../../../../iiif/test2/</xsl:text>
+    </xsl:variable>
     <xsl:template match="/">
         <xsl:apply-templates />
     </xsl:template>
     <xsl:template match="tei:TEI">
         <xsl:variable name="repository" select="//tei:repository" />
         <xsl:variable name="msID" select="substring-after(@xml:id,'ms-')" />
-        <xsl:variable name="baseURL" select="//tei:facsimile/@xml:base"/>
+        <!-- URI encode trailing slash in @xml:base as required by the IIIF Image API specification (https://iiif.io/api/image/2.0/#uri-encoding-and-decoding) -->
+        <xsl:variable name="baseURL" select="concat(substring(//tei:facsimile/@xml:base, 1, string-length(//tei:facsimile/@xml:base)-1), '%2F')"/>        
         <!-- variables for metadata -->
         <xsl:variable name="shelfmark" select="//tei:idno[@type = 'shelfmark']" />
         <xsl:variable name="head" select="//tei:msDesc/tei:head/normalize-space()" />
@@ -57,7 +62,8 @@
         <xsl:variable name="first-folio" select="//tei:facsimile/(tei:surface[matches(@xml:id, '^ms-\d{6}(_\d{4})?_\dr?$')][1] | tei:surface[matches(@xml:id, '^ms-\d{6}(_\d{4})?_S?\dr?$')][1] | tei:surface[1])[last()]/tei:graphic/@url" />
         <xsl:variable name="first-folio-id" select="translate($first-folio, '.tif', '')" />
         <xsl:variable name="start-canvas" select="count(//tei:surface[following-sibling::tei:surface/tei:graphic[@url = $first-folio]])"/>
-        <xsl:if test="exists(//tei:facsimile)"><xsl:result-document href="{concat('../../../../iiif/temp/',$msID,'/manifest.json')}">{
+        <xsl:variable name="result-document-path" select="if ($output-result-document='yes') then concat($iiifFolder,$msID,'/manifest.json') else ()"/>
+        <xsl:if test="exists(//tei:facsimile)"><xsl:result-document href="{$result-document-path}">{
     "@context": "http://iiif.io/api/presentation/2/context.json",
     "@id": "https://www.manuscripta.se/iiif/<xsl:value-of select="$msID" />/manifest.json",
     "@type": "sc:Manifest",
@@ -97,7 +103,7 @@
         "@id": "https://www.manuscripta.se/iiif/<xsl:value-of select="$msID" />/canvas/c-<xsl:value-of select="$start-canvas + 1"/>.json",
         "service": {
             "@context": "http://iiif.io/api/image/2/context.json",
-            "@id": "<xsl:value-of select="$baseURL" /><xsl:value-of select="$msID" />/<xsl:value-of select="$first-folio" />",
+            "@id": "<xsl:value-of select="$baseURL" /><xsl:value-of select="$first-folio" />",
             "profile": "http://iiif.io/api/image/2/level1.json"
         }
     },
@@ -132,10 +138,10 @@
                     "height": <xsl:value-of select="$height" />,
                     "width": <xsl:value-of select="$width" />,
                     "thumbnail": {
-                        "@id": "<xsl:value-of select="$baseURL" /><xsl:value-of select="$msID" />/<xsl:value-of select="$image" />/full/90,/0/default.jpg",
+                        "@id": "<xsl:value-of select="$baseURL" /><xsl:value-of select="$image" />/full/90,/0/default.jpg",
                         "service": {
                             "@context": "http://iiif.io/api/image/2/context.json",
-                            "@id": "<xsl:value-of select="$baseURL" /><xsl:value-of select="$msID" />/<xsl:value-of select="$image" />",
+                            "@id": "<xsl:value-of select="$baseURL" /><xsl:value-of select="$image" />",
                             "profile": "http://iiif.io/api/image/2/level1.json"
                         }
                     },
@@ -146,14 +152,14 @@
                             "motivation": "sc:painting",
                             "on": "https://www.manuscripta.se/iiif/<xsl:value-of select="$msID" />/canvas/c-<xsl:value-of select="$count-number" />.json",
                             "resource": {
-                                "@id": "<xsl:value-of select="$baseURL" /><xsl:value-of select="$msID" />/<xsl:value-of select="$image" />/full/full/0/default.jpg",
+                                "@id": "<xsl:value-of select="$baseURL" /><xsl:value-of select="$image" />/full/full/0/default.jpg",
                                 "@type": "dctypes:Image",
                                 "format": "image/jpeg",
                                 "height": <xsl:value-of select="$height" />,
                                 "width": <xsl:value-of select="$width" />,
                                 "service": {
                                     "@context": "http://iiif.io/api/image/2/context.json",
-                                    "@id": "<xsl:value-of select="$baseURL" /><xsl:value-of select="$msID" />/<xsl:value-of select="$image" />",
+                                    "@id": "<xsl:value-of select="$baseURL" /><xsl:value-of select="$image" />",
                                     "profile": "http://iiif.io/api/image/2/level1.json"
                                 }
                             }
