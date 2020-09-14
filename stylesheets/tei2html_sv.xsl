@@ -359,8 +359,7 @@
                                         </xsl:when>
                                         <xsl:otherwise>
                                             <div>
-                                                <h4>
-                                                    <xsl:text>Försättsblad</xsl:text>: </h4>
+                                                <h4><xsl:text>Försättsblad</xsl:text>: </h4>
                                                 <xsl:apply-templates/>
                                             </div>
                                         </xsl:otherwise>
@@ -512,8 +511,7 @@
                                         </xsl:when>
                                         <xsl:otherwise>
                                             <div>
-                                                <h4>
-                                                    <xsl:text>Textblock</xsl:text>: </h4>
+                                                <h4><xsl:text>Textblock</xsl:text>: </h4>
                                                 <xsl:apply-templates select="decoNote | p"/>
                                             </div>
                                             <hr class="hr-1"/>
@@ -814,8 +812,7 @@
         <xsl:choose>
             <xsl:when test="parent::msItem">
                 <div class="pl-2">
-                    <label>
-                        <xsl:text>Utgåva</xsl:text>: </label>
+                    <label><xsl:text>Utgåva</xsl:text>: </label>
                     <xsl:apply-templates select="title"/>
                     <xsl:text>, </xsl:text>
                     <xsl:choose>
@@ -1377,8 +1374,7 @@
     <xsl:template match="catchwords">
         <xsl:if test="string-length(.) != 0">
             <div>
-                <label>
-                    <xsl:text>Kustoder</xsl:text>: </label>
+                <label><xsl:text>Kustoder</xsl:text>: </label>
                 <xsl:apply-templates/>
             </div>
         </xsl:if>
@@ -1395,21 +1391,18 @@
         <xsl:apply-templates/>
     </xsl:template>
     <xsl:template match="collation/p">
-        <label>
-            <xsl:text>Anmärkning</xsl:text>: </label>
+        <label><xsl:text>Anmärkning</xsl:text>: </label>
         <xsl:apply-templates/>
     </xsl:template>
     <xsl:template match="colophon">
         <div class="pl-2">
-            <label>
-                <xsl:text>Kolofon</xsl:text>: </label>
+            <label><xsl:text>Kolofon</xsl:text>: </label>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     <xsl:template match="condition">
         <div>
-            <label>
-                <xsl:text>Skick</xsl:text>: </label>
+            <label><xsl:text>Skick</xsl:text>: </label>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -1453,36 +1446,28 @@
     <xsl:template match="decoNote">
         <div>
             <xsl:if test="@type = 'bookmarks'">
-                <label>
-                    <xsl:text>Bokmärken</xsl:text>: </label>
+                <label><xsl:text>Bokmärken</xsl:text>: </label>
             </xsl:if>
             <xsl:if test="@type = 'edges'">
-                <label>
-                    <xsl:text>Snitt</xsl:text>: </label>
+                <label><xsl:text>Snitt</xsl:text>: </label>
             </xsl:if>
             <xsl:if test="@type = 'endbands'">
-                <label>
-                    <xsl:text>Kapitälband</xsl:text>: </label>
+                <label><xsl:text>Kapitälband</xsl:text>: </label>
             </xsl:if>
             <xsl:if test="@type = 'illuminations'">
-                <label>
-                    <xsl:text>Illumineringar</xsl:text>: </label>
+                <label><xsl:text>Illumineringar</xsl:text>: </label>
             </xsl:if>
             <xsl:if test="@type = 'image'">
-                <label>
-                    <xsl:text>Bild</xsl:text>: </label>
+                <label><xsl:text>Bild</xsl:text>: </label>
             </xsl:if>
             <xsl:if test="@type = 'initials'">
-                <label>
-                    <xsl:text>Initialer</xsl:text>: </label>
+                <label><xsl:text>Initialer</xsl:text>: </label>
             </xsl:if>
             <xsl:if test="@type = 'lombards'">
-                <label>
-                    <xsl:text>Lombarder</xsl:text>: </label>
+                <label><xsl:text>Lombarder</xsl:text>: </label>
             </xsl:if>
             <xsl:if test="@type = 'tooling'">
-                <label>
-                    <xsl:text>Pärmstämplar</xsl:text>: </label>
+                <label><xsl:text>Pärmstämplar</xsl:text>: </label>
             </xsl:if>
             <xsl:apply-templates/>
         </div>
@@ -1505,35 +1490,30 @@
     <!--  desc  -->
     <xsl:template match="dimensions">
         <xsl:if test="@type = 'written'">
-            <label>
-                <xsl:text>Skriftyta</xsl:text>: </label>
+            <label><xsl:text>Skriftyta</xsl:text>: </label>
             <xsl:apply-templates/>
         </xsl:if>
         <xsl:if test="@type = 'binding'">
-            <label>
-                <xsl:text>Mått på bokband</xsl:text>: </label>
+            <label><xsl:text>Mått på bokband</xsl:text>: </label>
             <xsl:apply-templates/>
         </xsl:if>
         <xsl:if test="@type = 'watermark'">
             <div>
-                <label>
-                    <xsl:text>Mått på vattenmärke</xsl:text>: </label>
+                <label><xsl:text>Mått på vattenmärke</xsl:text>: </label>
                 <xsl:apply-templates/>
             </div>
         </xsl:if>
         <xsl:if test="@type = 'chainLines'">
             <div>
                 <xsl:for-each select=".[@type = 'chainLines']">
-                    <label>
-                        <xsl:text>Kedjelinjer</xsl:text>: </label>
+                    <label><xsl:text>Kedjelinjer</xsl:text>: </label>
                     <xsl:apply-templates select="width"/>
                 </xsl:for-each>
             </div>
         </xsl:if>
         <xsl:if test="@type = 'leaf'">
             <div>
-                <label>
-                    <xsl:text>Bladstorlek</xsl:text>: </label>
+                <label><xsl:text>Bladstorlek</xsl:text>: </label>
                 <xsl:apply-templates/>
             </div>
         </xsl:if>
@@ -1553,8 +1533,7 @@
     </xsl:template>
     <xsl:template match="explicit">
         <div class="pl-2">
-            <label>
-                <xsl:text>Explicit</xsl:text>: </label>
+            <label><xsl:text>Explicit</xsl:text>: </label>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -1566,26 +1545,22 @@
     <xsl:template match="filiation">
         <div class="pl-2">
             <xsl:if test="@type = 'protograph'">
-                <label>
-                    <xsl:text>Förlaga</xsl:text>: </label>
+                <label><xsl:text>Förlaga</xsl:text>: </label>
                 <xsl:apply-templates/>
             </xsl:if>
             <xsl:if test="@type = 'apograph'">
-                <label>
-                    <xsl:text>Avskrift</xsl:text>: </label>
+                <label><xsl:text>Avskrift</xsl:text>: </label>
                 <xsl:apply-templates/>
             </xsl:if>
             <xsl:if test="@type = 'siglum'">
-                <label>
-                    <xsl:text>Sigla</xsl:text>: </label>
+                <label><xsl:text>Sigla</xsl:text>: </label>
                 <xsl:apply-templates/>
             </xsl:if>
         </div>
     </xsl:template>
     <xsl:template match="finalRubric">
         <div class="pl-2">
-            <label>
-                <xsl:text>Slutrubrik</xsl:text>: </label>
+            <label><xsl:text>Slutrubrik</xsl:text>: </label>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -1607,8 +1582,7 @@
     <xsl:template match="formula">
         <xsl:if test="string-length(.) != 0">
             <div>
-                <label>
-                    <xsl:text>Formel</xsl:text>: </label>
+                <label><xsl:text>Formel</xsl:text>: </label>
                 <xsl:apply-templates/>
             </div>
         </xsl:if>
@@ -1633,15 +1607,13 @@
         <xsl:choose>
             <xsl:when test="@sameAs">
                 <div class="pb-2">
-                    <h5>Hand <xsl:value-of select="substring-after(@sameAs, '#hand-')"/>
-                    </h5>
+                    <h5>Hand <xsl:value-of select="substring-after(@sameAs, '#hand-')"/></h5>
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
             <xsl:otherwise>
                 <div class="pb-2">
-                    <h5>Hand <xsl:value-of select="substring-after(@xml:id, 'hand-')"/>
-                    </h5>
+                    <h5>Hand <xsl:value-of select="substring-after(@xml:id, 'hand-')"/></h5>
                     <xsl:apply-templates/>
                 </div>
             </xsl:otherwise>
@@ -1776,8 +1748,7 @@
     </xsl:template>
     <xsl:template match="incipit">
         <div class="pl-2">
-            <label>
-                <xsl:text>Incipit</xsl:text>: </label>
+            <label><xsl:text>Incipit</xsl:text>: </label>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -1797,15 +1768,13 @@
             <!--            <xsl:if test="@columns[. gt '1']">-->
             <xsl:if test="@columns">
                 <div>
-                    <label>
-                        <xsl:text>Kolumner</xsl:text>: </label>
+                    <label><xsl:text>Kolumner</xsl:text>: </label>
                     <xsl:value-of select="@columns"/>
                 </div>
             </xsl:if>
             <xsl:if test="@ruledLines">
                 <div>
-                    <label>
-                        <xsl:text>Linjerade rader</xsl:text>: </label>
+                    <label><xsl:text>Linjerade rader</xsl:text>: </label>
                     <xsl:choose>
                         <!-- Check for min and max values -->
                         <xsl:when test="substring(@ruledLines, 4, 5)">
@@ -1822,8 +1791,7 @@
             </xsl:if>
             <xsl:if test="@writtenLines">
                 <div>
-                    <label>
-                        <xsl:text>Skrivna rader</xsl:text>: </label>
+                    <label><xsl:text>Skrivna rader</xsl:text>: </label>
                     <xsl:choose>
                         <!-- Check for min and max values -->
                         <xsl:when test="substring(@writtenLines, 4, 5)">
@@ -1882,8 +1850,7 @@
         <xsl:choose>
             <xsl:when test="parent::msItem">
                 <div class="pl-2">
-                    <label>
-                        <xsl:text>Utgåvor</xsl:text>: </label>
+                    <label><xsl:text>Utgåvor</xsl:text>: </label>
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
@@ -2077,17 +2044,42 @@
     </xsl:template>-->
     <xsl:template match="locus">
         <xsl:if test="parent::p/parent::support or parent::watermark/parent::p/parent::support or parent::layout">
-            <label>
-                <xsl:text>Lokalisering</xsl:text>: </label>
+            <label><xsl:text>Lokalisering</xsl:text>: </label>
         </xsl:if>
         <!--<xsl:variable name="locusFrom" select="if (@from[contains(.,':')]) then substring-before(@from,':') else if (@from[matches(.,'^\d{1,}$')]) then (concat(@from,'r')) else data(@from)" />
         <xsl:variable name="locusTo" select="if (@to[contains(.,':')]) then substring-before(@to,':') else if (@to[matches(.,'^\d{1,}$')]) then (concat(@to,'r')) else data(@to)" />-->
-        <xsl:variable name="locusFrom" select="                 if (@from[contains(., ':')]) then                     substring-before(@from, ':')                 else                     if (@from[ends-with(., 'a')]) then                         substring-before(@from, 'a')                     else                         if (@from[ends-with(., 'b')]) then                             substring-before(@from, 'b')                         else                             if (@scheme = 'folios' and @from[not(contains(., 'r') or contains(., 'v'))]) then                                 (concat(@from, 'r'))                             else                                 data(@from)"/>
-        <xsl:variable name="locusTo" select="                 if (@to[contains(., ':')]) then                     substring-before(@to, ':')                 else                     if (@to[ends-with(., 'a')]) then                         substring-before(@to, 'a')                     else                         if (@to[ends-with(., 'b')]) then                             substring-before(@to, 'b')                         else                             if (@scheme = 'folios' and @to[not(contains(., 'r') or contains(., 'v'))]) then                                 (concat(@to, 'r'))                             else                                 data(@to)"/>
+        <xsl:variable name="locusFrom" select="
+                if (@from[contains(., ':')]) then
+                    substring-before(@from, ':')
+                else
+                    if (@from[ends-with(., 'a')]) then
+                        substring-before(@from, 'a')
+                    else
+                        if (@from[ends-with(., 'b')]) then
+                            substring-before(@from, 'b')
+                        else
+                            if (@scheme = 'folios' and @from[not(contains(., 'r') or contains(., 'v'))]) then
+                                (concat(@from, 'r'))
+                            else
+                                data(@from)"/>
+        <xsl:variable name="locusTo" select="
+                if (@to[contains(., ':')]) then
+                    substring-before(@to, ':')
+                else
+                    if (@to[ends-with(., 'a')]) then
+                        substring-before(@to, 'a')
+                    else
+                        if (@to[ends-with(., 'b')]) then
+                            substring-before(@to, 'b')
+                        else
+                            if (@scheme = 'folios' and @to[not(contains(., 'r') or contains(., 'v'))]) then
+                                (concat(@to, 'r'))
+                            else
+                                data(@to)"/>
         <!--<xsl:variable name="locusFromURL" select="//surface[@xml:id=concat(//TEI/@xml:id,'_',$locusFrom)]/graphic/@url"/>-->
-        <xsl:variable name="locusFromIndex" select="count(//surface[functx:substring-after-last(@xml:id , '_') = $locusFrom]/preceding-sibling::*)"/>
+        <xsl:variable name="locusFromIndex" select="count(//surface[functx:substring-after-last(@xml:id, '_') = $locusFrom]/preceding-sibling::*)"/>
         <!--<xsl:variable name="locusToURL" select="//surface[@xml:id=concat(//TEI/@xml:id,'_',$locusTo)]/graphic/@url"/>-->
-        <xsl:variable name="locusToIndex" select="count(//surface[functx:substring-after-last(@xml:id , '_') = $locusTo]/preceding-sibling::*)"/>
+        <xsl:variable name="locusToIndex" select="count(//surface[functx:substring-after-last(@xml:id, '_') = $locusTo]/preceding-sibling::*)"/>
         <xsl:choose>
             <xsl:when test="parent::msItem or parent::handNote or ancestor::additions or ancestor::decoDesc">
                 <xsl:if test="@scheme = 'folios'">
@@ -2212,27 +2204,50 @@
     </xsl:template>
     <xsl:template match="locusGrp">
         <xsl:if test="parent::p/parent::support or parent::layout">
-            <label>
-                <xsl:text>Lokalisering</xsl:text>: </label>
+            <label><xsl:text>Lokalisering</xsl:text>: </label>
         </xsl:if>
         <xsl:choose>
             <xsl:when test="parent::watermark">
                 <xsl:if test="locus/@scheme = 'folios' and not(preceding-sibling::locusGrp)">
-                    <label>
-                        <xsl:text>Lokalisering</xsl:text>: </label>
+                    <label><xsl:text>Lokalisering</xsl:text>: </label>
                     <xsl:text>ff. </xsl:text>
                 </xsl:if>
                 <xsl:if test="locus/@scheme = 'pages' and not(preceding-sibling::locusGrp)">
-                    <label>
-                        <xsl:text>Lokalisering</xsl:text>: </label>
+                    <label><xsl:text>Lokalisering</xsl:text>: </label>
                     <xsl:text>pp. </xsl:text>
                 </xsl:if>
                 <!--<xsl:for-each select="locusGrp">-->
                 <xsl:for-each select="locus">
-                    <xsl:variable name="locusFrom" select="                             if (@from[contains(., ':')]) then                                 substring-before(@from, ':')                             else                                 if (@from[ends-with(., 'a')]) then                                     substring-before(@from, 'a')                                 else                                     if (@from[ends-with(., 'b')]) then                                         substring-before(@from, 'b')                                     else                                         if (@scheme = 'folios' and @from[not(contains(., 'r') or contains(., 'v'))]) then                                             (concat(@from, 'r'))                                         else                                             data(@from)"/>
-                    <xsl:variable name="locusTo" select="                             if (@to[contains(., ':')]) then                                 substring-before(@to, ':')                             else                                 if (@to[ends-with(., 'a')]) then                                     substring-before(@to, 'a')                                 else                                     if (@to[ends-with(., 'b')]) then                                         substring-before(@to, 'b')                                     else                                         if (@scheme = 'folios' and @to[not(contains(., 'r') or contains(., 'v'))]) then                                             (concat(@to, 'r'))                                         else                                             data(@to)"/>
-                    <xsl:variable name="locusFromIndex" select="count(//surface[functx:substring-after-last(@xml:id , '_') = $locusFrom]/preceding-sibling::*)"/>
-                    <xsl:variable name="locusToIndex" select="count(//surface[functx:substring-after-last(@xml:id , '_') = $locusTo]/preceding-sibling::*)"/>
+                    <xsl:variable name="locusFrom" select="
+                            if (@from[contains(., ':')]) then
+                                substring-before(@from, ':')
+                            else
+                                if (@from[ends-with(., 'a')]) then
+                                    substring-before(@from, 'a')
+                                else
+                                    if (@from[ends-with(., 'b')]) then
+                                        substring-before(@from, 'b')
+                                    else
+                                        if (@scheme = 'folios' and @from[not(contains(., 'r') or contains(., 'v'))]) then
+                                            (concat(@from, 'r'))
+                                        else
+                                            data(@from)"/>
+                    <xsl:variable name="locusTo" select="
+                            if (@to[contains(., ':')]) then
+                                substring-before(@to, ':')
+                            else
+                                if (@to[ends-with(., 'a')]) then
+                                    substring-before(@to, 'a')
+                                else
+                                    if (@to[ends-with(., 'b')]) then
+                                        substring-before(@to, 'b')
+                                    else
+                                        if (@scheme = 'folios' and @to[not(contains(., 'r') or contains(., 'v'))]) then
+                                            (concat(@to, 'r'))
+                                        else
+                                            data(@to)"/>
+                    <xsl:variable name="locusFromIndex" select="count(//surface[functx:substring-after-last(@xml:id, '_') = $locusFrom]/preceding-sibling::*)"/>
+                    <xsl:variable name="locusToIndex" select="count(//surface[functx:substring-after-last(@xml:id, '_') = $locusTo]/preceding-sibling::*)"/>
                     <!--<xsl:variable name="locusFrom" select="if (@from[contains(.,':')]) then substring-before(@from,':') else if (@from[matches(.,'^\d{1,}$')]) then (concat(@from,'r')) else data(@from)" />
                     <xsl:variable name="locusTo" select="if (@to[contains(.,':')]) then substring-before(@to,':') else if (@to[matches(.,'^\d{1,}$')]) then (concat(@to,'r')) else data(@to)" />-->
                     <xsl:if test="position() != last()">
@@ -2291,10 +2306,24 @@
                     <xsl:text>(pp. </xsl:text>
                 </xsl:if>
                 <xsl:for-each select="locus">
-                    <xsl:variable name="locusFrom" select="                             if (@from[contains(., ':')]) then                                 substring-before(@from, ':')                             else                                 if (@scheme = 'folios' and @from[not(contains(., 'r') or contains(., 'v'))]) then                                     (concat(@from, 'r'))                                 else                                     data(@from)"/>
-                    <xsl:variable name="locusTo" select="                             if (@to[contains(., ':')]) then                                 substring-before(@to, ':')                             else                                 if (@scheme = 'folios' and @to[not(contains(., 'r') or contains(., 'v'))]) then                                     (concat(@to, 'r'))                                 else                                     data(@to)"/>
-                    <xsl:variable name="locusFromIndex" select="count(//surface[functx:substring-after-last(@xml:id , '_') = $locusFrom]/preceding-sibling::*)"/>
-                    <xsl:variable name="locusToIndex" select="count(//surface[functx:substring-after-last(@xml:id , '_') = $locusTo]/preceding-sibling::*)"/>
+                    <xsl:variable name="locusFrom" select="
+                            if (@from[contains(., ':')]) then
+                                substring-before(@from, ':')
+                            else
+                                if (@scheme = 'folios' and @from[not(contains(., 'r') or contains(., 'v'))]) then
+                                    (concat(@from, 'r'))
+                                else
+                                    data(@from)"/>
+                    <xsl:variable name="locusTo" select="
+                            if (@to[contains(., ':')]) then
+                                substring-before(@to, ':')
+                            else
+                                if (@scheme = 'folios' and @to[not(contains(., 'r') or contains(., 'v'))]) then
+                                    (concat(@to, 'r'))
+                                else
+                                    data(@to)"/>
+                    <xsl:variable name="locusFromIndex" select="count(//surface[functx:substring-after-last(@xml:id, '_') = $locusFrom]/preceding-sibling::*)"/>
+                    <xsl:variable name="locusToIndex" select="count(//surface[functx:substring-after-last(@xml:id, '_') = $locusTo]/preceding-sibling::*)"/>
                     <!--<xsl:variable name="locusFrom" select="if (@from[contains(.,':')]) then substring-before(@from,':') else if (@from[matches(.,'^\d{1,}$')]) then (concat(@from,'r')) else data(@from)" />
                     <xsl:variable name="locusTo" select="if (@to[contains(.,':')]) then substring-before(@to,':') else if (@to[matches(.,'^\d{1,}$')]) then (concat(@to,'r')) else data(@to)" />-->
                     <xsl:if test="position() != last()">
@@ -2334,10 +2363,24 @@
                     <xsl:text>pp. </xsl:text>
                 </xsl:if>
                 <xsl:for-each select="locus">
-                    <xsl:variable name="locusFrom" select="                             if (@from[contains(., ':')]) then                                 substring-before(@from, ':')                             else                                 if (@scheme = 'folios' and @from[not(contains(., 'r') or contains(., 'v'))]) then                                     (concat(@from, 'r'))                                 else                                     data(@from)"/>
-                    <xsl:variable name="locusTo" select="                             if (@to[contains(., ':')]) then                                 substring-before(@to, ':')                             else                                 if (@scheme = 'folios' and @to[not(contains(., 'r') or contains(., 'v'))]) then                                     (concat(@to, 'r'))                                 else                                     data(@to)"/>
-                    <xsl:variable name="locusFromIndex" select="count(//surface[functx:substring-after-last(@xml:id , '_') = $locusFrom]/preceding-sibling::*)"/>
-                    <xsl:variable name="locusToIndex" select="count(//surface[functx:substring-after-last(@xml:id , '_') = $locusTo]/preceding-sibling::*)"/>
+                    <xsl:variable name="locusFrom" select="
+                            if (@from[contains(., ':')]) then
+                                substring-before(@from, ':')
+                            else
+                                if (@scheme = 'folios' and @from[not(contains(., 'r') or contains(., 'v'))]) then
+                                    (concat(@from, 'r'))
+                                else
+                                    data(@from)"/>
+                    <xsl:variable name="locusTo" select="
+                            if (@to[contains(., ':')]) then
+                                substring-before(@to, ':')
+                            else
+                                if (@scheme = 'folios' and @to[not(contains(., 'r') or contains(., 'v'))]) then
+                                    (concat(@to, 'r'))
+                                else
+                                    data(@to)"/>
+                    <xsl:variable name="locusFromIndex" select="count(//surface[functx:substring-after-last(@xml:id, '_') = $locusFrom]/preceding-sibling::*)"/>
+                    <xsl:variable name="locusToIndex" select="count(//surface[functx:substring-after-last(@xml:id, '_') = $locusTo]/preceding-sibling::*)"/>
                     <!--<xsl:variable name="locusFrom" select="if (@from[contains(.,':')]) then substring-before(@from,':') else if (@from[matches(.,'^\d{1,}$')]) then (concat(@from,'r')) else data(@from)" />
                     <xsl:variable name="locusTo" select="if (@to[contains(.,':')]) then substring-before(@to,':') else if (@to[matches(.,'^\d{1,}$')]) then (concat(@to,'r')) else data(@to)" />-->
                     <xsl:if test="position() != last()">
@@ -2517,8 +2560,7 @@
         <xsl:choose>
             <xsl:when test="ancestor::support">
                 <div>
-                    <label>
-                        <xsl:text>Skriftunderlag</xsl:text>: </label>
+                    <label><xsl:text>Skriftunderlag</xsl:text>: </label>
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
@@ -2530,8 +2572,7 @@
     <xsl:template match="measure">
         <xsl:if test="@type = 'laidLinesIn20mm'">
             <div>
-                <label>
-                    <xsl:text>Lagda linjer per 20 mm</xsl:text>: </label>
+                <label><xsl:text>Lagda linjer per 20 mm</xsl:text>: </label>
                 <xsl:if test="@quantity">
                     <xsl:value-of select="@quantity"/>
                 </xsl:if>
@@ -2548,15 +2589,13 @@
         </xsl:if>
         <xsl:if test="@type = 'folding'">
             <div>
-                <label>
-                    <xsl:text>Format</xsl:text>: </label>
+                <label><xsl:text>Format</xsl:text>: </label>
                 <xsl:value-of select="."/>
             </div>
         </xsl:if>
         <xsl:if test="@type = 'textblockLeaves'">
             <div>
-                <label>
-                    <xsl:text>Omfång</xsl:text>: </label>
+                <label><xsl:text>Omfång</xsl:text>: </label>
                 <xsl:value-of select="@quantity"/>
             </div>
         </xsl:if>
@@ -2649,15 +2688,13 @@
         <xsl:choose>
             <xsl:when test="parent::msItem">
                 <div class="pl-2">
-                    <label>
-                        <xsl:text>Anmärkning</xsl:text>: </label>
+                    <label><xsl:text>Anmärkning</xsl:text>: </label>
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
             <xsl:when test="parent::layout">
                 <div>
-                    <label>
-                        <xsl:text>Anmärkning</xsl:text>: </label>
+                    <label><xsl:text>Anmärkning</xsl:text>: </label>
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
@@ -2668,29 +2705,25 @@
                 <xsl:choose>
                     <xsl:when test="@type = 'script'">
                         <div>
-                            <label>
-                                <xsl:text>Skrifttyp</xsl:text>: </label>
+                            <label><xsl:text>Skrifttyp</xsl:text>: </label>
                             <xsl:apply-templates/>
                         </div>
                     </xsl:when>
                     <xsl:when test="@type = 'scribe'">
                         <div>
-                            <label>
-                                <xsl:text>Skrivare</xsl:text>: </label>
+                            <label><xsl:text>Skrivare</xsl:text>: </label>
                             <xsl:apply-templates/>
                         </div>
                     </xsl:when>
                     <xsl:when test="@type = 'medium'">
                         <div>
-                            <label>
-                                <xsl:text>Skriftfärg</xsl:text>: </label>
+                            <label><xsl:text>Skriftfärg</xsl:text>: </label>
                             <xsl:apply-templates/>
                         </div>
                     </xsl:when>
                     <xsl:otherwise>
                         <div>
-                            <label>
-                                <xsl:text>Anmärkning</xsl:text>: </label>
+                            <label><xsl:text>Anmärkning</xsl:text>: </label>
                             <xsl:apply-templates/>
                         </div>
                     </xsl:otherwise>
@@ -2700,22 +2733,19 @@
                 <xsl:choose>
                     <xsl:when test="@type = 'description'">
                         <div>
-                            <label>
-                                <xsl:text>Beskrivning</xsl:text>: </label>
+                            <label><xsl:text>Beskrivning</xsl:text>: </label>
                             <xsl:apply-templates/>
                         </div>
                     </xsl:when>
                     <xsl:when test="@type = 'binding-date'">
                         <div>
-                            <label>
-                                <xsl:text>Bokbandsdatering</xsl:text>: </label>
+                            <label><xsl:text>Bokbandsdatering</xsl:text>: </label>
                             <xsl:apply-templates/>
                         </div>
                     </xsl:when>
                     <xsl:otherwise>
                         <div>
-                            <label>
-                                <xsl:text>Anmärkning</xsl:text>: </label>
+                            <label><xsl:text>Anmärkning</xsl:text>: </label>
                             <xsl:apply-templates/>
                         </div>
                     </xsl:otherwise>
@@ -2723,8 +2753,7 @@
             </xsl:when>
             <xsl:otherwise>
                 <div>
-                    <label>
-                        <xsl:text>Anmärkning</xsl:text>: </label>
+                    <label><xsl:text>Anmärkning</xsl:text>: </label>
                     <xsl:apply-templates/>
                 </div>
             </xsl:otherwise>
@@ -2775,8 +2804,7 @@
             </xsl:when>
             <xsl:when test="parent::binding and not(child::dimensions)">
                 <div>
-                    <label>
-                        <xsl:text>Beskrivning</xsl:text>: </label>
+                    <label><xsl:text>Beskrivning</xsl:text>: </label>
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
@@ -2918,8 +2946,7 @@
     </xsl:template>
     <xsl:template match="rubric">
         <div class="pl-2">
-            <label>
-                <xsl:text>Rubrik</xsl:text>: </label>
+            <label><xsl:text>Rubrik</xsl:text>: </label>
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -2931,8 +2958,7 @@
     <xsl:template match="signatures">
         <xsl:if test="string-length(.) != 0">
             <div>
-                <label>
-                    <xsl:text>Läggsignaturer</xsl:text>: </label>
+                <label><xsl:text>Läggsignaturer</xsl:text>: </label>
                 <xsl:apply-templates/>
             </div>
         </xsl:if>
@@ -3048,14 +3074,13 @@
         <xsl:choose>
             <xsl:when test="@type = 'watermarkMotif'">
                 <div>
-                    <label>
-                        <xsl:text>Motiv</xsl:text>: </label>
+                    <label><xsl:text>Motiv</xsl:text>: </label>
                     <!--<xsl:apply-templates/>-->
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
             <xsl:when test="@type = 'proximity'">
-                <xsl:apply-templates select="node() | ref"/>                
+                <xsl:apply-templates select="node() | ref"/>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:apply-templates/>
