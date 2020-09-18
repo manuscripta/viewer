@@ -57,6 +57,12 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    <xsl:template match="placeName">
+        <div>
+            <label>Place of organization: </label>
+            <xsl:value-of select="."/>
+        </div>
+    </xsl:template>
     <xsl:template match="title">
         <h1 class="page-header">
             <xsl:value-of select="//titleStmt/title"/>
