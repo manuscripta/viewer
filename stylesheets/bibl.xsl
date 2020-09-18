@@ -1,23 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" xpath-default-namespace="http://www.tei-c.org/ns/1.0">
     <xsl:output method="xhtml" indent="yes" encoding="utf-8"/>
 
     <xsl:template match="/">
         <xsl:choose>
             <xsl:when test="starts-with(//biblStruct//idno[1], 'https://books.google.se/books?id=')">
-                <h2 id="{data(//biblStruct//idno[1])}" class="page-header">
+                <h1 id="{data(//biblStruct//idno[1])}" class="page-header">
                     <xsl:value-of select="//titleStmt/title"/>
-                </h2>
+                </h1>
             </xsl:when>
             <xsl:when test="starts-with(//biblStruct//idno[1], 'https://archive.org/details/')">
-                <h2 id="{data(//biblStruct//idno[1])}" class="page-header">
+                <h1 id="{data(//biblStruct//idno[1])}" class="page-header">
                     <xsl:value-of select="//titleStmt/title"/>
-                </h2>
+                </h1>
             </xsl:when>
             <xsl:otherwise>
-                <h2 class="page-header">
+                <h1 class="page-header">
                     <xsl:value-of select="//titleStmt/title"/>
-                </h2>
+                </h1>
             </xsl:otherwise>
         </xsl:choose>
         <xsl:apply-templates select="//author"/>
