@@ -8,12 +8,25 @@ import module namespace config = "http://www.manuscripta.se/xquery/config" at "c
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
 declare namespace xmldb = "http://exist-db.org/xquery/xmldb";
 
+declare function view:use-title($node as node(), $model as map(*), $title as xs:string?, $what as xs:string?, $how as xs:string?) as node()* {
+    let $ret := templates:process($node/node(), $model)
+    let $title :=
+        if ($what = "content" or $node/name() = "title") then $ret
+        else if ($what = "heading") then $ret//h1[1]
+        else $title
+    let $_ := util:log("info", string-join(("set-title", $how), '-') || "=" || $title)
+    let $set-attribute := if ($title) then request:set-attribute(string-join(("set-title", $how), '-'), $title) else ()
+    return
+        if ($what = ("title") or $node/name() = "title") then ()
+        else $ret
+};
+
 declare function view:get-msDesc($node as node(), $model as map(*)) as node() {
     let $displayURI := request:get-parameter('id', '')
     let $rec := doc(concat($config:data-root, "/msDescs/", $displayURI))/tei:TEI
     return
         <div
-            class="container-msdesc col-xs-12 col-sm-12 col-md-6 col-lg-6 split split-horizontal"
+            class="container-msdesc col-xs-12"
             id="ms-desc">
             {view:view-msDesc-html($rec)}
         </div>
@@ -33,7 +46,7 @@ declare function view:get-person($node as node(), $model as map(*)) as node() {
         <div
             class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             {view:view-person-html($rec)}
-        <h3>Associated Manuscripts</h3>
+        <h2>Associated Manuscripts</h2>
             <table
                 class='table table-striped'>
                 <thead>
@@ -64,7 +77,7 @@ declare function view:get-place($node as node(), $model as map(*)) as node() {
         <div
             class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             {view:view-place-html($rec)}
-        <h3>Associated Manuscripts</h3>
+        <h2>Associated Manuscripts</h2>
             <table
                 class='table table-striped'>
                 <thead>
@@ -96,7 +109,7 @@ declare function view:get-bibl($node as node(), $model as map(*)) as node() {
             class="col-md-6 col-lg-6 split split-horizontal"
             id="bibl">
             {view:view-bibl-html($rec)}
-        <h3>Associated Manuscripts</h3>
+        <h2>Associated Manuscripts</h2>
             <table
                 class='table table-striped'>
                 <thead>
@@ -127,7 +140,7 @@ declare function view:get-org($node as node(), $model as map(*)) as node() {
         <div
             class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             {view:view-org-html($rec)}
-        <h3>Associated Manuscripts</h3>
+        <h2>Associated Manuscripts</h2>
             <table
                 class='table table-striped'>
                 <thead>
@@ -158,7 +171,7 @@ declare function view:get-work($node as node(), $model as map(*)) as node() {
         <div
             class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             {view:view-work-html($rec)}
-            <h3>Associated Manuscripts</h3>
+            <h2>Associated Manuscripts</h2>
             <table
                 class='table table-striped'>
                 <thead>
@@ -281,4 +294,3 @@ declare function view:get-org-mss-ref($rec as node()) {
         <td>{$head}</td>
         </tr>
 };
-
