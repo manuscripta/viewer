@@ -20,6 +20,15 @@ body {
     padding-top: 50px;
     /* Padding required for fixed navbar */
 }
+footer{
+    background-color: rgb(248, 248, 248);
+    background-image: linear-gradient(rgb(242, 242, 242) 0px, rgb(255, 255, 255) 100%);
+    /*background-image: linear-gradient(to bottom,#f5f5f5 0,#e8e8e8 100%);*/
+    background-repeat: repeat-x;
+    border: 1px solid transparent;
+    /*border-bottom-color: rgb(231, 231, 231);*/
+    border-radius:4px;
+}
 span.hi {
     background: none repeat scroll 0 0 #ffed3d;
 }
@@ -88,8 +97,7 @@ label {
     display: inline;
     font-weight: bold;
 }
-.container-msdesc,
-.container-viewer {
+.container-msdesc {
     overflow-y: scroll;
 }
 img.beta-image {
@@ -115,11 +123,23 @@ img.beta-image {
 .pt-2 {
     padding-top: 0.5em;
 }
+.pt-3 {
+    padding-top: 0.75em;
+}
+.pt-4 {
+    padding-top: 1em;
+}
 .pl-1 {
     padding-left: 0.25em;
 }
 .pl-2 {
     padding-left: 0.5em;
+}
+.pl-3 {
+    padding-left: 0.75em;
+}
+.pl-4 {
+    padding-left: 1em;
 }
 hr.hr-2 {
     border-top: 1px solid #ddd;
@@ -222,4 +242,8 @@ a.carousel-caption-link {
 }
 .carousel-control {
     width: 10%
+}
+
+:focus {
+    outline: 2px ridge #009fff !important;
 }
