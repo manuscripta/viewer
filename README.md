@@ -1,5 +1,5 @@
-# Manuscripta webapp
-eXist-db webapp for manuscripta.se
+# Manuscripta webapp (OBSOLETE)
+This version of the eXist-db webapp for manuscripta.se is obsolete and does not reflect the current online version. The new webapp will be released in a different repository in the coming months.
 
 ## Installation instructions
 
